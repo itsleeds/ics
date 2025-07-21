@@ -7,7 +7,7 @@ date: last-modified
 
 # Impact Case Study: Transforming Strategic Active Travel Network Planning Internationally
 
-## Summary of the Impact
+## Introduction
 
 The development of open-source tools and methodologies for strategic active travel network planning has changed transport planning practices internationally.
 As documented in a [2021 Impact Case Study](https://results2021.ref.ac.uk/impact/847d1191-7f25-46ba-a399-b481125edc8f?page=1), the Propensity to Cycle Tool (PCT) in England and Wales has influenced how millions of pounds are invested in active travel infrastructure, leading to more joined-up networks, better cycling conditions, and increased cycling uptake.
@@ -19,6 +19,8 @@ The research has been used as the basis for the following tools:
 - [CRUSE](https://www.cruse.bike/) - The Cycle Route Uptake & Scenario Estimation tool for Ireland, showing cycling trip percentages by county and cycle networks under different scenarios for everyday trips and cycle tourism.
 - [biclaR](https://biclar.tmlmobilidade.pt/index/) - A cycle network planning tool for the Lisbon Metropolitan Area that shows existing and planned cycling infrastructure alongside modeling cycling trip potential by municipality.
 - [Network Planning Tool for Scotland](https://www.npt.scot/#/) - A web-based application designed to support strategic cycle network planning and investment decisions, primarily for use by Scottish local authorities.
+
+## Research Questions
 
 The tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment.
 The research project described in this website aims to answer the questions:
