@@ -1,7 +1,7 @@
 ---
 title: "Transforming Strategic Active Travel Network Planning Internationally"
 subtitle: "Research project to inform a Case Study for REF 2029 Submission"
-author: "Robin Lovelace and Team"
+# author: "Robin Lovelace and Team"
 date: last-modified
 ---
 
