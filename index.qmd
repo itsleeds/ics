@@ -15,7 +15,10 @@ As documented in a [2021 Impact Case Study](https://results2021.ref.ac.uk/impact
 The purpose of this project is to research the impacts of methods and tools developed at the University of Leeds since then.
 The research has been used as the basis for the following tools: 
 
-- The 
+- [The Norwegian Propensity to Cycle Tool](https://norceresearch.brage.unit.no/norceresearch-xmlui/handle/11250/2994058) - A study modeling cycling potential in Trondheim and Nord-Jæren using Propensity to Cycle Tool methodology to calculate scenarios for increased everyday cycling.
+- [CRUSE](https://www.cruse.bike/) - The Cycle Route Uptake & Scenario Estimation tool for Ireland, showing cycling trip percentages by county and cycle networks under different scenarios for everyday trips and cycle tourism.
+- [biclaR](https://biclar.tmlmobilidade.pt/index/) - A cycle network planning tool for the Lisbon Metropolitan Area that shows existing and planned cycling infrastructure alongside modeling cycling trip potential by municipality.
+- [Network Planning Tool for Scotland](https://www.npt.scot/#/) - A web-based application designed to support strategic cycle network planning and investment decisions, primarily for use by Scottish local authorities.
 
 The tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment.
 The research project described in this website aims to answer the questions:
