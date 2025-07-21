@@ -1,7 +1,7 @@
 ---
 title: "Transforming Strategic Active Travel Network Planning Internationally"
 subtitle: "Impact Case Study Report for REF 2029"
-author: "Robin Lovelace and Team"
+# author: "Robin Lovelace and Team"
 date: last-modified
 format: 
   html:
@@ -24,7 +24,7 @@ To address the limitation that the methods omitted cycling as part of multi-moda
 
 # References to the research
 
-::: {.bibliography}
+::: {#refs}
 :::
 
 # Details of the impact
