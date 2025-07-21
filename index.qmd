@@ -1,6 +1,6 @@
 ---
 title: "Transforming Strategic Active Travel Network Planning Internationally"
-subtitle: "Impact Case Study for REF 2029 Submission"
+subtitle: "Research project to inform a Case Study for REF 2029 Submission"
 author: "Robin Lovelace and Team"
 date: last-modified
 ---
@@ -9,54 +9,20 @@ date: last-modified
 
 ## Summary of the Impact
 
-The development of open-source tools and methodologies for strategic active travel network planning has revolutionized transport planning practices internationally. Building on the success of the Propensity to Cycle Tool (PCT) in England and Wales, our research has enabled evidence-based active travel planning across multiple countries and continents. The tools and methods have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing significant active travel infrastructure investment.
+The development of open-source tools and methodologies for strategic active travel network planning has changed transport planning practices internationally.
+As documented in a [2021 Impact Case Study](https://results2021.ref.ac.uk/impact/847d1191-7f25-46ba-a399-b481125edc8f?page=1), the Propensity to Cycle Tool (PCT) in England and Wales has influenced how millions of pounds are invested in active travel infrastructure, leading to more joined-up networks, better cycling conditions, and increased cycling uptake.
 
-Our work has:
-- Enabled cost-effective planning of active travel networks internationally
-- Been adopted by transport agencies in multiple countries
-- Supported the development of national and regional active travel strategies
-- Empowered advocacy groups and civil society organizations globally
-- Influenced international transport policy and funding frameworks
+The purpose of this project is to research the impacts of methods and tools developed at the University of Leeds since then.
+The research has been used as the basis for the following tools: 
 
-## International Reach and Adoption
+- The 
 
-### Methodology Transfer
-Our research established a replicable, open-source framework that can be adapted to different national contexts, data availability, and transport cultures across:
+The tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment.
+The research project described in this website aims to answer the questions:
 
-- **Europe**: Multiple countries implementing adapted methodologies
-- **Asia-Pacific**: Transport agencies adopting evidence-based planning approaches  
-- **North America**: Cities and regions implementing strategic network planning
-- **Global South**: Emerging implementations in developing contexts
-
-## Key Innovations
-
-### Open Source Methodology
-Our research established a replicable, open-source framework that can be adapted to different national contexts, data availability, and transport cultures. The methodology includes:
-
-- **Scalable geographic analysis**: From street-level to national-scale planning
-- **Scenario modeling**: Multiple future scenarios including "Go Dutch" and e-bike adoption
-- **Multi-modal integration**: Combining cycling, walking, and public transport planning
-- **Health and environmental co-benefits**: Quantifying broader societal impacts
-
-### International Capacity Building
-- Training workshops for transport planners internationally
-- Open-access educational materials in multiple languages  
-- Collaboration with international research institutions
-- Support for capacity building initiatives globally
-
-## Research Underpinning the International Impact
-
-Our research program has evolved from national-scale tool development to international methodology transfer and adaptation. Key research developments include:
-
-1. **Cultural and Context Adaptation**: Methods for adapting PCT methodology to different transport cultures and infrastructure contexts
-2. **Data Harmonization**: Techniques for working with diverse international datasets and data quality levels
-3. **Policy Translation**: Framework for translating evidence into policy-relevant recommendations across different governance systems
-4. **Impact Evaluation**: Methods for measuring the effectiveness of evidence-based active travel planning
-
-## Evidence of Impact
-
-See the [research slides](slides.qmd) for detailed evidence of international adoption and the [academic report](report.qmd) for comprehensive research documentation.
-
----
-
-*This impact case study builds on the foundations established by the PCT project and demonstrates how university research can drive global transformation in sustainable transport planning.*
+- What tools and methods have been developed, building on the underlying research?
+- Who is using the tools and methods?
+- How much has been invested in active travel in general and cycle infrastructure in particular in countries benefiting from the tools and methods?
+- What proportion of the investment in active travel infrastructure has been influenced by the tools and methods?
+- How have investment and design decisions changed as a result of the tools and methods?
+- How has the research influenced international transport policy and funding frameworks?
