@@ -1,0 +1,5 @@
+
+
+- Video explainer of the Network Planning Tool and Network Planning Workspace, showing basics
+- Start on a paper about the the tool/tools
+- Contributions to ICS report
