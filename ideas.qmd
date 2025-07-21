@@ -3,6 +3,8 @@
 - Start on a paper about the the tool/tools
 - Contributions to ICS report
 - Analyse DfT data on tools used to inform active travel funding (if we can get it, Robin to ask)
+- Data from CRUSE and NPT suverys
+
 
 - Video explainer of the Network Planning Tool and Network Planning Workspace, showing basics
 

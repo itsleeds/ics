@@ -4,6 +4,7 @@ project:
     - index.qmd 
     - slides.qmd
     - report.qmd
+    - ideas.qmd
 
 website:
   title: "Transforming Strategic Active Travel Network Planning Internationally"
@@ -16,4 +17,6 @@ website:
       - text: "Slides"
         href: slides.qmd
       - text: "Report"
-        href: report.qmd 
+        href: report.qmd
+      - text: "Ideas"
+        href: ideas.qmd 
