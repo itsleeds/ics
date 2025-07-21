@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Robinlovelace.github.io/ics/report.html</loc>
-    <lastmod>2025-07-21T15:10:37.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Robinlovelace.github.io/ics/index.html</loc>
-    <lastmod>2025-07-21T15:10:37.219Z</lastmod>
+    <loc>https://Robinlovelace.github.io/ics/ideas.html</loc>
+    <lastmod>2025-07-21T15:12:39.862Z</lastmod>
   </url>
   <url>
     <loc>https://Robinlovelace.github.io/ics/slides.html</loc>
-    <lastmod>2025-07-21T15:10:37.219Z</lastmod>
+    <lastmod>2025-07-21T15:12:39.864Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Robinlovelace.github.io/ics/index.html</loc>
+    <lastmod>2025-07-21T15:12:39.864Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Robinlovelace.github.io/ics/report.html</loc>
+    <lastmod>2025-07-21T15:12:39.864Z</lastmod>
   </url>
 </urlset>
