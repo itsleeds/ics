@@ -1,0 +1,32 @@
+---
+title: "Transforming Strategic Active Travel Network Planning Internationally"
+subtitle: "Impact Case Study Report for REF 2029"
+author: "Robin Lovelace and Team"
+date: last-modified
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+bibliography: references.bib
+---
+
+# Summary of the impact
+
+[Content to be added]
+
+# Underpinning research
+
+[Content to be added]
+
+# References to the research
+
+[Content to be added]
+
+# Details of the impact
+
+[Content to be added]
+
+# Sources to corroborate the impact
+
+[Content to be added]
