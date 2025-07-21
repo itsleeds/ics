@@ -1,19 +1,27 @@
-# reproducible-slides-repo-template
+# Impact Case Study: Transforming Strategic Active Travel Network Planning Internationally
 
-Flexible repo template for reproducible slides with Quarto and continuous deployment via GitHub actions
+Research project to inform a Case Study for REF 2029 Submission
 
-See https://robinlovelace.github.io/reproducible-slides-repo-template/slides for the content, the most important parts of which are:
+This repository contains the documentation and analysis for an impact case study examining the international influence of strategic active travel network planning tools and methodologies developed at the University of Leeds.
 
-- You can use this repo as a template for your own reproducible slides
-- Quarto is a powerful tool for creating reproducible documents
-- Set-up GitHub pages with:
+## Key Features
+
+- Quarto-based reproducible documentation
+- Automated deployment via GitHub actions
+- Comprehensive analysis of international tool adoption and impact
+
+## Structure
+
+- `index.qmd` - Main project overview and introduction
+- `report.qmd` - Detailed impact case study report
+- `ideas.qmd` - Research ideas and future directions
+
+## Deployment
+
+Set up GitHub pages with:
 
 ```sh
 quarto publish gh-pages
 ```
 
-- Use [GitHub actions](.github/workflows/) to automatically deploy your slides to GitHub pages
-
-## Reproducible slide projects build with this
-
-- Deploying cross-language in high impact projects, auto-updated and deployed with every commit, with R and Python code running and generating results shown in the slides: https://github.com/Robinlovelace/cross_language_projects
+The site uses [GitHub actions](.github/workflows/) to automatically deploy updates to GitHub pages.

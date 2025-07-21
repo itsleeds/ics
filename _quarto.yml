@@ -2,7 +2,6 @@ project:
   type: website
   render:
     - index.qmd 
-    - slides.qmd
     - report.qmd
     - ideas.qmd
 
@@ -14,8 +13,6 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Slides"
-        href: slides.qmd
       - text: "Report"
         href: report.qmd
       - text: "Ideas"
