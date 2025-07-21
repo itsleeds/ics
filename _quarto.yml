@@ -3,6 +3,7 @@ project:
   render:
     - index.qmd 
     - report.qmd
+    - plan.qmd
     - ideas.qmd
 
 website:
@@ -15,5 +16,7 @@ website:
         href: index.qmd
       - text: "Report"
         href: report.qmd
+      - text: "Plan"
+        href: plan.qmd
       - text: "Ideas"
         href: ideas.qmd 
