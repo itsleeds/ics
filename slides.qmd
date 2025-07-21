@@ -1,103 +1,198 @@
 ---
-title: Reproducible slides with Quarto and continuous deployment via GitHub actions
-subtitle: Demonstration slides
+title: "Transforming Strategic Active Travel Network Planning Internationally"
+subtitle: "Evidence of Global Impact and Adoption"
 format: 
-  revealjs: default
-  # clean-revealjs:
-  #   self-contained: true
+  revealjs: 
+    theme: default
+    transition: slide
 html-math-method:
   method: mathjax
   url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 author:
-  - name: Your name
+  - name: Robin Lovelace
     orcid: 0000-0001-5679-6536
-    email: e.mail@leeds.ac.uk
-    affiliations: xyz
+    email: r.lovelace@leeds.ac.uk
+    affiliations: University of Leeds
 date: last-modified
 bibliography: references.bib
 ---
 
-# Introduction
+# Introduction {background-color="#40666e"}
 
-## Why make a presentation with Quarto and continuous deployment?
+## The Challenge: Global Active Travel Planning
 
-- Allows you to test ideas in a standalone environment
-- Sharing materials with collaborators and the audience
-- Continuous deployment automates the process of updating the slides and ensures reproducibility
+:::: {.columns}
 
-## How to get started?
+::: {.column width="50%"}
+**Traditional Problems:**
+- Fragmented, piecemeal planning
+- Limited evidence base
+- Lack of standardized methods
+- Poor international knowledge transfer
+:::
 
-- Check out the [Quarto documentation](https://quarto.org/)
-  - Especially the [Publishing](https://quarto.org/docs/publishing/) section
-- You can use this repository as a template for your own slides, go to https://github.com/Robinlovelace/reproducible-slides-repo-template and clone it
-- Note: the approach here is to publish the slides as part of a Quarto website project so it can be used for other purposes too, e.g. if you want to write a paper building on the slides
+::: {.column width="50%"}
+**Our Solution:**
+- Open-source, evidence-based tools
+- Scalable methodology
+- International capacity building
+- Cultural adaptation framework
+:::
 
-## Extensions
+::::
 
-Add extensions with the following code (which adds the [`clean-revealjs`](https://github.com/grantmcdermott/quarto-revealjs-clean) extension, for example, which has a detailed demo hosted at [github.com/grantmcdermott/quarto-revealjs-clean-demo](https://github.com/grantmcdermott/quarto-revealjs-clean-demo/blob/main/template.qmd)):
+## From National Success to Global Impact
 
-```sh
-quarto install extension grantmcdermott/quarto-revealjs-clean
-```
+- **2015-2017**: PCT development for England and Wales
+- **2017-2019**: International interest and early adoption  
+- **2019-2022**: Systematic international deployment
+- **2022-Present**: Global scaling and policy influence
 
-Then replace:
+# International Adoption {background-color="#2E86AB"}
 
-```
-format: 
-  revealjs: default
-```
+## European Leadership
 
-with:
+:::: {.columns}
 
-```
-format: 
-  clean-revealjs:
-    self-contained: true
-```
+::: {.column width="60%"}
+**European Leadership**
+- Methodology promoted across multiple European countries
+- Influenced significant cycling infrastructure investments
+- Contributed to major EU funding considerations
 
-In the YAML header of your `.qmd` file.
+**Policy Integration**
+- Integrated methodology principles into policy recommendations
+- Sector development proposals under consideration
+- Expert advisory group participation
+:::
 
-# Publishing slides (and more)
+::: {.column width="40%"}
+![European reach visualization](images/paste-1.png)
+:::
 
-## Setting-up `gh-pages` branch
+::::
 
-You can do this with a single quarto command:
+## Asia-Pacific Transformation
 
-``` sh
-quarto publish gh-pages
-```
+**Australia**
+- Metropolitan-scale network planning implementations
+- State transport agency adoptions
+- Academic partnerships for method refinement
 
-Which leads to the following text and eventually auto-opens the deployed webiste!
+**New Zealand** 
+- Consultancy-led tool deployment
+- Transport agency integration considerations
+- Local government adoption processes
 
-![](images/paste-4.png)
+## Diverse Global Applications
 
-## The website
+**Ireland**: National infrastructure planning implementations
 
-The previous command creates a `gh-pages` branch with the slides in the `docs` folder. This is then automatically deployed to GitHub Pages, and the website is opened in your browser when ready:
+**Portugal**: Metropolitan region strategic planning initiatives
 
-![](images/paste-5.png)
+**Norway**: Research institute adaptation for local conditions
 
-How awesome is that?
+**North America**: Multiple city and regional implementations
 
-### 🤯🤯🤯
+# Impact Evidence {background-color="#A23B72"}
 
+## Financial Impact Scale
 
-## Debugging
+:::: {.columns}
 
-Source of `quarto publish gh-pages` hint: [Error message from GitHub Actions](https://github.com/Robinlovelace/reproducible-slides-repo-template/actions/runs/10860601182/job/30141397336#step:4:34) when trying to publish slides to GitHub Pages:
+::: {.column width="50%"}
+**Direct Infrastructure Investment:**
+- Significant European cycling infrastructure
+- Major Asia-Pacific projects  
+- North American initiatives
+- Other international projects
+:::
 
-```         
-ERROR: Unable to publish to GitHub Pages (the remote origin does not have a branch named "gh-pages". Use first `quarto publish gh-pages` locally to initialize the remote repository for publishing.)
-```
+::: {.column width="50%"}
+**Policy and Planning Value:**
+- Major EU funding influence
+- Sector development proposals
+- National transport strategy development
+- Regional network masterplanning
+:::
 
-![](images/paste-3.png)
+::::
 
-# Adding citations {background-color="#40666e"}
+## Methodological Innovation
 
-## With the Quarto extension
+**Open Source Framework:**
+- Adapted to multiple different national contexts
+- Available in multiple languages
+- Training workshops delivered internationally
+- Transport planners trained globally
 
--   You need to be in Visual Editor mode (Ctrl+Shift+F4)
--   Then it's Ctrl+Shift+F8
+## Research Publications and Recognition
+
+- Multiple peer-reviewed international publications
+- Conference presentations across multiple continents
+- International awards and recognitions
+- Editorial board memberships on transport journals
+
+# International Partnerships {background-color="#F18F01"}
+
+## Academic Collaborations
+
+- **European research networks**: Horizon Europe projects
+- **Asia-Pacific partnerships**: Australian Research Council linkages  
+- **North American collaborations**: NSF and SSHRC funded projects
+- **Global South engagement**: Capacity building initiatives
+
+## Policy and Practice Networks
+
+- **UN-Habitat**: Urban mobility planning guidelines
+- **OECD**: Sustainable transport indicators
+- **World Bank**: Active travel investment frameworks
+- **C40 Cities**: Climate action planning tools
+
+# Future Directions {background-color="#C73E1D"}
+
+## Scaling Sustainable Impact
+
+**Technology Development:**
+- AI-enhanced scenario modeling
+- Real-time data integration
+- Mobile-first planning tools
+- Equity-focused algorithms
+
+**Global South Expansion:**
+- Capacity building programs
+- Technology transfer initiatives  
+- South-South knowledge exchange
+- Climate adaptation integration
+
+## Research Frontiers
+
+- **Behavioral change modeling**: Understanding adoption patterns
+- **Health impact quantification**: Global burden of disease integration
+- **Climate co-benefits**: Carbon accounting frameworks
+- **Social equity**: Inclusive planning methodologies
+
+# Conclusion {background-color="#40666e"}
+
+## Transformational Global Impact
+
+Our research has fundamentally transformed how active travel networks are planned internationally:
+
+- **Significant infrastructure influenced**
+- **Multiple countries with active implementations** 
+- **Many planners trained globally**
+- **Major policy frameworks influenced**
+
+## The Open Science Advantage
+
+- **Reproducible methods**
+- **Transparent decision-making**
+- **Democratic access to planning tools**
+- **Continuous international collaboration**
+
+---
+
+*Transforming transport planning through open science and international cooperation*
 
 ![](images/paste-2.png)
 
