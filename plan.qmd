@@ -16,13 +16,16 @@ Reading-up on the PCT and subsequent tools, including the [NPT manual](https://w
 
 Create a typology of key stakeholders
 
-Draft an online survey and semi-structured interview questions for NPT users and stakeholders. 
+Basic exploration data from previous surveys with basic results.
 
-Basic exploration data from previous surveys.
+Start on % LCWIPs using PCT and other tools
 
 ## Week 2: Outreach and Initial Data Collection (20 hours) 
 
-Stakeholder Outreach (10 hours): Begin contacting key stakeholders by email. Aim to get responses from practitioners and arrange a 2-day research trip to Scotland for the following week. 
+Draft an online survey and semi-structured interview questions for NPT users and stakeholders. 
+
+Share survey draft with stakeholders, pilot and refine based on feedback.
+<!-- Stakeholder Outreach (10 hours): Begin contacting key stakeholders by email. Aim to get responses from practitioners and arrange a 2-day research trip to Scotland for the following week.  -->
 
 Plan survey distribution and outreach strategy to ensure a diverse range of respondents, including local authorities, transport planners, and advocacy groups.
 
