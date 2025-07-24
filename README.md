@@ -16,6 +16,14 @@ This repository contains the documentation and analysis for an impact case study
 - `report.qmd` - Detailed impact case study report
 - `ideas.qmd` - Research ideas and future directions
 
+## Local Development
+
+- run the website locally with the following command.
+
+```sh
+quarto preview
+```
+
 ## Deployment
 
 Set up GitHub pages with:
