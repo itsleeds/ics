@@ -37,6 +37,10 @@ Send out the draft survey to stakeholders for feedback.
 
 Analyse data on LCWIP contents.
 
+Explore international impacts
+
+- Search results mentioning PCT in a policy context, e.g. site:govt.nz "propensity to cycle" and for other countries.
+
 ## Week 4: Data Analysis and Follow-up (20 hours) 
 
 Send out the online survey to the stakeholder database to gather quantitative data on tool usage, level of satisfaction, impact on planning decisions, and feature requests.
