@@ -1,0 +1,414 @@
+---
+jupyter: python3
+---
+
+#datasets
+
+##Installing the packages
+
+```{python}
+pip install pandas geopandas requests matplotlib --quiet
+```
+
+```{python}
+import json
+import requests
+import pandas as pd
+import geopandas as gpd
+```
+
+```{python}
+import folium
+```
+
+```{python}
+with open('/content/drive/MyDrive/LCWIP_database.json','r') as f: #reading the lcwip database
+  lcwip_data = json.load(f)
+  lcwip_df = pd.DataFrame(lcwip_data)
+```
+
+##Loading the dataset
+
+```{python}
+df_org = lcwip_df #saving the untouched dataset
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+print(lcwip_df.columns.tolist()) #checking the columns
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 521}
+lcwip_df.head() #the first 5 rows
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 247}
+lcwip_df.describe() #stats
+```
+
+## mentions of PCT data pre-processing
+
+```{python}
+lcwip_pct = df_org #df just for the mentions of PCT
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 178}
+lcwip_pct['mentions_pct'].value_counts() #checking the counts of reports that mention PCT
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 178}
+lcwip_pct['mentions_pct'].value_counts(normalize=True).mul(100).round(1).astype(str) + '%' #into percentage
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 178}
+lcwip_pct['report_name'].duplicated().value_counts() #checking the duplicates
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 147}
+lcwip_pct[lcwip_pct['report_name'].duplicated() == True]['report_name'] #each report represents the two LAs
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 437}
+lcwip_pct[lcwip_pct['mentions_pct'] == False] #reports that do not mention the use of PCT
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 209}
+lcwip_pct[lcwip_pct['mentions_pct'] == False]['local_authority_name'] #the LA names
+```
+
+## CA Analysis
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+lcwip_pct['combined_authority_name'].isna().sum() #checking how many reports corresponds to CAs
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 458}
+lcwip_pct['combined_authority_name'].notna() #checking the ones with CAs
+```
+
+```{python}
+lcwip_df_final = lcwip_pct[lcwip_pct['combined_authority_name'].notna()] #making a df with the ones with CAs
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+print('LCWIP Database loaded successfully.')
+print(f'Found {len(lcwip_df_final)} reports.') #checking the number of reports found in the database
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+# Display the first few rows of the df table to check
+print("\nLCWIP DataFrame Head:")
+print(lcwip_df_final.head())
+```
+
+```{python}
+#getting the GeoJSON data from the URL
+CA_gjs_url = 'https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/CAUTH_MAY_2025_EN_BSC/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson'
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+#request getting the CA URL
+try:
+    response = requests.get(CA_gjs_url)
+    response.raise_for_status()  # Raise an exception for bad status codes
+    ca_geojson = response.json()
+    # Load into a GeoDataFrame for spatial analysis
+    ca_gdf = gpd.GeoDataFrame.from_features(ca_geojson['features'], crs="EPSG:4326")
+    print("Combined Authorities GeoJSON loaded successfully.")
+    print(f"Found {len(ca_gdf)} Combined Authorities.")
+
+except requests.exceptions.RequestException as e:
+    print(f"Error fetching GeoJSON: {e}")
+    ca_gdf = None
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+if ca_gdf is not None: #checking the top 5 rows of the GeoJSON
+    print("\nCombined Authorities GeoDataFrame Head:")
+    print(ca_gdf.head())
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+#cleaning the authority name from the LCWIP database to match the CA GJson
+lcwip_df_final['clean_authority_name'] = lcwip_df_final['combined_authority_name'].str.split(' \[').str[0]
+
+#name of the authority is in the 'CAUTH25NM' column of the GeoDataFrame
+if ca_gdf is not None:
+    ca_names = ca_gdf['CAUTH25NM'].unique().tolist()
+ca_names
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 447}
+ca_gdf.plot()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+lcwip_df_final['clean_authority_name'].unique() #from the LCWIPs final df, checking the unique CA names
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+def find_ca(report_authority_name, ca_list):
+    """Checks if any Combined Authority name is in the report's authority string."""
+    for ca_name in ca_list:
+        if ca_name in report_authority_name:
+            return ca_name
+    return None # Return None if no match is found
+
+if ca_gdf is not None:
+    # Create a new column in the LCWIP DataFrame to store the matched Combined Authority
+    lcwip_df_final['matched_authority'] = lcwip_df_final['clean_authority_name'].apply(lambda x: find_ca(x, ca_names))
+
+    # See how many reports were matched
+    matched_reports = lcwip_df_final[lcwip_df_final['matched_authority'].notna()]
+    print(f"\nSuccessfully matched {len(matched_reports)} reports to a Combined Authority.")
+    print(matched_reports[['clean_authority_name', 'matched_authority']].head())
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 802}
+lcwip_df_final[['matched_authority','clean_authority_name']]
+```
+
+##Coverage Analysis
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+# Grouping by the 'clean_authority_name' column and count the number of reports
+if ca_gdf is not None:
+    ca_coverage = lcwip_df_final.groupby('matched_authority').size().reset_index(name='report_count')
+    ca_coverage = ca_coverage.sort_values('report_count', ascending=False)
+    print("\nLCWIP Report Count per Combined Authority")
+    print(ca_coverage)
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+#Merge analysis results back into the GeoDataFrame for mapping
+if ca_gdf is not None:
+    # Merge the coverage count into the GeoDataFrame
+    # We use a 'left' merge to keep all Combined Authorities, even those with no reports
+    map_gdf = ca_gdf.merge(ca_coverage, left_on='CAUTH25NM', right_on='matched_authority', how='left')
+    # Fill in 0 for CAs with no matched reports and ensure the count is an integer
+    #map_gdf['report_count'] = ca_coverage['report_count'].fillna(0).astype(int)
+
+    print("\nData prepared for mapping:")
+    print(map_gdf[['CAUTH25NM', 'report_count']].head(10))
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+map_gdf.columns.to_list()
+```
+
+```{python}
+map_gdf['report_count'] = map_gdf['report_count'].fillna(0).astype(int)
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 865}
+#Creating a Folium map centered on England
+m = folium.Map(location=[52.9, -1.5], zoom_start=6)
+
+#defining a threshold scale
+threshold_scale = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+#a Choropleth layer to color the regions by report count
+folium.Choropleth(
+    geo_data=map_gdf,
+    name='LCWIP Report Count',
+    data=map_gdf,
+    columns=['CAUTH25NM', 'report_count'],
+    key_on='feature.properties.CAUTH25NM',
+    fill_color='YlGnBu', # Color scheme
+    fill_opacity=0.9,
+    line_opacity=0.2,
+    legend_name='Number of LCWIP Reports in Database',
+    threshold_scale=threshold_scale,
+    nan_fill_color='black'
+).add_to(m)
+
+#fields to include in the popup
+popup_fields = ['CAUTH25NM', 'report_count']
+aliases = ['Combined Authority:', 'LCWIP Reports:']
+
+#Adding a GeoJson layer with interactive popups
+folium.GeoJson(
+    map_gdf,
+    name="Combined Authorities",
+    style_function=lambda x: {'color': 'black', 'weight': 0.5, 'fillOpacity': 0.1},
+    tooltip=folium.features.GeoJsonTooltip(fields=['CAUTH25NM']),
+    popup=folium.features.GeoJsonPopup(fields=popup_fields, aliases=aliases)
+).add_to(m)
+
+#Adding a layer control to toggle layers on and off
+folium.LayerControl().add_to(m)
+
+# Save the map to an HTML file
+#m.save('interactive_map.html')
+
+#print("\nSuccess! Interactive map has been saved as 'interactive_map.html'")
+#print("Open this file in your web browser to see the results.")
+
+#Display the Map in the Notebook
+m
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+lcwip_df_final[lcwip_df_final['mentions_pct']==True]['matched_authority'].count()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+lcwip_df_final.columns
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+lcwip_df_final.columns
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 147}
+lcwip_df_final['length_of_cycle_network_proposed'].isna().value_counts()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 836}
+lcwip_df_final['length_of_cycle_network_proposed']
+```
+
+##Total Investment per CA
+
+```{python}
+import re
+import numpy as np
+```
+
+```{python}
+def parse_cost_gbp(cost_value):
+    if cost_value is None or pd.isna(cost_value):
+        return np.nan
+
+    if isinstance(cost_value, dict):
+        cost_str = cost_value.get('min', '0')
+    else:
+        cost_str = str(cost_value)
+
+    cost_str = cost_str.lower().replace('£', '').replace(',', '').replace('approximately', '').strip()
+
+    if 'million' in cost_str:
+        num_part = re.findall(r'[\d\.]+', cost_str)
+        if num_part:
+            # FIX: Check if the found part is just a period.
+            if num_part[0] == '.': return np.nan
+            return float(num_part[0]) * 1_000_000
+
+    num_part = re.findall(r'[\d\.]+', cost_str)
+    if num_part:
+        # FIX: Check if the found part is just a period.
+        if num_part[0] == '.': return np.nan
+        return float(num_part[0])
+
+    return np.nan
+
+```
+
+```{python}
+def parse_length_km(length_value):
+    if length_value is None or pd.isna(length_value):
+        return np.nan
+
+    length_str = str(length_value).lower().replace('km', '').replace('circa', '').strip()
+
+    numbers = re.findall(r'[\d\.]+', length_str)
+    if numbers:
+        # FIX: Check if the found part is just a period.
+        if numbers[0] == '.': return np.nan
+        return float(numbers[0])
+
+    return np.nan
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+#Applying these robust functions to your DataFrame
+lcwip_df_final['cost_gbp'] = lcwip_df_final['total_cost_of_network'].apply(parse_cost_gbp)
+
+lcwip_df_final['length_km'] = lcwip_df_final['length_of_cycle_network_proposed'].apply(parse_length_km)
+lcwip_df_final['length_km'] = lcwip_df_final['length_km'].fillna(
+    lcwip_df_final['length_of_cycle_network_proposed'].apply(parse_length_km)
+)
+
+print("Numeric 'cost_gbp' and 'length_km' columns have been created with the corrected functions.")
+print(lcwip_df_final[['report_name', 'cost_gbp', 'length_km']].head())
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 317}
+# Group by the 'combined_authority_name' and aggregate the metrics
+ca_analysis = lcwip_df_final.groupby('combined_authority_name').agg(
+    report_count=('report_name', 'size'),
+    pct_mentions=('mentions_pct', 'sum'),
+    total_funding_gbp=('cost_gbp', 'sum'),
+    total_length_km=('length_km', 'sum')
+).sort_values('report_count', ascending=False)
+
+# Calculate the percentage of reports that use PCT for each CA
+ca_analysis['pct_usage_percentage'] = (ca_analysis['pct_mentions'] / ca_analysis['report_count'] * 100).round(1)
+
+print("Analysis per Combined Authority is complete.")
+ca_analysis
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 404}
+# Calculate the overall PCT usage percentage across all reports in CAs
+total_reports_in_cas = ca_analysis['report_count'].sum()
+total_pct_mentions_in_cas = ca_analysis['pct_mentions'].sum()
+overall_pct_percentage = (total_pct_mentions_in_cas / total_reports_in_cas * 100).round(1)
+
+print(f"Overall PCT Usage Analysis (for reports within Combined Authorities):")
+print(f"Total Reports: {total_reports_in_cas}")
+print(f"Reports Mentioning PCT: {total_pct_mentions_in_cas}")
+print(f"Percentage of Reports Using PCT: {overall_pct_percentage}%")
+
+# Display the formatted final analysis table
+print("\n--- Detailed Analysis per Combined Authority ---")
+
+# Format the columns for better presentation
+ca_analysis['total_funding_gbp'] = ca_analysis['total_funding_gbp'].apply(lambda x: f"£{x:,.0f}" if x > 0 else 'Not Specified')
+ca_analysis['total_length_km'] = ca_analysis['total_length_km'].apply(lambda x: f"{x:,.1f} km" if x > 0 else 'Not Specified')
+ca_analysis['pct_usage_percentage'] = ca_analysis['pct_usage_percentage'].astype(str) + '%'
+
+# Rename columns for the final report
+ca_analysis.rename(columns={
+    'report_count': 'Report Count',
+    'pct_mentions': 'PCT Mentions',
+    'total_funding_gbp': 'Total Funding (GBP)',
+    'total_length_km': 'Total Network Length (km)',
+    'pct_usage_percentage': '% of Reports Using PCT'
+}, inplace=True)
+
+ca_analysis
+```
+
+
