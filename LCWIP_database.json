@@ -89,21 +89,6 @@
     "total_cost_of_network": "Not specified in document. The plan explicitly states 'The LCWIP is a not a funded plan'. [3]"
   },
   {
-    "pdf_url": "https://democracy.york.gov.uk/documents/s180433/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20Report.pdf",
-    "date_published": "December 4, 2024",
-    "mentions_pct": true,
-    "report_name": "City of York Council Decision Report: Local Cycling and Walking Infrastructure Plan",
-    "other_tools_used": null,
-    "how_pct_was_used": "Used as one of several data sources to establish a two-tiered, strategic and local aspirational cycling network. [3]",
-    "other_tools_developed": "A sifting methodology was developed to rank the walking, wheelchair user, and wheeling zones, scoring criteria across four key themes: local destinations, safety, accessibility, and health and inclusion. [3]",
-    "specific_evidence_of_impact_of_using_pct": "The analysis from the Propensity to Cycle Tool, combined with other data sources, informed the creation of the aspirational active travel network and the identification of gaps where new and improved infrastructure is required. [3]",
-    "quotes_on_using_pct": null,
-    "local_authority_name": "City of York Council",
-    "combined_authority_name": "York and North Yorkshire Combined Authority",
-    "length_of_cycle_network_proposed": "Not specified in document",
-    "total_cost_of_network": "Not specified in document. The report states 'there is no direct funding commitment within the LCWIP' and 'External funding will be required to deliver the vast majority of projects identified'. [3]"
-  },
-  {
     "pdf_url": "https://api.warwickshire.gov.uk/documents/WCCC-1615347118-1427",
     "date_published": "February 2024",
     "mentions_pct": true,
@@ -161,7 +146,7 @@
     "local_authority_name": "Cumbria County Council [3]",
     "combined_authority_name": null,
     "length_of_cycle_network_proposed": "Circa 100km [3]",
-    "total_cost_of_network": "£132.5 million [3]"
+    "total_cost_of_network": null
   },
   {
     "pdf_url": "https://www.cumberland.gov.uk/sites/default/files/2025-04/whitehaven_lcwip_technical_report.pdf",
@@ -237,36 +222,6 @@
     "combined_authority_name": "North East Combined Authority",
     "length_of_cycle_network_proposed": "Not specified in document [3]",
     "total_cost_of_network": "A total network cost is not provided. Indicative cost estimates for individual cycling interventions are given in bands: £ (<£2 million), ££ (£2-5 million), and £££ (>£5 million). [3]"
-  },
-  {
-    "pdf_url": "https://letstalk.oxfordshire.gov.uk/18535/widgets/52707/documents/34444",
-    "date_published": "December 2022",
-    "mentions_pct": true,
-    "report_name": "Draft Witney Local Cycling and Walking Infrastructure Plan",
-    "other_tools_used": null,
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to develop the cycle desire line network, using 2011 Census journey to work data and local knowledge. The tool helped classify routes into primary, secondary, and local desire lines based on forecasted flows of cyclists. [3]",
-    "other_tools_developed": null,
-    "specific_evidence_of_impact_of_using_pct": "The PCT analysis was used to identify the routes people want to cycle, which formed the basis of the proposed network. It was also used to create 5km and 10km catchment area maps to provide context and show potential cycling trips, thereby highlighting areas for improvement. [3]",
-    "quotes_on_using_pct": null,
-    "local_authority_name": "Oxfordshire County Council",
-    "combined_authority_name": null,
-    "length_of_cycle_network_proposed": "Not specified in document",
-    "total_cost_of_network": "£73,972,665"
-  },
-  {
-    "pdf_url": "https://www.peterborough.gov.uk/asset-library/local-cycling-and-walking-infrastructure-plan-2024-2034.pdf",
-    "date_published": "2024",
-    "mentions_pct": true,
-    "report_name": "Peterborough City Council Local Cycling and Walking Infrastructure Plan (LCWIP) 2024-2034",
-    "other_tools_used": null,
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to analyze existing and potential cycling trips to assist in prioritizing investments. Its interactive map was used to highlight current and potential future commuter cycling trips under different scenarios, such as the 'Go Dutch' scenario, providing numerical and graphical outputs like estimated cyclist numbers and desire lines. The tool used 2011 census data to forecast future cycle flows, considering factors like hilliness and deprivation, and was also used to calculate quantifiable benefits for the economic appraisal of proposed schemes. [3]",
-    "other_tools_developed": null,
-    "specific_evidence_of_impact_of_using_pct": "The PCT's 'Go Dutch' scenario analysis was used to generate a map (Figure 5) showing the top 15 desire lines, which identified key trip attractors such as Fengate, the Orton Centre, and Peterborough City Hospital. The tool's outputs on increased cycling trips were used to calculate the quantifiable benefits for the economic appraisal of cycling schemes and were a key factor in the prioritization of improvements. [3]",
-    "quotes_on_using_pct": null,
-    "local_authority_name": "Peterborough City Council (PCC)",
-    "combined_authority_name": "Cambridgeshire and Peterborough Combined Authority",
-    "length_of_cycle_network_proposed": "The document identifies 16 specific cycling routes for future development but does not provide a total length for the proposed network. [3]",
-    "total_cost_of_network": "The total Present Value of Costs (PVC) for all proposed schemes is £18,746,000, which includes £16,807,000 for 16 cycling schemes and £1,939,000 for 15 walking schemes. [3]"
   },
   {
     "pdf_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474912710.pdf",
@@ -563,7 +518,7 @@
   {
     "pdf_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/Witney_LCWIP.pdf",
     "report_name": "Witney Local Cycling and Walking Infrastructure Plan",
-    "date_published": "2022-09-01",
+    "date_published": "2023-03-01",
     "mentions_pct": true,
     "other_tools_used": [
       "Oxfordshire Local Transport and Connectivity Plan (LTCP)",
@@ -599,25 +554,21 @@
     "length_of_cycle_network_proposed": "A network of primary and secondary routes is proposed, but a total length is not specified in the document.",
     "total_cost_of_network": "Not specified in the document."
   },
-  {
-    "pdf_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/ChippingNortonLCWIP.pdf",
-    "report_name": "Chipping Norton Local Cycling and Walking Infrastructure Plan",
-    "date_published": "2022-09-01",
-    "mentions_pct": true,
-    "other_tools_used": [
-      "Oxfordshire Local Transport and Connectivity Plan (LTCP)",
-      "West Oxfordshire Local Plan 2031",
-      "Active Travel England's LCWIP guidance"
-    ],
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used as the primary evidence base to identify the primary and secondary cycle routes for Chipping Norton. It highlighted corridors with high latent demand for cycling, which formed the basis of the proposed network.",
-    "other_tools_developed": null,
-    "specific_evidence_of_impact": "The plan's proposed cycle network, including the designation of primary and secondary routes, was directly shaped by the analysis and data from the Propensity to Cycle Tool. The routes with the highest potential according to the PCT were prioritized.",
-    "quotes_on_using_pct": [],
-    "local_authority_name": "Oxfordshire County Council",
-    "combined_authority_name": null,
-    "length_of_cycle_network_proposed": "A network of primary and secondary routes is proposed, but a total length is not specified in the document.",
-    "total_cost_of_network": "Not specified in the document."
-  },
+ {
+  "pdf_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/ChippingNortonLCWIP.pdf",
+  "report_name": "Chipping Norton Local Cycling and Walking Infrastructure Plan",
+  "date_published": "2025-04-01",
+  "mentions_pct": true,
+  "other_tools_used":null,
+  "how_pct_was_used": "The Propensity to Cycle Tool (PCT), using 2011 Census data, was utilized alongside local knowledge to develop the cycle desire line network for Chipping Norton.[1] This network identifies the most direct routes between key trip generators and classifies them as primary, secondary, or local based on forecasted cycling flows.[1]",
+  "other_tools_developed": null,
+  "specific_evidence_of_impact": "The cycle desire line network, created using the PCT, formed the basis for the aspirational cycle network map.[1] The analysis of potential cycling demand and key corridors directly informed the selection of routes proposed for improvement in the plan.[1]",
+  "quotes_on_using_pct":null,
+  "local_authority_name": "Oxfordshire County Council",
+  "combined_authority_name": null,
+  "length_of_cycle_network_proposed": "Not specified in document",
+  "total_cost_of_network": "Not specified in document"
+},
   {
     "pdf_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/WoodstockAreaLCWIP.pdf",
     "report_name": "Woodstock Area Local Cycling and Walking Infrastructure Plan",
@@ -659,24 +610,19 @@
     "total_cost_of_network": "Approximately £40 million"
   },
   {
-    "pdf_url": "https://www.ipswich.gov.uk/sites/default/files/ipswich_lcwip_-_main_report_-_nov_22.pdf",
+    "pdf_url": "https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/FINAL%20Ipswich%20LCWIP%2007.07.25.pdf",
     "report_name": "Ipswich Local Cycling and Walking Infrastructure Plan",
-    "date_published": "2022-11-01",
+    "date_published": "2025-07-16",
     "mentions_pct": true,
-    "other_tools_used": [
-      "Ipswich Strategic Planning Area (ISPA) transport model",
-      "Census 2011 data",
-      "Active Travel England (ATE) guidance",
-      "Local Transport Plan (LTP)"
-    ],
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to identify areas with a high potential for cycling growth. This data, combined with local knowledge and other data sources, was used to define and map the primary and secondary cycle networks for Ipswich.",
+    "other_tools_used":null,
+    "how_pct_was_used": "The Propensity to Cycle Tool (PCT), using 2011 Census data, was used to demonstrate and visualize high-level cycling desire lines for journeys to work and school. It generated maps for various scenarios, including the baseline, a 'Go Dutch' scenario, and an e-bike scenario to inform the overall network strategy.",
     "other_tools_developed": null,
-    "specific_evidence_of_impact": "The PCT analysis directly informed the creation of the cycle network map, highlighting the key corridors that form the basis of the proposed primary and secondary routes.",
-    "quotes_on_using_pct": [],
+    "specific_evidence_of_impact": "The analysis from the PCT, particularly the desire line and scenario maps, serves as a key evidence base that, in conjunction with public consultation, will help develop and validate the prioritised programme of cycling infrastructure improvements.",
+    "quotes_on_using_pct":null,
     "local_authority_name": "Ipswich Borough Council",
     "combined_authority_name": null,
-    "length_of_cycle_network_proposed": "Approximately 100km (62 miles) of primary and secondary routes.",
-    "total_cost_of_network": "Approximately £60 million"
+    "length_of_cycle_network_proposed": "Not specified in document",
+    "total_cost_of_network": "Not specified in document"
   },
   {
     "pdf_url": "https://tunbridgewells.gov.uk/__data/assets/pdf_file/0007/385333/05_LCWIP-Phase-2_Final-Report.pdf",
@@ -827,8 +773,8 @@
   },
   {
     "pdf_url": "https://democracy.york.gov.uk/documents/s166024/Annex%20A%20LCWIP%20Draft%20Background%20Evaluation%20Report.pdf",
-    "report_name": "York Local Cycling and Walking Infrastructure Plan",
-    "date_published": "2022-02-22",
+    "report_name": "Draft York Local Cycling and Walking Infrastructure Plan",
+    "date_published": "2023-01-24",
     "mentions_pct": true,
     "other_tools_used": [
       "Department for Transport (DfT) LCWIP Technical Guidance",
@@ -1888,32 +1834,6 @@
     }
   },
   {
-    "report_name": "Draft Chipping Norton Local Cycling and Walking Infrastructure Plan (LCWIP)",
-    "pdf_url": "https://letstalk.oxfordshire.gov.uk/38763/widgets/114019/documents/77105",
-    "date_published": "March 2024",
-    "mentions_pct": true,
-    "other_tools_used": [
-      "DfT's Route Selection Tool (RST)",
-      "DfT's Walking Route Audit Tool (WRAT)",
-      "Bikeability",
-      "Modeshift STARS"
-    ],
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used in the early stages of the LCWIP development to help identify 'desire lines' for cycling. Specifically, the PCT's 'Government Target (Equality)' scenario was applied to model future cycle commuting flows and identify key corridors with the highest potential for cycling growth based on 2011 Census data. It helped in understanding existing and potential travel patterns by bicycle, informing the selection of routes for further assessment.",
-    "other_tools_developed": [],
-    "specific_evidence_of_impact_of_using_pct": "The PCT provided evidence on existing and future potential demand for cycling, which was a key factor in identifying the initial cycle 'desire lines' and prioritizing routes.",
-    "quotes_on_using_pct": [],
-    "local_authority_name": "Oxfordshire County Council (for Chipping Norton)",
-	"combined_authority_name": null,
-    "length_of_cycle_network_proposed": "The document identifies a core walking and cycling network. Specific aggregated lengths in kilometers for the entire proposed network are not provided. However, it mentions 5 'Key Cycle Corridors' and 9 'Key Walking Routes' within the Chipping Norton area.",
-    "total_cost_of_network": {
-      "min": "£10,000,000",
-      "max": "£18,000,000",
-      "currency": "GBP",
-      "price_year": 2023,
-      "notes": "Cost estimates are for construction only and do not include fees, land acquisition, or inflation. These are high-level estimates."
-    }
-  },
-  {
     "report_name": "Kent Cycling and Walking Infrastructure Plan (CWIP) Final Report",
     "pdf_url": "https://letstalk.kent.gov.uk/27288/widgets/77329/documents/72175",
     "date_published": "March 2021",
@@ -1938,32 +1858,5 @@
       "price_year": 2020,
       "notes": "Cost estimates are high-level construction estimates and do not include inflation, statutory undertakers' utilities, or land acquisition. They include preliminaries, traffic management, overheads, surveys, investigations, design, procurement, supervision, management, liaison, and risk."
     }
-  },
-  {
-    "report_name": "Draft Ipswich Local Cycling and Walking Infrastructure Plan (LCWIP)",
-    "pdf_url": "https://democracy.ipswich.gov.uk/documents/s42945/E-24-35%20Appendix%201%20-%20Draft%20Ipswich%20LCWIP.pdf",
-    "date_published": "July 2023",
-    "mentions_pct": true,
-    "other_tools_used": [
-      "Department for Transport (DfT) LCWIP Technical Guidance",
-      "DfT Cycling and Walking Investment Strategy (CWIS)",
-      "Suffolk County Council's Local Transport Plan (LTP)",
-      "Ipswich Borough Council's Local Plan",
-      "DfT's Route Selection Tool (RST)",
-      "DfT's Walking Route Audit Tool (WRAT)"
-    ],
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to provide an evidence-based understanding of existing and potential future demand for cycling. Specifically, the 'Government Target (Equality)' scenario from the PCT was used to forecast future cycle commuting flows based on the 2011 Census and School Census data. This helped to 'identify where the most benefit can be realised' and informed the selection of the primary cycling corridors.",
-    "other_tools_developed": [],
-    "specific_evidence_of_impact_of_using_pct": "The PCT helped in 'understanding existing and future travel patterns' and 'identifying where the most benefit can be realised' by increasing cycling and walking trips.",
-    "quotes_on_using_pct": [],
-    "local_authority_name": "Ipswich Borough Council",
-	"combined_authority_name": null,
-    "length_of_cycle_network_proposed": "The document identifies 10 Primary Cycle Network Corridors and 13 Key Walking Routes. A total combined length in kilometers for the entire proposed network is not explicitly stated.",
-    "total_cost_of_network": {
-      "min": "£32,000,000",
-      "max": "£75,000,000",
-      "currency": "GBP",
-      "price_year": 2023,
-      "notes": "Cost estimates are high-level and for construction only. They do not include land acquisition, inflation, or statutory undertakers' utilities."
-    }
-  }]
+  }
+]

@@ -1,0 +1,575 @@
+---
+jupyter: python3
+---
+
+#Finding correlation between the UK Transport Authorities Dataset and the LCWIPs dataset
+
+```{python}
+pip install pandas geopandas requests matplotlib --quiet
+```
+
+```{python}
+import pandas as pd
+import geopandas as gpd
+import numpy as np
+import matplotlib as plt
+```
+
+```{python}
+import requests
+import folium
+import json
+```
+
+##loading the LCWIP Json file first
+
+```{python}
+with open('LCWIP_database.json') as f: #reading the lcwip database
+  lcwip_data = json.load(f)
+  lcwip_df = pd.DataFrame(lcwip_data)
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+df_org = lcwip_df #saving the untouched dataset
+print(lcwip_df.columns.tolist()) #checking the columns
+```
+
+```{python}
+lcwip_pct = df_org #df just for the mentions of PCT
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+print(lcwip_pct['mentions_pct'].value_counts()) #checking the counts of reports that mention PCT
+print(lcwip_pct['mentions_pct'].value_counts(normalize=True).mul(100).round(1).astype(str) + '%') #into percentage
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+lcwip_pct.columns
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 489}
+lcwip_pct['local_authority_name'].value_counts()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 489}
+lcwip_pct['report_name'].value_counts()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+lcwip_pct['local_authority_name'].tolist()
+```
+
+##Loading the UK Transport Authorities boundary
+
+```{python}
+atf_df = gpd.read_file('https://raw.githubusercontent.com/itsleeds/uktransportauthorities/main/atf_joined_2025.geojson') #loading the geojson atf
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 0}
+atf_df.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 0}
+atf_df.count() #checking the counts to be consistent with the csv
+```
+
+```{python}
+atf_csv = pd.read_csv('https://raw.githubusercontent.com/itsleeds/uktransportauthorities/main/atf_table_aggregated.csv') #loading the csv file
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 0}
+atf_csv.head()
+```
+
+```{python}
+name1 = atf_csv['name']
+name2 = atf_df['name']
+if name1 is name2:
+    print("The datasets are in same order.") #making sure if there are same set of names or count of entries in both datasets.
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+atf_csv.info()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+atf_df.columns.tolist()
+```
+
+```{python}
+cols_df = ['atf24_25', 'atf23_24', 'atf22_23', 'atf21_22', 'atf20_21', 'atfe20_21']
+for col in cols_df:
+    num_col1 = pd.to_numeric(atf_df[col], downcast='integer', errors='coerce')
+    atf_df[col] = num_col1.astype('Int64')
+
+    num_col2 = pd.to_numeric(atf_csv[col], downcast='integer', errors='coerce')
+    atf_csv[col] = num_col2.astype('Int64')
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+atf_df.info()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 0}
+atf_csv.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 0}
+atf_df.head()
+```
+
+```{python}
+atf_subset = atf_csv[["name","name_atf"]] #creating a subset from csv to merge into the geodataframe
+```
+
+```{python}
+atf_df_new = atf_df.merge(atf_subset,how='left',on='name') #merging on the name column using left instead of inner key
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 0}
+atf_df_new.head()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+atf_df_new.info()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 0}
+atf_df_new.plot()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 0}
+atf_df.plot()
+```
+
+##Matching the LAs between the two final dfs
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+atf_df_new.crs
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 81}
+atf_df_new[atf_df_new['name_atf'].duplicated()]
+```
+
+```{python}
+atf_names_list = atf_df_new['name'].dropna().tolist()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+atf_names_list
+```
+
+```{python}
+ca_constituent_map = {
+    'West Yorkshire Combined Authority': ['Leeds', 'Wakefield', 'Calderdale', 'Kirklees', 'Bradford'],
+    'Liverpool City Region Combined Authority': ['Halton', 'Knowsley', 'Liverpool', 'Sefton', 'St Helens', 'Wirral'],
+    'Greater Manchester Combined Authority': ['Bolton', 'Bury', 'Manchester', 'Oldham', 'Rochdale', 'Salford', 'Stockport', 'Tameside', 'Trafford', 'Wigan'],
+    'West of England Combined Authority': ['Bath & North East Somerset', 'Bristol', 'South Gloucestershire'],
+    'North East Joint Transport Committee': ['Durham', 'Gateshead', 'South Tyneside', 'Sunderland', 'Northumberland', 'Newcastle upon Tyne', 'North Tyneside'],
+    'South Yorkshire Combined Authority': ['Barnsley', 'Doncaster', 'Rotherham', 'Sheffield'],
+    'Tees Valley Combined Authority': ['Darlington', 'Hartlepool', 'Middlesbrough', 'Redcar and Cleveland', 'Stockton-on-Tees'],
+    'Cambridgeshire and Peterborough Combined Authority': ['Cambridge', 'Peterborough'],
+    'West Midlands ITA': ['Birmingham', 'Coventry', 'Dudley', 'Sandwell', 'Solihull', 'Walsall', 'Wolverhampton'],
+    'East Midlands Combined Authority': ['Derby', 'Derbyshire', 'Nottingham', 'Nottinghamshire','Leicester','Leicestershire','Lincolnshire','Nottingham','Nottinghamshire','Rutland'],
+    'Royal Borough of Windsor and Maidenhead Unitary Authority':['The Royal Borough of Windsor & Maidenhead (RBWM)','Windsor and Maidenhead','Royal Borough of Windsor & Maidenhead'],
+    'Brighton & Hove Unitary Authority':['Brighton and Hove','Brighton & Hove City Council'],
+    'Isles of Scilly':['Council of the ISLES OF SCILLY'],
+    'Hampshire':['Hart District Council','Hampshire County Council'],
+    'Cumbria':["Cumbria County Council","South Lakeland District Council", "Kendal Town Council","Cumbria County Council, South Lakeland District Council, and Kendal Town Council [3]"]
+}
+```
+
+```{python}
+def find_authority_match(lcwip_name, atf_list, ca_map):
+    """
+    Matches an LCWIP authority name to an ATF authority name.
+
+    1. Checks for a direct match with a Combined Authority name.
+    2. If no direct match, checks if any constituent council name is present.
+    3. If still no match, checks for a direct match with other local authorities.
+    """
+    if not isinstance(lcwip_name, str):
+        return None
+
+    # Priority 1: Check for a direct match with a Combined Authority from the map keys
+    for ca_name in ca_map.keys():
+        if ca_name in lcwip_name:
+            return ca_name
+
+    # Priority 2: Check for constituent councils from the map values
+    for ca_name, councils in ca_map.items():
+        for council in councils:
+            if council in lcwip_name:
+                return ca_name # Return the parent Combined Authority name
+
+    # Priority 3: Check for a direct match with any other name in the ATF list
+    # Sort by length to match "North Yorkshire" before "York"
+    for atf_name in sorted(atf_list, key=len, reverse=True):
+        if atf_name in lcwip_name:
+            return atf_name
+
+    return None
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+#| collapsed: true
+#Apply the function to your DataFrame
+lcwip_pct['matched_authority_name'] = lcwip_pct['local_authority_name'].apply(
+    lambda x: find_authority_match(x, atf_names_list, ca_constituent_map)
+)
+
+#Display the results to verify
+print("Matching complete. Here are the unique matches found:")
+print(
+    lcwip_pct[['local_authority_name', 'matched_authority_name']]
+    .dropna()
+    .drop_duplicates()
+    .sort_values('matched_authority_name')
+)
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 423}
+lcwip_pct[['local_authority_name', 'matched_authority_name']]
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 458}
+lcwip_pct['matched_authority_name']
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 523}
+lcwip_pct[lcwip_pct['matched_authority_name'].isna()]['local_authority_name']
+```
+
+```{python}
+import re
+```
+
+```{python}
+def parse_cost_gbp(cost_value):
+    if cost_value is None or pd.isna(cost_value):
+        return np.nan
+
+    if isinstance(cost_value, dict):
+        cost_str = cost_value.get('min', '0')
+    else:
+        cost_str = str(cost_value)
+
+    cost_str = cost_str.lower().replace('£', '').replace(',', '').replace('approximately', '').strip()
+
+    if 'million' in cost_str:
+        num_part = re.findall(r'[\d\.]+', cost_str)
+        if num_part:
+            # Check if the found part is just a period.
+            if num_part[0] == '.': return np.nan
+            return float(num_part[0]) * 1_000_000
+
+    num_part = re.findall(r'[\d\.]+', cost_str)
+    if num_part:
+        # Check if the found part is just a period.
+        if num_part[0] == '.': return np.nan
+        return float(num_part[0])
+
+    return np.nan
+
+```
+
+```{python}
+def parse_length_km(length_value):
+    if length_value is None or pd.isna(length_value):
+        return np.nan
+
+    length_str = str(length_value).lower().replace('km', '').replace('circa', '').replace('links', '').replace('routes', '').strip()
+
+    numbers = re.findall(r'[\d\.]+', length_str)
+    if numbers:
+        # Check if the found part is just a period.
+        if numbers[0] == '.': return np.nan
+        return float(numbers[0])
+
+    return np.nan
+```
+
+```{python}
+# Make sure the numeric columns exist before aggregating
+if 'cost_gbp' not in lcwip_pct.columns:
+    # If this cell hasn't been run, let's create the numeric columns
+    lcwip_pct['cost_gbp'] = lcwip_pct['total_cost_of_network'].apply(parse_cost_gbp)
+    lcwip_pct['length_km'] = lcwip_pct['length_of_cycle_network_proposed'].apply(parse_length_km)
+    lcwip_pct['length_km'] = lcwip_pct['length_km'].fillna(
+        lcwip_pct['length_of_cycle_network_proposed'].apply(parse_length_km)
+    )
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+# Perform the aggregation
+lcwip_summary = lcwip_pct.groupby('matched_authority_name').agg(
+    lcwip_report_count=('report_name', 'size'),
+    pct_mentions=('mentions_pct', 'sum'),
+    total_funding_gbp=('cost_gbp', 'sum'),
+    total_length_km=('length_km', 'sum')
+).reset_index() # reset_index turns the grouped output back into a DataFrame
+
+# Calculate the PCT usage percentage
+lcwip_summary['pct_usage_percentage'] = (lcwip_summary['pct_mentions'] / lcwip_summary['lcwip_report_count'] * 100).round(1)
+
+print("LCWIP data has been aggregated by authority:")
+print(lcwip_summary.head())
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+#merge on the 'name_atf' column from the geojson and the 'matched_authority' from our summary.
+atf_spatial_analysis_df = atf_df_new.merge(
+    lcwip_summary,
+    left_on='name',
+    right_on='matched_authority_name',
+    how='left'
+)
+
+#Clean up the final DataFrame
+# The merge will create a duplicate 'matched_authority' column, so we'll drop it.
+atf_spatial_analysis_df.drop('matched_authority_name', axis=1, inplace=True)
+
+# Replace NaN values in the numeric columns with 0 for cleaner mapping and analysis.
+cols_to_fill = ['lcwip_report_count', 'pct_mentions', 'total_funding_gbp', 'total_length_km', 'pct_usage_percentage']
+for col in cols_to_fill:
+    atf_spatial_analysis_df[col] = atf_spatial_analysis_df[col].fillna(0)
+
+
+print("\nMerge complete. Your GeoDataFrame now contains the aggregated LCWIP analysis.")
+# Display the new columns for a few authorities to verify the merge
+print(atf_spatial_analysis_df[['name_atf', 'lcwip_report_count', 'pct_usage_percentage', 'total_funding_gbp']].head())
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+atf_spatial_analysis_df.shape
+```
+
+```{python}
+import folium
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 335}
+atf_spatial_analysis_df['atf24_25'].describe()
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/}
+atf_spatial_analysis_df.columns
+```
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 865}
+# Clean up data types for the popup
+atf_spatial_analysis_df['lcwip_report_count'] = atf_spatial_analysis_df['lcwip_report_count'].astype(int)
+atf_spatial_analysis_df['pct_mentions'] = atf_spatial_analysis_df['pct_mentions'].astype(int)
+atf_spatial_analysis_df['atf24_25'] = pd.to_numeric(atf_spatial_analysis_df['atf24_25'], errors='coerce').fillna(0).astype(int)
+
+
+#Creating the Interactive Map
+m = folium.Map(location=[52.9, -1.5], zoom_start=6, tiles='CartoDB positron')
+
+# Define a custom threshold scale for coloring
+threshold_scale = [0, 1, 2, 4, 6, 8, 11]
+
+folium.Choropleth(
+    geo_data=atf_spatial_analysis_df,
+    name='LCWIP Report Count',
+    data=atf_spatial_analysis_df,
+    columns=['name', 'lcwip_report_count'],
+    key_on='feature.properties.name',
+    fill_color='YlGnBu',
+    fill_opacity=0.7,
+    line_opacity=0.4,
+    legend_name='Number of LCWIP Reports in Database',
+    threshold_scale=threshold_scale,
+    nan_fill_color="white"
+).add_to(m)
+
+#Add the Custom Popups
+# Define the specific fields and aliases you want to display
+popup_fields = ['name', 'lcwip_report_count', 'pct_mentions', 'total_funding_gbp', 'atf24_25']
+aliases = [
+    'Authority:',
+    'LCWIP Report Count:',
+    'Reports Mentioning PCT:',
+    'Total LCWIP Funding:',
+    'ATF 24/25 Allocation:'
+]
+
+# Add a GeoJson layer with the custom popups
+popup = folium.features.GeoJsonPopup(fields=popup_fields, aliases=aliases, localize=True, labels=True)
+folium.GeoJson(
+    atf_spatial_analysis_df,
+    name="Authority Details",
+    style_function=lambda x: {'color': 'black', 'weight': 0.5, 'fillOpacity': 0.1},
+    tooltip=folium.features.GeoJsonTooltip(fields=['name']),
+    popup=popup
+).add_to(m)
+
+folium.LayerControl().add_to(m)
+
+#Display the Map
+m
+```
+
+Note:
+both draft LCWIP and LCWIP are included in JSON for Ipswich.(addressed, final report is out on 16th of July 2025.)<br><br>
+Some of the local councils of North Yorkshire Councils and Cumbria Councils are duplicated.<br>
+Cumbria- Kendal - Technical report + LCWIP, Carlisle - Technical report + LCWIP, Barrow-in-Furness - Technical report + LCWIP <br><br>
+These are not present in ATF but in LCWIP database:<br>
+Mid Sussex District Council, Ipswich Borough Council, Tunbridge Wells Borough Council, Chichester District Council, Three Rivers District Council, Blaby District Council, Hull City Council, St.Helens Borough Council, Broads Authority, Hart District Council, Adur & Worthing Councils, Crawley Borough Council, Horsham District Council. <br><br>
+
+```{python}
+#| colab: {base_uri: https://localhost:8080/, height: 865}
+# Clean up data types for the popup
+atf_spatial_analysis_df['lcwip_report_count'] = atf_spatial_analysis_df['lcwip_report_count'].astype(int)
+atf_spatial_analysis_df['pct_mentions'] = atf_spatial_analysis_df['pct_mentions'].astype(int)
+atf_spatial_analysis_df['atf24_25'] = pd.to_numeric(atf_spatial_analysis_df['atf24_25'], errors='coerce').fillna(0).astype(int)
+
+
+#Creating the Interactive Map
+m = folium.Map(location=[52.9, -1.5], zoom_start=6, tiles='CartoDB positron')
+
+# Define a custom threshold scale for coloring
+threshold_scale = [0, 1e+06, 2e+06, 3e+06, 4e+06, 5e+06, 6e+06]
+
+folium.Choropleth(
+    geo_data=atf_spatial_analysis_df,
+    name='No. of LCWIPS and ATF Allocations 2024-2025',
+    data=atf_spatial_analysis_df,
+    columns=['name', 'atf24_25'],
+    key_on='feature.properties.name',
+    fill_color='viridis',
+    fill_opacity=0.9,
+    line_opacity=0.4,
+    legend_name='ATF (2024-2025) Allocations',
+    threshold_scale=threshold_scale,
+    nan_fill_color="white"
+).add_to(m)
+
+#Add the Custom Popups
+# Define the specific fields and aliases you want to display
+popup_fields = ['name', 'lcwip_report_count', 'pct_mentions', 'total_funding_gbp', 'atf24_25']
+aliases = [
+    'Authority:',
+    'LCWIP Report Count:',
+    'Reports Mentioning PCT:',
+    'Total LCWIP Funding:',
+    'ATF 24/25 Allocation:'
+]
+
+# Add a GeoJson layer with the custom popups
+popup = folium.features.GeoJsonPopup(fields=popup_fields, aliases=aliases, localize=True, labels=True)
+folium.GeoJson(
+    atf_spatial_analysis_df,
+    name="Authority Details",
+    style_function=lambda x: {'color': 'black', 'weight': 0.5, 'fillOpacity': 0.1},
+    tooltip=folium.features.GeoJsonTooltip(fields=['name']),
+    popup=popup
+).add_to(m)
+
+folium.LayerControl().add_to(m)
+
+#Display the Map
+m
+```
+
+Regional Dashboard
+
+```{python}
+pip install seaborn --quiet
+```
+
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+```
+
+```{python}
+lcwip_pct.columns
+```
+
+```{python}
+atf_spatial_analysis_df.columns
+```
+
+```{python}
+
+# Convert funding back to a numeric type for plotting, handling 'Not Specified'
+atf_spatial_analysis_df['total_funding_gbp_mil'] = (atf_spatial_analysis_df['total_funding_gbp']/1000000).astype(float)
+
+# Convert length back to a numeric type
+atf_spatial_analysis_df['total_length_km_numeric'] = atf_spatial_analysis_df['total_length_km'].astype(float)
+
+sns.set_theme(style="whitegrid")
+fig, axes = plt.subplots(3, 1, figsize=(12, 20))
+fig.suptitle('LCWIP Analysis Dashboard for Local Authorities', fontsize=20, weight='bold')
+
+
+# Plot 1: Total Planned Investment
+sns.barplot(ax=axes[0], x=atf_spatial_analysis_df.name, y='total_funding_gbp_mil', data=atf_spatial_analysis_df, palette='viridis')
+axes[0].set_title('Total Planned LCWIP Investment', fontsize=16)
+axes[0].set_xlabel('Combined Authority')
+axes[0].set_ylabel('Funding (GBP in Millions)')
+# Format y-axis labels to be more readable (in millions)
+axes[0].ticklabel_format(style='plain', axis='x')
+axes[0].xaxis.set_major_formatter(lambda x, pos: f'£{x/1e6:.1f}M')
+
+
+# Plot 2: Total Proposed Network Length
+sns.barplot(ax=axes[1], y=atf_spatial_analysis_df.index, x='total_length_km_numeric', data=atf_spatial_analysis_df, palette='plasma')
+axes[1].set_title('Total Proposed Cycle Network Length', fontsize=16)
+axes[1].set_xlabel('Length (km)')
+axes[1].set_ylabel('')
+
+
+# Plot 3: PCT Usage Rate
+# Convert percentage string back to float for plotting
+atf_spatial_analysis_df['pct_usage_float'] = atf_spatial_analysis_df['pct_usage_percentage'].str.replace('%', '').astype(float)
+sns.barplot(ax=axes[2], y=atf_spatial_analysis_df.index, x='pct_usage_float', data=atf_spatial_analysis_df, palette='magma')
+axes[2].set_title('Percentage of LCWIPs Mentioning PCT', fontsize=16)
+axes[2].set_xlabel('Usage Rate (%)')
+axes[2].set_ylabel('')
+axes[2].set_xlim(0, 100) # Set the x-axis to go from 0 to 100%
+
+plt.tight_layout(rect=[0, 0.03, 1, 0.96]) # Adjust layout to make room for the suptitle
+plt.show()
+```
+
+Heatmap
+
+```{python}
+from folium.plugins import HeatMap
+```
+
+
