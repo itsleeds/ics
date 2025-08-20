@@ -93,10 +93,10 @@ if __name__ == "__main__":
     
     task = f"{basic_task}\n\n{extra_instructions}"
     
-    # Load the first 3 URLs from the database JSON file
+    # Load all URLs from the database JSON file
     with open('LCWIP_database_v1.json', 'r') as dbfile:
         db_data = json.load(dbfile)
-    url_list = [entry['pdf_url'] for entry in db_data[:3]]
+    url_list = [entry['pdf_url'] for entry in db_data]
     model = 'gpt-4o'
 
     results = []
