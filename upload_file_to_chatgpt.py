@@ -93,9 +93,13 @@ if __name__ == "__main__":
     
     task = f"{basic_task}\n\n{extra_instructions}"
     
-    url_list = ["https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf"]
+    # Load the first 3 URLs from the database JSON file
+    with open('LCWIP_database_v1.json', 'r') as dbfile:
+        db_data = json.load(dbfile)
+    url_list = [entry['pdf_url'] for entry in db_data[:3]]
     model = 'gpt-4o'
-    
+
+    results = []
     for url in url_list:
         try:
             print(f"Processing URL: {url}")
@@ -106,9 +110,15 @@ if __name__ == "__main__":
                 # The response might be wrapped in ```json ... ```, so we need to extract it.
                 if response_text.strip().startswith("```json"):
                     response_text = response_text.strip()[7:-3].strip()
-                response = json.loads(response_text) 
+                response = json.loads(response_text)
                 print(json.dumps(response, indent=2))
+                results.append(response)
             except json.JSONDecodeError:
                 print("Failed to decode JSON from response.")
         except Exception as e:
             print(f"An error occurred: {e}")
+
+    # Output all results to LCWIP_database_v2.json
+    with open('LCWIP_database_v2.json', 'w') as outfile:
+        json.dump(results, outfile, indent=2)
+    print("Results written to LCWIP_database_v2.json")

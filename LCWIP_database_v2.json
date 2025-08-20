@@ -1,0 +1,71 @@
+[
+  {
+    "pdf_url": "document.pdf",
+    "report_name": "Local Cycling and Walking Infrastructure Plan (LCWIP)",
+    "date_published": "May 2019",
+    "mentions_pct": true,
+    "other_tools_used": [
+      "Walking Networks",
+      "Route Selection Tool (RST)",
+      "Walking Route Audit Tool (WRAT)",
+      "Walking Audit Methodology for Liverpool City Region",
+      "Active Mode Appraisal Tool (AMAT)"
+    ],
+    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to show the opportunity for change by highlighting areas with potential for increased cycling rates based on current low cycling levels but favorable conditions like flat terrain.",
+    "other_tools_developed": "A Walkability Tool was developed by University College London and Living Streets to identify high demand walking locations.",
+    "specific_evidence_of_impact": "The PCT analysis showed potential for higher levels of cycling in the region, such as a specific area in Liverpool where commuting by bicycle was as high as 7%. The PCT data supported the strategic identification of areas with potential for growth in cycling activity.",
+    "quotes_on_using_pct": [],
+    "local_authority_name": "Liverpool City Region",
+    "combined_authority_name": "Liverpool City Region Combined Authority",
+    "length_of_cycle_network_proposed": "up to 600km",
+    "total_cost_of_network": "in excess of \u00a3250m",
+    "length_of_network_km": 600,
+    "total_cost_pounds": 250000000,
+    "routes": 31
+  },
+  {
+    "pdf_url": "document.pdf",
+    "report_name": "Ripon and Catterick and Local Cycling and Walking Infrastructure Plans",
+    "date_published": "2025-01-24",
+    "mentions_pct": true,
+    "other_tools_used": [
+      "Route Selection Tool (RST)",
+      "Early Assessment and Sifting Tool (EAST)",
+      "Cycling Infrastructure Design (Local Transport Note 1/20)"
+    ],
+    "how_pct_was_used": "To estimate and validate existing and potential cycling demand and flows.",
+    "other_tools_developed": null,
+    "specific_evidence_of_impact": null,
+    "quotes_on_using_pct": null,
+    "local_authority_name": "North Yorkshire Council",
+    "combined_authority_name": null,
+    "length_of_cycle_network_proposed": null,
+    "total_cost_of_network": null,
+    "length_of_network_km": null,
+    "total_cost_pounds": null,
+    "routes": 9
+  },
+  {
+    "pdf_url": "document.pdf",
+    "report_name": "Ripon and Catterick and Local Cycling and Walking Infrastructure Plans",
+    "date_published": "2025-01-24",
+    "mentions_pct": true,
+    "other_tools_used": [
+      "Widenmypath.com",
+      "Strava",
+      "Propensity to Cycle Tool (PCT)",
+      "Datashine"
+    ],
+    "how_pct_was_used": "The PCT was used to model the additional increase in cycling that would be achieved through the widespread uptake of electric cycles and to estimate cycle flows in the Ripon and Catterick areas.",
+    "other_tools_developed": false,
+    "specific_evidence_of_impact": false,
+    "quotes_on_using_pct": [],
+    "local_authority_name": "North Yorkshire Council",
+    "combined_authority_name": null,
+    "length_of_cycle_network_proposed": null,
+    "total_cost_of_network": null,
+    "length_of_network_km": null,
+    "total_cost_pounds": 69962,
+    "routes": null
+  }
+]
