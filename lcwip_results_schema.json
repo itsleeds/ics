@@ -1,0 +1,56 @@
+{
+  "schema": [
+    {
+      "name": "pdf_url",
+      "prompt": "What is the URL of the PDF document?"
+    },
+    {
+      "name": "date_published",
+      "prompt": "What is the publication date of the report?"
+    },
+    {
+      "name": "mentions_pct",
+      "prompt": "Does the report mention the Propensity to Cycle Tool (PCT)?"
+    },
+    {
+      "name": "report_name",
+      "prompt": "What is the name of the report?"
+    },
+    {
+      "name": "other_tools_used",
+      "prompt": "What other tools were used in the report?"
+    },
+    {
+      "name": "how_pct_was_used",
+      "prompt": "How was the Propensity to Cycle Tool (PCT) used in the report?"
+    },
+    {
+      "name": "other_tools_developed",
+      "prompt": "Were any other tools developed as part of the report?"
+    },
+    {
+      "name": "specific_evidence_of_impact_of_using_pct",
+      "prompt": "Is there any specific evidence of the impact of using the Propensity to Cycle Tool (PCT)?"
+    },
+    {
+      "name": "quotes_on_using_pct",
+      "prompt": "Are there any quotes on using the Propensity to Cycle Tool (PCT)?"
+    },
+    {
+      "name": "local_authority_name",
+      "prompt": "What is the name of the local authority?"
+    },
+    {
+      "name": "combined_authority_name",
+      "prompt": "What is the name of the combined authority?"
+    },
+    {
+      "name": "length_of_cycle_network_proposed",
+      "prompt": "What is the length of the cycle network proposed?"
+    },
+    {
+      "name": "total_cost_of_network",
+      "prompt": "What is the total cost of the network?"
+    }
+  ]
+}
