@@ -43,14 +43,18 @@ Explore international impacts
 
 ## Week 4: Data Analysis and Follow-up (20 hours) 
 
-Send out the online survey to the stakeholder database to gather quantitative data on tool usage, level of satisfaction, impact on planning decisions, and feature requests.
+<!-- Send out the online survey to the stakeholder database to gather quantitative data on tool usage, level of satisfaction, impact on planning decisions, and feature requests. -->
+
+Analysis of LCWIPs and funding data.
 
 ## Week 5: Additional Analysis and Dissemination (20 hours) 
 
-Analysis (15 hours): Analyse the results from the online survey and the interview transcripts. Synthesise the findings to identify key themes, impact case studies, and user testimonials. 
+Analysis (15 hours): Analyse the results from the LCWIP text analysis. Synthesise the findings to identify key themes, impact case studies, and authorities who have made the most extensive use of the tools.
 
-Follow-up Interviews (5 hours): Conduct follow-up interviews via video call with any stakeholders who were unavailable during the Scotland trip. 
+<!-- Follow-up Interviews (5 hours): Conduct follow-up interviews via video call with any stakeholders who were unavailable during the Scotland trip. -->
 
-Final Report: Compile all evidence into a comprehensive impact report. This report will include an analysis of the NPT’s reach, case studies of its application, and an assessment of its influence on transport policy and infrastructure decisions. 
+- Test automated workflow to extract information from documents using API calls to LLMs? (Chris)
+
+Final Report: Compile all evidence into a comprehensive impact report. This report will include an analysis of the PCT's reach, case studies of its application, and an assessment of its influence on transport policy and infrastructure decisions.
 
 Optional: contributing to a paper about the tools.
