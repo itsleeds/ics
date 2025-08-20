@@ -524,7 +524,7 @@ atf_spatial_analysis_df.columns
 ```
 
 ```{python}
-
+#| eval: false
 # Convert funding back to a numeric type for plotting, handling 'Not Specified'
 atf_spatial_analysis_df['total_funding_gbp_mil'] = (atf_spatial_analysis_df['total_funding_gbp']/1000000).astype(float)
 
