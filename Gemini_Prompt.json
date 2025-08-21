@@ -1,0 +1,6 @@
+{
+  "schema": [
+	{"attempt" : "first", "prompt" : "Create a .json file with the following for the documents: PDF url: https://letstalk.oxfordshire.gov.uk/40548/widgets/120199/documents/84124 , date published, mentions PCT or Propensity Cycling Tool, other tools used, how pct was used, other tools developed, specific evidence of impact of using pct, quotes on using pct, local authority name, length of cycle network proposed, total cost of network"},
+	{"attempt" : "second", "prompt" : "Could you please add two attributes in this LCWIP database? 1) 'length_of_network_km' from 'length_of_cycle_network_proposed'. Just extract the km value (numbers only). If it does not mention any value, just put null value. 2) 'total_cost_pounds' from 'total_cost_of_network'. Same as above, just extract the most relevant funding values in pounds(numbers only). If it does not mention any value, just put null value."}
+  ]
+}
