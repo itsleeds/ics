@@ -11,9 +11,9 @@ format:
 bibliography: references.bib
 ---
 
-# Summary of the impact
+# Summary of Impact
 
-\[Content to be added\]
+The Propensity to Cycle Tool (PCT) has become a foundational piece of evidence for active travel planning across the United Kingdom. Analysis of 94 of collected Local Cycling and Walking Infrastructure Plans (LCWIPs) reveals that 95.7% of local and regional authorities now use the PCT to inform their investment decisions. The tool is consistently used for strategic network planning, identifying desire lines, and forecasting future cycling demand. This widespread adoption demonstrates the PCT's significant impact on shaping transport policy and directing investments into cycling and walking infrastructure. 
 
 # Underpinning research
 
@@ -27,31 +27,41 @@ To address the limitation that the methods omitted cycling as part of multi-moda
 ::: {#refs}
 :::
 
+# Details of Engagement
+
+Engagement for this project has involved from desk-based research of the LCWIPs to stakeholder interaction to build a comprehensive survey material for understanding of the PCT's real-world application. Although the initial plan included the distribution of the finalised questionnaire to the stakeholders, the work scope was shifted more towards the continuation of the further detailed analysis over the database and automation of the data collection, which are expected to be applied to other tools in the future when possible. Key activities included:
+
+•	Stakeholder Identification and Scoping: A typology of key stakeholders was created, covering transport planners, local authority representatives, and academic researchers. This was supplemented by an initial analysis of previous surveys to understand existing usage patterns and inform outreach.
+
+•	Survey Development and Feedback: A draft online survey questionnaire was developed to capture quantitative and qualitative data on tool usage. This draft was shared with key stakeholders, and their feedback was incorporated to refine the questions, ensuring they were relevant to practitioners.
+
+•	Systematic Review of Planning Documents: A database of 105 of initially collected LCWIPs was compiled and systematically analysed. This analysis formed the primary evidence base for the tool's impact, with the intention to act as an additional efficient tool to user surveys to documented application.
+
+•	Data Integration and Analysis: The final clean database of 94 LCWIPs was then merged with geographic boundary data and Active Travel Fund (ATF) allocation data. This created an integrated dataset allowing for spatial and financial analysis of the PCT's influence.
+
+
 # Details of the impact
 
-\[Content to be added\]
-Text para
+The analysis of the documents provides clear, quantifiable evidence of the PCT's significant impact on transport policy and infrastructure investment in the UK. 
+The most significant finding is that 95.7% (90 out of 94) of the analysed LCWIPs explicitly mention using the Propensity to Cycle Tool as part of their walking and cycling infrastructure planning [1]. This demonstrates that the PCT has become one of the integral parts of the official government methodology for planning active travel networks. Reports from authorities such as the Liverpool City Region Combined Authority [2] and Oxfordshire County Council for Kidlington [3] show the PCT is used to identify "desire lines," model future scenarios (e.g., 'Go Dutch'), and at last justify investment decisions.
 
-```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
-#| echo: false
+In addition, the evidence shows the PCT is not just mentioned but actively used to shape the design of cycle networks. Reports consistently cite the tool's role in identifying key corridors, for an instance, in the Portsmouth LCWIP Background Report, the PCT's 'Government Target' scenario was used to identify the highest forecast future cycle commuting flows within the plan area, directly informing the selection of primary cycle ways [4]. In the Cumbria County Council reports for Carlisle [5] and Workington [6], the PCT's 'Go Dutch' scenario outputs were used with the purpose to validate the desire lines that form the basis of their proposed networks.
 
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 4 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
+Finally, another significant evidence of impact can be found in the Durham County Council LCWIP report for Shildon, where PCT outputs were integrated directly into its prioritisation matrix, meaning the tool had a direct and quantifiable impact on which routes were selected for future investment [7].
 
 
 # Sources to corroborate the impact
 
-\[Content to be added\]
+[1] https://github.com/itsleeds/ics
+
+[2] https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf
+
+[3] https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf
+
+[4] https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf
+
+[5] https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technical_report.pdf
+
+[6] https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4481911413.pdf
+
+[7] https://democracy.durham.gov.uk/documents/s174868/Item%207%20Shildon%20LCWIP%20Final%20inc%20Appendices_opt.pdf
