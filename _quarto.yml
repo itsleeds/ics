@@ -6,6 +6,7 @@ project:
     - report-pct.qmd
     - plan.qmd
     - ideas.qmd
+    - lcwips.qmd
 
 website:
   title: "Transforming Strategic Active Travel Network Planning Internationally"
@@ -21,3 +22,5 @@ website:
         href: plan.qmd
       - text: "Ideas"
         href: ideas.qmd
+      - text: "LCWIP funding"
+        href: lcwips.qmd
