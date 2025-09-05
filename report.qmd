@@ -1,0 +1,71 @@
+---
+title: "Transforming Strategic Active Travel Network Planning Internationally"
+subtitle: "Impact Case Study Report for REF 2029"
+# author: "Robin Lovelace and Team"
+date: last-modified
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+bibliography: references.bib
+---
+
+# Summary of Impact
+
+The development of open-source tools and methodologies for strategic active travel network planning has changed transport planning practices internationally. This report summarises the impact of a suite of tools that build on the foundational research of the Propensity to Cycle Tool (PCT). These tools are now used by local and regional authorities worldwide to inform investment decisions in cycling and walking infrastructure.
+
+# Underpinning research
+
+The research underpinning these tools addresses several limitations of earlier models. Key developments include:
+
+- **The Propensity to Cycle Tool (PCT):** The original tool for cycle network planning in England and Wales. See the [PCT impact report](report-pct.qmd) for more details.
+- **CRUSE (Cycle Route Uptake & Scenario Estimation):** Developed to estimate cycling potential for all trip purposes, now in use across the Republic of Ireland.
+- **biclaR:** A cycle network planning tool for the Lisbon Metropolitan Area, which includes methods for calculating cycling potential to public transport links.
+- **The Norwegian Propensity to Cycle Tool:** An adaptation of the PCT methodology for Trondheim and Nord-Jæren.
+- **Network Planning Tool for Scotland:** A web-based application to support strategic cycle network planning in Scotland.
+
+# References to the research
+
+::: {#refs}
+:::
+
+# Details of Engagement
+
+Engagement for this project has involved desk-based research and stakeholder interaction to understand the real-world application of these tools. Key activities included:
+
+-   Stakeholder Identification and Scoping
+-   Survey Development and Feedback
+-   Systematic Review of Planning Documents
+-   Data Integration and Analysis
+
+# Details of the impact
+
+The analysis of planning documents and other sources provides clear, quantifiable evidence of the significant impact of these tools on transport policy and infrastructure investment.
+
+### The Propensity to Cycle Tool (PCT)
+
+The PCT is a foundational tool for active travel planning in the United Kingdom. It is used by the vast majority of local authorities to inform investment decisions, identify strategic desire lines for new routes, and forecast future cycling demand. See the [PCT impact report](report-pct.qmd) for more details.
+
+### CRUSE (Cycle Route Uptake & Scenario Estimation)
+
+The [CRUSE tool](https://www.cruse.bike/) for Ireland extends the PCT methodology by incorporating all trip purposes, not just commuting and school travel. This provides a more comprehensive estimate of cycling potential. As described in the official documentation, "The tool can be used to visualise and assess current patterns of cycling and how these could change in future, under scenarios of increased cycling uptake."
+
+### biclaR
+
+The [biclaR tool](https://biclar.tmlmobilidade.pt/index/) for the Lisbon Metropolitan Area is another evolution of the PCT's methods. It is an online tool for the "design and assessment of different scenarios of the cycling network models in the Lisbon metropolitan area (LMA)" and notably includes the calculation of cycling potential to public transport links, addressing a key limitation of earlier models.
+
+### The Norwegian Propensity to Cycle Tool
+
+Building on the PCT, [the Norwegian adaptation](https://norceresearch.brage.unit.no/norceresearch-xmlui/handle/11250/2994058) models cycling potential in Trondheim and Nord-Jæren. This demonstrates the international applicability and adaptability of the underlying research and methods.
+
+### Network Planning Tool for Scotland
+
+The [Network Planning Tool for Scotland](https://www.npt.scot/#/) is a "web-based application designed to support strategic cycle network planning and investment decisions". This tool is primarily for use by Scottish local authorities and shows the continued development and specialization of the original PCT concepts for different national contexts.
+
+# Sources to corroborate the impact
+
+- [CRUSE: Cycle Route Uptake and Scenario Estimation](https://www.cruse.bike/)
+- [biclaR: Strategic Cycle Network Modelling for Lisbon Metropolitan Area](https://u-shift.github.io/biclar/)
+- [The Norwegian Propensity to Cycle Tool](https://norceresearch.brage.unit.no/norceresearch-xmlui/handle/11250/2994058)
+- [Network Planning Tool for Scotland](https://www.npt.scot/)

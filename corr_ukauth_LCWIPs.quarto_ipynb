@@ -1,0 +1,1087 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "jupyter: python3\n",
+        "formate: html\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "#Finding correlation between the UK Transport Authorities Dataset and the LCWIPs dataset\n"
+      ],
+      "id": "1b07213b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "pip install pandas geopandas requests matplotlib --quiet"
+      ],
+      "id": "13eabf6b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import pandas as pd\n",
+        "import geopandas as gpd\n",
+        "import numpy as np\n",
+        "import matplotlib as plt"
+      ],
+      "id": "c3c509aa",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import requests\n",
+        "import folium\n",
+        "import json"
+      ],
+      "id": "a566c4a4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "##loading the LCWIP Json file first\n"
+      ],
+      "id": "a4f35ca5"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "with open('LCWIP_database.json') as f: #reading the lcwip database\n",
+        "  lcwip_data = json.load(f)\n",
+        "  lcwip_df = pd.DataFrame(lcwip_data)"
+      ],
+      "id": "34b3a362",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "df_org = lcwip_df #saving the untouched dataset\n",
+        "print(lcwip_df.columns.tolist()) #checking the columns"
+      ],
+      "id": "493a229a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "lcwip_pct = df_org #df just for the mentions of PCT"
+      ],
+      "id": "cd2b34b6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "print(lcwip_pct['mentions_pct'].value_counts()) #checking the counts of reports that mention PCT\n",
+        "print(lcwip_pct['mentions_pct'].value_counts(normalize=True).mul(100).round(1).astype(str) + '%') #into percentage"
+      ],
+      "id": "a6cfaf08",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "lcwip_pct.columns"
+      ],
+      "id": "a240e448",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 489
+        }
+      },
+      "source": [
+        "lcwip_pct['local_authority_name'].value_counts()"
+      ],
+      "id": "f6d21255",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 489
+        }
+      },
+      "source": [
+        "lcwip_pct['report_name'].value_counts()"
+      ],
+      "id": "c0e16bfa",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "lcwip_pct['local_authority_name'].tolist()"
+      ],
+      "id": "0f79c702",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "##Loading the UK Transport Authorities boundary\n"
+      ],
+      "id": "be4beeb3"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "atf_df = gpd.read_file('https://raw.githubusercontent.com/itsleeds/uktransportauthorities/main/atf_joined_2025.geojson') #loading the geojson atf"
+      ],
+      "id": "f57471f8",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        }
+      },
+      "source": [
+        "atf_df.head()"
+      ],
+      "id": "121ed7dc",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        }
+      },
+      "source": [
+        "atf_df.count() #checking the counts to be consistent with the csv"
+      ],
+      "id": "cde94414",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "atf_csv = pd.read_csv('https://raw.githubusercontent.com/itsleeds/uktransportauthorities/main/atf_table_aggregated.csv') #loading the csv file"
+      ],
+      "id": "ae398cec",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        }
+      },
+      "source": [
+        "atf_csv.head()"
+      ],
+      "id": "c01ee9c8",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "name1 = atf_csv['name']\n",
+        "name2 = atf_df['name']\n",
+        "if name1 is name2:\n",
+        "    print(\"The datasets are in same order.\") #making sure if there are same set of names or count of entries in both datasets."
+      ],
+      "id": "07cbbd4a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "atf_csv.info()"
+      ],
+      "id": "fcb40349",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "atf_df.columns.tolist()"
+      ],
+      "id": "81d64cef",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "cols_df = ['atf24_25', 'atf23_24', 'atf22_23', 'atf21_22', 'atf20_21', 'atfe20_21']\n",
+        "for col in cols_df:\n",
+        "    num_col1 = pd.to_numeric(atf_df[col], downcast='integer', errors='coerce')\n",
+        "    atf_df[col] = num_col1.astype('Int64')\n",
+        "\n",
+        "    num_col2 = pd.to_numeric(atf_csv[col], downcast='integer', errors='coerce')\n",
+        "    atf_csv[col] = num_col2.astype('Int64')"
+      ],
+      "id": "116e8a05",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "atf_df.info()"
+      ],
+      "id": "0b998804",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        }
+      },
+      "source": [
+        "atf_csv.head()"
+      ],
+      "id": "ad638021",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        }
+      },
+      "source": [
+        "atf_df.head()"
+      ],
+      "id": "a68aee3a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "atf_subset = atf_csv[[\"name\",\"name_atf\"]] #creating a subset from csv to merge into the geodataframe"
+      ],
+      "id": "dfbbecba",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "atf_df_new = atf_df.merge(atf_subset,how='left',on='name') #merging on the name column using left instead of inner key"
+      ],
+      "id": "ec6e94e7",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        }
+      },
+      "source": [
+        "atf_df_new.head()"
+      ],
+      "id": "b9a9bd8a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "atf_df_new.info()"
+      ],
+      "id": "57270479",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        }
+      },
+      "source": [
+        "atf_df_new.plot()"
+      ],
+      "id": "cb6f15a2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        }
+      },
+      "source": [
+        "atf_df.plot()"
+      ],
+      "id": "64e3f42b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "##Matching the LAs between the two final dfs\n"
+      ],
+      "id": "f7bbbef0"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "atf_df_new.crs"
+      ],
+      "id": "ec570842",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 81
+        }
+      },
+      "source": [
+        "atf_df_new[atf_df_new['name_atf'].duplicated()]"
+      ],
+      "id": "53a996e7",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "atf_names_list = atf_df_new['name'].dropna().tolist()"
+      ],
+      "id": "edc09fd4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "atf_names_list"
+      ],
+      "id": "d608babf",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "ca_constituent_map = {\n",
+        "    'West Yorkshire Combined Authority': ['Leeds', 'Wakefield', 'Calderdale', 'Kirklees', 'Bradford'],\n",
+        "    'Liverpool City Region Combined Authority': ['Halton', 'Knowsley', 'Liverpool', 'Sefton', 'St Helens', 'Wirral'],\n",
+        "    'Greater Manchester Combined Authority': ['Bolton', 'Bury', 'Manchester', 'Oldham', 'Rochdale', 'Salford', 'Stockport', 'Tameside', 'Trafford', 'Wigan'],\n",
+        "    'West of England Combined Authority': ['Bath & North East Somerset', 'Bristol', 'South Gloucestershire'],\n",
+        "    'North East Joint Transport Committee': ['Durham', 'Gateshead', 'South Tyneside', 'Sunderland', 'Northumberland', 'Newcastle upon Tyne', 'North Tyneside'],\n",
+        "    'South Yorkshire Combined Authority': ['Barnsley', 'Doncaster', 'Rotherham', 'Sheffield'],\n",
+        "    'Tees Valley Combined Authority': ['Darlington', 'Hartlepool', 'Middlesbrough', 'Redcar and Cleveland', 'Stockton-on-Tees'],\n",
+        "    'Cambridgeshire and Peterborough Combined Authority': ['Cambridge', 'Peterborough'],\n",
+        "    'West Midlands ITA': ['Birmingham', 'Coventry', 'Dudley', 'Sandwell', 'Solihull', 'Walsall', 'Wolverhampton'],\n",
+        "    'East Midlands Combined Authority': ['Derby', 'Derbyshire', 'Nottingham', 'Nottinghamshire','Leicester','Leicestershire','Lincolnshire','Nottingham','Nottinghamshire','Rutland'],\n",
+        "    'Royal Borough of Windsor and Maidenhead Unitary Authority':['The Royal Borough of Windsor & Maidenhead (RBWM)','Windsor and Maidenhead','Royal Borough of Windsor & Maidenhead'],\n",
+        "    'Brighton & Hove Unitary Authority':['Brighton and Hove','Brighton & Hove City Council'],\n",
+        "    'Isles of Scilly':['Council of the ISLES OF SCILLY'],\n",
+        "    'Hampshire':['Hart District Council','Hampshire County Council'],\n",
+        "    'Cumbria':[\"Cumbria County Council\",\"South Lakeland District Council\", \"Kendal Town Council\",\"Cumbria County Council, South Lakeland District Council, and Kendal Town Council [3]\"]\n",
+        "}"
+      ],
+      "id": "6c4192b6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "def find_authority_match(lcwip_name, atf_list, ca_map):\n",
+        "    \"\"\"\n",
+        "    Matches an LCWIP authority name to an ATF authority name.\n",
+        "\n",
+        "    1. Checks for a direct match with a Combined Authority name.\n",
+        "    2. If no direct match, checks if any constituent council name is present.\n",
+        "    3. If still no match, checks for a direct match with other local authorities.\n",
+        "    \"\"\"\n",
+        "    if not isinstance(lcwip_name, str):\n",
+        "        return None\n",
+        "\n",
+        "    # Priority 1: Check for a direct match with a Combined Authority from the map keys\n",
+        "    for ca_name in ca_map.keys():\n",
+        "        if ca_name in lcwip_name:\n",
+        "            return ca_name\n",
+        "\n",
+        "    # Priority 2: Check for constituent councils from the map values\n",
+        "    for ca_name, councils in ca_map.items():\n",
+        "        for council in councils:\n",
+        "            if council in lcwip_name:\n",
+        "                return ca_name # Return the parent Combined Authority name\n",
+        "\n",
+        "    # Priority 3: Check for a direct match with any other name in the ATF list\n",
+        "    # Sort by length to match \"North Yorkshire\" before \"York\"\n",
+        "    for atf_name in sorted(atf_list, key=len, reverse=True):\n",
+        "        if atf_name in lcwip_name:\n",
+        "            return atf_name\n",
+        "\n",
+        "    return None"
+      ],
+      "id": "e2f3ec55",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true
+      },
+      "source": [
+        "#Apply the function to your DataFrame\n",
+        "lcwip_pct['matched_authority_name'] = lcwip_pct['local_authority_name'].apply(\n",
+        "    lambda x: find_authority_match(x, atf_names_list, ca_constituent_map)\n",
+        ")\n",
+        "\n",
+        "#Display the results to verify\n",
+        "print(\"Matching complete. Here are the unique matches found:\")\n",
+        "print(\n",
+        "    lcwip_pct[['local_authority_name', 'matched_authority_name']]\n",
+        "    .dropna()\n",
+        "    .drop_duplicates()\n",
+        "    .sort_values('matched_authority_name')\n",
+        ")"
+      ],
+      "id": "587f9fae",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 423
+        }
+      },
+      "source": [
+        "lcwip_pct[['local_authority_name', 'matched_authority_name']]"
+      ],
+      "id": "7c2a2a6f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 458
+        }
+      },
+      "source": [
+        "lcwip_pct['matched_authority_name']"
+      ],
+      "id": "648beefd",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 523
+        }
+      },
+      "source": [
+        "lcwip_pct[lcwip_pct['matched_authority_name'].isna()]['local_authority_name']"
+      ],
+      "id": "676263a5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import re"
+      ],
+      "id": "06ba48d3",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "def parse_cost_gbp(cost_value):\n",
+        "    if cost_value is None or pd.isna(cost_value):\n",
+        "        return np.nan\n",
+        "\n",
+        "    if isinstance(cost_value, dict):\n",
+        "        cost_str = cost_value.get('min', '0')\n",
+        "    else:\n",
+        "        cost_str = str(cost_value)\n",
+        "\n",
+        "    cost_str = cost_str.lower().replace('£', '').replace(',', '').replace('approximately', '').strip()\n",
+        "\n",
+        "    if 'million' in cost_str:\n",
+        "        num_part = re.findall(r'[\\d\\.]+', cost_str)\n",
+        "        if num_part:\n",
+        "            # Check if the found part is just a period.\n",
+        "            if num_part[0] == '.': return np.nan\n",
+        "            return float(num_part[0]) * 1_000_000\n",
+        "\n",
+        "    num_part = re.findall(r'[\\d\\.]+', cost_str)\n",
+        "    if num_part:\n",
+        "        # Check if the found part is just a period.\n",
+        "        if num_part[0] == '.': return np.nan\n",
+        "        return float(num_part[0])\n",
+        "\n",
+        "    return np.nan"
+      ],
+      "id": "57994b6a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "def parse_length_km(length_value):\n",
+        "    if length_value is None or pd.isna(length_value):\n",
+        "        return np.nan\n",
+        "\n",
+        "    length_str = str(length_value).lower().replace('km', '').replace('circa', '').replace('links', '').replace('routes', '').strip()\n",
+        "\n",
+        "    numbers = re.findall(r'[\\d\\.]+', length_str)\n",
+        "    if numbers:\n",
+        "        # Check if the found part is just a period.\n",
+        "        if numbers[0] == '.': return np.nan\n",
+        "        return float(numbers[0])\n",
+        "\n",
+        "    return np.nan"
+      ],
+      "id": "04899125",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# Make sure the numeric columns exist before aggregating\n",
+        "if 'cost_gbp' not in lcwip_pct.columns:\n",
+        "    # If this cell hasn't been run, let's create the numeric columns\n",
+        "    lcwip_pct['cost_gbp'] = lcwip_pct['total_cost_of_network'].apply(parse_cost_gbp)\n",
+        "    lcwip_pct['length_km'] = lcwip_pct['length_of_cycle_network_proposed'].apply(parse_length_km)\n",
+        "    lcwip_pct['length_km'] = lcwip_pct['length_km'].fillna(\n",
+        "        lcwip_pct['length_of_cycle_network_proposed'].apply(parse_length_km)\n",
+        "    )"
+      ],
+      "id": "b21c7f88",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Perform the aggregation\n",
+        "lcwip_summary = lcwip_pct.groupby('matched_authority_name').agg(\n",
+        "    lcwip_report_count=('report_name', 'size'),\n",
+        "    pct_mentions=('mentions_pct', 'sum'),\n",
+        "    total_funding_gbp=('cost_gbp', 'sum'),\n",
+        "    total_length_km=('length_km', 'sum')\n",
+        ").reset_index() # reset_index turns the grouped output back into a DataFrame\n",
+        "\n",
+        "# Calculate the PCT usage percentage\n",
+        "lcwip_summary['pct_usage_percentage'] = (lcwip_summary['pct_mentions'] / lcwip_summary['lcwip_report_count'] * 100).round(1)\n",
+        "\n",
+        "print(\"LCWIP data has been aggregated by authority:\")\n",
+        "print(lcwip_summary.head())"
+      ],
+      "id": "1434d8d0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#merge on the 'name_atf' column from the geojson and the 'matched_authority' from our summary.\n",
+        "atf_spatial_analysis_df = atf_df_new.merge(\n",
+        "    lcwip_summary,\n",
+        "    left_on='name',\n",
+        "    right_on='matched_authority_name',\n",
+        "    how='left'\n",
+        ")\n",
+        "\n",
+        "#Clean up the final DataFrame\n",
+        "# The merge will create a duplicate 'matched_authority' column, so we'll drop it.\n",
+        "atf_spatial_analysis_df.drop('matched_authority_name', axis=1, inplace=True)\n",
+        "\n",
+        "# Replace NaN values in the numeric columns with 0 for cleaner mapping and analysis.\n",
+        "cols_to_fill = ['lcwip_report_count', 'pct_mentions', 'total_funding_gbp', 'total_length_km', 'pct_usage_percentage']\n",
+        "for col in cols_to_fill:\n",
+        "    atf_spatial_analysis_df[col] = atf_spatial_analysis_df[col].fillna(0)\n",
+        "\n",
+        "\n",
+        "print(\"\\nMerge complete. Your GeoDataFrame now contains the aggregated LCWIP analysis.\")\n",
+        "# Display the new columns for a few authorities to verify the merge\n",
+        "print(atf_spatial_analysis_df[['name_atf', 'lcwip_report_count', 'pct_usage_percentage', 'total_funding_gbp']].head())"
+      ],
+      "id": "3fb62aa2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "atf_spatial_analysis_df.shape"
+      ],
+      "id": "f39b4bd7",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import folium"
+      ],
+      "id": "102b8edd",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 335
+        }
+      },
+      "source": [
+        "atf_spatial_analysis_df['atf24_25'].describe()"
+      ],
+      "id": "1dd32030",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "atf_spatial_analysis_df.columns"
+      ],
+      "id": "9b4d9d23",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 865
+        }
+      },
+      "source": [
+        "# Clean up data types for the popup\n",
+        "atf_spatial_analysis_df['lcwip_report_count'] = atf_spatial_analysis_df['lcwip_report_count'].astype(int)\n",
+        "atf_spatial_analysis_df['pct_mentions'] = atf_spatial_analysis_df['pct_mentions'].astype(int)\n",
+        "atf_spatial_analysis_df['atf24_25'] = pd.to_numeric(atf_spatial_analysis_df['atf24_25'], errors='coerce').fillna(0).astype(int)\n",
+        "\n",
+        "\n",
+        "#Creating the Interactive Map\n",
+        "m = folium.Map(location=[52.9, -1.5], zoom_start=6, tiles='CartoDB positron')\n",
+        "\n",
+        "# Define a custom threshold scale for coloring\n",
+        "threshold_scale = [0, 1, 2, 4, 6, 8, 11]\n",
+        "\n",
+        "folium.Choropleth(\n",
+        "    geo_data=atf_spatial_analysis_df,\n",
+        "    name='LCWIP Report Count',\n",
+        "    data=atf_spatial_analysis_df,\n",
+        "    columns=['name', 'lcwip_report_count'],\n",
+        "    key_on='feature.properties.name',\n",
+        "    fill_color='YlGnBu',\n",
+        "    fill_opacity=0.7,\n",
+        "    line_opacity=0.4,\n",
+        "    legend_name='Number of LCWIP Reports in Database',\n",
+        "    threshold_scale=threshold_scale,\n",
+        "    nan_fill_color=\"white\"\n",
+        ").add_to(m)\n",
+        "\n",
+        "#Add the Custom Popups\n",
+        "# Define the specific fields and aliases you want to display\n",
+        "popup_fields = ['name', 'lcwip_report_count', 'pct_mentions', 'total_funding_gbp', 'atf24_25']\n",
+        "aliases = [\n",
+        "    'Authority:',\n",
+        "    'LCWIP Report Count:',\n",
+        "    'Reports Mentioning PCT:',\n",
+        "    'Total LCWIP Funding:',\n",
+        "    'ATF 24/25 Allocation:'\n",
+        "]\n",
+        "\n",
+        "# Add a GeoJson layer with the custom popups\n",
+        "popup = folium.features.GeoJsonPopup(fields=popup_fields, aliases=aliases, localize=True, labels=True)\n",
+        "folium.GeoJson(\n",
+        "    atf_spatial_analysis_df,\n",
+        "    name=\"Authority Details\",\n",
+        "    style_function=lambda x: {'color': 'black', 'weight': 0.5, 'fillOpacity': 0.1},\n",
+        "    tooltip=folium.features.GeoJsonTooltip(fields=['name']),\n",
+        "    popup=popup\n",
+        ").add_to(m)\n",
+        "\n",
+        "folium.LayerControl().add_to(m)\n",
+        "\n",
+        "#Display the Map\n",
+        "m"
+      ],
+      "id": "5f188c53",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Note:\n",
+        "both draft LCWIP and LCWIP are included in JSON for Ipswich.(addressed, final report is out on 16th of July 2025.)<br><br>\n",
+        "Some of the local councils of North Yorkshire Councils and Cumbria Councils are duplicated.<br>\n",
+        "Cumbria- Kendal - Technical report + LCWIP, Carlisle - Technical report + LCWIP, Barrow-in-Furness - Technical report + LCWIP <br><br>\n",
+        "These are not present in ATF but in LCWIP database:<br>\n",
+        "Mid Sussex District Council, Ipswich Borough Council, Tunbridge Wells Borough Council, Chichester District Council, Three Rivers District Council, Blaby District Council, Hull City Council, St.Helens Borough Council, Broads Authority, Hart District Council, Adur & Worthing Councils, Crawley Borough Council, Horsham District Council. <br><br>\n"
+      ],
+      "id": "47bd06a8"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 865
+        }
+      },
+      "source": [
+        "# Clean up data types for the popup\n",
+        "atf_spatial_analysis_df['lcwip_report_count'] = atf_spatial_analysis_df['lcwip_report_count'].astype(int)\n",
+        "atf_spatial_analysis_df['pct_mentions'] = atf_spatial_analysis_df['pct_mentions'].astype(int)\n",
+        "atf_spatial_analysis_df['atf24_25'] = pd.to_numeric(atf_spatial_analysis_df['atf24_25'], errors='coerce').fillna(0).astype(int)\n",
+        "\n",
+        "\n",
+        "#Creating the Interactive Map\n",
+        "m = folium.Map(location=[52.9, -1.5], zoom_start=6, tiles='CartoDB positron')\n",
+        "\n",
+        "# Define a custom threshold scale for coloring\n",
+        "threshold_scale = [0, 1e+06, 2e+06, 3e+06, 4e+06, 5e+06, 6e+06]\n",
+        "\n",
+        "folium.Choropleth(\n",
+        "    geo_data=atf_spatial_analysis_df,\n",
+        "    name='No. of LCWIPS and ATF Allocations 2024-2025',\n",
+        "    data=atf_spatial_analysis_df,\n",
+        "    columns=['name', 'atf24_25'],\n",
+        "    key_on='feature.properties.name',\n",
+        "    fill_color='viridis',\n",
+        "    fill_opacity=0.9,\n",
+        "    line_opacity=0.4,\n",
+        "    legend_name='ATF (2024-2025) Allocations',\n",
+        "    threshold_scale=threshold_scale,\n",
+        "    nan_fill_color=\"white\"\n",
+        ").add_to(m)\n",
+        "\n",
+        "#Add the Custom Popups\n",
+        "# Define the specific fields and aliases you want to display\n",
+        "popup_fields = ['name', 'lcwip_report_count', 'pct_mentions', 'total_funding_gbp', 'atf24_25']\n",
+        "aliases = [\n",
+        "    'Authority:',\n",
+        "    'LCWIP Report Count:',\n",
+        "    'Reports Mentioning PCT:',\n",
+        "    'Total LCWIP Funding:',\n",
+        "    'ATF 24/25 Allocation:'\n",
+        "]\n",
+        "\n",
+        "# Add a GeoJson layer with the custom popups\n",
+        "popup = folium.features.GeoJsonPopup(fields=popup_fields, aliases=aliases, localize=True, labels=True)\n",
+        "folium.GeoJson(\n",
+        "    atf_spatial_analysis_df,\n",
+        "    name=\"Authority Details\",\n",
+        "    style_function=lambda x: {'color': 'black', 'weight': 0.5, 'fillOpacity': 0.1},\n",
+        "    tooltip=folium.features.GeoJsonTooltip(fields=['name']),\n",
+        "    popup=popup\n",
+        ").add_to(m)\n",
+        "\n",
+        "folium.LayerControl().add_to(m)\n",
+        "\n",
+        "#Display the Map\n",
+        "m"
+      ],
+      "id": "6ba48dd0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Regional Dashboard\n"
+      ],
+      "id": "170c67b6"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "pip install seaborn --quiet"
+      ],
+      "id": "a5257bb0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import seaborn as sns\n",
+        "import matplotlib.pyplot as plt"
+      ],
+      "id": "147e5097",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "lcwip_pct.columns"
+      ],
+      "id": "5d26e69d",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "atf_spatial_analysis_df.columns"
+      ],
+      "id": "eadacd8b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| eval: false\n",
+        "# Convert funding back to a numeric type for plotting, handling 'Not Specified'\n",
+        "atf_spatial_analysis_df['total_funding_gbp_mil'] = (atf_spatial_analysis_df['total_funding_gbp']/1000000).astype(float)\n",
+        "\n",
+        "# Convert length back to a numeric type\n",
+        "atf_spatial_analysis_df['total_length_km_numeric'] = atf_spatial_analysis_df['total_length_km'].astype(float)\n",
+        "\n",
+        "sns.set_theme(style=\"whitegrid\")\n",
+        "fig, axes = plt.subplots(3, 1, figsize=(12, 20))\n",
+        "fig.suptitle('LCWIP Analysis Dashboard for Local Authorities', fontsize=20, weight='bold')\n",
+        "\n",
+        "\n",
+        "# Plot 1: Total Planned Investment\n",
+        "sns.barplot(ax=axes[0], x=atf_spatial_analysis_df.name, y='total_funding_gbp_mil', data=atf_spatial_analysis_df, palette='viridis')\n",
+        "axes[0].set_title('Total Planned LCWIP Investment', fontsize=16)\n",
+        "axes[0].set_xlabel('Combined Authority')\n",
+        "axes[0].set_ylabel('Funding (GBP in Millions)')\n",
+        "# Format y-axis labels to be more readable (in millions)\n",
+        "axes[0].ticklabel_format(style='plain', axis='x')\n",
+        "axes[0].xaxis.set_major_formatter(lambda x, pos: f'£{x/1e6:.1f}M')\n",
+        "\n",
+        "\n",
+        "# Plot 2: Total Proposed Network Length\n",
+        "sns.barplot(ax=axes[1], y=atf_spatial_analysis_df.index, x='total_length_km_numeric', data=atf_spatial_analysis_df, palette='plasma')\n",
+        "axes[1].set_title('Total Proposed Cycle Network Length', fontsize=16)\n",
+        "axes[1].set_xlabel('Length (km)')\n",
+        "axes[1].set_ylabel('')\n",
+        "\n",
+        "\n",
+        "# Plot 3: PCT Usage Rate\n",
+        "# Convert percentage string back to float for plotting\n",
+        "atf_spatial_analysis_df['pct_usage_float'] = atf_spatial_analysis_df['pct_usage_percentage'].str.replace('%', '').astype(float)\n",
+        "sns.barplot(ax=axes[2], y=atf_spatial_analysis_df.index, x='pct_usage_float', data=atf_spatial_analysis_df, palette='magma')\n",
+        "axes[2].set_title('Percentage of LCWIPs Mentioning PCT', fontsize=16)\n",
+        "axes[2].set_xlabel('Usage Rate (%)')\n",
+        "axes[2].set_ylabel('')\n",
+        "axes[2].set_xlim(0, 100) # Set the x-axis to go from 0 to 100%\n",
+        "\n",
+        "plt.tight_layout(rect=[0, 0.03, 1, 0.96]) # Adjust layout to make room for the suptitle\n",
+        "plt.show()"
+      ],
+      "id": "b20a833f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Heatmap\n"
+      ],
+      "id": "b046b543"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from folium.plugins import HeatMap"
+      ],
+      "id": "bfcdefc7",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
