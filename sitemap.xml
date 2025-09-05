@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://itsleeds.github.io/ics/ideas.html</loc>
-    <lastmod>2025-09-05T10:53:13.534Z</lastmod>
-  </url>
-  <url>
-    <loc>https://itsleeds.github.io/ics/report-pct.html</loc>
-    <lastmod>2025-09-05T10:53:13.538Z</lastmod>
-  </url>
-  <url>
-    <loc>https://itsleeds.github.io/ics/index.html</loc>
-    <lastmod>2025-09-05T10:53:13.537Z</lastmod>
-  </url>
-  <url>
-    <loc>https://itsleeds.github.io/ics/report.html</loc>
-    <lastmod>2025-09-05T10:53:13.538Z</lastmod>
+    <loc>https://itsleeds.github.io/ics/lcwips.html</loc>
+    <lastmod>2025-09-05T11:18:59.243Z</lastmod>
   </url>
   <url>
     <loc>https://itsleeds.github.io/ics/plan.html</loc>
-    <lastmod>2025-09-05T10:53:13.538Z</lastmod>
+    <lastmod>2025-09-05T11:18:59.243Z</lastmod>
+  </url>
+  <url>
+    <loc>https://itsleeds.github.io/ics/report.html</loc>
+    <lastmod>2025-09-05T11:18:59.243Z</lastmod>
+  </url>
+  <url>
+    <loc>https://itsleeds.github.io/ics/index.html</loc>
+    <lastmod>2025-09-05T11:18:59.243Z</lastmod>
+  </url>
+  <url>
+    <loc>https://itsleeds.github.io/ics/report-pct.html</loc>
+    <lastmod>2025-09-05T11:18:59.243Z</lastmod>
+  </url>
+  <url>
+    <loc>https://itsleeds.github.io/ics/ideas.html</loc>
+    <lastmod>2025-09-05T11:18:59.240Z</lastmod>
   </url>
 </urlset>
