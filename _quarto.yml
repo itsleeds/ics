@@ -22,5 +22,5 @@ website:
         href: plan.qmd
       - text: "Ideas"
         href: ideas.qmd
-      - text: "LCWIP funding"
-        href: lcwips.qmd
+      # - text: "LCWIP funding"
+      #   href: lcwips.qmd
