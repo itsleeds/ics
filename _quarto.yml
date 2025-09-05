@@ -1,8 +1,8 @@
 project:
   type: website
   render:
-    - index.qmd 
-    - report.qmd
+    - index.qmd
+    - report-pct.qmd
     - plan.qmd
     - ideas.qmd
     - corr_ukauth_LCWIPS.qmd
@@ -16,10 +16,10 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Report"
-        href: report.qmd
+        href: report-pct.qmd
       - text: "Plan"
         href: plan.qmd
       - text: "Ideas"
-        href: ideas.qmd 
+        href: ideas.qmd
       - text: "LCWIP funding"
         href: corr_ukauth_LCWIPS.qmd
