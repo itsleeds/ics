@@ -1,0 +1,44 @@
+{
+  "pdf_url": "",
+  "report_name": "Local Cycling & Walking Infrastructure Plan Adur & Worthing Councils",
+  "date_published": "October 2019",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "NTS 2017",
+    "Sustrans Earthlight platform",
+    "Route Selection Tool",
+    "RATE tool",
+    "DfT Traffic Counts",
+    "Road Traffic Accidents",
+    "Census 2011",
+    "Cycle Streets routing application"
+  ],
+  "how_pct_was_used": "Used to show existing and potential distribution of commuter cycle trips; used to inform which investment locations could represent best value for money; used to test the proposed network against demand data.",
+  "pct_scenarios_used": [
+    "Government Target",
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "school travel"
+  ],
+  "desire_lines_used": false,
+  "prioritisation_integration": true,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Adur & Worthing Councils",
+  "combined_authority_name": "",
+  "region": "South East",
+  "length_of_cycle_network_proposed": "",
+  "total_cost_of_network": "",
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 64,
+  "_url": "https://www.adur-worthing.gov.uk/media/Media,158651,smxx.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

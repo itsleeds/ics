@@ -1,0 +1,40 @@
+{
+  "pdf_url": "",
+  "report_name": "Active Travel England Local Authority Active Travel Capability Ratings 2025",
+  "date_published": "December 2025",
+  "doc_type": "LCWIP-related",
+  "mentions_pct": false,
+  "other_tools_used": [
+    "Redway Design Manual"
+  ],
+  "how_pct_was_used": "",
+  "pct_scenarios_used": [],
+  "pct_data_sources": [],
+  "desire_lines_used": false,
+  "prioritisation_integration": false,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Multiple (including Milton Keynes City Council, Nottinghamshire County Council, Gloucestershire County Council)",
+  "combined_authority_name": [
+    "Cambridgeshire and Peterborough Combined Authority",
+    "Greater Manchester Combined Authority",
+    "Liverpool City Region Combined Authority",
+    "South Yorkshire Mayoral Combined Authority",
+    "Tees Valley Combined Authority",
+    "West Midlands Combined Authority",
+    "West of England Combined Authority",
+    "West Yorkshire Combined Authority"
+  ],
+  "region": "England",
+  "length_of_cycle_network_proposed": "26-mile 'Gloucestershire Cycle Spine'",
+  "total_cost_of_network": "",
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 5,
+  "_url": "https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf",
+  "_source": "web-search",
+  "_download_status": "ok"
+}

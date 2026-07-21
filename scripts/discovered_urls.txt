@@ -1,0 +1,34 @@
+# New England LCWIPs / related active-travel docs discovered 2026 (added to 94 seed DB)
+https://www.devon.gov.uk/roads-and-transport/traffic-information/transport-planning/local-cycling-and-walking-infrastructure-plans-lcwips/	Devon countywide LCWIP (adopted Mar 2025)
+https://www.somerset.gov.uk/roads-travel-and-parking/local-cycling-and-walking-infrastructure-plans/	Somerset 8 town LCWIPs (2025)
+https://www.cambridgeshire.gov.uk/residents/travel-roads-and-parking/transport-plans-and-policies/cambridgeshires-local-cycling-and-walking-infrastructure-plan-lcwip	Cambridgeshire LCWIP (adopted Oct 2022)
+https://norfolk.citizenspace.com/environment-transport-and-development/aclelcwip/supporting_documents/Countywide%20LCWIP_Summary%20Report_Accessible.pdf	Norfolk Countywide LCWIP Summary (2023)
+https://www.hertfordshire.gov.uk/about-the-council/consultations/transport-and-highways/lcwips-2022/lcwips-2022.aspx	Hertfordshire LCWIPs hub (8 adopted)
+https://www.threerivers.gov.uk/news/lcwip-approved-herts-county-council	Three Rivers LCWIP (adopted Nov 2025)
+https://transportforthesoutheast.org.uk/app/uploads/2025/06/TfSE-RATSAP-Evidence-Base-Report-2025.pdf	TfSE RATSAP Evidence Base (Jun 2025) - 64 LCWIPs status log
+https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf	ATE Local Authority Active Travel Capability Ratings 2025
+https://www.westofengland-ca.gov.uk/wp-content/uploads/2021/09/West-of-England-Local-Cycling-and-Walking-Infrastructure-Plan-2020-2036.pdf	West of England LCWIP 2020-2036
+https://www.plymouth.gov.uk/local-cycling-and-walking-infrastructure-plan	Plymouth LCWIP
+https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/FINAL%20Ipswich%20LCWIP%2007.07.25.pdf	Ipswich LCWIP (adopted Jul 2025)
+https://www.thurrock.gov.uk/sites/default/files/assets/documents/thurrock_local_cycling_and_walking_infrastructure_plan_january_2025-compressed.pdf	Thurrock LCWIP (Jan 2025)
+https://www.stoke.gov.uk/download/downloads/id/2757/draft_local_cycling_and_walking_infrastructure_plan.pdf	Stoke-on-Trent LCWIP 2025-2035
+https://banburycag.org.uk/wp-content/uploads/2025/01/Final-LCWIP.pdf	Banbury LCWIP (Jul 2023)
+https://brentwood.moderngov.co.uk/documents/s29126/Brentwood%20Committee%20Report%20Template%202025%20LCWIP%20final.pdf	Brentwood LCWIP (2025)
+https://mycouncil.oxfordshire.gov.uk/documents/s79633/CMDTM11122025%20-%20Wantage%20and%20Grove%20LCWIP.pdf	Wantage and Grove LCWIP (Nov 2025)
+https://northnorthants.moderngov.co.uk/documents/s28884/Wellingborough+and+Rushden+Area+Local+Cycling+and+Walking+Infrastructure+Plan.pdf	Wellingborough and Rushden LCWIP (Mar 2025)
+https://www.merseycycle.org.uk/wp-content/uploads/2025/03/LCWIP-Report-Consultation-Draft.pdf	Knowsley LCWIP (Mar 2025)
+https://www.worcestershire.gov.uk/sites/default/files/2025-10/redditch_lcwip_final.pdf	Redditch LCWIP 2025
+https://favershamtowncouncil.gov.uk/wp-content/uploads/2025/09/Faversham-LCWIP-Aug-25.pdf	Faversham LCWIP (Aug 2025)
+https://www.bracknell-forest.gov.uk/sites/default/files/2024-11/local-cycling-and-walking-infrastructure-plan.pdf	Bracknell Forest LCWIP (2024)
+https://mycouncil.oxfordshire.gov.uk/documents/s75882/CMDTMT25042025%20-%20Chipping%20Norton%20LCWIP.pdf	Chipping Norton LCWIP (Apr 2025)
+https://mycouncil.oxfordshire.gov.uk/documents/s78135/CMDTM091025%20-%20Carterton%20LCWIP%20Final%20Draft%20LCWIP.pdf	Carterton LCWIP (2025)
+https://mycouncil.oxfordshire.gov.uk/documents/s75883/CMDTMT25042025%20-%20Woodstock%20LCWIP.pdf	Woodstock LCWIP (Apr 2025)
+https://www.essexhighways.org/uploads/files/getting%20around/cycling/basildon-lcwip-report.pdf	Basildon LCWIP+ (2021)
+https://www.staffordshire.gov.uk/sites/default/files/2025-09/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%202021%20-%202031.pdf	Staffordshire LCWIP 2021-2031
+https://www.nottinghamshire.gov.uk/media/5081421/d2n2localcyclingandwalkinginfrastructureplan.pdf	D2N2 LCWIP (Derby/Derbyshire/Nottingham/Nottinghamshire) 2021
+https://democracy.kirklees.gov.uk/documents/s61927/Kirklees%20Transport%20Strategy_Draft%20DTP_130125.pdf	Kirklees Transport Strategy (references LCWIP) 2025
+https://westyorkshire.moderngov.co.uk/mgConvert2PDF.aspx?ID=31798	West Yorkshire ATF4 / LCWIP programme (2025)
+https://s3-eu-west-1.amazonaws.com/travelwest/wp-content/uploads/2020/07/LCWIP.pdf	West of England LCWIP (alt)
+https://assets.ctfassets.net/xfhv954w443t/6I3qoqrkOLeiXUA5CVZcAz/f4203328d488aa76a0f1f5aa57aaf1d9/Greater_Manchester_Active_Travel_Annual_Report_2025.pdf	GM Active Travel Annual Report 2025
+https://democracy.greatermanchester-ca.gov.uk/documents/s3398/15%20GMCA%20Cycling%20and%20Walking%20Challenge%20Fund%20Update.pdf	GM Cycling and Walking Challenge Fund Update (LCWIP-related)
+https://democracy.greatermanchester-ca.gov.uk/documents/s40952/GMCA%20OS%2020251126%20Draft%20Local%20Transport%20Plan%20-%20Appendix%204%20GM%20Transport%20Delivery%20Plan%20Consultation%20Dr.pdf	GM Transport Delivery Plan 2027-2037 (active travel)

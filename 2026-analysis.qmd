@@ -1,0 +1,178 @@
+---
+title: "PCT / LCWIP Data Ingest 2026 — Exploratory Analysis"
+subtitle: "REF 2029 impact case study — England proof-of-concept"
+date: last-modified
+format:
+  gfm:
+    toc: true
+    number-sections: true
+---
+
+# Overview
+
+This document reports the results of the **2026 re-run** of the data-ingest
+process that collects evidence of the Propensity to Cycle Tool (PCT) and related
+active-travel planning tools in English Local Cycling and Walking Infrastructure
+Plans (LCWIPs) and related documents.
+
+The 2026 run is a **proof-of-concept for England** (the first stage before an
+international roll-out). It improves on the previous (~2024) work in three ways:
+
+1. **Distinction between LCWIP reports and related material** — each document is
+   classified `LCWIP`, `LCWIP-related`, or `other`, a distinction the previous
+   work did not make.
+2. **Richer "how PCT was used" detail** — explicit scenario usage
+   (`Go Dutch`, `Government Target`, `E-bike`, `Go Cambridge`), data sources,
+   desire-line usage and prioritisation-integration flags.
+3. **Reproducible pipeline** — every web page / PDF is downloaded to
+   `data-govuk-2026-raw` and a `.md` text extract written to
+   `data-govuk-2026-md`; structured fields are extracted with a single,
+   unlimited local engine (Ollama `gemma4-12b-hermes`) so the results are fully
+   reproducible without paid API credits.
+
+The headline dataset merges the fresh 2026 collection with the existing 94-entry
+database (`LCWIP_database.json`), so the release shows **how the evidence base
+has grown**.
+
+# Methods
+
+- **Discovery.** Seed URLs came from the existing 94-entry database, supplemented
+  by web searches for 2024–2026 LCWIPs and related active-travel strategies, plus
+  the Transport for the South East (TfSE) Regional Active Travel Strategy and
+  Action Plan (RATSAP) Evidence Base (June 2025), which contains a 64-LCWIP
+  status log for the South East.
+- **Download.** Each candidate URL was fetched and stored as a raw file
+  (`data-govuk-2026-raw`) with a text/markdown extract (`data-govuk-2026-md`).
+- **Extraction.** A 21-field schema (`schema_2026.json`) was applied per document
+  via a local LLM. Outputs are in `results/extracted/`.
+- **Aggregation.** Extracted records were merged with the 94-entry database by
+  URL/name and written to `results.json` and a flat `results.csv`.
+
+# Corpus composition
+
+```{python}
+#| label: corpus-composition
+import json, os, pandas as pd
+res = json.load(open("results/results.json"))
+df = pd.DataFrame(res)
+print(f"Total merged records: {len(df)}")
+print(f"  2026-only: {(df['_source_tag']=='2026').sum()}")
+print(f"  from existing 94-DB: {(df['_source_tag']=='existing94').sum()}")
+print()
+print("Document type:")
+print(df['doc_type'].fillna('(unknown)').value_counts())
+```
+
+# PCT mentions
+
+The central finding for the REF case study is the share of documents that
+explicitly mention the Propensity to Cycle Tool.
+
+```{python}
+#| label: pct-mentions
+import json, os, pandas as pd
+res = json.load(open("results/results.json"))
+df = pd.DataFrame(res)
+pct = df['mentions_pct']
+n = pct.notna().sum()
+mentioned = (pct == True).sum()
+print(f"Documents with a usable mentions_pct flag: {n}")
+print(f"Mention PCT: {mentioned} ({mentioned/n*100:.1f}%)")
+print(f"Do not mention PCT: {(pct==False).sum()} ({ (pct==False).sum()/n*100:.1f}%)")
+print(f"Unknown (no content / failed download): {pct.isna().sum()}")
+```
+
+## PCT mentions by document type
+
+```{python}
+#| label: pct-by-doctype
+import json, os, pandas as pd
+res = json.load(open("results/results.json"))
+df = pd.DataFrame(res)
+ct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('unknown'))
+print(ct)
+```
+
+# Scenario usage
+
+Among documents that mention the PCT, which future scenarios are referenced?
+
+```{python}
+#| label: scenarios
+import json, os, pandas as pd
+from collections import Counter
+res = json.load(open("results/results.json"))
+c = Counter()
+for r in res:
+    if r.get('mentions_pct') is True:
+        for s in (r.get('pct_scenarios_used') or []):
+            c[str(s).strip()] += 1
+sc = pd.Series(dict(c)).sort_values(ascending=False)
+print("Scenario mentions (across PCT-mentioning docs):")
+print(sc.to_string())
+```
+
+# Geographic coverage
+
+Coverage against the higher-tier authorities in
+[uktransportauthorities](https://github.com/itsleeds/uktransportauthorities)
+(ATF allocations) gives a sense of how much of England is represented.
+
+```{python}
+#| label: geographic
+import json, os, pandas as pd
+res = json.load(open("results/results.json"))
+df = pd.DataFrame(res)
+print("Records by region (England):")
+print(df['region'].fillna('(not stated)').value_counts().to_string())
+print()
+print("Records with a combined authority named:")
+print(df['combined_authority_name'].notna().sum())
+```
+
+# Cost and network length
+
+Where stated, LCWIPs propose substantial networks and investment.
+
+```{python}
+#| label: cost-length
+import json, os, pandas as pd
+res = json.load(open("results/results.json"))
+df = pd.DataFrame(res)
+cost = pd.to_numeric(df['total_cost_pounds'], errors='coerce')
+km = pd.to_numeric(df['length_of_network_km'], errors='coerce')
+print(f"Documents stating a total cost: {cost.notna().sum()}")
+print(f"Total stated investment (£): {cost.sum():,.0f}")
+print(f"Median stated investment (£): {cost.median():,.0f}")
+print(f"Documents stating network length (km): {km.notna().sum()}")
+print(f"Total stated network length (km): {km.sum():,.0f}")
+```
+
+# Illustrative examples
+
+A sample of LCWIPs that mention the PCT, with how it was used:
+
+```{python}
+#| label: examples
+import json, os, pandas as pd
+res = json.load(open("results/results.json"))
+df = pd.DataFrame(res)
+ex = df[(df['mentions_pct']==True) & (df['doc_type']=='LCWIP')].head(10)
+for _, r in ex.iterrows():
+    print(f"### {r.get('report_name')} ({r.get('local_authority_name')})")
+    print(f"- Date: {r.get('date_published')}")
+    print(f"- Scenarios: {r.get('pct_scenarios_used')}")
+    print(f"- How used: {(r.get('how_pct_was_used') or '')[:300]}")
+    print()
+```
+
+# Limitations & next steps
+
+- This 2026 run covers **England only**; the international tools (NPT Scotland,
+  CRUSE Ireland, biclaR Portugal, Norway PCT) are the next stage.
+- `doc_type` and free-text fields are model-extracted; treat as indicative and
+  spot-check before citation.
+- 10 candidate URLs could not be downloaded (blocked/relocated); their records are
+  retained with `download_status: failed` for transparency.
+- Reproducibility: re-run `scripts/run_extract_ollama.py` against the downloaded
+  corpus; no paid API credits are required.

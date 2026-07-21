@@ -1,0 +1,40 @@
+{
+  "pdf_url": "",
+  "report_name": "Crawley Local Cycling and Walking Infrastructure Plan \u2013 2021",
+  "date_published": "March 2021",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "Route Selection Tool (RST)",
+    "Walking Route Assessment Tool (WRAT)",
+    "TfL Cycle Level of Service (CLoS)"
+  ],
+  "how_pct_was_used": "Used to identify likely route corridors where cycling has the greatest potential to grow and provide estimated figures for their use by linking census data to employment locations or schools.",
+  "pct_scenarios_used": [
+    "Government Target",
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "school travel",
+    "desire lines"
+  ],
+  "desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Crawley Borough Council",
+  "combined_authority_name": null,
+  "region": "South East",
+  "length_of_cycle_network_proposed": "60.15 km",
+  "total_cost_of_network": "32.98 / 29.85",
+  "length_of_network_km": 60.15,
+  "total_cost_pounds": 32980000,
+  "routes": 16,
+  "extraction_notes": "",
+  "_idx": 10,
+  "_url": "https://crawley.gov.uk/sites/default/files/2023-08/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20report%20and%20appendices.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

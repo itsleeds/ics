@@ -1,0 +1,41 @@
+{
+  "pdf_url": "",
+  "report_name": "North West Leicestershire Local Cycling and Walking Infrastructure Plan",
+  "date_published": "",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "National Travel Survey",
+    "Cycle Streets",
+    "OpenStreetMap",
+    "Walking Route Audit Tool (WRAT)",
+    "Sustrans wide cost calculator tool"
+  ],
+  "how_pct_was_used": "Used to identify potential cycling routes based on current commonality and growth potential; used in the Cycling and Walking Strategy to identify and prioritize cycle route options; allows investigation of different scenarios for business cases.",
+  "pct_scenarios_used": [
+    "Go Dutch",
+    "E-bike"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "school travel"
+  ],
+  "desire_lines_used": false,
+  "prioritisation_integration": true,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "North West Leicestershire District Council",
+  "combined_authority_name": "",
+  "region": "East Midlands",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 88,
+  "_url": "https://www.nwleics.gov.uk/files/documents/lcwip/Appendix%204%20NWLDC-LCWIP-.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

@@ -1,0 +1,37 @@
+{
+  "pdf_url": "",
+  "report_name": "Thurrock Local Cycling + Walking Infrastructure Plan",
+  "date_published": "January 2025",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "Census 2011",
+    "Census 2021",
+    "Sport England's Active Lives Survey"
+  ],
+  "how_pct_was_used": "Used to model the potential for cycling to increase and identify areas/alignments with high potential for more cycling; specifically used to determine where an uplift in cycling levels would be concentrated and suggest locations for high-quality corridors.",
+  "pct_scenarios_used": [
+    "Government Target"
+  ],
+  "pct_data_sources": [],
+  "desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [
+    "The DfT\u2019s Propensity to Cycle tool (www.pct.bike) provides a way to model the potential for cycling to increase."
+  ],
+  "local_authority_name": "Thurrock",
+  "combined_authority_name": null,
+  "region": "East of England",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 106,
+  "_url": "https://www.thurrock.gov.uk/sites/default/files/assets/documents/thurrock_local_cycling_and_walking_infrastructure_plan_january_2025-compressed.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

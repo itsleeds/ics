@@ -1,10 +1,10 @@
-/.quarto/
-_site/
-
-# Ignore environment files
-.env
-
-# Ignore Python cache
-__pycache__/
-*.pyc
-
+node_modules/
+.venv/
+data-govuk-2026-raw/
+data-govuk-2026-md/
+*.zip
+scripts/test_pdfs/
+scripts/reference/
+scripts/__pycache__/
+results/extracted/_progress.json
+.quarto/

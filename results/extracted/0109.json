@@ -1,0 +1,32 @@
+{
+  "pdf_url": "",
+  "report_name": "West of England Local Cycling and Walking Infrastructure Plan 2020 \u2013 2036",
+  "date_published": "January 2021",
+  "doc_type": "LCWIP",
+  "mentions_pct": false,
+  "other_tools_used": [
+    "DfT methodology",
+    "Census 2011 data"
+  ],
+  "how_pct_was_used": "",
+  "pct_scenarios_used": [],
+  "pct_data_sources": [],
+  "desire_lines_used": false,
+  "prioritisation_integration": false,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Bath & North East Somerset, Bristol City, South Gloucestershire, North Somerset",
+  "combined_authority_name": "West of England Combined Authority (WECA)",
+  "region": "South West",
+  "length_of_cycle_network_proposed": "55 continuous cycle routes",
+  "total_cost_of_network": "\u00a3411m",
+  "length_of_network_km": null,
+  "total_cost_pounds": 411000000,
+  "routes": 55,
+  "extraction_notes": "",
+  "_idx": 109,
+  "_url": "https://www.westofengland-ca.gov.uk/wp-content/uploads/2021/09/West-of-England-Local-Cycling-and-Walking-Infrastructure-Plan-2020-2036.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "2026",
+  "description": "Extended extraction schema for the 2026 re-run of the ICS LCWIP/PCT data ingest. Adds explicit 'how PCT was used' detail (scenarios, data sources, desire lines, prioritisation integration) and a doc_type distinction (LCWIP vs related active-travel material) that was not made in the 2021-era work.",
+  "fields": [
+    { "name": "pdf_url", "prompt": "What is the URL of the PDF or web document?" },
+    { "name": "report_name", "prompt": "What is the name/title of the report or document?" },
+    { "name": "date_published", "prompt": "What is the publication date of the report? (YYYY-MM-DD or Month YYYY)" },
+    { "name": "doc_type", "prompt": "Classify the document type. Use one of: 'LCWIP' (a Local Cycling and Walking Infrastructure Plan or its technical/background report), 'LCWIP-related' (other active travel strategy, BSIP, cycling/walking delivery plan, or consultation that references cycle network planning), or 'other' (not directly an active-travel planning document)." },
+    { "name": "mentions_pct", "prompt": "Does the report mention the Propensity to Cycle Tool (PCT) or the underlying PCT methodology? (true/false)" },
+    { "name": "other_tools_used", "prompt": "What other cycle/walk network planning tools or data sources were used in the report? List all mentioned (e.g. NPT Scotland, CRUSE, OSM, DfT road traffic stats, local models)." },
+    { "name": "how_pct_was_used", "prompt": "How was the Propensity to Cycle Tool (PCT) used in the report? Describe the role it played in evidence, network design, or prioritisation." },
+    { "name": "pct_scenarios_used", "prompt": "Which PCT scenarios are referenced? List any of: 'Government Target', 'Go Dutch', 'E-bike', 'Go Cambridge', 'Dutch Standards', 'Current'/'Baseline', or other named scenario." },
+    { "name": "pct_data_sources", "prompt": "Which PCT data inputs/sources are referenced? List any of: 'Census 2011 commuting', 'school travel', 'desire lines', 'jittering', 'ORS', or other." },
+    { "name": "desire_lines_used", "prompt": "Were PCT 'desire lines' (straight-line potential flows) specifically used or referenced? (true/false)" },
+    { "name": "prioritisation_integration", "prompt": "Was PCT output integrated into a prioritisation matrix, scoring, or route-ranking method? (true/false)" },
+    { "name": "other_tools_developed", "prompt": "Were any other tools or methods developed as part of the report? If so, describe them." },
+    { "name": "specific_evidence_of_impact", "prompt": "Is there any specific evidence of the impact of using the Propensity to Cycle Tool (PCT)? E.g. secured funding, changed route choice, quantified demand." },
+    { "name": "quotes_on_using_pct", "prompt": "Are there any direct quotes on using the Propensity to Cycle Tool (PCT)? List all quotes if present." },
+    { "name": "local_authority_name", "prompt": "What is the name of the local authority (or authorities) the document covers?" },
+    { "name": "combined_authority_name", "prompt": "What is the name of the combined authority, if any?" },
+    { "name": "region", "prompt": "Which region of England does this document primarily cover? (e.g. North East, North West, Yorkshire and The Humber, East Midlands, West Midlands, East of England, London, South East, South West)" },
+    { "name": "length_of_cycle_network_proposed", "prompt": "What is the length of the cycle network proposed? (as stated in the report, verbatim if possible)" },
+    { "name": "total_cost_of_network", "prompt": "What is the total cost of the network? (as stated in the report, verbatim if possible)" },
+    { "name": "length_of_network_km", "prompt": "What is the total length of the network in kilometers? (numeric, if available)" },
+    { "name": "total_cost_pounds", "prompt": "What is the total cost of the network in pounds? (numeric, if available)" },
+    { "name": "routes", "prompt": "How many routes are included in the plan? (numeric, if available)" },
+    { "name": "extraction_notes", "prompt": "Any notes on extraction quality, scanned/unreadable pages, or ambiguity. Keep brief." }
+  ]
+}

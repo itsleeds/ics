@@ -1,0 +1,39 @@
+{
+  "pdf_url": "",
+  "report_name": "Three Rivers District Local Cycling and Walking Infrastructure Plan",
+  "date_published": "July 2025",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "Place & Movement approach",
+    "Route Selection Tool (RST)",
+    "Indices of Multiple Deprivation (IMD)"
+  ],
+  "how_pct_was_used": "Used to understand potential for cycling along straight desire lines and as a tool in the pre-prioritisation process to identify links that could potentially attract the largest numbers of users for commuting and school travel.",
+  "pct_scenarios_used": [
+    "Government Target",
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "desire lines"
+  ],
+  "desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Three Rivers District Council, Hertfordshire County Council",
+  "combined_authority_name": "",
+  "region": "East of England",
+  "length_of_cycle_network_proposed": "",
+  "total_cost_of_network": "",
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": 5,
+  "extraction_notes": "",
+  "_idx": 45,
+  "_url": "https://moderngov.threerivers.gov.uk/documents/s13679/Appendix+A+-+Local+Cycling+and+Walking+Infrastructure+Plan+including+appendices.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}
