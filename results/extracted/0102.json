@@ -1,0 +1,33 @@
+{
+  "pdf_url": "",
+  "report_name": "Local Cycling and Walking Infrastructure Plan 2025 \u2013 2035",
+  "date_published": "November 2025",
+  "doc_type": "LCWIP",
+  "mentions_pct": false,
+  "other_tools_used": [
+    "LTN 1/20",
+    "Office for Health Improvement and Disparities 2023",
+    "Walk Wheel Cycle Trust"
+  ],
+  "how_pct_was_used": "",
+  "pct_scenarios_used": [],
+  "pct_data_sources": [],
+  "desire_lines_used": false,
+  "prioritisation_integration": false,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Stoke-on-Trent City Council",
+  "combined_authority_name": null,
+  "region": "West Midlands",
+  "length_of_cycle_network_proposed": "",
+  "total_cost_of_network": "",
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": 5,
+  "extraction_notes": "",
+  "_idx": 102,
+  "_url": "https://www.stoke.gov.uk/download/downloads/id/2757/draft_local_cycling_and_walking_infrastructure_plan.pdf",
+  "_source": "web-search",
+  "_download_status": "ok"
+}

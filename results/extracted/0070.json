@@ -1,0 +1,32 @@
+{
+  "pdf_url": "",
+  "report_name": "Cambridgeshire\u2019s Local Cycling and Walking Infrastructure Plan (LCWIP)",
+  "date_published": "2022-10",
+  "doc_type": "LCWIP",
+  "mentions_pct": false,
+  "other_tools_used": [
+    "CWS criteria",
+    "methodology used for identifying higher demand cycle routes"
+  ],
+  "how_pct_was_used": "",
+  "pct_scenarios_used": [],
+  "pct_data_sources": [],
+  "desire_lines_used": false,
+  "prioritisation_integration": false,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Cambridgeshire County Council",
+  "combined_authority_name": "",
+  "region": "East of England",
+  "length_of_cycle_network_proposed": "",
+  "total_cost_of_network": "",
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 70,
+  "_url": "https://www.cambridgeshire.gov.uk/residents/travel-roads-and-parking/transport-plans-and-policies/cambridgeshires-local-cycling-and-walking-infrastructure-plan-lcwip",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

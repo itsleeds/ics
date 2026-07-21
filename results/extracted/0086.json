@@ -1,0 +1,40 @@
+{
+  "pdf_url": "",
+  "report_name": "Mid Sussex District Council Local Cycling and Walking Infrastructure Plan (LCWIP) Final Report",
+  "date_published": "March 2023",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "Route Selection Tool (RST)",
+    "Walking Route Audit Tool (WRAT)",
+    "K-means clustering analysis"
+  ],
+  "how_pct_was_used": "Used to identify the greatest latent demand for cycle and school commuting. The 'E-Bike' scenario was used for cycling and 'Go Dutch' for schools.",
+  "pct_scenarios_used": [
+    "E-bike",
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "school travel",
+    "desire lines"
+  ],
+  "desire_lines_used": true,
+  "prioritisation_integration": false,
+  "other_tools_developed": "K-means clustering analysis to cluster 'Everyday' trip desire lines into a refined plan.",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Mid Sussex District Council",
+  "combined_authority_name": "",
+  "region": "South East",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 86,
+  "_url": "https://www.midsussex.gov.uk/media/9010/mid-sussex-local-cycling-and-walking-infrastructure-plan-2023-vfinal.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

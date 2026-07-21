@@ -1,0 +1,40 @@
+{
+  "pdf_url": "",
+  "report_name": "Local Cycling and Walking Infrastructure Plan: Congleton, Macclesfield and Wilmslow",
+  "date_published": "February 2021",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "Sustrans National Cycle Network",
+    "STATS19",
+    "Walking Route Audit Tool (WRAT)"
+  ],
+  "how_pct_was_used": "Used to assist the identification of key cycle desire lines within the LCWIP area and provide an evidence base for identifying future routes and desire lines connecting trip origins and destinations.",
+  "pct_scenarios_used": [
+    "Government Target",
+    "Go Dutch",
+    "Current/Baseline"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "desire lines"
+  ],
+  "desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": [],
+  "local_authority_name": "Cheshire East Council",
+  "combined_authority_name": null,
+  "region": "North West",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 43,
+  "_url": "https://moderngov.cheshireeast.gov.uk/documents/s83625/Local%20Cycling%20and%20Walking%20Infrastructure%20Plans%20-%20app%202%20NE.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

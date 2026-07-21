@@ -1,0 +1,35 @@
+{
+  "pdf_url": "",
+  "report_name": "Chipping Norton Local Cycling and Walking Infrastructure Plan",
+  "date_published": "April 2025",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "Route Selection Tool (RST)",
+    "Walking Route Audit Tool (WRAT)"
+  ],
+  "how_pct_was_used": "Used to create the cycle desire line network by classifying routes as Primary, Secondary, or Local based on forecast flows using 2011 Census journey to work data.",
+  "pct_scenarios_used": [],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "desire lines"
+  ],
+  "desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "",
+  "quotes_on_using_pct": "",
+  "local_authority_name": "Chipping Norton (Oxfordshire County Council and West Oxfordshire District Council)",
+  "combined_authority_name": "",
+  "region": "South East",
+  "length_of_cycle_network_proposed": "",
+  "total_cost_of_network": "",
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 92,
+  "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/ChippingNortonLCWIP.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}

@@ -1,0 +1,40 @@
+{
+  "pdf_url": "",
+  "report_name": "LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN technical report",
+  "date_published": "March 2022",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "other_tools_used": [
+    "Strava global heatmap",
+    "National Cycle Network (NCN)",
+    "Census data"
+  ],
+  "how_pct_was_used": "Used to validate demand for cycling routes and identify popular corridors in various scenarios; used as a basis for identifying the most important connections between people and places.",
+  "pct_scenarios_used": [
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "school travel",
+    "desire lines"
+  ],
+  "desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "",
+  "specific_evidence_of_impact": "Identified potential growth for cycling within Kendal (e.g., routes exceeding 100 cyclists per day) and provided a basis for securing funding for infrastructure like the Kendal Northern Access Route.",
+  "quotes_on_using_pct": [
+    "The NCN 6, Wildman Street, Shap Road and Lowther Street (converging on the town centre) are by far the most popular routes in all current and future scenarios in the Propensity to Cycle Tool (PCT)"
+  ],
+  "local_authority_name": "Cumbria County Council",
+  "combined_authority_name": "",
+  "region": "North West",
+  "length_of_cycle_network_proposed": "",
+  "total_cost_of_network": "",
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "extraction_notes": "",
+  "_idx": 37,
+  "_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474911344.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok"
+}
