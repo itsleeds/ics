@@ -1,6 +1,6 @@
 # PCT / LCWIP Data Ingest 2026 — Exploratory Analysis
 
-2026-07-21
+2026-07-22
 
 - [<span class="toc-section-number">1</span> Overview](#overview)
 - [<span class="toc-section-number">2</span> Methods](#methods)
@@ -10,6 +10,8 @@
   mentions](#pct-mentions)
   - [<span class="toc-section-number">4.1</span> PCT mentions by
     document type](#pct-mentions-by-document-type)
+  - [<span class="toc-section-number">4.2</span> Change over
+    time](#change-over-time)
 - [<span class="toc-section-number">5</span> Scenario
   usage](#scenario-usage)
 - [<span class="toc-section-number">6</span> Geographic
@@ -71,20 +73,38 @@ import json, os, pandas as pd
 res = json.load(open("results/results.json"))
 df = pd.DataFrame(res)
 print(f"Total merged records: {len(df)}")
+```
+
+    Total merged records: 112
+
+``` python
 print(f"  2026-only: {(df['_source_tag']=='2026').sum()}")
+```
+
+      2026-only: 109
+
+``` python
 print(f"  from existing 94-DB: {(df['_source_tag']=='existing94').sum()}")
+```
+
+      from existing 94-DB: 3
+
+``` python
 print()
+```
+
+``` python
 print("Document type:")
+```
+
+    Document type:
+
+``` python
 print(df['doc_type'].fillna('(unknown)').value_counts())
 ```
 
-    Total merged records: 111
-      2026-only: 109
-      from existing 94-DB: 2
-
-    Document type:
     doc_type
-    LCWIP            85
+    LCWIP            86
     (unknown)        15
     LCWIP-related    10
     other             1
@@ -103,14 +123,26 @@ pct = df['mentions_pct']
 n = pct.notna().sum()
 mentioned = (pct == True).sum()
 print(f"Documents with a usable mentions_pct flag: {n}")
+```
+
+    Documents with a usable mentions_pct flag: 112
+
+``` python
 print(f"Mention PCT: {mentioned} ({mentioned/n*100:.1f}%)")
+```
+
+    Mention PCT: 78 (69.6%)
+
+``` python
 print(f"Do not mention PCT: {(pct==False).sum()} ({ (pct==False).sum()/n*100:.1f}%)")
+```
+
+    Do not mention PCT: 34 (30.4%)
+
+``` python
 print(f"Unknown (no content / failed download): {pct.isna().sum()}")
 ```
 
-    Documents with a usable mentions_pct flag: 111
-    Mention PCT: 77 (69.4%)
-    Do not mention PCT: 34 (30.6%)
     Unknown (no content / failed download): 0
 
 ## PCT mentions by document type
@@ -125,10 +157,56 @@ print(ct)
 
     mentions_pct   False  True 
     doc_type                   
-    LCWIP             25     60
+    LCWIP             25     61
     LCWIP-related      8      2
     other              1      0
     unknown            0     15
+
+## Change over time
+
+The chart below shows the evolution of LCWIP and active travel document
+publications over time (2019–2025), categorized by whether the report
+mentions the Propensity to Cycle Tool.
+
+``` r
+library(readr)
+library(ggplot2)
+library(dplyr)
+
+df <- read_csv("results/results_flat.csv", show_col_types = FALSE) %>%
+  filter(!is.na(year), year >= 2018, year <= 2026)
+
+df_summary <- df %>%
+  mutate(pct_label = if_else(mentions_pct, "Mentions PCT", "Does not mention PCT")) %>%
+  group_by(year = factor(year), pct_label) %>%
+  summarise(count = n(), .groups = "drop")
+
+ggplot(df_summary, aes(x = year, y = count, fill = pct_label)) +
+  geom_col(position = "stack", width = 0.6) +
+  scale_fill_manual(values = c("Mentions PCT" = "#2b8cbe", "Does not mention PCT" = "#de2d26")) +
+  labs(
+    title = "LCWIP Document Publications and PCT Mentions Over Time (2019–2025)",
+    subtitle = "Annual count of published active travel strategy documents in England",
+    x = "Publication Year",
+    y = "Number of Documents",
+    fill = "PCT Status"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+<div id="fig-pct-over-time">
+
+![](2026-analysis_files/figure-commonmark/fig-pct-over-time-1.png)
+
+Figure 1: Publication of LCWIP and active-travel planning documents over
+time by PCT mention status.
+
+</div>
 
 # Scenario usage
 
@@ -146,10 +224,14 @@ for r in res:
             c[str(s).strip()] += 1
 sc = pd.Series(dict(c)).sort_values(ascending=False)
 print("Scenario mentions (across PCT-mentioning docs):")
-print(sc.to_string())
 ```
 
     Scenario mentions (across PCT-mentioning docs):
+
+``` python
+print(sc.to_string())
+```
+
     Go Dutch             29
     Government Target    20
     E-bike               13
@@ -170,15 +252,16 @@ import json, os, pandas as pd
 res = json.load(open("results/results.json"))
 df = pd.DataFrame(res)
 print("Records by region (England):")
-print(df['region'].fillna('(not stated)').value_counts().to_string())
-print()
-print("Records with a combined authority named:")
-print(df['combined_authority_name'].notna().sum())
 ```
 
     Records by region (England):
+
+``` python
+print(df['region'].fillna('(not stated)').value_counts().to_string())
+```
+
     region
-    South East                  32
+    South East                  33
     North West                  16
     (not stated)                15
     East of England             12
@@ -190,8 +273,21 @@ print(df['combined_authority_name'].notna().sum())
     North East                   4
     England                      1
 
+``` python
+print()
+```
+
+``` python
+print("Records with a combined authority named:")
+```
+
     Records with a combined authority named:
-    81
+
+``` python
+print(df['combined_authority_name'].notna().sum())
+```
+
+    82
 
 # Cost and network length
 
@@ -204,16 +300,32 @@ df = pd.DataFrame(res)
 cost = pd.to_numeric(df['total_cost_pounds'], errors='coerce')
 km = pd.to_numeric(df['length_of_network_km'], errors='coerce')
 print(f"Documents stating a total cost: {cost.notna().sum()}")
-print(f"Total stated investment (£): {cost.sum():,.0f}")
-print(f"Median stated investment (£): {cost.median():,.0f}")
-print(f"Documents stating network length (km): {km.notna().sum()}")
-print(f"Total stated network length (km): {km.sum():,.0f}")
 ```
 
     Documents stating a total cost: 11
+
+``` python
+print(f"Total stated investment (£): {cost.sum():,.0f}")
+```
+
     Total stated investment (£): 11,669,280,000
+
+``` python
+print(f"Median stated investment (£): {cost.median():,.0f}")
+```
+
     Median stated investment (£): 110,000,000
+
+``` python
+print(f"Documents stating network length (km): {km.notna().sum()}")
+```
+
     Documents stating network length (km): 8
+
+``` python
+print(f"Total stated network length (km): {km.sum():,.0f}")
+```
+
     Total stated network length (km): 6,708
 
 # Illustrative examples
