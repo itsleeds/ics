@@ -30,5 +30,12 @@
   "_idx": 71,
   "_url": "https://www.cheshirewestandchester.gov.uk/asset-library/transport/cycling/local-cycling-and-walking-infrastructure-plan-2020-2030.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 3,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

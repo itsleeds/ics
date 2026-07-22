@@ -36,5 +36,12 @@
   "_idx": 103,
   "_url": "https://www.sunderland.gov.uk/media/28328/Local-Cycling-and-Walking-Infrastructure-Plan-SCC/pdf/LocalCyclingAndWalkingInfrastructurePlan-SCC.pdf?m=638035103774900000",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 4,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 4,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

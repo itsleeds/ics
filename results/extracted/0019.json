@@ -29,5 +29,12 @@
   "_idx": 19,
   "_url": "https://democracy.epsom-ewell.gov.uk/documents/s32880/Appendix%201%20-%20LCWIP.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 74,
+  "pct_term_breakdown": {
+    "pct": 66,
+    "propensity_to_cycle_tool": 8,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

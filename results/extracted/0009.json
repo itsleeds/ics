@@ -35,5 +35,12 @@
   "_idx": 9,
   "_url": "https://councillors.herefordshire.gov.uk/documents/s50113886/Herefordshire%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 9,
+  "pct_term_breakdown": {
+    "pct": 7,
+    "propensity_to_cycle_tool": 2,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

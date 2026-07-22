@@ -27,5 +27,12 @@
   "_idx": 8,
   "_url": "https://centrallocalplan.lancashire.gov.uk/media/2053/it03-central-lancashire-local-cycling-and-walking-infrastructure-plan.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 20,
+  "pct_term_breakdown": {
+    "pct": 16,
+    "propensity_to_cycle_tool": 4,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

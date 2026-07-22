@@ -28,5 +28,12 @@
   "_idx": 69,
   "_url": "https://www.buckinghamshire.gov.uk/documents/35977/Buckinghamshire_Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 2,
+  "pct_term_breakdown": {
+    "pct": 1,
+    "propensity_to_cycle_tool": 1,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

@@ -29,5 +29,12 @@
   "_idx": 48,
   "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s75882/CMDTMT25042025%20-%20Chipping%20Norton%20LCWIP.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 22,
+  "pct_term_breakdown": {
+    "pct": 7,
+    "propensity_to_cycle_tool": 13,
+    "pct_bike": 2
+  },
+  "has_text_layer": true
 }

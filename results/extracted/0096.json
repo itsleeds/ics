@@ -36,5 +36,12 @@
   "_idx": 96,
   "_url": "https://www.rbwm.gov.uk/sites/default/files/2024-06/transport_local_cycling_and_walking_infrastructure_plan.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 10,
+  "pct_term_breakdown": {
+    "pct": 4,
+    "propensity_to_cycle_tool": 6,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

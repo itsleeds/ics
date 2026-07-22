@@ -31,5 +31,12 @@
   "_idx": 49,
   "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s75883/CMDTMT25042025%20-%20Woodstock%20LCWIP.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 14,
+  "pct_term_breakdown": {
+    "pct": 8,
+    "propensity_to_cycle_tool": 5,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

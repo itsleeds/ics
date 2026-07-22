@@ -34,5 +34,12 @@
   "_idx": 35,
   "_url": "https://images.reading.gov.uk/2020/01/Local-Cycling-and-Walking-Infrastructure-Plan_Accessible-Low-Res_March-2020.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 6,
+  "pct_term_breakdown": {
+    "pct": 3,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

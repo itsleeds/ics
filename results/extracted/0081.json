@@ -32,5 +32,12 @@
   "_idx": 81,
   "_url": "https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/FINAL%20Ipswich%20LCWIP%2007.07.25.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 15,
+  "pct_term_breakdown": {
+    "pct": 2,
+    "propensity_to_cycle_tool": 11,
+    "pct_bike": 2
+  },
+  "has_text_layer": true
 }

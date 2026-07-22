@@ -33,5 +33,12 @@
   "_idx": 108,
   "_url": "https://www.westberks.gov.uk/media/50987/Local-Cycling-Walking-Infrastructure-Plan-LCWIP-June-2021/pdf/LCWIP_June_2021.pdf?m=1623079527393",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 8,
+  "pct_term_breakdown": {
+    "pct": 4,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

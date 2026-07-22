@@ -34,5 +34,12 @@
   "_idx": 76,
   "_url": "https://www.essexhighways.org/uploads/files/getting%20around/cycling/basildon-lcwip-report.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 15,
+  "pct_term_breakdown": {
+    "pct": 8,
+    "propensity_to_cycle_tool": 6,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

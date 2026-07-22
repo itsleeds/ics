@@ -36,5 +36,12 @@
   "_idx": 37,
   "_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474911344.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 12,
+  "pct_term_breakdown": {
+    "pct": 8,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

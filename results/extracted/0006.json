@@ -35,5 +35,12 @@
   "_idx": 6,
   "_url": "https://banburycag.org.uk/wp-content/uploads/2025/01/Final-LCWIP.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 41,
+  "pct_term_breakdown": {
+    "pct": 26,
+    "propensity_to_cycle_tool": 15,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

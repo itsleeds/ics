@@ -36,5 +36,12 @@
   "_idx": 10,
   "_url": "https://crawley.gov.uk/sites/default/files/2023-08/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20report%20and%20appendices.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 16,
+  "pct_term_breakdown": {
+    "pct": 11,
+    "propensity_to_cycle_tool": 5,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

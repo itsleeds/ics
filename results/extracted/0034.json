@@ -36,5 +36,12 @@
   "_idx": 34,
   "_url": "https://favershamtowncouncil.gov.uk/wp-content/uploads/2025/09/Faversham-LCWIP-Aug-25.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 19,
+  "pct_term_breakdown": {
+    "pct": 16,
+    "propensity_to_cycle_tool": 2,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

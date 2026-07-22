@@ -28,5 +28,12 @@
   "_idx": 18,
   "_url": "https://democracy.durham.gov.uk/documents/s174927/Background%20Document%203.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 1,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 1,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

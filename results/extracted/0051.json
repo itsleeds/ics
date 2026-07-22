@@ -29,5 +29,12 @@
   "_idx": 51,
   "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s79633/CMDTM11122025%20-%20Wantage%20and%20Grove%20LCWIP.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 0,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 0,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

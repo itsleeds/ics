@@ -39,5 +39,12 @@
   "_idx": 90,
   "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 24,
+  "pct_term_breakdown": {
+    "pct": 21,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

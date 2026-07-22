@@ -31,5 +31,12 @@
   "_idx": 85,
   "_url": "https://www.merseycycle.org.uk/wp-content/uploads/2025/03/LCWIP-Report-Consultation-Draft.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 21,
+  "pct_term_breakdown": {
+    "pct": 13,
+    "propensity_to_cycle_tool": 8,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

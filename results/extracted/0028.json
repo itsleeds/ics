@@ -38,5 +38,12 @@
   "_idx": 28,
   "_url": "https://democracy.york.gov.uk/documents/s166024/Annex%20A%20LCWIP%20Draft%20Background%20Evaluation%20Report.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 26,
+  "pct_term_breakdown": {
+    "pct": 24,
+    "propensity_to_cycle_tool": 2,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

@@ -37,5 +37,12 @@
   "_idx": 46,
   "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s66592/CMDHM20230720R05a%20Annex%20A%20Banbury%20LCWIP%20FINAL_10072023%20version.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 41,
+  "pct_term_breakdown": {
+    "pct": 26,
+    "propensity_to_cycle_tool": 15,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

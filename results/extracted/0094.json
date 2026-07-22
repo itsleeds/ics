@@ -31,5 +31,12 @@
   "_idx": 94,
   "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/WoodstockAreaLCWIP.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 7,
+  "pct_term_breakdown": {
+    "pct": 4,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

@@ -38,5 +38,12 @@
   "_idx": 60,
   "_url": "https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 11,
+  "pct_term_breakdown": {
+    "pct": 6,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 2
+  },
+  "has_text_layer": true
 }

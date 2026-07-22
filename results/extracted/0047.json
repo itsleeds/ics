@@ -33,5 +33,12 @@
   "_idx": 47,
   "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s68729/CMDTM20231214R06%20Annex%201%20-%20Didcot%20LCWIP%20Report.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 30,
+  "pct_term_breakdown": {
+    "pct": 27,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }
