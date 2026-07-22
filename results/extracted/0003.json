@@ -25,5 +25,12 @@
   "_idx": 3,
   "_url": "https://assets.ctfassets.net/xfhv954w443t/6I3qoqrkOLeiXUA5CVZcAz/f4203328d488aa76a0f1f5aa57aaf1d9/Greater_Manchester_Active_Travel_Annual_Report_2025.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 0,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 0,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

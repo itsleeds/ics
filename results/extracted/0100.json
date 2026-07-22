@@ -29,5 +29,12 @@
   "_idx": 100,
   "_url": "https://www.sstaffs.gov.uk/sites/default/files/2023-03/local_cycling_and_walking_infrastructure_plan.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 0,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 0,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

@@ -35,5 +35,12 @@
   "_idx": 32,
   "_url": "https://edemocracy.northyorks.gov.uk/documents/s47233/Ripon%20and%20Catterick%20Phase%201%20LCWIPs.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 28,
+  "pct_term_breakdown": {
+    "pct": 20,
+    "propensity_to_cycle_tool": 6,
+    "pct_bike": 2
+  },
+  "has_text_layer": true
 }

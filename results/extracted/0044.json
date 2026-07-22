@@ -41,5 +41,12 @@
   "_idx": 44,
   "_url": "https://moderngov.dover.gov.uk/documents/s60537/Local%20Cycling%20Walking%20Appendix.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 14,
+  "pct_term_breakdown": {
+    "pct": 10,
+    "propensity_to_cycle_tool": 4,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

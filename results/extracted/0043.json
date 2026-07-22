@@ -36,5 +36,12 @@
   "_idx": 43,
   "_url": "https://moderngov.cheshireeast.gov.uk/documents/s83625/Local%20Cycling%20and%20Walking%20Infrastructure%20Plans%20-%20app%202%20NE.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 17,
+  "pct_term_breakdown": {
+    "pct": 12,
+    "propensity_to_cycle_tool": 4,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

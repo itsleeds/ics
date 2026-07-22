@@ -35,5 +35,12 @@
   "_idx": 25,
   "_url": "https://democracy.leics.gov.uk/documents/s179818/Appendix%20C%20-%20Loughborough%20Area%20LCWIP%20and%20Appendices.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 32,
+  "pct_term_breakdown": {
+    "pct": 25,
+    "propensity_to_cycle_tool": 7,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

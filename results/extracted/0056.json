@@ -37,5 +37,12 @@
   "_idx": 56,
   "_url": "https://shropshire.gov.uk/committee-services/documents/s34213/Shropshire%20LCWIP%20Final%20Draft.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 12,
+  "pct_term_breakdown": {
+    "pct": 6,
+    "propensity_to_cycle_tool": 6,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

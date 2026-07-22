@@ -37,6 +37,13 @@
     "_url": "https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 6,
+    "pct_term_breakdown": {
+      "pct": 5,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT analysis was used to provide evidence of the high potential for cycling growth in the region, justifying the need for the LCWIP. It showed that despite favorable geography, cycling rates were low, and that implementing the Government\u2019s strategy would deliver significant change.[1]",
     "_also_in_2026": false
@@ -79,6 +86,13 @@
     "_url": "https://api.warwickshire.gov.uk/documents/WCCC-1615347118-1427",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 2,
+    "pct_term_breakdown": {
+      "pct": 1,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -110,6 +124,13 @@
     "_url": "https://assets.ctfassets.net/xfhv954w443t/6I3qoqrkOLeiXUA5CVZcAz/f4203328d488aa76a0f1f5aa57aaf1d9/Greater_Manchester_Active_Travel_Annual_Report_2025.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -149,6 +170,13 @@
     "_url": "https://assets.publishing.service.gov.uk/media/5ffa1f96d3bf7f65d9e35825/cycle-infrastructure-design-ltn-1-20.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 2,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "Not applicable. As a national guidance document, it recommends the use of the tool rather than reporting on the specific impact of its past use in a local scheme.",
     "_also_in_2026": false
@@ -192,6 +220,13 @@
     "_url": "https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -234,6 +269,13 @@
     "_url": "https://banburycag.org.uk/wp-content/uploads/2025/01/Final-LCWIP.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 41,
+    "pct_term_breakdown": {
+      "pct": 26,
+      "propensity_to_cycle_tool": 15,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -264,6 +306,13 @@
     "_url": "https://brentwood.moderngov.co.uk/documents/s29126/Brentwood%20Committee%20Report%20Template%202025%20LCWIP%20final.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -298,6 +347,13 @@
     "_url": "https://centrallocalplan.lancashire.gov.uk/media/2053/it03-central-lancashire-local-cycling-and-walking-infrastructure-plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 20,
+    "pct_term_breakdown": {
+      "pct": 16,
+      "propensity_to_cycle_tool": 4,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -339,6 +395,13 @@
     "_url": "https://councillors.herefordshire.gov.uk/documents/s50113886/Herefordshire%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 9,
+    "pct_term_breakdown": {
+      "pct": 7,
+      "propensity_to_cycle_tool": 2,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -381,6 +444,13 @@
     "_url": "https://crawley.gov.uk/sites/default/files/2023-08/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20report%20and%20appendices.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 16,
+    "pct_term_breakdown": {
+      "pct": 11,
+      "propensity_to_cycle_tool": 5,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT helped to identify and validate corridors with high existing and future cycling demand, ensuring the LCWIP focuses investment where the most benefit can be realised. For example, radial routes from neighbourhoods into the town centre showed the highest forecast future cycle flows according to the PCT's Government Target (Equality) scenario.",
     "_also_in_2026": false
@@ -421,6 +491,13 @@
     "_url": "https://cumbria.gov.uk/elibrary/Content/Internet/538/18110/38384/44749114236.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 2,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -460,6 +537,13 @@
     "_url": "https://cumbria.gov.uk/elibrary/Content/Internet/538/18110/38384/44819111034.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 2,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -500,6 +584,13 @@
     "_url": "https://democracy.bcpcouncil.gov.uk/documents/s32638/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -537,6 +628,13 @@
     "_url": "https://democracy.brighton-hove.gov.uk/documents/s175857/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -580,6 +678,13 @@
     "_url": "https://democracy.durham.gov.uk/documents/s145571/Local%20Cycling%20App%20b%20Durham%20City%20Local%20Cycling%20Walking%20Infrastructure%20Plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 1,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The tool's analysis was used to inform the development of the network plans and the subsequent prioritisation of routes for investment. [3]",
     "_also_in_2026": false
@@ -622,6 +727,13 @@
     "_url": "https://democracy.durham.gov.uk/documents/s174866/Item%207%20Peterlee%20LCWIP%20Final%20inc%20Appendices_opt.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 5,
+    "pct_term_breakdown": {
+      "pct": 4,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -665,6 +777,13 @@
     "_url": "https://democracy.durham.gov.uk/documents/s174868/Item%207%20Shildon%20LCWIP%20Final%20inc%20Appendices_opt.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 5,
+    "pct_term_breakdown": {
+      "pct": 4,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT's data was used to validate and refine the key desire lines that form the basis of the proposed cycle network. Its outputs were also integrated directly into the scoring and prioritisation matrix, meaning the tool had a direct impact on which routes were identified as priorities for future investment. [3]",
     "_also_in_2026": false
@@ -702,6 +821,13 @@
     "_url": "https://democracy.durham.gov.uk/documents/s174927/Background%20Document%203.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 1,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -737,6 +863,13 @@
     "_url": "https://democracy.epsom-ewell.gov.uk/documents/s32880/Appendix%201%20-%20LCWIP.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 74,
+    "pct_term_breakdown": {
+      "pct": 66,
+      "propensity_to_cycle_tool": 8,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -770,6 +903,13 @@
     "_url": "https://democracy.greatermanchester-ca.gov.uk/documents/s3398/15%20GMCA%20Cycling%20and%20Walking%20Challenge%20Fund%20Update.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 2,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -800,6 +940,13 @@
     "_url": "https://democracy.greatermanchester-ca.gov.uk/documents/s40952/GMCA%20OS%2020251126%20Draft%20Local%20Transport%20Plan%20-%20Appendix%204%20GM%20Transport%20Delivery%20Plan%20Consultation%20Dr.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -837,6 +984,13 @@
     "_url": "https://democracy.hants.gov.uk/documents/s105949/5%20Basingstoke%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan-2023-03-09-LEMH2050%20Decision%20Day.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -883,6 +1037,13 @@
     "_url": "https://democracy.hants.gov.uk/documents/s122153/2024-06-27%202i%20Hart%20LCWIP%20-%20Appendix%20A-2024-06-27-EMH2050%20Decision%20Day.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 27,
+    "pct_term_breakdown": {
+      "pct": 17,
+      "propensity_to_cycle_tool": 10,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false,
     "specific_evidence_of_impact_of_using_pct": "The search results indicate that PCT provides an evidence base to inform cycling investment and helps in identifying areas and routes with high cycling potential for investment."
@@ -915,6 +1076,13 @@
     "_url": "https://democracy.kirklees.gov.uk/documents/s61927/Kirklees%20Transport%20Strategy_Draft%20DTP_130125.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -955,6 +1123,13 @@
     "_url": "https://democracy.leics.gov.uk/documents/s179818/Appendix%20C%20-%20Loughborough%20Area%20LCWIP%20and%20Appendices.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 32,
+    "pct_term_breakdown": {
+      "pct": 25,
+      "propensity_to_cycle_tool": 7,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1000,6 +1175,13 @@
     "_url": "https://democracy.peterborough.gov.uk/documents/s53301/Item%205.%20Appendix%201%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP%2016072024%20Cabinet.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 20,
+    "pct_term_breakdown": {
+      "pct": 15,
+      "propensity_to_cycle_tool": 4,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1045,6 +1227,13 @@
     "_url": "https://democracy.warwickshire.gov.uk/documents/s35370/Appendix%203%20for%20Warwickshire%20LCWIP%20Part%201%20Introduction.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 2,
+    "pct_term_breakdown": {
+      "pct": 1,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1089,6 +1278,13 @@
     "_url": "https://democracy.york.gov.uk/documents/s166024/Annex%20A%20LCWIP%20Draft%20Background%20Evaluation%20Report.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 26,
+    "pct_term_breakdown": {
+      "pct": 24,
+      "propensity_to_cycle_tool": 2,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1207,6 +1403,13 @@
     "_url": "https://edemocracy.northyorks.gov.uk/documents/s10084/Malton%20and%20Norton%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 31,
+    "pct_term_breakdown": {
+      "pct": 28,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1248,6 +1451,13 @@
     "_url": "https://edemocracy.northyorks.gov.uk/documents/s47233/Ripon%20and%20Catterick%20Phase%201%20LCWIPs.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 28,
+    "pct_term_breakdown": {
+      "pct": 20,
+      "propensity_to_cycle_tool": 6,
+      "pct_bike": 2
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT outputs provided evidence to support the identified desire lines for Ripon's cycling network. However, the tool's analysis also indicated that there was lower cycling potential in the areas of North Stainley, Kirkby Malzeard, and Bishop Monkton, which helped to refine the network plan. [3]",
     "_also_in_2026": false
@@ -1289,6 +1499,13 @@
     "_url": "https://edemocracy.northyorks.gov.uk/documents/s52849/Thirsk%20and%20Whitby%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plans.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 28,
+    "pct_term_breakdown": {
+      "pct": 21,
+      "propensity_to_cycle_tool": 7,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT 'E-bike' scenario outputs generally reflected the desire lines identified within the study area and also suggested cycling potential to villages outside the LCWIP's scope. However, it did not highlight the demand between Thirsk railway station and the Sowerby Gateway development, a limitation attributed to the PCT's reliance on 2011 census data, which predates much of that development. [3]",
     "_also_in_2026": false
@@ -1332,6 +1549,13 @@
     "_url": "https://favershamtowncouncil.gov.uk/wp-content/uploads/2025/09/Faversham-LCWIP-Aug-25.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 19,
+    "pct_term_breakdown": {
+      "pct": 16,
+      "propensity_to_cycle_tool": 2,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -1373,6 +1597,13 @@
     "_url": "https://images.reading.gov.uk/2020/01/Local-Cycling-and-Walking-Infrastructure-Plan_Accessible-Low-Res_March-2020.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 6,
+    "pct_term_breakdown": {
+      "pct": 3,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1410,6 +1641,13 @@
     "_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474911322.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 2,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -1451,6 +1689,13 @@
     "_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474911344.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 12,
+    "pct_term_breakdown": {
+      "pct": 8,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The top ten PCT outputs supported the identified desire lines within the urban area of Kendal, and longer distance desire lines to Levens and Staveley were more closely aligned to leisure trips and the National Cycle Network. Under future forecast scenarios, many routes in Kendal are estimated to exceed 100 cyclists per day for commuting purposes based on the PCT, reflecting the potential for growth. [3]",
     "_also_in_2026": false
@@ -1492,6 +1737,13 @@
     "_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/44819113937.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 13,
+    "pct_term_breakdown": {
+      "pct": 9,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The tool's outputs directly influenced the prioritisation of cycling schemes. Routes with a higher forecast number of journeys to work (over 100 cyclists) received a higher score, making them a higher priority for investment. [3]",
     "_also_in_2026": false
@@ -1532,6 +1784,13 @@
     "_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4481911413.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 13,
+    "pct_term_breakdown": {
+      "pct": 9,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT outputs supported the identified desire lines within the urban area of Workington, while longer distance desire lines were more closely aligned to leisure trips and the National Cycle Network. This analysis helped validate the proposed network. [3]",
     "_also_in_2026": false
@@ -1575,6 +1834,13 @@
     "_url": "https://letstalk.kent.gov.uk/27288/widgets/77329/documents/72175",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT was 'used at the strategic planning stage' to help in identifying and validating 'desire lines', which informed the selection of the primary cycling corridors. This helped ensure that the proposed network focused on areas with high existing and future cycling potential.",
     "_also_in_2026": false
@@ -1616,6 +1882,13 @@
     "_url": "https://letstalk.oxfordshire.gov.uk/40548/widgets/120199/documents/84124",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1658,6 +1931,13 @@
     "_url": "https://moderngov.cheshireeast.gov.uk/documents/s83625/Local%20Cycling%20and%20Walking%20Infrastructure%20Plans%20-%20app%202%20NE.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 17,
+    "pct_term_breakdown": {
+      "pct": 12,
+      "propensity_to_cycle_tool": 4,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1705,6 +1985,13 @@
     "_url": "https://moderngov.dover.gov.uk/documents/s60537/Local%20Cycling%20Walking%20Appendix.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 14,
+    "pct_term_breakdown": {
+      "pct": 10,
+      "propensity_to_cycle_tool": 4,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT's analysis provided specific, impactful forecasts. For example, the 'E-bike Scenario' predicted a 'significant increase in commuting by bicycle across the entire district.' The 'Go Cambridge' scenario for school trips showed a 'significant increase in bicycle trips to school around the wider areas surrounding Sandwich and Deal.' This evidence directly shaped the understanding of potential demand and the justification for the proposed network. [3]",
     "_also_in_2026": false
@@ -1747,6 +2034,13 @@
     "_url": "https://moderngov.threerivers.gov.uk/documents/s13679/Appendix+A+-+Local+Cycling+and+Walking+Infrastructure+Plan+including+appendices.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 31,
+    "pct_term_breakdown": {
+      "pct": 23,
+      "propensity_to_cycle_tool": 7,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1786,6 +2080,13 @@
     "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s68729/CMDTM20231214R06%20Annex%201%20-%20Didcot%20LCWIP%20Report.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 30,
+    "pct_term_breakdown": {
+      "pct": 27,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -1821,6 +2122,13 @@
     "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s75882/CMDTMT25042025%20-%20Chipping%20Norton%20LCWIP.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 22,
+    "pct_term_breakdown": {
+      "pct": 7,
+      "propensity_to_cycle_tool": 13,
+      "pct_bike": 2
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -1857,6 +2165,13 @@
     "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s75883/CMDTMT25042025%20-%20Woodstock%20LCWIP.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 14,
+    "pct_term_breakdown": {
+      "pct": 8,
+      "propensity_to_cycle_tool": 5,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -1891,6 +2206,13 @@
     "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s78135/CMDTM091025%20-%20Carterton%20LCWIP%20Final%20Draft%20LCWIP.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 29,
+    "pct_term_breakdown": {
+      "pct": 14,
+      "propensity_to_cycle_tool": 14,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -1925,6 +2247,13 @@
     "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s79633/CMDTM11122025%20-%20Wantage%20and%20Grove%20LCWIP.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -1959,6 +2288,13 @@
     "_url": "https://norfolk.citizenspace.com/environment-transport-and-development/aclelcwip/supporting_documents/Countywide%20LCWIP_Summary%20Report_Accessible.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -1989,6 +2325,13 @@
     "_url": "https://northnorthants.moderngov.co.uk/documents/s28884/Wellingborough+and+Rushden+Area+Local+Cycling+and+Walking+Infrastructure+Plan.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -2019,6 +2362,13 @@
     "_url": "https://rbwmtogether.rbwm.gov.uk/15306/widgets/44982/documents/25696",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The plan includes maps generated from the PCT's 'Go Dutch' scenario, showing the top 100 most-cycled desire lines for the Windsor, Maidenhead, and Ascot areas. This visual evidence was used to inform the network plan and was cross-referenced with public feedback to determine where interventions were most wanted and could be most effective. [3]",
     "_also_in_2026": false
@@ -2051,6 +2401,13 @@
     "_url": "https://s3-eu-west-1.amazonaws.com/travelwest/wp-content/uploads/2020/07/LCWIP.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 1,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -2093,6 +2450,13 @@
     "_url": "https://shropshire.gov.uk/committee-services/documents/s34213/Shropshire%20LCWIP%20Final%20Draft.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 12,
+    "pct_term_breakdown": {
+      "pct": 6,
+      "propensity_to_cycle_tool": 6,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -2131,6 +2495,13 @@
     "_url": "https://shropshire.gov.uk/committee-services/documents/s37227/Appendix%209%20-%20Shropshire%20LCWIP%20Consultation%20Report_v1.0.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The search results indicate that the PCT is increasingly being used in planning, and its use is recommended by the Department for Transport (DfT) for LCWIPs. It helps in defining potential demand for cycling, identifying routes and areas for investment, and estimating future capacity needs.",
     "_also_in_2026": false
@@ -2168,6 +2539,13 @@
     "_url": "https://sthelens.gov.uk/media/4732/St-Helens-Borough-LCWIP/pdf/St_Helens_LCWIP_FINAL.pdf?m=637998005068170000",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 1,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -2202,6 +2580,13 @@
     "_url": "https://transportforthesoutheast.org.uk/app/uploads/2025/06/TfSE-RATSAP-Evidence-Base-Report-2025.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 6,
+    "pct_term_breakdown": {
+      "pct": 3,
+      "propensity_to_cycle_tool": 2,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -2250,6 +2635,13 @@
     "_url": "https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 11,
+    "pct_term_breakdown": {
+      "pct": 6,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 2
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT identified areas of high existing and potential cycling demand, which informed the selection of cycle network corridors.",
     "_also_in_2026": false
@@ -2362,6 +2754,13 @@
     "_url": "https://westyorkshire.moderngov.co.uk/mgConvert2PDF.aspx?ID=31798",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -2413,6 +2812,13 @@
     "_url": "https://www.adur-worthing.gov.uk/media/Media,158651,smxx.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 33,
+    "pct_term_breakdown": {
+      "pct": 30,
+      "propensity_to_cycle_tool": 2,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT identified areas of high existing and potential cycling demand, which informed the selection of cycle network corridors.",
     "_also_in_2026": false
@@ -2453,6 +2859,13 @@
     "_url": "https://www.atkinsrealis.com",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT analysis indicated a strong potential for growth in cycling across the Fylde Coast. Under the 'Go Dutch' scenario, urban western areas (Blackpool, Fleetwood, Cleveleys, St. Anne's) could see over 30% cycle commuter mode share, reflecting the high proportion of short trips and flat terrain. This evidence directly informed the identification of strategic cycle corridors and primary core walking zones, which are the focus of the LCWIP, to support a shift from car journeys to sustainable modes.",
     "_also_in_2026": false
@@ -2496,6 +2909,13 @@
     "_url": "https://www.blaby.gov.uk/media/r0zjdj5m/blaby-district-council-lcwip-2024-230724.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 12,
+    "pct_term_breakdown": {
+      "pct": 5,
+      "propensity_to_cycle_tool": 6,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The analysis from the PCT was a key evidence source that directly informed the identification of desire lines and the subsequent development and mapping of the proposed cycle network.",
     "_also_in_2026": false
@@ -2540,6 +2960,13 @@
     "_url": "https://www.bracknell-forest.gov.uk/sites/default/files/2024-11/local-cycling-and-walking-infrastructure-plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 12,
+    "pct_term_breakdown": {
+      "pct": 7,
+      "propensity_to_cycle_tool": 5,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT's 'Go Dutch' scenario analysis demonstrated a high potential for a connected cycle network that would support cycling to the majority of schools in the area. It also highlighted specific corridors with the highest propensity for cycling, such as those in the more residential parts of Bracknell and along Waterloo and Sandhurst Road in Crowthorne. [3]",
     "_also_in_2026": false
@@ -2577,6 +3004,13 @@
     "_url": "https://www.broads-authority.gov.uk/__data/assets/pdf_file/0017/152342/Broads_Local_Cycling_and_Walking_Infrastructure_Plan.pdf",
     "_source": "retry",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "Not applicable as the tool was not used.",
     "_also_in_2026": false
@@ -2612,6 +3046,13 @@
     "_url": "https://www.buckinghamshire.gov.uk/documents/35977/Buckinghamshire_Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 2,
+    "pct_term_breakdown": {
+      "pct": 1,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -2647,6 +3088,13 @@
     "_url": "https://www.cambridgeshire.gov.uk/residents/travel-roads-and-parking/transport-plans-and-policies/cambridgeshires-local-cycling-and-walking-infrastructure-plan-lcwip",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The use of the PCT directly informed the prioritization of cycling schemes by providing a 'value score' based on the number of additional cyclists attracted and the distance of the scheme. This is explicitly stated as a criterion in the prioritization matrix for cycling schemes. It helped in identifying routes with the greatest potential impact, influencing the development of the cycling network across various districts like Cambridge, South Cambridgeshire, Huntingdonshire, East Cambridgeshire, and Fenland.",
     "_also_in_2026": false
@@ -2684,6 +3132,13 @@
     "_url": "https://www.cheshirewestandchester.gov.uk/asset-library/transport/cycling/local-cycling-and-walking-infrastructure-plan-2020-2030.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 3,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The analysis from the Propensity to Cycle Tool was a component of the evidence base used to identify desire lines and establish the final set of proposed cycling infrastructure improvements. [3]",
     "_also_in_2026": false
@@ -2726,6 +3181,13 @@
     "_url": "https://www.chichester.gov.uk/media/39558/Local-Cycling-and-Walking-Infrastructure-Plan-LCWIP/pdf/Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf?m=1714123154250",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 20,
+    "pct_term_breakdown": {
+      "pct": 16,
+      "propensity_to_cycle_tool": 4,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -2769,6 +3231,13 @@
     "_url": "https://www.cumberland.gov.uk/sites/default/files/2025-04/whitehaven_lcwip_technical_report.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 13,
+    "pct_term_breakdown": {
+      "pct": 9,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT analysis provided specific evidence supporting the network plan. It identified the link between Whitehaven and Bigrigg as the most popular route in all scenarios, highlighting its strategic importance despite currently having fewer than 50 cyclists per day. The 'Go Dutch' scenario outputs also supported the identified desire lines within Whitehaven's urban area and longer-distance lines towards Sellafield. [3]",
     "_also_in_2026": false
@@ -2801,6 +3270,13 @@
     "_url": "https://www.devon.gov.uk/roads-and-transport/traffic-information/transport-planning/local-cycling-and-walking-infrastructure-plans-lcwips/",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -2840,6 +3316,13 @@
     "_url": "https://www.essexhighways.org/uploads/files/getting%20around/cycling/basildon-lcwip-report.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 15,
+    "pct_term_breakdown": {
+      "pct": 8,
+      "propensity_to_cycle_tool": 6,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -2878,6 +3361,13 @@
     "_url": "https://www.guildford.gov.uk/media/36793/Guildford-LCWIP-Chapter-2/pdf/Guildford_LCWIP_Chapter_2.pdf?m=1746179680000",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -2959,6 +3449,13 @@
     "_url": "https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/FINAL%20Ipswich%20LCWIP%2007.07.25.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 15,
+    "pct_term_breakdown": {
+      "pct": 2,
+      "propensity_to_cycle_tool": 11,
+      "pct_bike": 2
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3106,6 +3603,13 @@
     "_url": "https://www.merseycycle.org.uk/wp-content/uploads/2025/03/LCWIP-Report-Consultation-Draft.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 21,
+    "pct_term_breakdown": {
+      "pct": 13,
+      "propensity_to_cycle_tool": 8,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -3147,6 +3651,13 @@
     "_url": "https://www.midsussex.gov.uk/media/9010/mid-sussex-local-cycling-and-walking-infrastructure-plan-2023-vfinal.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 65,
+    "pct_term_breakdown": {
+      "pct": 53,
+      "propensity_to_cycle_tool": 9,
+      "pct_bike": 3
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3188,6 +3699,13 @@
     "_url": "https://www.nottinghamshire.gov.uk/media/5081421/d2n2localcyclingandwalkinginfrastructureplan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 24,
+    "pct_term_breakdown": {
+      "pct": 14,
+      "propensity_to_cycle_tool": 7,
+      "pct_bike": 3
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The data analysis and modelling from the PCT were used to complement existing local plans, help identify gaps in the network, and provide an indication of potential usage to assist with prioritisation. The analysis also highlighted the tool's limitations, noting it is helpful in urban areas but does not work as well for rural areas. [3]",
     "_also_in_2026": false
@@ -3234,6 +3752,13 @@
     "_url": "https://www.nwleics.gov.uk/files/documents/lcwip/Appendix%204%20NWLDC-LCWIP-.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 17,
+    "pct_term_breakdown": {
+      "pct": 12,
+      "propensity_to_cycle_tool": 4,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3277,6 +3802,13 @@
     "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-connecting-oxfordshire/Abingdon_LCWIP.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 34,
+    "pct_term_breakdown": {
+      "pct": 29,
+      "propensity_to_cycle_tool": 5,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3322,6 +3854,13 @@
     "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 24,
+    "pct_term_breakdown": {
+      "pct": 21,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3357,6 +3896,13 @@
     "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/BicesterLCWIPTownUpdate2023.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3394,6 +3940,13 @@
     "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/ChippingNortonLCWIP.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 7,
+    "pct_term_breakdown": {
+      "pct": 3,
+      "propensity_to_cycle_tool": 4,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3431,6 +3984,13 @@
     "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/Witney_LCWIP.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 7,
+    "pct_term_breakdown": {
+      "pct": 3,
+      "propensity_to_cycle_tool": 4,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3468,6 +4028,13 @@
     "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/WoodstockAreaLCWIP.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 7,
+    "pct_term_breakdown": {
+      "pct": 4,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3510,6 +4077,13 @@
     "_url": "https://www.rbwm.gov.uk/sites/default/files/2024-06/transport_local_cycling_and_walking_infrastructure_plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 10,
+    "pct_term_breakdown": {
+      "pct": 4,
+      "propensity_to_cycle_tool": 6,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3552,6 +4126,13 @@
     "_url": "https://www.rutland.gov.uk/sites/default/files/2025-03/ev11.7_cycling_and_walking_infrastructure_plan_august_2023.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 13,
+    "pct_term_breakdown": {
+      "pct": 8,
+      "propensity_to_cycle_tool": 5,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The PCT analysis identified a clear 'spoke' pattern of desire lines radiating from Oakham, confirming its status as the main employment hub. It highlighted strong potential for cycling between Oakham and nearby villages, as well as longer journeys towards Stamford. The analysis also informed the understanding of school travel patterns. Subsequently, the completed LCWIP was used to successfully secure over \u00a3100,000 in capability funding from Active Travel England to develop designs for priority locations identified in the plan. [4, 3]",
     "_also_in_2026": false
@@ -3588,6 +4169,13 @@
     "_url": "https://www.scilly.gov.uk/environment-transport/highways/local-cycling-walking-infrastructure-plan",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "Not applicable as the tool was not mentioned.",
     "_also_in_2026": false
@@ -3620,6 +4208,13 @@
     "_url": "https://www.somerset.gov.uk/roads-travel-and-parking/local-cycling-and-walking-infrastructure-plans/",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -3654,6 +4249,13 @@
     "_url": "https://www.sstaffs.gov.uk/sites/default/files/2023-03/local_cycling_and_walking_infrastructure_plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3689,6 +4291,13 @@
     "_url": "https://www.stoke.gov.uk/download/downloads/id/2757/draft_local_cycling_and_walking_infrastructure_plan.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -3721,6 +4330,13 @@
     "_url": "https://www.swindon.gov.uk/downloads/file/8394/swindon_local_cycling_and_walking_infrastructure_plan",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The use of predictive tools (likely including PCT) helped in identifying 'key desire lines' and was fundamental in generating the initial list of corridors and schemes for improvement. This directly informed the 'Swindon's LCWIP' and its proposed investment of approximately \u00a345m over the next 10 years to transform active travel. For example, for the 'Whitehill Way - Windmill Hill Business Park to Mead Way' scheme, trip data from the 2011 Census (which is often analyzed with PCT) highlighted areas where short car trips could transfer to cycling if proper facilities were provided, leading to its assessment and inclusion in the plan. Similarly, for the 'Northern Route - Great Western Way (Route 45) to Orbital District Centre' and 'Gorse Hill-Town Centre to Kembrey Park' schemes, trip data from the 2011 census helped identify areas where short car trips could potentially transfer to cycling, and the DfT's RST was used to assess these routes.",
     "_also_in_2026": false
@@ -3753,6 +4369,13 @@
     "_url": "https://www.threerivers.gov.uk/news/lcwip-approved-herts-county-council",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -3791,6 +4414,13 @@
     "_url": "https://www.thurrock.gov.uk/sites/default/files/assets/documents/thurrock_local_cycling_and_walking_infrastructure_plan_january_2025-compressed.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 3,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 2,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3827,6 +4457,13 @@
     "_url": "https://www.west-norfolk.gov.uk/download/downloads/id/8479/f67_-_local_cycling_and_walking_infrastructure_plan_lcwip.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "specific_evidence_of_impact_of_using_pct": "The application of 'cycle propensity modelling' helped identify key attractors within King's Lynn and informed the development of the cycle network plan. This indicates that the output of such modeling (like PCT) was directly used in shaping the proposed infrastructure improvements to encourage cycling in the area.",
     "_also_in_2026": false
@@ -3867,6 +4504,13 @@
     "_url": "https://www.westberks.gov.uk/media/50987/Local-Cycling-Walking-Infrastructure-Plan-LCWIP-June-2021/pdf/LCWIP_June_2021.pdf?m=1623079527393",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 8,
+    "pct_term_breakdown": {
+      "pct": 4,
+      "propensity_to_cycle_tool": 3,
+      "pct_bike": 1
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3901,6 +4545,13 @@
     "_url": "https://www.westofengland-ca.gov.uk/wp-content/uploads/2021/09/West-of-England-Local-Cycling-and-Walking-Infrastructure-Plan-2020-2036.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },
@@ -3938,6 +4589,13 @@
     "_url": "https://www.westsussex.gov.uk/media/chjdcz0u/local_cycling_and_walking_infrastructure_plan.pdf",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 1,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 1,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false,
     "specific_evidence_of_impact_of_using_pct": "Whilst this (PCT) did not directly influence the choice of routes it provided a useful validation exercise to explore the potential increase in cycling journeys which may result from providing or enhancing infrastructure."
@@ -4167,6 +4825,13 @@
     "_url": "https://www.worcestershire.gov.uk/sites/default/files/2025-10/redditch_lcwip_final.pdf",
     "_source": "web-search",
     "_download_status": "ok",
+    "n_mentions_pct": 70,
+    "pct_term_breakdown": {
+      "pct": 59,
+      "propensity_to_cycle_tool": 11,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026"
   },
   {
@@ -4203,6 +4868,13 @@
     "_url": "https://yoursay.hull.gov.uk/42351/widgets/125945/documents/85658",
     "_source": "seed-94db",
     "_download_status": "ok",
+    "n_mentions_pct": 0,
+    "pct_term_breakdown": {
+      "pct": 0,
+      "propensity_to_cycle_tool": 0,
+      "pct_bike": 0
+    },
+    "has_text_layer": true,
     "_source_tag": "2026",
     "_also_in_2026": false
   },

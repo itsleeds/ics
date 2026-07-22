@@ -36,5 +36,12 @@
   "_idx": 5,
   "_url": "https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 0,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 0,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

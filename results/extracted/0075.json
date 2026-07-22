@@ -25,5 +25,12 @@
   "_idx": 75,
   "_url": "https://www.devon.gov.uk/roads-and-transport/traffic-information/transport-planning/local-cycling-and-walking-infrastructure-plans-lcwips/",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 0,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 0,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

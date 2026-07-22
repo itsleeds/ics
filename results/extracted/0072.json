@@ -35,5 +35,12 @@
   "_idx": 72,
   "_url": "https://www.chichester.gov.uk/media/39558/Local-Cycling-and-Walking-Infrastructure-Plan-LCWIP/pdf/Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf?m=1714123154250",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 20,
+  "pct_term_breakdown": {
+    "pct": 16,
+    "propensity_to_cycle_tool": 4,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

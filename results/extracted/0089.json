@@ -37,5 +37,12 @@
   "_idx": 89,
   "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-connecting-oxfordshire/Abingdon_LCWIP.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 34,
+  "pct_term_breakdown": {
+    "pct": 29,
+    "propensity_to_cycle_tool": 5,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

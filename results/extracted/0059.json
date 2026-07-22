@@ -28,5 +28,12 @@
   "_idx": 59,
   "_url": "https://transportforthesoutheast.org.uk/app/uploads/2025/06/TfSE-RATSAP-Evidence-Base-Report-2025.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 6,
+  "pct_term_breakdown": {
+    "pct": 3,
+    "propensity_to_cycle_tool": 2,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

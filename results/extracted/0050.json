@@ -29,5 +29,12 @@
   "_idx": 50,
   "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s78135/CMDTM091025%20-%20Carterton%20LCWIP%20Final%20Draft%20LCWIP.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 29,
+  "pct_term_breakdown": {
+    "pct": 14,
+    "propensity_to_cycle_tool": 14,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

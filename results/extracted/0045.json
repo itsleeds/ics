@@ -35,5 +35,12 @@
   "_idx": 45,
   "_url": "https://moderngov.threerivers.gov.uk/documents/s13679/Appendix+A+-+Local+Cycling+and+Walking+Infrastructure+Plan+including+appendices.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 31,
+  "pct_term_breakdown": {
+    "pct": 23,
+    "propensity_to_cycle_tool": 7,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

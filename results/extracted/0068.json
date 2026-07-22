@@ -25,5 +25,12 @@
   "_idx": 68,
   "_url": "https://www.broads-authority.gov.uk/__data/assets/pdf_file/0017/152342/Broads_Local_Cycling_and_Walking_Infrastructure_Plan.pdf",
   "_source": "retry",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 0,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 0,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

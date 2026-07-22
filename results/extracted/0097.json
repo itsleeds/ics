@@ -36,5 +36,12 @@
   "_idx": 97,
   "_url": "https://www.rutland.gov.uk/sites/default/files/2025-03/ev11.7_cycling_and_walking_infrastructure_plan_august_2023.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 13,
+  "pct_term_breakdown": {
+    "pct": 8,
+    "propensity_to_cycle_tool": 5,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

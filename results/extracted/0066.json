@@ -36,5 +36,12 @@
   "_idx": 66,
   "_url": "https://www.blaby.gov.uk/media/r0zjdj5m/blaby-district-council-lcwip-2024-230724.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 12,
+  "pct_term_breakdown": {
+    "pct": 5,
+    "propensity_to_cycle_tool": 6,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

@@ -30,5 +30,12 @@
   "_idx": 58,
   "_url": "https://sthelens.gov.uk/media/4732/St-Helens-Borough-LCWIP/pdf/St_Helens_LCWIP_FINAL.pdf?m=637998005068170000",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 1,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 1,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

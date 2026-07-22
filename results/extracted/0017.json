@@ -37,5 +37,12 @@
   "_idx": 17,
   "_url": "https://democracy.durham.gov.uk/documents/s174868/Item%207%20Shildon%20LCWIP%20Final%20inc%20Appendices_opt.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 5,
+  "pct_term_breakdown": {
+    "pct": 4,
+    "propensity_to_cycle_tool": 1,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

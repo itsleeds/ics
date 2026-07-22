@@ -35,5 +35,12 @@
   "_idx": 1,
   "_url": "https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 6,
+  "pct_term_breakdown": {
+    "pct": 5,
+    "propensity_to_cycle_tool": 1,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

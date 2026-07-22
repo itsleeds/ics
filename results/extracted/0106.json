@@ -33,5 +33,12 @@
   "_idx": 106,
   "_url": "https://www.thurrock.gov.uk/sites/default/files/assets/documents/thurrock_local_cycling_and_walking_infrastructure_plan_january_2025-compressed.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 3,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 2,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

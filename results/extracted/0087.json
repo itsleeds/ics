@@ -35,5 +35,12 @@
   "_idx": 87,
   "_url": "https://www.nottinghamshire.gov.uk/media/5081421/d2n2localcyclingandwalkinginfrastructureplan.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 24,
+  "pct_term_breakdown": {
+    "pct": 14,
+    "propensity_to_cycle_tool": 7,
+    "pct_bike": 3
+  },
+  "has_text_layer": true
 }

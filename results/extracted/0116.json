@@ -36,5 +36,12 @@
   "_idx": 116,
   "_url": "https://www.worcestershire.gov.uk/sites/default/files/2025-10/redditch_lcwip_final.pdf",
   "_source": "web-search",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 70,
+  "pct_term_breakdown": {
+    "pct": 59,
+    "propensity_to_cycle_tool": 11,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

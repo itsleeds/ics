@@ -34,5 +34,12 @@
   "_idx": 33,
   "_url": "https://edemocracy.northyorks.gov.uk/documents/s52849/Thirsk%20and%20Whitby%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plans.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 28,
+  "pct_term_breakdown": {
+    "pct": 21,
+    "propensity_to_cycle_tool": 7,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

@@ -37,5 +37,12 @@
   "_idx": 26,
   "_url": "https://democracy.peterborough.gov.uk/documents/s53301/Item%205.%20Appendix%201%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP%2016072024%20Cabinet.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 20,
+  "pct_term_breakdown": {
+    "pct": 15,
+    "propensity_to_cycle_tool": 4,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

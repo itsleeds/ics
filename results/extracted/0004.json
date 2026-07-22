@@ -32,5 +32,12 @@
   "_idx": 4,
   "_url": "https://assets.publishing.service.gov.uk/media/5ffa1f96d3bf7f65d9e35825/cycle-infrastructure-design-ltn-1-20.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 2,
+  "pct_term_breakdown": {
+    "pct": 0,
+    "propensity_to_cycle_tool": 1,
+    "pct_bike": 1
+  },
+  "has_text_layer": true
 }

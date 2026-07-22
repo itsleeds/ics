@@ -30,5 +30,12 @@
   "_idx": 31,
   "_url": "https://edemocracy.northyorks.gov.uk/documents/s10084/Malton%20and%20Norton%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 31,
+  "pct_term_breakdown": {
+    "pct": 28,
+    "propensity_to_cycle_tool": 3,
+    "pct_bike": 0
+  },
+  "has_text_layer": true
 }

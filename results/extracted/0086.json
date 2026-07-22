@@ -36,5 +36,12 @@
   "_idx": 86,
   "_url": "https://www.midsussex.gov.uk/media/9010/mid-sussex-local-cycling-and-walking-infrastructure-plan-2023-vfinal.pdf",
   "_source": "seed-94db",
-  "_download_status": "ok"
+  "_download_status": "ok",
+  "n_mentions_pct": 65,
+  "pct_term_breakdown": {
+    "pct": 53,
+    "propensity_to_cycle_tool": 9,
+    "pct_bike": 3
+  },
+  "has_text_layer": true
 }
