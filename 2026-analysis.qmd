@@ -93,6 +93,45 @@ ct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('un
 print(ct)
 ```
 
+## Change over time
+
+The chart below shows the evolution of LCWIP and active travel document publications over time (2019–2025), categorized by whether the report mentions the Propensity to Cycle Tool.
+
+```{r}
+#| label: fig-pct-over-time
+#| fig-cap: "Publication of LCWIP and active-travel planning documents over time by PCT mention status."
+#| warning: false
+#| message: false
+library(readr)
+library(ggplot2)
+library(dplyr)
+
+df <- read_csv("results/results_flat.csv", show_col_types = FALSE) %>%
+  filter(!is.na(year), year >= 2018, year <= 2026)
+
+df_summary <- df %>%
+  mutate(pct_label = if_else(mentions_pct, "Mentions PCT", "Does not mention PCT")) %>%
+  group_by(year = factor(year), pct_label) %>%
+  summarise(count = n(), .groups = "drop")
+
+ggplot(df_summary, aes(x = year, y = count, fill = pct_label)) +
+  geom_col(position = "stack", width = 0.6) +
+  scale_fill_manual(values = c("Mentions PCT" = "#2b8cbe", "Does not mention PCT" = "#de2d26")) +
+  labs(
+    title = "LCWIP Document Publications and PCT Mentions Over Time (2019–2025)",
+    subtitle = "Annual count of published active travel strategy documents in England",
+    x = "Publication Year",
+    y = "Number of Documents",
+    fill = "PCT Status"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
 # Scenario usage
 
 Among documents that mention the PCT, which future scenarios are referenced?
