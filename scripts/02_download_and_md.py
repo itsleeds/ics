@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
-"""Download every candidate URL into data-govuk-2026-raw and produce a .md
-file (raw text + metadata) in data-govuk-2026-md.
+"""Download every candidate URL into data-govuk-2026-raw and produce a .md extract in data-govuk-2026-md.
 
-PDFs: extract text with pypdf (fast); if <50 chars, retry with pdfplumber.
-HTML/web pages: fetch and extract <body> text with a lightweight regex/bs4-free
-parser (html.unescape + strip tags).
-Each download writes:
-  data-govuk-2026-raw/<id>.<ext>      raw bytes
-  data-govuk-2026-md/<id>.md          text + front-matter
+Reads:
+  - scripts/candidates.json
 
-<id> = zero-padded index + short slug.
-Incremental: skips URLs already present (keyed by normalised URL list file).
+Outputs:
+  - data-govuk-2026-raw/<id>.<ext>
+  - data-govuk-2026-md/<id>.md
+  - scripts/done_urls.txt
+
+Run: python scripts/02_download_and_md.py
 """
-import json, os, re, sys, time, hashlib, html
+import json, os, re, sys, time, html, io
 from urllib.parse import urlparse, unquote
 import requests
 from pypdf import PdfReader
-import io
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(ROOT, "data-govuk-2026-raw")
@@ -50,7 +48,7 @@ def pdf_text(raw):
             with pdfplumber.open(io.BytesIO(raw)) as pdf:
                 txt = "\n".join((pg.extract_text() or "") for pg in pdf.pages)
             return txt, len(pdf.pages)
-        except Exception as e:
+        except Exception:
             return "", 0
 
 def html_text(raw):
@@ -58,7 +56,6 @@ def html_text(raw):
         s = raw.decode("utf-8", "ignore")
     except Exception:
         s = str(raw)
-    # crude tag strip
     s = re.sub(r"(?is)<(script|style|head|noscript).*?</\1>", " ", s)
     s = re.sub(r"(?is)<!--.*?-->", " ", s)
     s = re.sub(r"(?s)<[^>]+>", " ", s)
@@ -67,24 +64,17 @@ def html_text(raw):
     s = re.sub(r"\n\s*\n+", "\n\n", s)
     return s
 
-# index of already-processed
-done = {}
-for fn in os.listdir(MD):
-    if fn.endswith(".md"):
-        # first line may be '# <url>'
-        try:
-            with open(os.path.join(MD, fn)) as f:
-                first = f.readline()
-            m = re.search(r"url:\s*(\S+)", open(os.path.join(MD, fn)).read())
-        except Exception:
-            pass
-# Simpler: track by reading a manifest
 MANIFEST = os.path.join(ROOT, "scripts", "done_urls.txt")
 done_set = set()
 if os.path.exists(MANIFEST):
     done_set = set(l.strip() for l in open(MANIFEST) if l.strip())
 
-cands = json.load(open(os.path.join(ROOT, "scripts", "candidates.json")))
+cands_path = os.path.join(ROOT, "scripts", "candidates.json")
+if not os.path.exists(cands_path):
+    print("candidates.json not found. Run scripts/01_build_candidates.py first.")
+    sys.exit(1)
+
+cands = json.load(open(cands_path))
 total = len(cands)
 new = 0
 for i, c in enumerate(cands):
@@ -101,7 +91,6 @@ for i, c in enumerate(cands):
         raw = r.content
     except Exception as e:
         print(f"   DOWNLOAD FAIL: {e}", flush=True)
-        # record failure in md so we know
         with open(os.path.join(MD, f"{sid}.md"), "w") as f:
             f.write(f"# {u}\n\nurl: {u}\nstatus: download_failed\nerror: {e}\nsource: {c['source']}\n")
         done_set.add(norm(u))
@@ -117,18 +106,17 @@ for i, c in enumerate(cands):
         txt = html_text(raw)
         meta = f"bytes: {len(raw)}\ncontent_type: {ctype}"
 
-    # save raw
     rawpath = os.path.join(RAW, f"{sid}.{ext}")
     with open(rawpath, "wb") as f:
         f.write(raw)
-    # save md
+
     mdpath = os.path.join(MD, f"{sid}.md")
     header = (f"# {u}\n\n"
               f"url: {u}\nsource: {c['source']}\nnote: {c.get('note','')}\n"
               f"doc_type_guess: \n{meta}\n\n---\n\n")
     body = txt if txt.strip() else f"[No extractable text; raw file: {os.path.basename(rawpath)}]"
     with open(mdpath, "w") as f:
-        f.write(header + body[:200000])  # cap 200k chars
+        f.write(header + body[:200000])
     done_set.add(norm(u))
     new += 1
     if len(raw) < 500:
@@ -136,4 +124,4 @@ for i, c in enumerate(cands):
 
 with open(MANIFEST, "w") as f:
     f.write("\n".join(sorted(done_set)) + "\n")
-print(f"\nDONE. newly downloaded this run: {new}. total candidates: {total}")
+print(f"\nDONE. Newly downloaded this run: {new}. Total candidates: {total}")
