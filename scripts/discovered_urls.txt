@@ -32,3 +32,11 @@ https://s3-eu-west-1.amazonaws.com/travelwest/wp-content/uploads/2020/07/LCWIP.p
 https://assets.ctfassets.net/xfhv954w443t/6I3qoqrkOLeiXUA5CVZcAz/f4203328d488aa76a0f1f5aa57aaf1d9/Greater_Manchester_Active_Travel_Annual_Report_2025.pdf	GM Active Travel Annual Report 2025
 https://democracy.greatermanchester-ca.gov.uk/documents/s3398/15%20GMCA%20Cycling%20and%20Walking%20Challenge%20Fund%20Update.pdf	GM Cycling and Walking Challenge Fund Update (LCWIP-related)
 https://democracy.greatermanchester-ca.gov.uk/documents/s40952/GMCA%20OS%2020251126%20Draft%20Local%20Transport%20Plan%20-%20Appendix%204%20GM%20Transport%20Delivery%20Plan%20Consultation%20Dr.pdf	GM Transport Delivery Plan 2027-2037 (active travel)
+https://www.stalbans.gov.uk/sites/default/files/attachments/St%20Albans%20District%20LCWIP%20-%20Final%20Report%20-%20FINAL%20accessible.pdf	St Albans District LCWIP
+https://n-somerset.gov.uk/sites/default/files/2026-05/CD7.47%20West%20of%20England%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%202020-2036.pdf	North Somerset LCWIP (2020-2036)
+https://www.wiltshire.gov.uk/media/10839/amesbury-lcwip.pdf	Amesbury LCWIP (Wiltshire)
+https://www.wiltshire.gov.uk/media/10840/devizes-lcwip.pdf	Devizes LCWIP (Wiltshire)
+https://www.wiltshire.gov.uk/media/10841/trowbridge-lcwip.pdf	Trowbridge LCWIP (Wiltshire)
+https://www.hants.gov.uk/transport/transportschemes/winchesterlcwip	Winchester LCWIP (Hampshire)
+https://www.surreycc.gov.uk/transport-and-streets/road-safety-and-active-travel/active-travel-schemes/farnham-lcwip	Farnham LCWIP (Surrey)
+https://www.guildford.gov.uk/article/27192/Local-Cycling-and-Walking-Infrastructure-Plan	Guildford LCWIP (Surrey)
