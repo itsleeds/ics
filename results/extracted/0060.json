@@ -1,49 +1,45 @@
 {
-  "pdf_url": "",
-  "report_name": "Portsmouth City Council LOCAL CYCLING & WALKING INFRASTRUCTURE PLAN Background Report",
-  "date_published": "May 2020",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Route Selection Tool (RST)",
-    "Walking Route Audit Tool (WRAT)",
-    "Datashine Commute",
-    "National Travel Survey 2018",
-    "Traffic counts",
-    "Footfall data"
-  ],
-  "how_pct_was_used": "The PCT\u2019s Government Target (Equality) scenario was used to identify the highest forecast future cycle commuting flows within the plan area.",
-  "pct_scenarios_used": [
-    "Government Target"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [
-    "The Propensity to Cycle Tool (PCT): a website analysis tool which forecasts the potential future growth of cycle trips under different scenarios for travel to work and travel to school."
-  ],
-  "local_authority_name": "Portsmouth City Council",
-  "combined_authority_name": "",
-  "region": "South East",
-  "length_of_cycle_network_proposed": null,
-  "total_cost_of_network": null,
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 60,
   "_url": "https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf",
+  "report_name": "LOCAL CYCLING & WALKING INFRASTRUCTURE PLAN Background Report",
+  "date_published": "May 2020",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 11,
   "pct_term_breakdown": {
     "pct": 6,
     "propensity_to_cycle_tool": 3,
     "pct_bike": 2
   },
-  "has_text_layer": true
+  "pct_usage_depth": "3 - Network design & mapping",
+  "other_tools_used": [
+    "RST",
+    "WRAT"
+  ],
+  "how_pct_was_used": "The PCT was used to forecast potential future growth of cycle trips under different scenarios to inform the identification of desire lines and the prioritisation of cycling corridors.",
+  "pct_scenarios_used": [
+    "Government Target"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "Route Selection Tool (RST) and Walking Route Audit Tool (WRAT) were used for auditing, and a custom prioritisation matrix was developed using weighted criteria including existing/potential demand, strategic projects, economy, education, housing, and public health.",
+  "specific_evidence_of_impact": "The council secured \u00a34m in Tranche 1 funding from the Transforming Cities Fund, with \u00a32.6m allocated to three junction improvements and Real Time Information installation, and the LCWIP evidence base is being used to support further funding bids for the Transforming Cities Fund and Clean Air Fund.",
+  "pct_usage_quote": "The Propensity to Cycle Tool (PCT): a website analysis tool3 which forecasts the potential future growth of cycle trips under different scenarios for travel to work and travel to school.",
+  "local_authority_name": "Portsmouth City Council",
+  "combined_authority_name": null,
+  "region": "South East",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": "\u00a3114m-208m",
+  "length_of_network_km": null,
+  "total_cost_pounds": 208000000,
+  "routes": 11,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

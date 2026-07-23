@@ -1,25 +1,38 @@
 {
-  "pdf_url": null,
+  "_idx": 81,
+  "_url": "https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/FINAL%20Ipswich%20LCWIP%2007.07.25.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok",
+  "pdf_url": "https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/FINAL%20Ipswich%20LCWIP%2007.07.25.pdf",
   "report_name": "Draft Ipswich Local Cycling and Walking Infrastructure Plan (LCWIP)",
-  "date_published": "",
+  "date_published": "2025-07",
   "doc_type": "LCWIP",
   "mentions_pct": true,
+  "n_mentions_pct": 15,
+  "pct_term_breakdown": {
+    "pct": 2,
+    "propensity_to_cycle_tool": 11,
+    "pct_bike": 2
+  },
+  "pct_usage_depth": "2 - Contextual background / data input",
   "other_tools_used": [
-    "Walking Route Audit Tool (WRAT)",
-    "Route Selection Tool",
-    "Multi Criteria Assessment Framework (MCAF)"
+    "WRAT",
+    "Route Selection Tool"
   ],
-  "how_pct_was_used": "Used as a web-based mapping application to assist transport planners in identifying new schemes based on commuting data from the 2011 Census and school travel trip purpose features.",
-  "pct_scenarios_used": [],
+  "how_pct_was_used": "The Propensity to Cycle Tool was used to demonstrate cycling desire lines for journeys to work and school, and to assess potential cycling rates under different scenarios to assist in identifying new schemes.",
+  "pct_scenarios_used": [
+    "Go Dutch",
+    "E-bike"
+  ],
   "pct_data_sources": [
     "Census 2011 commuting",
-    "school travel"
+    "School travel demand"
   ],
-  "desire_lines_used": false,
+  "pct_desire_lines_used": true,
   "prioritisation_integration": false,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
+  "other_tools_developed": "Multi Criteria Assessment Framework (MCAF) and Walking Route Audit Tool (WRAT)",
+  "specific_evidence_of_impact": "The document states that the LCWIP is a strategic approach to identify improvements and that having a prioritised list of routes 'ready to go' will place Ipswich and Suffolk in a stronger position to bid for and secure delivery funding when opportunities arise.",
+  "pct_usage_quote": null,
   "local_authority_name": "Ipswich Borough Council",
   "combined_authority_name": null,
   "region": "East of England",
@@ -28,16 +41,6 @@
   "length_of_network_km": null,
   "total_cost_pounds": null,
   "routes": 85,
-  "extraction_notes": "",
-  "_idx": 81,
-  "_url": "https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/FINAL%20Ipswich%20LCWIP%2007.07.25.pdf",
-  "_source": "seed-94db",
-  "_download_status": "ok",
-  "n_mentions_pct": 15,
-  "pct_term_breakdown": {
-    "pct": 2,
-    "propensity_to_cycle_tool": 11,
-    "pct_bike": 2
-  },
-  "has_text_layer": true
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

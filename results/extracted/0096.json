@@ -1,47 +1,44 @@
 {
-  "pdf_url": "",
-  "report_name": "Royal Borough of Windsor & Maidenhead Local Cycling & Walking Infrastructure Plan",
-  "date_published": "",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Route Selection Tool",
-    "Walking Audit"
-  ],
-  "how_pct_was_used": "Used to create a data-driven approach to developing a cycle network and identify routes with the greatest potential; results were cross-referenced with public engagement feedback.",
-  "pct_scenarios_used": [
-    "Go Dutch"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel"
-  ],
-  "desire_lines_used": false,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "Budget of \u00a31.5 million approved for 2022/23; identification of priority corridors for study.",
-  "quotes_on_using_pct": [
-    "The Propensity to Cycle Tool (PCT) for England and Wales provides an evidence base to inform cycling investment.",
-    "The 'Go-Dutch' Scenario has been used to understand which routes provide the greatest potential."
-  ],
-  "local_authority_name": "Royal Borough of Windsor & Maidenhead",
-  "combined_authority_name": "",
-  "region": "South East",
-  "length_of_cycle_network_proposed": "",
-  "total_cost_of_network": "\u00a31.5 million",
-  "length_of_network_km": null,
-  "total_cost_pounds": 1500000,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 96,
   "_url": "https://www.rbwm.gov.uk/sites/default/files/2024-06/transport_local_cycling_and_walking_infrastructure_plan.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://www.rbwm.gov.uk/sites/default/files/2024-06/transport_local_cycling_and_walking_infrastructure_plan.pdf",
+  "report_name": "Local Cycling & Walking Infrastructure Plan",
+  "date_published": "2024-06",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 10,
   "pct_term_breakdown": {
     "pct": 4,
     "propensity_to_cycle_tool": 6,
     "pct_bike": 0
   },
-  "has_text_layer": true
+  "pct_usage_depth": "3 - Network design & mapping",
+  "other_tools_used": [
+    "Route Selection Tool"
+  ],
+  "how_pct_was_used": "The PCT was used to model demand for trips between origins and destinations to create a data-driven approach for developing a cycle network and to cross-reference with public engagement feedback to identify where interventions have the greatest potential to improve journeys.",
+  "pct_scenarios_used": [
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "Route Selection Tool",
+  "specific_evidence_of_impact": "The council allocated a \u00a31.5 million investment in walking and cycling for the 2022/23 financial year to support the development and delivery of the first set of improvements identified in the plan.",
+  "pct_usage_quote": "The \u2018Go-Dutch\u2019 Scenario has been used to understand which routes provide the greatest potential.",
+  "local_authority_name": "The Royal Borough of Windsor & Maidenhead",
+  "combined_authority_name": null,
+  "region": "South East",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": 12,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

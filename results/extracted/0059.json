@@ -1,39 +1,43 @@
 {
-  "pdf_url": "",
-  "report_name": "Transport for the South East Regional Active Travel Strategy and Action Plan Technical Report 1: Evidence Base Report",
-  "date_published": "June 2025",
-  "doc_type": "LCWIP-related",
-  "mentions_pct": false,
-  "other_tools_used": [
-    "DfT route selection tool",
-    "National Travel Survey"
-  ],
-  "how_pct_was_used": "",
-  "pct_scenarios_used": [],
-  "pct_data_sources": [],
-  "desire_lines_used": false,
-  "prioritisation_integration": false,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "Bracknell Forest, Reading, Royal Borough of Windsor & Maidenhead, Slough, Wokingham, West Berkshire, Kent, Medway, Hampshire, Isle of Wight, Surrey, East Sussex, West Sussex, Portsmouth, Southampton, Brighton & Hove",
-  "combined_authority_name": "",
-  "region": "South East",
-  "length_of_cycle_network_proposed": null,
-  "total_cost_of_network": null,
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 59,
   "_url": "https://transportforthesoutheast.org.uk/app/uploads/2025/06/TfSE-RATSAP-Evidence-Base-Report-2025.pdf",
   "_source": "web-search",
   "_download_status": "ok",
+  "pdf_url": "https://transportforthesoutheast.org.uk/app/uploads/2025/06/TfSE-RATSAP-Evidence-Base-Report-2025.pdf",
+  "report_name": "Regional Active Travel Strategy and Action Plan Technical Report 1: Evidence Base Report",
+  "date_published": "2025-06-25",
+  "doc_type": "other",
+  "mentions_pct": true,
   "n_mentions_pct": 6,
   "pct_term_breakdown": {
     "pct": 3,
     "propensity_to_cycle_tool": 2,
     "pct_bike": 1
   },
-  "has_text_layer": true
+  "pct_usage_depth": "2 - Contextual background / data input",
+  "other_tools_used": [
+    "Department for Transport\u2019s (DfT\u2019s) route selection tool"
+  ],
+  "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to calculate the probability for mode shift to cycling based on trip distances, hilliness, and population, supporting the identification of targeted infrastructure in areas with the greatest potential for active travel journeys.",
+  "pct_scenarios_used": [
+    "Government Target"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting"
+  ],
+  "pct_desire_lines_used": false,
+  "prioritisation_integration": false,
+  "other_tools_developed": "Active Travel Progression Model (ATPM) and a multi-criteria assessment framework for network appraisal",
+  "specific_evidence_of_impact": "The PCT tool was used to support the identification of targeted infrastructure in areas where there is the greatest potential for active travel journeys, helping to inform the RATSAP development approach.",
+  "pct_usage_quote": "The Propensity to Cycle Tool (PCT)lvi calculates the probability for mode shift to cycling based on trip distances but also hilliness and population. Figure 7-5 portrays propensity to cycle in the TfSE area using the tool. It shows a low propensity for cycle use across the TfSE area based on an analysis using the 2011 Census. It reflects similar patterns to Figure 5-5, where potential is greatest in built-up areas, primarily due to shorter travel distances required. Similarly to desire lines, PCT informed the approach to the RATSAP development by supporting the identification of targeted infrastructure in areas where there is the greatest potential for active travel journeys.",
+  "local_authority_name": null,
+  "combined_authority_name": "Transport for the South East",
+  "region": "South East",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

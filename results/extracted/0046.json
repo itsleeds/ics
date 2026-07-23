@@ -1,48 +1,48 @@
 {
-  "pdf_url": "",
-  "report_name": "Banbury Local Cycling and Walking Infrastructure Plan (LCWIP)",
-  "date_published": "July 2023",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Strava Global Heatmap",
-    "CycleStreets",
-    "Rapid Cycleway Prioritisation Tool",
-    "Core Accessibility Indicators",
-    "Index of Multiple Deprivation (IMD)"
-  ],
-  "how_pct_was_used": "Used to identify preferred routes for cycling journeys based on commuting data and school travel across various scenarios.",
-  "pct_scenarios_used": [
-    "E-bike",
-    "Go Dutch"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "Cherwell District Council",
-  "combined_authority_name": null,
-  "region": "South East",
-  "length_of_cycle_network_proposed": "",
-  "total_cost_of_network": "",
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 46,
   "_url": "https://mycouncil.oxfordshire.gov.uk/documents/s66592/CMDHM20230720R05a%20Annex%20A%20Banbury%20LCWIP%20FINAL_10072023%20version.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://mycouncil.oxfordshire.gov.uk/documents/s66592/CMDHM20230720R05a%20Annex%20A%20Banbury%20LCWIP%20FINAL_10072023%20version.pdf",
+  "report_name": "Banbury Local Cycling and Walking Infrastructure Plan (LCWIP)",
+  "date_published": "July 2023",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 41,
   "pct_term_breakdown": {
     "pct": 26,
     "propensity_to_cycle_tool": 15,
     "pct_bike": 0
   },
-  "has_text_layer": true
+  "pct_usage_depth": "3 - Network design & mapping",
+  "other_tools_used": [
+    "Strava Global Heatmap",
+    "Rapid Cycleway Prioritisation Tool",
+    "CycleStreets"
+  ],
+  "how_pct_was_used": "The PCT was used to identify existing cycling demand, estimate future potential under different scenarios, and inform the development and prioritisation of the proposed cycle network.",
+  "pct_scenarios_used": [
+    "Baseline",
+    "Go Dutch",
+    "E-bike"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "Rapid Cycleway Prioritisation Tool, CycleStreets low traffic neighbourhoods tool, and a custom prioritisation table based on factors including safety implications and connectivity enhancement.",
+  "specific_evidence_of_impact": "Public consultation feedback led to significant alterations to the final document, including updates to proposal clarity and changes to route maps. Additionally, the LCWIP process has already secured infrastructure commitments from development sites, such as improvements to the M40 tunnel, an off-carriageway cycle path along Old Daventry Road, off-road cycle lanes on Warwick Road, and contributions toward upgrading the canal towpath.",
+  "pct_usage_quote": null,
+  "local_authority_name": "Oxfordshire County Council",
+  "combined_authority_name": null,
+  "region": "South East England",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": 25,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

@@ -1,44 +1,48 @@
 {
-  "pdf_url": "",
-  "report_name": "LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN technical report",
-  "date_published": "March 2022",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Strava"
-  ],
-  "how_pct_was_used": "Used to validate desire lines against the 'Go Dutch' scenario and identify high-potential growth for cycling on key routes.",
-  "pct_scenarios_used": [
-    "Go Dutch"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel",
-    "desire lines"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "Cumbria County Council",
-  "combined_authority_name": "",
-  "region": "North West",
-  "length_of_cycle_network_proposed": "",
-  "total_cost_of_network": "",
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 73,
   "_url": "https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technical_report.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technical_report.pdf",
+  "report_name": "LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN technical report",
+  "date_published": "March 2022",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 12,
   "pct_term_breakdown": {
     "pct": 8,
     "propensity_to_cycle_tool": 3,
     "pct_bike": 1
   },
-  "has_text_layer": true
+  "pct_usage_depth": "2 - Contextual background / data input",
+  "other_tools_used": [
+    "Strava",
+    "RST",
+    "WRAT",
+    "EAST"
+  ],
+  "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to validate identified desire lines, forecast potential growth for cycling, and identify the most popular routes in current and future scenarios.",
+  "pct_scenarios_used": [
+    "Government Target",
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "Assessment and Sifting Tool (EAST), Route Selection Tool (RST), and a custom prioritisation framework with scoring criteria (Effectiveness, Policy, Economic, Deliverability).",
+  "specific_evidence_of_impact": "Carlisle was awarded \u00a319.7m of funding from the Towns Fund for regeneration and connectivity, and \u00a39.1 million was secured for the City Centre through the Future High Streets Fund. Additionally, the LCWIP process has directly informed the prioritisation of 38 cycling routes and 9 primary walking routes, with the Priority Cycling Network map being refined based on public consultation feedback.",
+  "pct_usage_quote": "The key radial routes of the A7 corridor, Castle Way, London Road, Warwick Road converging on the City Centre area are the most popular routes in all current and future scenarios in the Propensity to Cycle Tool (PCT) (see www.pct.bike for further information on the PCT).",
+  "local_authority_name": "Cumbria County Council",
+  "combined_authority_name": null,
+  "region": "North West",
+  "length_of_cycle_network_proposed": "circa 100km",
+  "total_cost_of_network": "\u00a3132.5 million",
+  "length_of_network_km": 100,
+  "total_cost_pounds": 132500000,
+  "routes": 41,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

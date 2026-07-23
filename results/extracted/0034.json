@@ -1,47 +1,48 @@
 {
-  "pdf_url": "",
-  "report_name": "Faversham Town Council Local Cycling and Walking Infrastructure Plan",
-  "date_published": "September 2025",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Route Selection Tool (RST)",
-    "Walking Route Audit Tool (WRAT)",
-    "Strava data"
-  ],
-  "how_pct_was_used": "Used to estimate future demand for cycling based on commuting and school trips; provided straight-line networks and applied network results.",
-  "pct_scenarios_used": [
-    "E-bike",
-    "Go Dutch"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel",
-    "desire lines"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "Faversham Town Council",
-  "combined_authority_name": "",
-  "region": "South East",
-  "length_of_cycle_network_proposed": null,
-  "total_cost_of_network": null,
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": 11,
-  "extraction_notes": "",
   "_idx": 34,
   "_url": "https://favershamtowncouncil.gov.uk/wp-content/uploads/2025/09/Faversham-LCWIP-Aug-25.pdf",
   "_source": "web-search",
   "_download_status": "ok",
+  "pdf_url": "https://favershamtowncouncil.gov.uk/wp-content/uploads/2025/09/Faversham-LCWIP-Aug-25.pdf",
+  "report_name": "Faversham Town Council Local Cycling and Walking Infrastructure Plan",
+  "date_published": "September 2025",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 19,
   "pct_term_breakdown": {
     "pct": 16,
     "propensity_to_cycle_tool": 2,
     "pct_bike": 1
   },
-  "has_text_layer": true
+  "pct_usage_depth": "3 - Network design & mapping",
+  "other_tools_used": [
+    "Strava",
+    "WRAT",
+    "RST"
+  ],
+  "how_pct_was_used": "The PCT was used to identify current rates and estimate future demand for cycling based on commuting and school trips, providing both straight-line desire lines and applied networks to inform the LCWIP network recommendations.",
+  "pct_scenarios_used": [
+    "Government Target",
+    "E-bike",
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": false,
+  "other_tools_developed": "Route Selection Tool (RST) and Walking Route Assessment Tool (WRAT)",
+  "specific_evidence_of_impact": "The LCWIP methodology and prioritisation approach enabled Faversham Town Council, Swale Borough Council, and Kent County Council to secure \u00a31 million in funding from Active Travel England, which was used to implement the East-West cross-town walking route.",
+  "pct_usage_quote": "The PCT (www.pct.bike) shows current rates and estimates future demand for cycling based on commuting and school trips.",
+  "local_authority_name": "Faversham Town Council",
+  "combined_authority_name": null,
+  "region": "Kent",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": 11,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

@@ -1,47 +1,47 @@
 {
-  "pdf_url": "",
-  "report_name": "Crawley Local Cycling and Walking Infrastructure Plan \u2013 2021",
-  "date_published": "March 2021",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Route Selection Tool (RST)",
-    "Walking Route Assessment Tool (WRAT)",
-    "TfL Cycle Level of Service (CLoS)"
-  ],
-  "how_pct_was_used": "Used to identify likely route corridors where cycling has the greatest potential to grow and provide estimated figures for their use by linking census data to employment locations or schools.",
-  "pct_scenarios_used": [
-    "Government Target",
-    "Go Dutch"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel",
-    "desire lines"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "Crawley Borough Council",
-  "combined_authority_name": null,
-  "region": "South East",
-  "length_of_cycle_network_proposed": "60.15 km",
-  "total_cost_of_network": "32.98 / 29.85",
-  "length_of_network_km": 60.15,
-  "total_cost_pounds": 32980000,
-  "routes": 16,
-  "extraction_notes": "",
   "_idx": 10,
   "_url": "https://crawley.gov.uk/sites/default/files/2023-08/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20report%20and%20appendices.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://crawley.gov.uk/sites/default/files/2023-08/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20report%20and%20appendices.pdf",
+  "report_name": "Crawley Local Cycling and Walking Infrastructure Plan",
+  "date_published": "July 2023",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 16,
   "pct_term_breakdown": {
     "pct": 11,
     "propensity_to_cycle_tool": 5,
     "pct_bike": 0
   },
-  "has_text_layer": true
+  "pct_usage_depth": "2 - Contextual background / data input",
+  "other_tools_used": [
+    "RST",
+    "WRAT",
+    "AMAT",
+    "TfL Cycle Level of Service (CLoS)"
+  ],
+  "how_pct_was_used": "The PCT was used to identify likely route corridors for cycling to work or school by linking census SOA centroids to employment locations and schools. It was used to compare and confirm corridors identified through manual mapping and local knowledge, though it was not the sole source of data.",
+  "pct_scenarios_used": [
+    "Government Target"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": false,
+  "other_tools_developed": "Active Mode Appraisal Tool (AMAT), Route Selection Tool (RST), and Walking Route Assessment Tool (WRAT)",
+  "specific_evidence_of_impact": "The LCWIP underpinned a successful \u00a321m government bid from the Towns Fund and Future High Street funds to provide a key commuter cycle route linking Gatwick Airport station, Manor Royal Business District, and the town centre.",
+  "pct_usage_quote": "The Propensity to Cycle Tool (PCT) aims to identify likely route corridors where cycling has the greatest potential to grow and provides estimated figures for their use.",
+  "local_authority_name": "Crawley Borough Council",
+  "combined_authority_name": null,
+  "region": "South East",
+  "length_of_cycle_network_proposed": "60.15 km",
+  "total_cost_of_network": "between \u00a329m and \u00a368m",
+  "length_of_network_km": 60.15,
+  "total_cost_pounds": 68000000,
+  "routes": 16,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

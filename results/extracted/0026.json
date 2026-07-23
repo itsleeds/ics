@@ -1,30 +1,39 @@
 {
-  "pdf_url": "",
+  "_idx": 26,
+  "_url": "https://democracy.peterborough.gov.uk/documents/s53301/Item%205.%20Appendix%201%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP%2016072024%20Cabinet.pdf",
+  "_source": "seed-94db",
+  "_download_status": "ok",
+  "pdf_url": "https://democracy.peterborough.gov.uk/documents/s53301/Item%205.%20Appendix%201%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP%2016072024%20Cabinet.pdf",
   "report_name": "Peterborough City Council Local Cycling and Walking Infrastructure Plan 2024- 2034",
   "date_published": "2024",
   "doc_type": "LCWIP",
   "mentions_pct": true,
+  "n_mentions_pct": 20,
+  "pct_term_breakdown": {
+    "pct": 15,
+    "propensity_to_cycle_tool": 4,
+    "pct_bike": 1
+  },
+  "pct_usage_depth": "3 - Network design & mapping",
   "other_tools_used": [
-    "CycleFriendly report",
-    "WalkFriendly report",
-    "Route Selection Tool (RST)",
-    "Walking Route Audit Tool (WRAT)",
-    "Active Mode Appraisal Toolkit (AMAT)"
+    "RST",
+    "WRAT",
+    "Active Mode Appraisal Toolkit (AMAT)",
+    "Healthy Streets Toolkit"
   ],
-  "how_pct_was_used": "Used for analyzing existing and potential cycling trips to provide numerical and graphical outputs; specifically used to produce desire lines for the 'Go Dutch' scenario and as a basis to calculate expected trip growth based on a 'Government Target' scenario.",
+  "how_pct_was_used": "The PCT was used to analyze existing and potential cycling trips, forecast future commuter cycle flows, and inform the prioritization of cycling schemes by comparing current trips against a 'Government Target' scenario.",
   "pct_scenarios_used": [
-    "Go Dutch",
-    "Government Target"
+    "Government Target",
+    "Go Dutch"
   ],
   "pct_data_sources": [
-    "Census 2011 commuting",
-    "desire lines"
+    "Census 2011 commuting"
   ],
-  "desire_lines_used": true,
+  "pct_desire_lines_used": true,
   "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
+  "other_tools_developed": "Prioritisation Matrix, Route Selection Tool (RST), Walking Route Audit Tool (WRAT)",
+  "specific_evidence_of_impact": "The LCWIP has identified 16 cycling routes and 15 walking routes for future investment, prioritised based on economic appraisal (BCR), safety, and potential for mode shift. It serves as a strategic tool to inform future funding bids, S106 developer contributions, and capital budget allocations to improve infrastructure and increase active travel.",
+  "pct_usage_quote": "The DfT Propensity to Cycle Tool (PCT) was used for analysing existing and potential cycling trips. The PCT is designed to assist transport planners and policy makers when prioritising investments and interventions to promote cycling.",
   "local_authority_name": "Peterborough City Council",
   "combined_authority_name": "Cambridgeshire and Peterborough Combined Authority",
   "region": "East of England",
@@ -33,16 +42,6 @@
   "length_of_network_km": null,
   "total_cost_pounds": null,
   "routes": 31,
-  "extraction_notes": "",
-  "_idx": 26,
-  "_url": "https://democracy.peterborough.gov.uk/documents/s53301/Item%205.%20Appendix%201%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP%2016072024%20Cabinet.pdf",
-  "_source": "seed-94db",
-  "_download_status": "ok",
-  "n_mentions_pct": 20,
-  "pct_term_breakdown": {
-    "pct": 15,
-    "propensity_to_cycle_tool": 4,
-    "pct_bike": 1
-  },
-  "has_text_layer": true
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

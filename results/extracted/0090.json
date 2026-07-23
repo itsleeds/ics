@@ -1,50 +1,46 @@
 {
-  "pdf_url": "",
-  "report_name": "Kidlington Local Cycling and Walking Infrastructure Plan (LCWIP)",
-  "date_published": "January 2022",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "National Travel Survey",
-    "Active Lives Survey",
-    "Oxfordshire Walking Design Standards",
-    "Cherwell Local Plan",
-    "Kidlington Framework Masterplan"
-  ],
-  "how_pct_was_used": "Used to identify baseline cycling modal shares, existing network routes, school travel data, and for modeling various scenarios such as 'Go Dutch' and 'E-bike'.",
-  "pct_scenarios_used": [
-    "Government Target",
-    "Go Dutch",
-    "E-bike",
-    "Baseline/Current"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel"
-  ],
-  "desire_lines_used": false,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "Oxfordshire County Council",
-  "combined_authority_name": "",
-  "region": "South East",
-  "length_of_cycle_network_proposed": "",
-  "total_cost_of_network": "",
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 90,
   "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf",
+  "report_name": "Kidlington Local Cycling and Walking Infrastructure Plan (LCWIP)",
+  "date_published": "January 2022",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 24,
   "pct_term_breakdown": {
     "pct": 21,
     "propensity_to_cycle_tool": 3,
     "pct_bike": 0
   },
-  "has_text_layer": true
+  "pct_usage_depth": "3 - Network design & mapping",
+  "other_tools_used": [
+    "Route Selection Tool"
+  ],
+  "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to identify baseline 2011 Census cycle commuting modal shares, model future potential cycling scenarios (Government target, Gender equality, Go Dutch, E-bike), and identify key cycle routes and desire lines to inform network improvements.",
+  "pct_scenarios_used": [
+    "Baseline",
+    "Government Target",
+    "Go Dutch",
+    "E-bike"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "Route Selection Tool",
+  "specific_evidence_of_impact": "The LCWIP has secured funding through the Oxfordshire Growth Deal for the Kidlington Roundabout improvements (anticipated delivery 2023) and has informed the planning of A44 and A4260 corridor improvements, including the provision of segregated cycle paths and shared use paths.",
+  "pct_usage_quote": "The Propensity to Cycle Tool (PCT) has been used to identify baseline (2011 Census) cycle commuting modal shares and the existing network.",
+  "local_authority_name": "Oxfordshire County Council",
+  "combined_authority_name": null,
+  "region": "South East",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

@@ -1,42 +1,42 @@
 {
-  "pdf_url": "",
-  "report_name": "Witney Local Cycling and Walking Infrastructure Plan",
-  "date_published": "March 2023",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Route Selection Tool (RST)",
-    "Walking Route Audit Tool (WRAT)"
-  ],
-  "how_pct_was_used": "Used to develop a cycle desire line network and classify routes as Primary, Secondary, or Local based on forecast flows of people cycling.",
-  "pct_scenarios_used": [],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "desire lines"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": false,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "West Oxfordshire District Council",
-  "combined_authority_name": null,
-  "region": "South East",
-  "length_of_cycle_network_proposed": null,
-  "total_cost_of_network": null,
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 93,
   "_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/Witney_LCWIP.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/Witney_LCWIP.pdf",
+  "report_name": "Witney Local Cycling and Walking Infrastructure Plan",
+  "date_published": "March 2023",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 7,
   "pct_term_breakdown": {
     "pct": 3,
     "propensity_to_cycle_tool": 4,
     "pct_bike": 0
   },
-  "has_text_layer": true
+  "pct_usage_depth": "3 - Network design & mapping",
+  "other_tools_used": [
+    "RST",
+    "WRAT"
+  ],
+  "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to develop the cycle desire line network by identifying routes people want to cycle, which informed the network planning stage.",
+  "pct_scenarios_used": null,
+  "pct_data_sources": [
+    "Census 2011 commuting"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": false,
+  "other_tools_developed": "Route Selection Tool (RST) and Walking Route Audit Tool (WRAT)",
+  "specific_evidence_of_impact": "The plan identifies 101 proposed cycling and walking improvements, categorised into eleven geographical packages, and provides a prioritised list to guide future funding from sources such as developer contributions and central government bids.",
+  "pct_usage_quote": "The cycle desire line network shows the routes people want to cycle regardless of whether they are currently suitable for cycling. Figure 2 and Figure 3 illustrate this cycle desire line network. The PCT classifies these routes as: \u2022 Primary \u2013 high flows of people cycling are forecast along desire lines that link large residential areas to places such as the town centre \u2022 Secondary \u2013 medium flows of people cycling are forecast along desire lines that link to places such as schools, colleges and employment sites \u2022 Local \u2013 lower flows of people cycling are forecast along desire lines that cater for local cycle trips, often providing links to primary or secondary desire lines",
+  "local_authority_name": "Oxfordshire County Council",
+  "combined_authority_name": null,
+  "region": "South East",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": 101,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

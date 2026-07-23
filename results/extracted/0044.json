@@ -1,52 +1,45 @@
 {
-  "pdf_url": "",
-  "report_name": "Local Cycling & Walking Infrastructure Plan (LCWIP) for Dover District",
-  "date_published": "December 2024",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "DDC transport and land use policies",
-    "Port of Dover information",
-    "indices of multiple deprivation",
-    "pedestrian and cyclists collision data",
-    "topography",
-    "trip generators and attractors"
-  ],
-  "how_pct_was_used": "Used to identify patterns of walking and cycling, potential new journeys, and as a basis for developing a straight-line network plan that clustered trip generators/attractors and summarized key desire lines.",
-  "pct_scenarios_used": [
-    "Go Dutch",
-    "E-bike",
-    "Go Cambridge",
-    "Baseline"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel",
-    "desire lines"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "Dover District Council",
-  "combined_authority_name": "",
-  "region": "South East",
-  "length_of_cycle_network_proposed": null,
-  "total_cost_of_network": null,
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 44,
   "_url": "https://moderngov.dover.gov.uk/documents/s60537/Local%20Cycling%20Walking%20Appendix.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://moderngov.dover.gov.uk/documents/s60537/Local%20Cycling%20Walking%20Appendix.pdf",
+  "report_name": "Local Cycling & Walking Infrastructure Plan (LCWIP) for Dover District",
+  "date_published": "December 2024",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 14,
   "pct_term_breakdown": {
     "pct": 10,
     "propensity_to_cycle_tool": 4,
     "pct_bike": 0
   },
-  "has_text_layer": true
+  "pct_usage_depth": "3 - Network design & mapping",
+  "other_tools_used": null,
+  "how_pct_was_used": "The PCT was used to review which routes have the highest potential for an increase in cycling under various scenarios for change, and to inform the development of the network plan.",
+  "pct_scenarios_used": [
+    "Baseline",
+    "Go Dutch",
+    "E-bike",
+    "Go Cambridge"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": false,
+  "prioritisation_integration": false,
+  "other_tools_developed": "Each recommendation was assessed in terms of deliverability and impact to differentiate interventions and identify 'Quick Wins' versus those requiring additional funding or feasibility studies.",
+  "specific_evidence_of_impact": "Dover District Council secured funding from Active Travel England (ATE) in partnership with Kent County Council to commission this LCWIP. The plan is intended to enable further government funding to be accessed, inform developers of the level of ambition for the network, and guide the implementation of proposed schemes such as the Fastrack electric bus route and improvements to Pencester Road.",
+  "pct_usage_quote": "The Propensity to Cycle Tool (PCT) was designed to assist transport planners and policy makers to prioritise investments and interventions to promote cycling. It is a modelling tool which shows different visions of the future under various scenarios of change. The PCT answers the question: \u2018where is cycling currently common and where does cycling have the greatest potential to grow?\u2019",
+  "local_authority_name": "Dover District Council",
+  "combined_authority_name": "Kent County Council",
+  "region": "South East",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": 23,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

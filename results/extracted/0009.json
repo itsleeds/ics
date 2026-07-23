@@ -1,46 +1,46 @@
 {
-  "pdf_url": "",
-  "report_name": "Herefordshire Local Cycling and Walking Infrastructure Plan",
-  "date_published": "November 2023",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Strava data",
-    "Cycling Level of Service (CLOS)",
-    "Walking Route Audit Tool (WRAT)"
-  ],
-  "how_pct_was_used": "Used to identify where increases in the rates of cycling can be expected through the provision of better infrastructure by analyzing commuting trips.",
-  "pct_scenarios_used": [
-    "E-bike"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel",
-    "desire lines"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "Herefordshire",
-  "combined_authority_name": "",
-  "region": "West Midlands",
-  "length_of_cycle_network_proposed": null,
-  "total_cost_of_network": null,
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 9,
   "_url": "https://councillors.herefordshire.gov.uk/documents/s50113886/Herefordshire%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://councillors.herefordshire.gov.uk/documents/s50113886/Herefordshire%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+  "report_name": "Herefordshire Local Cycling and Walking Infrastructure Plan",
+  "date_published": "November 2023",
+  "doc_type": "LCWIP-related",
+  "mentions_pct": true,
   "n_mentions_pct": 9,
   "pct_term_breakdown": {
     "pct": 7,
     "propensity_to_cycle_tool": 2,
     "pct_bike": 0
   },
-  "has_text_layer": true
+  "pct_usage_depth": "2 - Contextual background / data input",
+  "other_tools_used": [
+    "Strava",
+    "CLOS",
+    "WRAT"
+  ],
+  "how_pct_was_used": "The PCT was used to identify where increases in cycling rates could be expected through better infrastructure by assessing trip distances and potential for short journeys, specifically utilizing the 'E-bike' scenario to provide an ambitious, long-term outlook for cycling demand.",
+  "pct_scenarios_used": [
+    "E-bike"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "A prioritisation matrix for walking and cycling routes is being developed to establish the priority order of routes.",
+  "specific_evidence_of_impact": "The council was granted \u00a367,124 from Active Travel England\u2019s Capability Fund in February 2023 to develop the countywide LCWIP and purchase an active travel sensor for the St Owen St contraflow scheme.",
+  "pct_usage_quote": "The Propensity to Cycle Tool (PCT) is a nationwide model that is used to identify where increases in the rates of cycling can be expected through the provision of better infrastructure. It uses Census \u2018Travel to Work\u2019 data and School travel data to assess trip distances, identifying where there may be scope for short journeys to be undertaken by cycling.",
+  "local_authority_name": "Herefordshire Council",
+  "combined_authority_name": null,
+  "region": "West Midlands",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": null,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

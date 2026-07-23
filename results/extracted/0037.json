@@ -1,47 +1,45 @@
 {
-  "pdf_url": "",
-  "report_name": "LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN technical report",
-  "date_published": "March 2022",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Strava global heatmap",
-    "National Cycle Network (NCN)",
-    "Census data"
-  ],
-  "how_pct_was_used": "Used to validate demand for cycling routes and identify popular corridors in various scenarios; used as a basis for identifying the most important connections between people and places.",
-  "pct_scenarios_used": [
-    "Go Dutch"
-  ],
-  "pct_data_sources": [
-    "school travel",
-    "desire lines"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "Identified potential growth for cycling within Kendal (e.g., routes exceeding 100 cyclists per day) and provided a basis for securing funding for infrastructure like the Kendal Northern Access Route.",
-  "quotes_on_using_pct": [
-    "The NCN 6, Wildman Street, Shap Road and Lowther Street (converging on the town centre) are by far the most popular routes in all current and future scenarios in the Propensity to Cycle Tool (PCT)"
-  ],
-  "local_authority_name": "Cumbria County Council",
-  "combined_authority_name": "",
-  "region": "North West",
-  "length_of_cycle_network_proposed": "",
-  "total_cost_of_network": "",
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": null,
-  "extraction_notes": "",
   "_idx": 37,
   "_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474911344.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
+  "pdf_url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474911344.pdf",
+  "report_name": "LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN technical report",
+  "date_published": "March 2022",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
   "n_mentions_pct": 12,
   "pct_term_breakdown": {
     "pct": 8,
     "propensity_to_cycle_tool": 3,
     "pct_bike": 1
   },
-  "has_text_layer": true
+  "pct_usage_depth": "2 - Contextual background / data input",
+  "other_tools_used": [
+    "Strava",
+    "WRAT",
+    "RST"
+  ],
+  "how_pct_was_used": "The PCT was used to validate identified desire lines by comparing them against the 'Go Dutch' scenario outputs and to forecast potential growth for cycling within Kendal.",
+  "pct_scenarios_used": [
+    "Go Dutch"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "LCWIP Prioritisation framework (Table 5.1) using 20 criteria across Effectiveness, Policy, Economic, and Deliverability categories; Assessment and Sifting Tool (EAST); Route Selection Tool (RST); Walking Route Audit Tool (WRAT)",
+  "specific_evidence_of_impact": "The LCWIP process has directly influenced the development of a prioritised programme of infrastructure improvements, informed the design of the Kendal Northern Access Route (KNAR) business case, and provided a strategic framework for leveraging future government funding and developer contributions.",
+  "pct_usage_quote": "The desire lines were compared against the PCT Go Dutch scenario outputs, which presents a potential scenario of available, as well as a similar attitude toward cycling.",
+  "local_authority_name": "Cumbria County Council",
+  "combined_authority_name": null,
+  "region": "North West",
+  "length_of_cycle_network_proposed": "circa 30km",
+  "total_cost_of_network": "\u00a340.5 million",
+  "length_of_network_km": 30,
+  "total_cost_pounds": 40500000,
+  "routes": 20,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }

@@ -1,46 +1,48 @@
 {
-  "pdf_url": "",
-  "report_name": "Ripon and Catterick and Local Cycling and Walking Infrastructure Plans",
-  "date_published": "2025-01-24",
-  "doc_type": "LCWIP",
-  "mentions_pct": true,
-  "other_tools_used": [
-    "Strava global heatmap",
-    "DfT Route Selection Tool (RST)",
-    "East assessment tool"
-  ],
-  "how_pct_was_used": "Used to validate desire lines against evidence of cycling demand across different scenarios.",
-  "pct_scenarios_used": [
-    "E-bike"
-  ],
-  "pct_data_sources": [
-    "Census 2011 commuting",
-    "school travel",
-    "desire lines"
-  ],
-  "desire_lines_used": true,
-  "prioritisation_integration": true,
-  "other_tools_developed": "",
-  "specific_evidence_of_impact": "",
-  "quotes_on_using_pct": [],
-  "local_authority_name": "North Yorkshire Council",
-  "combined_authority_name": "",
-  "region": "Yorkshire and The Humber",
-  "length_of_cycle_network_proposed": "",
-  "total_cost_of_network": "",
-  "length_of_network_km": null,
-  "total_cost_pounds": null,
-  "routes": 16,
-  "extraction_notes": "",
   "_idx": 32,
   "_url": "https://edemocracy.northyorks.gov.uk/documents/s47233/Ripon%20and%20Catterick%20Phase%201%20LCWIPs.pdf",
   "_source": "seed-94db",
   "_download_status": "ok",
-  "n_mentions_pct": 28,
+  "pdf_url": "https://edemocracy.northyorks.gov.uk/documents/s47233/Ripon%20and%20Catterick%20Phase%201%20LCWIPs.pdf",
+  "report_name": "Ripon and Catterick and Local Cycling and Walking Infrastructure Plans",
+  "date_published": "January 2025",
+  "doc_type": "LCWIP",
+  "mentions_pct": true,
+  "n_mentions_pct": 27,
   "pct_term_breakdown": {
-    "pct": 20,
+    "pct": 19,
     "propensity_to_cycle_tool": 6,
     "pct_bike": 2
   },
-  "has_text_layer": true
+  "pct_usage_depth": "3 - Network design & mapping",
+  "other_tools_used": [
+    "Strava",
+    "WRAT",
+    "RST",
+    "EAST"
+  ],
+  "how_pct_was_used": "The PCT was used to validate desire lines, identify important routes, and model potential increases in cycling under different scenarios.",
+  "pct_scenarios_used": [
+    "Government Target",
+    "E-bike"
+  ],
+  "pct_data_sources": [
+    "Census 2011 commuting",
+    "School travel demand"
+  ],
+  "pct_desire_lines_used": true,
+  "prioritisation_integration": true,
+  "other_tools_developed": "A prioritisation framework was developed using 14 criteria across categories of Effectiveness, Policy Alignment, Economic factors, and Deliverability to score and rank schemes.",
+  "specific_evidence_of_impact": "The LCWIP process has identified priority schemes for Ripon and Catterick to attract funding opportunities, and has informed the development of draft designs for priority corridors, with \u00a369,962 spent on development funded through the Transport Planning budget and s106 funds.",
+  "pct_usage_quote": "The route along Clotherholme Road and Park Street is the most popular route in all current and future scenarios in the Propensity to Cycle Tool (PCT)",
+  "local_authority_name": "North Yorkshire Council",
+  "combined_authority_name": null,
+  "region": "Yorkshire and the Humber",
+  "length_of_cycle_network_proposed": null,
+  "total_cost_of_network": null,
+  "length_of_network_km": null,
+  "total_cost_pounds": null,
+  "routes": 16,
+  "has_text_layer": true,
+  "extraction_notes": ""
 }
