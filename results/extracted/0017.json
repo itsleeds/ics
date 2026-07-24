@@ -18,10 +18,9 @@
   "other_tools_used": [
     "Strava",
     "RST",
-    "EAST",
-    "AMAT"
+    "EAST"
   ],
-  "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to identify potential demand for cycling and to inform the prioritisation of key desire lines.",
+  "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to identify potential demand and validate key desire lines for the cycling network.",
   "pct_scenarios_used": [
     "Government Target"
   ],

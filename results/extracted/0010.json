@@ -21,9 +21,10 @@
     "AMAT",
     "TfL Cycle Level of Service (CLoS)"
   ],
-  "how_pct_was_used": "The PCT was used to identify likely route corridors for cycling to work or school by linking census SOA centroids to employment locations and schools. It was used to compare and confirm corridors identified through manual mapping and local knowledge, though it was not the sole source of data.",
+  "how_pct_was_used": "The PCT was used to identify likely route corridors for cycling to work or school, compare them with manually mapped desire lines, and generate estimates of potential cycle rates based on policy targets.",
   "pct_scenarios_used": [
-    "Government Target"
+    "Government Target",
+    "Go Dutch"
   ],
   "pct_data_sources": [
     "Census 2011 commuting",
@@ -32,8 +33,8 @@
   "pct_desire_lines_used": true,
   "prioritisation_integration": false,
   "other_tools_developed": "Active Mode Appraisal Tool (AMAT), Route Selection Tool (RST), and Walking Route Assessment Tool (WRAT)",
-  "specific_evidence_of_impact": "The LCWIP underpinned a successful \u00a321m government bid from the Towns Fund and Future High Street funds to provide a key commuter cycle route linking Gatwick Airport station, Manor Royal Business District, and the town centre.",
-  "pct_usage_quote": "The Propensity to Cycle Tool (PCT) aims to identify likely route corridors where cycling has the greatest potential to grow and provides estimated figures for their use.",
+  "specific_evidence_of_impact": "Crawley Borough Council secured \u00a321m from the Towns Fund and Future High Street funds, a bid underpinned by the LCWIP, to provide a key commuter cycle route linking Gatwick Airport station, Manor Royal Business District, and the town centre.",
+  "pct_usage_quote": "The PCT selects census SOA centroids and links them directly to employment locations or schools as straight line corridors to indicate the basis for identifying potential routes for cycling to work or to school.",
   "local_authority_name": "Crawley Borough Council",
   "combined_authority_name": null,
   "region": "South East",

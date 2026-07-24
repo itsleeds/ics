@@ -14,14 +14,14 @@
     "propensity_to_cycle_tool": 1,
     "pct_bike": 0
   },
-  "pct_usage_depth": "4 - Core prioritisation & funding framework",
+  "pct_usage_depth": "2 - Contextual background / data input",
   "other_tools_used": [
     "Strava",
     "WRAT",
     "RST",
     "EAST"
   ],
-  "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to identify potential demand and forecast the number of journeys to work using corridors in the Government Target Near Market scenario, which informed the prioritisation of key desire lines.",
+  "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used as a data source to inform the identification of desire lines and to assess the effectiveness of potential cycling routes within the prioritisation framework.",
   "pct_scenarios_used": [
     "Government Target"
   ],
@@ -31,7 +31,7 @@
   "pct_desire_lines_used": true,
   "prioritisation_integration": false,
   "other_tools_developed": "Durham LCWIP Prioritisation Matrix",
-  "specific_evidence_of_impact": "The LCWIP has informed early design work on active travel schemes in Peterlee to support current funding opportunities, including the identification of priority routes such as the Town Centre to A19, Town Centre to Thorpe Road, and Town Centre to Horden, as well as the Grampian Estate area-based walking priority.",
+  "specific_evidence_of_impact": "The LCWIP has been used to inform current funding opportunities, with early design work identifying routes and schemes that serve key desire lines and the town centre, and it will support the County Council in making the case for future funding.",
   "pct_usage_quote": "Forecast number of journeys to work using the corridor in the Government Target Near Market scenario (LSOA)",
   "local_authority_name": "Durham County Council",
   "combined_authority_name": null,

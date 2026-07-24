@@ -1,28 +1,18 @@
 [
   {
-    "_idx": 1,
-    "_url": "https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf",
-    "_source": "seed-94db",
-    "_download_status": "ok",
+    "idx": 1,
+    "url": "https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf",
     "pdf_url": "https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf",
-    "report_name": "Local Cycling and Walking Infrastructure Plan (LCWIP)",
-    "date_published": "September 2023",
-    "doc_type": "LCWIP",
-    "mentions_pct": true,
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0001-LCR-LCWIP-Final-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0001-LCR-LCWIP-Final-pdf.pdf",
     "n_mentions_pct": 6,
     "pct_term_breakdown": {
       "pct": 5,
       "propensity_to_cycle_tool": 1,
       "pct_bike": 0
     },
-    "pct_usage_depth": "2 - Contextual background / data input",
-    "other_tools_used": [
-      "Route Selection Tool (RST)",
-      "Walking Route Audit Tool (WRAT)",
-      "Walking Audit Methodology for Liverpool City Region",
-      "Active Mode Appraisal Tool (AMAT)"
-    ],
-    "how_pct_was_used": "The PCT was used to identify potential for change, analyze cycling propensity in relation to flat terrain and employment destinations, and highlight the potential for increased cycling levels under different scenarios.",
+    "mentions_pct": true,
+    "how_pct_was_used": "The PCT was used to identify potential for cycling growth, analyze existing low-cycling areas with high potential, and compare scenarios to demonstrate the impact of full implementation of the Government\u2019s Cycling and Walking Investment Strategy (CWIS) in the LCR.",
     "pct_scenarios_used": [
       "Government Target",
       "Go Dutch"
@@ -30,21 +20,33 @@
     "pct_data_sources": [
       "Census 2011 commuting"
     ],
+    "pct_usage_depth": "2 - Contextual background / data input",
+    "other_tools_used": [
+      "Route Selection Tool (RST)",
+      "Walking Route Audit Tool (WRAT)",
+      "Walking Audit Methodology for Liverpool City Region",
+      "Active Mode Appraisal Tool (AMAT)",
+      "Walkability Tool"
+    ],
     "pct_desire_lines_used": true,
-    "prioritisation_integration": true,
+    "prioritisation_integration": null,
     "other_tools_developed": "Walking Audit Methodology for Liverpool City Region (developed with WSP)",
-    "specific_evidence_of_impact": "Phase 1 funding of \u00a316.7m has been secured, comprising \u00a38.35m of European Regional Development Funding (ERDF) Sustainable Urban Development (SUD), \u00a34.8m LCR Transforming Cities Funding, and \u00a33.5m Local Authority match funding, enabling the delivery of 55km of new and upgraded cycling and walking routes.",
-    "pct_usage_quote": "The PCT shows that there are many parts of the LCR that are relatively flat and close to major employment destinations, yet currently still only have very low numbers of people cycling.",
+    "report_name": "Local Cycling and Walking Infrastructure Plan (LCWIP)",
+    "authors": "WSP",
+    "date_published": "2023-09",
+    "doc_type": "LCWIP",
     "local_authority_name": "Liverpool City Region Combined Authority (LCRCA), in partnership with Halton, Knowsley, Liverpool, Sefton, St Helens, and Wirral councils.[1]",
     "combined_authority_name": "Liverpool City Region Combined Authority",
     "region": "North West England",
-    "length_of_cycle_network_proposed": "up to 600km of cycling and walking routes",
+    "length_of_cycle_network_proposed": "up to 600km",
     "total_cost_of_network": "in excess of \u00a3250m",
     "length_of_network_km": 600,
     "total_cost_pounds": 250000000,
     "routes": 31,
-    "has_text_layer": true,
-    "extraction_notes": "",
+    "pct_usage_quote": "The PCT shows that there are many parts of the LCR that are relatively flat and close to major employment destinations, yet currently still only have very low numbers of people cycling.",
+    "specific_evidence_of_impact": "Phase 1 funding of \u00a316.7m was secured (\u00a38.35m ERDF, \u00a34.8m Transforming Cities Funding, \u00a33.5m Local Authority match) to deliver 55km of new and upgraded cycling and walking routes.",
+    "is_multipart": false,
+    "linked_documents": [],
     "_source_tag": "2026"
   },
   {
@@ -95,6 +97,11 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix K Car and Cycling Parking Standards"
+    ],
+    "authors": "PJA, Phil Jones Associates, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -133,6 +140,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "GM",
     "_source_tag": "2026"
   },
   {
@@ -180,6 +190,16 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A and the Junction Assessment tools (JAT) at",
+      "Appendix A. This includes a",
+      "Appendix B are new mechanisms introduced to set",
+      "Appendix B which enables designers to assess how well",
+      "Appendix C). The issues around separating",
+      "Appendix C."
+    ],
+    "authors": "PJA, Phil Jones Associates, Steer, Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -218,6 +238,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "ATE",
     "_source_tag": "2026"
   },
   {
@@ -267,6 +290,9 @@
     "routes": 25,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -308,10 +334,14 @@
     "authors": "WSP, Essex County Council",
     "is_multipart": true,
     "linked_documents": [
-      "Appendix A (Brentwood LCWIP Document)",
-      "Appendix B (Proposed Routes)",
-      "Appendix C (Essex Wide LCWIP)",
-      "Appendix D (Technical Report by WSP)"
+      "Appendix A is the completed and published Brentwood LCWIP.",
+      "Appendix A \u2013 Brentwood LCWIP Document",
+      "Appendix A) and the technical report (Appendix D).",
+      "Appendix B is the rural strategic cycle routes across Essex",
+      "Appendix B \u2013 Proposed routes for upgrade",
+      "Appendix C shows the proposed routes for upgrade",
+      "Appendix C \u2013 Essex Wide LCWIP (rural strategic)",
+      "Appendix D \u2013 Brentwood LCWIP Technical Report"
     ],
     "_source_tag": "2026"
   },
@@ -357,6 +387,14 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A.",
+      "Appendix A\u2013 Cycle route maps",
+      "Appendix B \u2013 Core Walking Zone Maps",
+      "Appendix B."
+    ],
+    "authors": "Jacobs, PJA, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -404,6 +442,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "PJA, Phil Jones Associates",
     "_source_tag": "2026"
   },
   {
@@ -453,6 +494,20 @@
     "routes": 16,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 2.1 Geographical scope",
+      "Appendix 2.2 Governance",
+      "Appendix 2.3 Public survey",
+      "Appendix 2.3 Public survey questionnaire",
+      "Appendix 3a.1 Public consultation on draft LCWIP",
+      "Appendix 3a.2 Local Plan policies relating to cycling and walking",
+      "Appendix 3b.1 Crawley Cycle Network Review 2017",
+      "Appendix 3b.1 Crawley Cycle Network Review 2017 \u2013 ii",
+      "Appendix 4.1 LCWIP routes",
+      "Appendix 4.2 Summary LTN 1/20 guidance on protection and lane and tra"
+    ],
+    "authors": "Sustrans, Urban Movement, WSP",
     "_source_tag": "2026"
   },
   {
@@ -480,8 +535,8 @@
     ],
     "pct_desire_lines_used": true,
     "prioritisation_integration": null,
-    "other_tools_developed": "A prioritisation framework that assesses effectiveness (potential to generate cycling trips), alignment with policy objectives, economic factors (scheme cost, value for money, and likelihood of attracting funding), and deliverability (engineering constraints, land ownership, and stakeholder support).",
-    "specific_evidence_of_impact": "The LCWIP has facilitated the allocation of \u00a319.7m from the Towns Fund for sustainable travel, \u00a320m from the Borderlands Inclusive Growth Deal for the Carlisle Station Gateway, \u00a350m for the Carlisle Citadels University Campus, \u00a39.1m from the Future High Streets Fund, and the inclusion of a shared-use cycling and walking path along the entire length of the Carlisle Southern Link Road.",
+    "other_tools_developed": "A prioritisation framework that assesses effectiveness (potential to generate cycling trips), alignment with policy objectives, economic factors (scheme cost, value for money, likelihood of attracting funding), and deliverability (engineering constraints, land ownership, and stakeholder support).",
+    "specific_evidence_of_impact": "The plan has secured \u00a319.7m from the Towns Fund for sustainable travel and public realm, \u00a320m from the Borderlands Inclusive Growth Deal for the Carlisle Station Gateway, \u00a350m for the Carlisle Citadels University Campus, and \u00a39.1m from the Future High Streets Fund for city centre improvements.",
     "pct_usage_quote": "The most popular cycle routes [17] for both school and travel to work journeys within the district are all located within the urban area of Carlisle.",
     "local_authority_name": "Cumbria County Council",
     "combined_authority_name": null,
@@ -676,7 +731,7 @@
     "pct_desire_lines_used": true,
     "prioritisation_integration": false,
     "other_tools_developed": "Route Selection Tool, Walking Route Audit Tool (WRAT), and a scoring mechanism based on effectiveness, policy alignment, economic factors, and deliverability.",
-    "specific_evidence_of_impact": "The LCWIP has identified three priority corridors (Belmont/Carville to City Centre, Cock o\u2019 the North to City Centre, and Gilesgate to Durham University Mountjoy campuses) for initial feasibility assessment and future investment, and will be used to support the County Council in making the case for future funding.",
+    "specific_evidence_of_impact": "The LCWIP has identified three priority corridors (Belmont/Carville to City Centre, Cock o\u2019 the North to City Centre, and Gilesgate to Durham University Mountjoy campuses) for initial feasibility assessment and development, and will be used by the County Council to support the case for future funding.",
     "pct_usage_quote": "Propensity to Cycle Tool",
     "local_authority_name": "Durham County Council",
     "combined_authority_name": null,
@@ -713,14 +768,14 @@
       "propensity_to_cycle_tool": 1,
       "pct_bike": 0
     },
-    "pct_usage_depth": "4 - Core prioritisation & funding framework",
+    "pct_usage_depth": "2 - Contextual background / data input",
     "other_tools_used": [
       "Strava",
       "WRAT",
       "RST",
       "EAST"
     ],
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to identify potential demand and forecast the number of journeys to work using corridors in the Government Target Near Market scenario, which informed the prioritisation of key desire lines.",
+    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used as a data source to inform the identification of desire lines and to assess the effectiveness of potential cycling routes within the prioritisation framework.",
     "pct_scenarios_used": [
       "Government Target"
     ],
@@ -730,7 +785,7 @@
     "pct_desire_lines_used": true,
     "prioritisation_integration": false,
     "other_tools_developed": "Durham LCWIP Prioritisation Matrix",
-    "specific_evidence_of_impact": "The LCWIP has informed early design work on active travel schemes in Peterlee to support current funding opportunities, including the identification of priority routes such as the Town Centre to A19, Town Centre to Thorpe Road, and Town Centre to Horden, as well as the Grampian Estate area-based walking priority.",
+    "specific_evidence_of_impact": "The LCWIP has been used to inform current funding opportunities, with early design work identifying routes and schemes that serve key desire lines and the town centre, and it will support the County Council in making the case for future funding.",
     "pct_usage_quote": "Forecast number of journeys to work using the corridor in the Government Target Near Market scenario (LSOA)",
     "local_authority_name": "Durham County Council",
     "combined_authority_name": null,
@@ -773,10 +828,9 @@
     "other_tools_used": [
       "Strava",
       "RST",
-      "EAST",
-      "AMAT"
+      "EAST"
     ],
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to identify potential demand for cycling and to inform the prioritisation of key desire lines.",
+    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used to identify potential demand and validate key desire lines for the cycling network.",
     "pct_scenarios_used": [
       "Government Target"
     ],
@@ -830,7 +884,7 @@
       "Route Selection Tool",
       "Walking Route Audit Tool"
     ],
-    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used as one of the key datasets to inform the development of network plans for cycling.",
+    "how_pct_was_used": "The Propensity to Cycle Tool (PCT) was used as one of the key datasets to inform the development of network plans for cycling and walking.",
     "pct_scenarios_used": null,
     "pct_data_sources": null,
     "pct_desire_lines_used": false,
@@ -1181,15 +1235,14 @@
     "is_multipart": true,
     "linked_documents": [
       "Appendix 121",
-      "Appendix A - LCWIP technical 121",
-      "Appendix A - LCWIP technical guidance core design principles",
-      "Appendix A \u2013 LCWIP technical",
-      "Appendix A), Department for Transport, July 2020.",
-      "Appendix B - AMAT user 122",
-      "Appendix B - AMAT user interface inputs",
-      "Appendix B \u2013 AMAT user interface inputs",
-      "Appendix B), Department for Transport, July 2020.",
-      "Appendix C - Proposed cycling and 124"
+      "Appendix A - LCWIP technical guidance core design principles 121",
+      "Appendix B - AMAT user interface inputs 122",
+      "Appendix C - Proposed cycling and walking routes 124",
+      "Appendix C - Proposed cycling and walking routes 125",
+      "Appendix D - Loughborough area LCWIP prioritisation table 127",
+      "Appendix E - Concept designs 129",
+      "Appendix E - Concept designs 131",
+      "appendix D."
     ],
     "authors": "Sustrans",
     "_source_tag": "2026"

@@ -18,7 +18,7 @@
   "other_tools_used": [
     "Strava"
   ],
-  "how_pct_was_used": "The PCT was used to analyze travel-to-work trips between key origins and destinations, identifying potential demand for cycle commuter trips and informing the identification of desire lines across the three districts.",
+  "how_pct_was_used": "The PCT was used to analyse travel-to-work trips between key origins and destinations, identifying potential demand for cycle commuter trips and informing the development of the LCWIP network.",
   "pct_scenarios_used": [
     "E-bike"
   ],
@@ -28,7 +28,7 @@
   "pct_desire_lines_used": true,
   "prioritisation_integration": null,
   "other_tools_developed": "Everyday Trips analysis using a grid system to identify origin clusters and potential trip destinations, and Strava Metro data analysis.",
-  "specific_evidence_of_impact": "The LCWIP network was updated based on public consultation feedback, and the evidence base (including PCT and everyday trips analysis) was used to identify cycling corridors and core walking zones for future investment and infrastructure planning.",
+  "specific_evidence_of_impact": "The LCWIP network was updated based on public consultation feedback, and the evidence base (including PCT and everyday trips analysis) was used to identify priority cycling corridors and core walking zones to support future investment and infrastructure development.",
   "pct_usage_quote": "The Propensity to Cycle Tool (PCT) has been utilised to analyse travel to work trips between key origins and destinations in the area.",
   "local_authority_name": "Preston City Council, South Ribble Borough Council, Chorley Council",
   "combined_authority_name": null,
