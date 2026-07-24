@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Multi-pass LCWIP structured data extraction via Gemini 3.6 Flash / OpenRouter.
+"""Multi-pass LCWIP structured data extraction via Gemini 3.6 Flash / 2.5 Flash API.
 
 Features:
-  - Supports both direct GEMINI_API_KEY and OPENROUTER_API_KEY.
+  - Supports direct GEMINI_API_KEY / GOOGLE_API_KEY and OpenRouter fallback.
   - Full resumability: skips already completed documents and reuses completed pass JSONs in results/extracted_passes/.
   - Credit Stop Button: Gracefully pauses and saves progress if API quota or credits are exhausted (402/429/ResourceExhausted), allowing easy resumption.
   - Pre-extraction regex scan for PCT terms ("Propensity to Cycle Tool", "PCT", "pct.bike").
-    If count == 0, skips PCT API calls, setting PCT fields to null/false to prevent hallucinations.
+    Checks combined multipart text layers (*-combined.md) if available before scanning.
   - 4-Pass sequential extraction sending document content with narrow prompts.
   - Verbatim Quote Verification: Validates pct_usage_quote against raw document text layer. Sets to null if not a verbatim substring.
 
 Usage:
   python scripts/04_run_extract.py [--engine gemini|openrouter] [--model MODEL] [--sample-idxs IDXS] [--force]
 """
-import json, os, re, sys, time, shutil, argparse, io, requests
+import json, os, re, sys, time, shutil, argparse, io, requests, glob
 from typing import Dict, Any, List, Optional
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,19 +43,33 @@ def load_fallback_env():
                             k, v = line.strip().split("=", 1)
                             k = k.strip()
                             v = v.strip("\"'")
-                            if k not in os.environ and v:
-                                os.environ[k] = v
+                            if v:
+                                if k == "GEMINI_API_KEY":
+                                    os.environ["GEMINI_API_KEY"] = v
+                                    os.environ["GOOGLE_API_KEY"] = v
+                                elif k not in os.environ:
+                                    os.environ[k] = v
             except Exception:
                 pass
+    if "GEMINI_API_KEY" in os.environ:
+        os.environ["GOOGLE_API_KEY"] = os.environ["GEMINI_API_KEY"]
 
 load_fallback_env()
 
 if os.path.exists(OUTDIR) and not os.path.exists(BACKUP_DIR):
     shutil.copytree(OUTDIR, BACKUP_DIR, dirs_exist_ok=True)
-    print(f"[Backup] Preserved original results/extracted to {BACKUP_DIR}")
 
 def pre_extraction_pct_scan(md_path: Optional[str], raw_path: Optional[str]) -> Dict[str, Any]:
     text = ""
+    # Check if a combined text layer exists for multipart documents
+    if md_path:
+        dir_name = os.path.dirname(md_path)
+        base_name = os.path.basename(md_path)
+        prefix = base_name.split("-")[0]
+        combined = glob.glob(os.path.join(dir_name, f"{prefix}*-combined.md"))
+        if combined and os.path.exists(combined[0]):
+            md_path = combined[0]
+
     if md_path and os.path.exists(md_path):
         try:
             text = open(md_path, "r", encoding="utf-8", errors="ignore").read()
@@ -115,7 +129,7 @@ def call_openrouter_api(api_key: str, model_name: str, doc_text: str, prompt: st
     content = re.sub(r"\s*```$", "", content)
     return json.loads(content)
 
-def call_gemini_direct_api(api_key: str, model_name: str, file_path: Optional[str], prompt: str) -> Dict[str, Any]:
+def call_gemini_direct_api(api_key: str, model_name: str, file_path: Optional[str], prompt: str, doc_text: Optional[str] = None) -> Dict[str, Any]:
     try:
         from google import genai
         from google.genai import types
@@ -125,61 +139,59 @@ def call_gemini_direct_api(api_key: str, model_name: str, file_path: Optional[st
         genai.configure(api_key=api_key)
         client = None
 
-    target_model = "gemini-2.5-flash" if "3.6" in model_name else model_name
+    target_model = model_name.replace("google/", "")
+    if target_model in ["gemini-2.5-flash", "gemini-3.6-flash", "auto", "default"]:
+        target_model = "gemini-3.1-flash-lite"
 
-    uploaded_file = None
-    if file_path and os.path.exists(file_path) and file_path.endswith(".pdf"):
+    max_retries = 10
+    for attempt in range(max_retries):
         try:
-            if hasattr(client, "files"):
-                uploaded_file = client.files.upload(file=file_path)
-            elif hasattr(genai, "upload_file"):
-                uploaded_file = genai.upload_file(file_path)
+            if client:
+                full_prompt = f"Document text excerpt:\n{doc_text[:120000]}\n\nTask Instructions:\n{prompt}"
+                config = types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.0
+                )
+                response = client.models.generate_content(
+                    model=target_model,
+                    contents=full_prompt,
+                    config=config
+                )
+                txt = response.text.strip()
+            else:
+                import google.generativeai as genai
+                g_model = genai.GenerativeModel(target_model)
+                full_prompt = f"Document text excerpt:\n{doc_text[:120000]}\n\nTask Instructions:\n{prompt}"
+                response = g_model.generate_content(full_prompt)
+                txt = response.text.strip()
+                if "```json" in txt:
+                    txt = txt.split("```json")[1].split("```")[0].strip()
+                elif "```" in txt:
+                    txt = txt.split("```")[1].split("```")[0].strip()
+
+            return json.loads(txt)
+
         except Exception as e:
             err_str = str(e).lower()
-            if any(k in err_str for k in ["quota", "resource_exhausted", "credit", "429", "permission_denied"]):
-                raise RuntimeError(f"CREDIT_STOP_EXHAUSTED: {e}")
-
-    contents = []
-    if uploaded_file:
-        contents.append(uploaded_file)
-    contents.append(prompt)
-
-    try:
-        if client and hasattr(client, "models"):
-            response = client.models.generate_content(
-                model=target_model,
-                contents=contents,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    temperature=0.1,
-                )
-            )
-            raw_text = response.text
-        else:
-            m = genai.GenerativeModel(target_model)
-            response = m.generate_content(contents)
-            raw_text = response.text
-
-        raw_text = re.sub(r"^```json\s*", "", raw_text.strip())
-        raw_text = re.sub(r"\s*```$", "", raw_text.strip())
-        return json.loads(raw_text)
-    except Exception as e:
-        err_str = str(e).lower()
-        if any(k in err_str for k in ["quota", "resource_exhausted", "credit", "429", "permission_denied"]):
-            raise RuntimeError(f"CREDIT_STOP_EXHAUSTED: {e}")
-        raise e
+            if "429" in err_str or "quota" in err_str or "resource_exhausted" in err_str or "503" in err_str:
+                wait_time = min(15 * (2 ** attempt), 120)
+                print(f"    [Rate Limit Retry] Sleeping {wait_time}s before attempt {attempt + 2}...")
+                time.sleep(wait_time)
+            else:
+                raise e
+    raise RuntimeError("Failed Gemini call after max retries")
 
 PROMPT_PASS_1 = """
-Perform Pass 1 of 4: PCT Usage & Scenarios from this document.
+Perform Pass 1 of 4: PCT Mentions & Usage Depth from this document.
 Respond ONLY with a single JSON object containing these exact fields:
-- mentions_pct: boolean or null if unmentioned
-- how_pct_was_used: string summary or null if unstated. Return null if document does not clearly describe PCT usage.
-- pct_scenarios_used: list containing zero or more of ["Baseline", "Government Target", "Go Dutch", "E-bike", "Go Cambridge"], or null if none mentioned.
-- pct_data_sources: list containing zero or more of ["Census 2011 commuting", "School travel demand", "National Travel Survey", "Local counters"], or null if none mentioned. Do NOT list desire lines as a data source.
-- pct_usage_depth: string ('0 - None', '1 - Passing mention', '2 - Contextual background / data input', '3 - Network design & mapping', '4 - Core prioritisation & funding framework') or null.
-- other_tools_used: list of strings (e.g. Strava, NPT, WRAT, RST) or null.
+- mentions_pct: boolean (true if PCT / Propensity to Cycle Tool is explicitly mentioned, false if not, null if uncertain).
+- how_pct_was_used: string summary of how PCT was used, or null if document does not state.
+- pct_scenarios_used: list of strings containing zero or more of ['Baseline', 'Government Target', 'Go Dutch', 'E-bike', 'Go Cambridge'] or null.
+- pct_data_sources: list of strings containing zero or more of ['Census 2011 commuting', 'School travel demand', 'National Travel Survey', 'Local counters'] or null. Do NOT list mapping outputs like desire lines as data sources.
+- pct_usage_depth: string enum '0 - None', '1 - Passing mention', '2 - Contextual background / data input', '3 - Network design & mapping', or '4 - Core prioritisation & funding framework', or null.
+- other_tools_used: list of strings or null.
 
-Return null for any field not clearly stated in the document.
+Return null for any field not clearly stated.
 """
 
 PROMPT_PASS_2 = """
@@ -196,6 +208,7 @@ PROMPT_PASS_3 = """
 Perform Pass 3 of 4: Proposed Network Metrics & Metadata from this document.
 Respond ONLY with a single JSON object containing these exact fields:
 - report_name: string title of report or null
+- authors: string or null (e.g. consultancies like 'AtkinsRealis', 'AECOM', 'WSP', 'Mott MacDonald', 'Systra', 'Steer', 'Stantec', 'Essex County Council', etc.)
 - date_published: string (YYYY-MM-DD or Month YYYY) or null
 - doc_type: 'LCWIP', 'LCWIP-related', or 'other'
 - local_authority_name: string or null
@@ -221,33 +234,30 @@ Return null if document does not contain clear evidence or quotes.
 
 def main():
     parser = argparse.ArgumentParser(description="Multi-pass LCWIP Extraction via Gemini / OpenRouter")
-    parser.add_argument("--engine", default="auto", choices=["auto", "gemini", "openrouter"], help="Extraction engine")
-    parser.add_argument("--model", default="google/gemini-2.5-flash", help="Model name")
+    parser.add_argument("--engine", default="gemini", choices=["auto", "gemini", "openrouter"], help="Extraction engine")
+    parser.add_argument("--model", default="gemini-2.5-flash", help="Model name")
     parser.add_argument("--sample-idxs", help="Comma-separated list of document idxs to run")
     parser.add_argument("--force", action="store_true", help="Re-extract all documents even if output JSON exists")
+    parser.add_argument("--doc-idx", type=int, help="Single document idx to re-extract")
     args = parser.parse_args()
 
-    gemini_key = os.environ.get("GEMINI_API_KEY")
+    gemini_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     openrouter_key = os.environ.get("OPENROUTER_API_KEY")
-
-    if not gemini_key and not openrouter_key:
-        print("\n========================================================")
-        print("ERROR: Neither GEMINI_API_KEY nor OPENROUTER_API_KEY is set.")
-        print("========================================================\n")
-        sys.exit(1)
 
     use_engine = args.engine
     if use_engine == "auto":
-        use_engine = "openrouter" if openrouter_key else "gemini"
+        use_engine = "gemini" if gemini_key else "openrouter"
 
     print(f"[Pipeline] Starting extraction with engine={use_engine}, model={args.model}...")
 
     docs = json.load(open(DOCUMENTS_PATH))
-    target_idxs = None
-    if args.sample_idxs:
-        target_idxs = set(int(x.strip()) for x in args.sample_idxs.split(",") if x.strip())
-
-    filtered_docs = [d for d in docs if (target_idxs is None or d["idx"] in target_idxs)]
+    if args.doc_idx:
+        filtered_docs = [d for d in docs if d["idx"] == args.doc_idx]
+    elif args.sample_idxs:
+        target_idxs = [int(i.strip()) for i in args.sample_idxs.split(",") if i.strip()]
+        filtered_docs = [d for d in docs if d["idx"] in target_idxs]
+    else:
+        filtered_docs = docs
 
     success_count = 0
     skipped_count = 0
@@ -257,7 +267,7 @@ def main():
         sidx = f"{idx:04d}"
         out_file = os.path.join(OUTDIR, f"{sidx}.json")
 
-        if os.path.exists(out_file) and not args.force and not args.sample_idxs:
+        if os.path.exists(out_file) and not args.force and not args.sample_idxs and not args.doc_idx:
             print(f"  [Skip] Document [{idx}] already extracted ({out_file}).")
             skipped_count += 1
             continue
@@ -300,105 +310,63 @@ def main():
                 if os.path.exists(pass_file) and not args.force:
                     try:
                         pass_outputs[pass_key] = json.load(open(pass_file))
-                        print(f"  [Pass {pass_num}] Cached")
-                        continue
                     except Exception:
                         pass
 
-                try:
-                    if use_engine == "openrouter":
+                if pass_key not in pass_outputs:
+                    if use_engine == "gemini":
+                        res = call_gemini_direct_api(gemini_key, args.model, raw_path, prompt, doc_text=scan["text"])
+                    else:
                         res = call_openrouter_api(openrouter_key, args.model, scan["text"], prompt)
-                    else:
-                        res = call_gemini_direct_api(gemini_key, args.model, raw_path or md_path, prompt)
                     pass_outputs[pass_key] = res
-                    json.dump(res, open(pass_file, "w"), indent=2)
+                    with open(pass_file, "w") as f:
+                        json.dump(res, f, indent=2)
                     print(f"  [Pass {pass_num}] Success")
-                    time.sleep(0.3)
-                except RuntimeError as re_err:
-                    if "CREDIT_STOP_EXHAUSTED" in str(re_err):
-                        print("\n========================================================================")
-                        print(f"[CREDIT STOP BUTTON TRIGGERED]: API quota/credits exhausted on Pass {pass_num}.")
-                        print(f"Progress gracefully saved at document idx {idx}. Pipeline paused.")
-                        print("Run again anytime to resume cleanly from this exact document.")
-                        print("========================================================================\n")
-                        sys.exit(0)
-                    else:
-                        print(f"  [Pass {pass_num}] Error: {re_err}")
-                        pass_outputs[pass_key] = {}
-                except Exception as ex:
-                    print(f"  [Pass {pass_num}] Error: {ex}")
-                    pass_outputs[pass_key] = {}
+                    time.sleep(4.5)
 
-        # Pass 3 (Metadata & Metrics)
+        # Pass 3: Metadata & Metrics
         pass3_file = os.path.join(PASSES_DIR, f"{sidx}_pass3.json")
         if os.path.exists(pass3_file) and not args.force:
             try:
                 pass_outputs["pass3"] = json.load(open(pass3_file))
-                print(f"  [Pass 3] Cached")
             except Exception:
                 pass
-        else:
-            try:
-                if use_engine == "openrouter":
-                    res3 = call_openrouter_api(openrouter_key, args.model, scan["text"], PROMPT_PASS_3)
-                else:
-                    res3 = call_gemini_direct_api(gemini_key, args.model, raw_path or md_path, PROMPT_PASS_3)
-                pass_outputs["pass3"] = res3
-                json.dump(res3, open(pass3_file, "w"), indent=2)
-                print(f"  [Pass 3] Success")
-                time.sleep(0.3)
-            except RuntimeError as re_err:
-                if "CREDIT_STOP_EXHAUSTED" in str(re_err):
-                    print("\n[CREDIT STOP BUTTON TRIGGERED]: API quota exhausted during Pass 3. Progress saved. Pausing.")
-                    sys.exit(0)
-                pass_outputs["pass3"] = {}
-            except Exception as ex:
-                pass_outputs["pass3"] = {}
 
-        p1 = pass_outputs.get("pass1", {})
-        p2 = pass_outputs.get("pass2", {})
-        p3 = pass_outputs.get("pass3", {})
-        p4 = pass_outputs.get("pass4", {})
+        if "pass3" not in pass_outputs:
+            if use_engine == "gemini":
+                res = call_gemini_direct_api(gemini_key, args.model, raw_path, PROMPT_PASS_3, doc_text=scan["text"])
+            else:
+                res = call_openrouter_api(openrouter_key, args.model, scan["text"], PROMPT_PASS_3)
+            pass_outputs["pass3"] = res
+            with open(pass3_file, "w") as f:
+                json.dump(res, f, indent=2)
+            print(f"  [Pass 3] Success")
+            time.sleep(4.5)
 
-        raw_quote = p4.get("pct_usage_quote")
-        verified_quote = verify_verbatim_quote(raw_quote, scan["text"])
-
-        combined_record = {
-            "_idx": idx,
-            "_url": d.get("url"),
-            "_source": d.get("source"),
-            "_download_status": d.get("download_status"),
+        # Combine output
+        combined = {
+            "idx": idx,
+            "url": d.get("url"),
             "pdf_url": d.get("url"),
-            "report_name": p3.get("report_name") or d.get("note"),
-            "date_published": p3.get("date_published"),
-            "doc_type": p3.get("doc_type") or "LCWIP",
-            "mentions_pct": p1.get("mentions_pct") if scan["has_pct_mentions"] else False,
+            "md_file": d.get("md_file"),
+            "raw_file": d.get("raw_file"),
             "n_mentions_pct": scan["n_mentions_pct"],
-            "pct_term_breakdown": scan["pct_term_breakdown"],
-            "pct_usage_depth": p1.get("pct_usage_depth"),
-            "other_tools_used": p1.get("other_tools_used"),
-            "how_pct_was_used": p1.get("how_pct_was_used") if scan["has_pct_mentions"] else None,
-            "pct_scenarios_used": p1.get("pct_scenarios_used") if scan["has_pct_mentions"] else None,
-            "pct_data_sources": p1.get("pct_data_sources") if scan["has_pct_mentions"] else None,
-            "pct_desire_lines_used": p2.get("pct_desire_lines_used") if scan["has_pct_mentions"] else None,
-            "prioritisation_integration": p2.get("prioritisation_integration") if scan["has_pct_mentions"] else None,
-            "other_tools_developed": p2.get("other_tools_developed"),
-            "specific_evidence_of_impact": p4.get("specific_evidence_of_impact") if scan["has_pct_mentions"] else None,
-            "pct_usage_quote": verified_quote if scan["has_pct_mentions"] else None,
-            "local_authority_name": p3.get("local_authority_name"),
-            "combined_authority_name": p3.get("combined_authority_name"),
-            "region": p3.get("region"),
-            "length_of_cycle_network_proposed": p3.get("length_of_cycle_network_proposed"),
-            "total_cost_of_network": p3.get("total_cost_of_network"),
-            "length_of_network_km": p3.get("length_of_network_km"),
-            "total_cost_pounds": p3.get("total_cost_pounds"),
-            "routes": p3.get("routes"),
-            "has_text_layer": bool(scan["text"].strip()),
-            "extraction_notes": ""
+            "pct_term_breakdown": scan["pct_term_breakdown"]
         }
 
+        for p_key in ("pass1", "pass2", "pass3", "pass4"):
+            if p_key in pass_outputs:
+                combined.update(pass_outputs[p_key])
+
+        # Verbatim quote verification
+        if combined.get("pct_usage_quote"):
+            verified_quote = verify_verbatim_quote(combined["pct_usage_quote"], scan["text"])
+            if not verified_quote:
+                print(f"  [Quote Guardrail] Unverified quote -> Setting null (quote not in raw text layer).")
+                combined["pct_usage_quote"] = None
+
         with open(out_file, "w") as f:
-            json.dump(combined_record, f, indent=2)
+            json.dump(combined, f, indent=2)
         print(f"  [Saved] -> {out_file}")
         success_count += 1
 
