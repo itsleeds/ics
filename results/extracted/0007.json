@@ -36,14 +36,10 @@
   "extraction_notes": "",
   "is_multipart": true,
   "linked_documents": [
-    "Appendix A is the completed and published Brentwood LCWIP.",
-    "Appendix A \u2013 Brentwood LCWIP Document",
-    "Appendix A) and the technical report (Appendix D).",
-    "Appendix B is the rural strategic cycle routes across Essex",
-    "Appendix B \u2013 Proposed routes for upgrade",
-    "Appendix C shows the proposed routes for upgrade",
-    "Appendix C \u2013 Essex Wide LCWIP (rural strategic)",
-    "Appendix D \u2013 Brentwood LCWIP Technical Report"
+    "Appendix A (Brentwood LCWIP Document)",
+    "Appendix B (Proposed Routes)",
+    "Appendix C (Essex Wide LCWIP)",
+    "Appendix D (Technical Report by WSP)"
   ],
-  "authors": "Brentwood"
+  "authors": "WSP, Essex County Council"
 }
