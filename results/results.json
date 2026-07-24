@@ -20,10 +20,9 @@
       "Route Selection Tool (RST)",
       "Walking Route Audit Tool (WRAT)",
       "Walking Audit Methodology for Liverpool City Region",
-      "Active Mode Appraisal Tool (AMAT)",
-      "Walkability Tool"
+      "Active Mode Appraisal Tool (AMAT)"
     ],
-    "how_pct_was_used": "The PCT was used to identify potential for change, analyze cycling propensity in areas close to employment, and highlight the potential for increased cycling levels in the LCR under different scenarios.",
+    "how_pct_was_used": "The PCT was used to identify potential for change, analyze cycling propensity in relation to flat terrain and employment destinations, and highlight the potential for increased cycling levels under different scenarios.",
     "pct_scenarios_used": [
       "Government Target",
       "Go Dutch"
@@ -46,9 +45,6 @@
     "routes": 31,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": false,
-    "linked_documents": [],
-    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -86,7 +82,7 @@
     "pct_data_sources": null,
     "pct_desire_lines_used": true,
     "prioritisation_integration": null,
-    "other_tools_developed": "The document mentions the use of a 'Route Selection Tool', 'Walking Route Audit Tool', 'Cycling Level of Service', 'Healthy Streets Design Check England', 'Active Mode Appraisal Toolkit', 'Health Equity Assessment Tool (HEAT)', 'Cycling Infrastructure Prioritisation Toolkit (CyIPT)', and a 'Cycle Audit' developed by Warwickshire County Council.",
+    "other_tools_developed": "The document mentions the use of a 'Route Selection Tool', 'Walking Route Audit Tool', 'Cycling Level of Service' (within LTN 1/20), 'Healthy Streets Design Check England', 'Active Mode Appraisal Toolkit', 'Health Equity Assessment Tool (HEAT)', 'Cycling Infrastructure Prioritisation Toolkit (CyIPT)', and internal Warwickshire County Council tools including an 'Equality Impact Assessment' and 'Cycle Audit'.",
     "specific_evidence_of_impact": "The 2018 Cycling Infrastructure Task and Finish Group Report led to an ambitious programme of capital investment in cycling improvements, and the 2021 Commonplace survey and 2022 LCWIP consultation feedback were used to update the LCWIP and develop network proposals.",
     "pct_usage_quote": "Propensity to Cycle Tool (PCT)",
     "local_authority_name": "Warwickshire County Council",
@@ -99,11 +95,6 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": true,
-    "linked_documents": [
-      "Appendix K Car and Cycling Parking Standards"
-    ],
-    "authors": "PJA, Phil Jones Associates, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -134,7 +125,7 @@
     "pct_usage_quote": null,
     "local_authority_name": null,
     "combined_authority_name": "Greater Manchester Combined Authority",
-    "region": "North West",
+    "region": "North West England",
     "length_of_cycle_network_proposed": "over 2,700km",
     "total_cost_of_network": null,
     "length_of_network_km": 2700,
@@ -142,9 +133,6 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": false,
-    "linked_documents": [],
-    "authors": "GM",
     "_source_tag": "2026"
   },
   {
@@ -192,16 +180,6 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": true,
-    "linked_documents": [
-      "Appendix A and the Junction Assessment tools (JAT) at",
-      "Appendix A. This includes a",
-      "Appendix B are new mechanisms introduced to set",
-      "Appendix B which enables designers to assess how well",
-      "Appendix C). The issues around separating",
-      "Appendix C."
-    ],
-    "authors": "PJA, Phil Jones Associates, Steer, Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -240,9 +218,6 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": false,
-    "linked_documents": [],
-    "authors": "ATE",
     "_source_tag": "2026"
   },
   {
@@ -292,9 +267,6 @@
     "routes": 25,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": false,
-    "linked_documents": [],
-    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -306,23 +278,23 @@
     "report_name": "Local Cycling and Walking Infrastructure Plan \u2013 (LCWIP)",
     "date_published": "2025",
     "doc_type": "LCWIP",
-    "mentions_pct": false,
-    "n_mentions_pct": 0,
+    "mentions_pct": true,
+    "n_mentions_pct": 2,
     "pct_term_breakdown": {
-      "pct": 0,
-      "propensity_to_cycle_tool": 0,
+      "pct": 2,
+      "propensity_to_cycle_tool": 1,
       "pct_bike": 0
     },
-    "pct_usage_depth": "0 - None",
+    "pct_usage_depth": "2 - Contextual background / data input",
     "other_tools_used": null,
-    "how_pct_was_used": null,
+    "how_pct_was_used": "Referenced in Appendix D (WSP Technical Report) as a primary data source under Stage 2 (Gathering Information) and contrasted against WSPs custom GIS network model which evaluates destinations beyond PCT commute and school trips.",
     "pct_scenarios_used": null,
     "pct_data_sources": null,
     "pct_desire_lines_used": null,
     "prioritisation_integration": null,
     "other_tools_developed": null,
     "specific_evidence_of_impact": null,
-    "pct_usage_quote": null,
+    "pct_usage_quote": "Available data sources. Training and support in use of Propensity to Cycle Tool (PCT).",
     "local_authority_name": "Brentwood",
     "combined_authority_name": null,
     "region": "East of England",
@@ -333,6 +305,7 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "authors": "WSP, Essex County Council",
     "is_multipart": true,
     "linked_documents": [
       "Appendix A (Brentwood LCWIP Document)",
@@ -340,7 +313,6 @@
       "Appendix C (Essex Wide LCWIP)",
       "Appendix D (Technical Report by WSP)"
     ],
-    "authors": "WSP, Essex County Council",
     "_source_tag": "2026"
   },
   {
@@ -363,7 +335,7 @@
     "other_tools_used": [
       "Strava"
     ],
-    "how_pct_was_used": "The PCT was used to analyze travel-to-work trips between key origins and destinations, identifying potential demand for cycle commuter trips and informing the identification of desire lines across the three districts.",
+    "how_pct_was_used": "The PCT was used to analyse travel-to-work trips between key origins and destinations, identifying potential demand for cycle commuter trips and informing the development of the LCWIP network.",
     "pct_scenarios_used": [
       "E-bike"
     ],
@@ -373,7 +345,7 @@
     "pct_desire_lines_used": true,
     "prioritisation_integration": null,
     "other_tools_developed": "Everyday Trips analysis using a grid system to identify origin clusters and potential trip destinations, and Strava Metro data analysis.",
-    "specific_evidence_of_impact": "The LCWIP network was updated based on public consultation feedback, and the evidence base (including PCT and everyday trips analysis) was used to identify cycling corridors and core walking zones for future investment and infrastructure planning.",
+    "specific_evidence_of_impact": "The LCWIP network was updated based on public consultation feedback, and the evidence base (including PCT and everyday trips analysis) was used to identify priority cycling corridors and core walking zones to support future investment and infrastructure development.",
     "pct_usage_quote": "The Propensity to Cycle Tool (PCT) has been utilised to analyse travel to work trips between key origins and destinations in the area.",
     "local_authority_name": "Preston City Council, South Ribble Borough Council, Chorley Council",
     "combined_authority_name": null,
@@ -385,14 +357,6 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": true,
-    "linked_documents": [
-      "Appendix A.",
-      "Appendix A\u2013 Cycle route maps",
-      "Appendix B \u2013 Core Walking Zone Maps",
-      "Appendix B."
-    ],
-    "authors": "Jacobs, PJA, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -417,7 +381,7 @@
       "CLOS",
       "WRAT"
     ],
-    "how_pct_was_used": "The PCT was used to identify where increases in cycling rates could be expected through better infrastructure by assessing trip distances and potential for short journeys, specifically utilizing the 'E-bike' scenario to provide an ambitious, long-term outlook for cycling demand.",
+    "how_pct_was_used": "The PCT was used to identify where increases in cycling rates could be expected through better infrastructure by assessing trip distances and identifying scope for short journeys.",
     "pct_scenarios_used": [
       "E-bike"
     ],
@@ -440,9 +404,6 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": true,
-    "linked_documents": [],
-    "authors": "PJA, Phil Jones Associates",
     "_source_tag": "2026"
   },
   {
@@ -468,9 +429,10 @@
       "AMAT",
       "TfL Cycle Level of Service (CLoS)"
     ],
-    "how_pct_was_used": "The PCT was used to identify likely route corridors for cycling to work or school by linking census SOA centroids to employment locations and schools. It was used to compare and confirm corridors identified through manual mapping and local knowledge, though it was not the sole source of data.",
+    "how_pct_was_used": "The PCT was used to identify likely route corridors for cycling to work or school, compare them with manually mapped desire lines, and generate estimates of potential cycle rates based on policy targets.",
     "pct_scenarios_used": [
-      "Government Target"
+      "Government Target",
+      "Go Dutch"
     ],
     "pct_data_sources": [
       "Census 2011 commuting",
@@ -479,8 +441,8 @@
     "pct_desire_lines_used": true,
     "prioritisation_integration": false,
     "other_tools_developed": "Active Mode Appraisal Tool (AMAT), Route Selection Tool (RST), and Walking Route Assessment Tool (WRAT)",
-    "specific_evidence_of_impact": "The LCWIP underpinned a successful \u00a321m government bid from the Towns Fund and Future High Street funds to provide a key commuter cycle route linking Gatwick Airport station, Manor Royal Business District, and the town centre.",
-    "pct_usage_quote": "The Propensity to Cycle Tool (PCT) aims to identify likely route corridors where cycling has the greatest potential to grow and provides estimated figures for their use.",
+    "specific_evidence_of_impact": "Crawley Borough Council secured \u00a321m from the Towns Fund and Future High Street funds, a bid underpinned by the LCWIP, to provide a key commuter cycle route linking Gatwick Airport station, Manor Royal Business District, and the town centre.",
+    "pct_usage_quote": "The PCT selects census SOA centroids and links them directly to employment locations or schools as straight line corridors to indicate the basis for identifying potential routes for cycling to work or to school.",
     "local_authority_name": "Crawley Borough Council",
     "combined_authority_name": null,
     "region": "South East",
@@ -491,20 +453,6 @@
     "routes": 16,
     "has_text_layer": true,
     "extraction_notes": "",
-    "is_multipart": true,
-    "linked_documents": [
-      "Appendix 2.1 Geographical scope",
-      "Appendix 2.2 Governance",
-      "Appendix 2.3 Public survey",
-      "Appendix 2.3 Public survey questionnaire",
-      "Appendix 3a.1 Public consultation on draft LCWIP",
-      "Appendix 3a.2 Local Plan policies relating to cycling and walking",
-      "Appendix 3b.1 Crawley Cycle Network Review 2017",
-      "Appendix 3b.1 Crawley Cycle Network Review 2017 \u2013 ii",
-      "Appendix 4.1 LCWIP routes",
-      "Appendix 4.2 Summary LTN 1/20 guidance on protection and lane and tra"
-    ],
-    "authors": "Sustrans, Urban Movement, WSP",
     "_source_tag": "2026"
   },
   {

@@ -7,23 +7,23 @@
   "report_name": "Local Cycling and Walking Infrastructure Plan \u2013 (LCWIP)",
   "date_published": "2025",
   "doc_type": "LCWIP",
-  "mentions_pct": false,
-  "n_mentions_pct": 0,
+  "mentions_pct": true,
+  "n_mentions_pct": 2,
   "pct_term_breakdown": {
-    "pct": 0,
-    "propensity_to_cycle_tool": 0,
+    "pct": 2,
+    "propensity_to_cycle_tool": 1,
     "pct_bike": 0
   },
-  "pct_usage_depth": "0 - None",
+  "pct_usage_depth": "2 - Contextual background / data input",
   "other_tools_used": null,
-  "how_pct_was_used": null,
+  "how_pct_was_used": "Referenced in Appendix D (WSP Technical Report) as a primary data source under Stage 2 (Gathering Information) and contrasted against WSPs custom GIS network model which evaluates destinations beyond PCT commute and school trips.",
   "pct_scenarios_used": null,
   "pct_data_sources": null,
   "pct_desire_lines_used": null,
   "prioritisation_integration": null,
   "other_tools_developed": null,
   "specific_evidence_of_impact": null,
-  "pct_usage_quote": null,
+  "pct_usage_quote": "Available data sources. Training and support in use of Propensity to Cycle Tool (PCT).",
   "local_authority_name": "Brentwood",
   "combined_authority_name": null,
   "region": "East of England",
@@ -34,12 +34,12 @@
   "routes": null,
   "has_text_layer": true,
   "extraction_notes": "",
+  "authors": "WSP, Essex County Council",
   "is_multipart": true,
   "linked_documents": [
     "Appendix A (Brentwood LCWIP Document)",
     "Appendix B (Proposed Routes)",
     "Appendix C (Essex Wide LCWIP)",
     "Appendix D (Technical Report by WSP)"
-  ],
-  "authors": "WSP, Essex County Council"
+  ]
 }
