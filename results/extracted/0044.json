@@ -41,5 +41,12 @@
   "total_cost_pounds": null,
   "routes": 23,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix Government Vision for Walking and Cycling",
+    "Appendix of this report for",
+    "Appendix of this report."
+  ],
+  "authors": "Sustrans"
 }

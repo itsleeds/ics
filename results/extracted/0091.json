@@ -33,5 +33,19 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix 1 Design",
+    "Appendix 1 Design Principles ___________________________ 56",
+    "Appendix 2 Potential",
+    "Appendix 2 Potential Funding Sources ____________________ 60",
+    "Appendix 3 Cycle route maps",
+    "Appendix 3 Cycle route maps ___________________________ 61",
+    "Appendix 3 also includes a map for each settlement, which shows these",
+    "Appendix 3.",
+    "Appendix 4 Walking route maps",
+    "Appendix 4 Walking route maps _________________________ 68"
+  ],
+  "authors": "Sustrans"
 }

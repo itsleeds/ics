@@ -33,5 +33,16 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix 1 to this report.",
+    "Appendix 1)",
+    "Appendix 1.",
+    "Appendix 2 and includes the following",
+    "Appendix 2 to this report) as a basis for the strategic planning of",
+    "Appendix 2). Further detail is included in the",
+    "Appendix 2). Having an LCWIP in place will ensure the"
+  ],
+  "authors": "Brighton"
 }

@@ -33,5 +33,16 @@
   "total_cost_pounds": 31000000,
   "routes": 200,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A Background Information Plans .............................",
+    "Appendix B RST and WRAT Tables ................................ ....",
+    "Appendix B.",
+    "Appendix C ,",
+    "Appendix C Design Recommendations ................................ .",
+    "Appendix C.",
+    "Appendix D and summarised in Table 5-1 and Table 5-2."
+  ],
+  "authors": "PJA"
 }

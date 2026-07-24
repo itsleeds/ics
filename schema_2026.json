@@ -1,9 +1,12 @@
 {
-  "schema_version": "2026.2",
-  "description": "Updated extraction schema for LCWIP/PCT data ingest (4-pass modular extraction with Gemini 3.6 Flash / 2.5 Flash). All fields are nullable. Instructions explicitly mandate returning null if unmentioned or uncertain.",
+  "schema_version": "2026.3",
+  "description": "Updated extraction schema for LCWIP/PCT data ingest adding authors/consultancy tracking and multipart document metadata. All fields are nullable.",
   "fields": [
     { "name": "pdf_url", "prompt": "What is the URL of the PDF or web document? Return null if unavailable." },
     { "name": "report_name", "prompt": "What is the name/title of the report or document? Return null if unavailable." },
+    { "name": "authors", "prompt": "Who are the authors or consultancies responsible for preparing the plan? (e.g. 'AtkinsRealis', 'AECOM', 'WSP', 'Mott MacDonald', 'Systra', 'Steer', 'Stantec', 'Essex County Council', etc.). Return string or null if unstated." },
+    { "name": "is_multipart", "prompt": "Is this LCWIP published as a multipart package with separate appendices or technical reports? (true/false, or null if uncertain)." },
+    { "name": "linked_documents", "prompt": "List of linked appendices, annexes, or technical reports identified for this LCWIP package. Return list of strings or null if none." },
     { "name": "date_published", "prompt": "What is the publication date of the report? (YYYY-MM-DD or Month YYYY). Return null if unavailable." },
     { "name": "doc_type", "prompt": "Classify the document type: 'LCWIP', 'LCWIP-related', or 'other'. Return null if unstated." },
     { "name": "mentions_pct", "prompt": "Does the report mention the Propensity to Cycle Tool (PCT) or PCT methodology? (true/false, or null if uncertain)." },

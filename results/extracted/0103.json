@@ -38,5 +38,16 @@
   "total_cost_pounds": null,
   "routes": 9,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A. The policies cover the following key issues",
+    "Appendix B. The analysis has determined the cycle",
+    "Appendix C which includes a Cycle",
+    "Appendix D.",
+    "Appendix E which includes a Walking",
+    "Appendix F indicates that at least \u00a32.07m for walking",
+    "Appendix F. The programme will be subject to ongoing review,"
+  ],
+  "authors": "PJA, Sustrans"
 }

@@ -41,5 +41,16 @@
   "total_cost_pounds": 208000000,
   "routes": 11,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A for a full list). In summary, this includes",
+    "Appendix A \u2013 LTA Policy Log",
+    "Appendix B - LCWIP",
+    "Appendix B - LCWIP Status Log",
+    "Appendix B \u2013 LCWIP Status Log",
+    "Appendix C \u2013 Active Travel Progression Model Category",
+    "Appendix C \u2013 Active Travel Progression Model Category Levels"
+  ],
+  "authors": "ITP, Sustrans"
 }

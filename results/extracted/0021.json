@@ -33,5 +33,8 @@
   "total_cost_pounds": 10000000000,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [],
+  "authors": "GM"
 }

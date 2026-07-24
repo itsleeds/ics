@@ -42,5 +42,8 @@
   "total_cost_pounds": null,
   "routes": 43,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": false,
+  "linked_documents": [],
+  "authors": null
 }

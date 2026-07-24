@@ -36,5 +36,12 @@
   "total_cost_pounds": null,
   "routes": 3,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "appendix of the LCWIP Technical Report which is",
+    "appendix of the LCWIP Technical Report.",
+    "appendix to the LCWIP Technical Report which is"
+  ],
+  "authors": "WSP"
 }

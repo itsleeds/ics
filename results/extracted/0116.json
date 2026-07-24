@@ -46,5 +46,8 @@
   "total_cost_pounds": 76280000,
   "routes": 33,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": false,
+  "linked_documents": [],
+  "authors": null
 }

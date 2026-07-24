@@ -36,5 +36,18 @@
   "total_cost_pounds": null,
   "routes": 73,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix 1 \u2013 Broads LCWIP Draft V 1.1",
+    "Appendix 1 \u2013 Draft Broads LCWIP V1.1",
+    "Appendix 1. The",
+    "Appendix x for a list of key partners.",
+    "\u2022 Glossary and abbreviations (may not be needed)",
+    "\u2022 Government ambition by 2040 (see below)",
+    "\u2022 Key partners",
+    "\u2022 Maps (check how other LCWIPS include maps within PDF versions)",
+    "\u2022 Related plans and policies (if not included within main text)"
+  ],
+  "authors": null
 }

@@ -39,5 +39,13 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A.",
+    "Appendix A\u2013 Cycle route maps",
+    "Appendix B \u2013 Core Walking Zone Maps",
+    "Appendix B."
+  ],
+  "authors": "Jacobs, PJA, Sustrans"
 }

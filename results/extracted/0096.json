@@ -40,5 +40,18 @@
   "total_cost_pounds": null,
   "routes": 12,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A), consultation feedback from",
+    "Appendix A), consultation feedback from \u2018Let\u2019s Talk",
+    "Appendix A, section 13.",
+    "Appendix A.",
+    "Appendix B.",
+    "Appendix B. This resulted in the identification of a network that was",
+    "Appendix C.",
+    "Appendix D.",
+    "Appendix E. This is a live document and will be regularly reviewed to"
+  ],
+  "authors": "Sustrans"
 }

@@ -43,5 +43,15 @@
   "total_cost_pounds": 35582560,
   "routes": 32,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A shows trip generators in the Woodstock Area.",
+    "Appendix A.",
+    "Appendix B . This resulted in the identification of a network that wa",
+    "Appendix B) and stakeholder engagement including the Steering Group.",
+    "Appendix C), local",
+    "Appendix C."
+  ],
+  "authors": "Sustrans"
 }

@@ -43,5 +43,10 @@
   "total_cost_pounds": 82317186,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix Page 111"
+  ],
+  "authors": "Sustrans"
 }

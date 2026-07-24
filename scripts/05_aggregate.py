@@ -70,7 +70,7 @@ for o in old:
         continue
     if k in merged:
         m = merged[k]
-        for field in ("local_authority_name", "date_published", "year_published"):
+        for field in ("local_authority_name", "date_published", "year_published", "authors"):
             if not m.get(field) and o.get(field):
                 m[field] = o[field]
         if not m.get("pct_mentioned") and o.get("pct_mentioned"):
@@ -79,6 +79,9 @@ for o in old:
         rec = {
             "_source_tag": "existing94",
             "report_name": o.get("report_name"),
+            "authors": o.get("consultancy_name") or o.get("authors"),
+            "is_multipart": False,
+            "linked_documents": [],
             "local_authority_name": o.get("local_authority_name"),
             "transport_authority": o.get("transport_authority"),
             "region": o.get("region"),
@@ -108,10 +111,11 @@ for r in final_list:
     all_keys.update(r.keys())
 
 preferred_cols = [
-    "_source_tag", "idx", "report_name", "local_authority_name", "transport_authority",
-    "region", "doc_type", "date_published", "year_published", "pct_mentioned",
-    "n_pct_mentions", "n_mentions_pct", "pct_used_for_prioritisation",
-    "pct_scenarios", "pct_usage_quote", "download_status", "pdf_url"
+    "_source_tag", "idx", "report_name", "authors", "is_multipart", "linked_documents",
+    "local_authority_name", "transport_authority",
+    "region", "doc_type", "date_published", "year_published", "mentions_pct", "pct_mentioned",
+    "n_mentions_pct", "pct_usage_depth", "pct_scenarios_used", "pct_desire_lines_used",
+    "pct_usage_quote", "download_status", "pdf_url"
 ]
 other_cols = sorted(list(all_keys - set(preferred_cols)))
 cols = [c for c in preferred_cols if c in all_keys] + other_cols

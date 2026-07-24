@@ -43,5 +43,13 @@
   "total_cost_pounds": 57000000,
   "routes": 18,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "APPENDIX B PRIORITISED NETWORK PLAN",
+    "Appendix A.",
+    "Appendix A. 4.5.6. Note that all the routes promoted in the priority",
+    "Appendix A. Figure 4.3. Draft Walking Network Map"
+  ],
+  "authors": "WSP"
 }

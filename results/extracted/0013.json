@@ -33,5 +33,16 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix 1 \u2013 BCP LCWIP",
+    "Appendix 2 \u2013 LCWIP Consultation Report January 2022",
+    "Appendix 3 \u2013 EIA Conversation Screening LCWIP",
+    "Appendix 4 \u2013 DOTS Disability \u2013 LCWIP Review",
+    "Appendix 5 \u2013 LCWIP Technical Report",
+    "Appendix 6 \u2013 LCWIP Technical Report Appendices A \u2013 E",
+    "Appendix 7 - LCWIP Technical Report Appendices F - I"
+  ],
+  "authors": "BCP"
 }

@@ -33,5 +33,16 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A ), walking route audits (Appendix C ) and",
+    "Appendix A and Appendix B).",
+    "Appendix A.",
+    "Appendix B provides detailed information about their locations and",
+    "Appendix B.",
+    "Appendix C provides detailed",
+    "Appendix C."
+  ],
+  "authors": "Oxfordshire"
 }

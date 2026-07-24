@@ -33,5 +33,18 @@
   "total_cost_pounds": null,
   "routes": 7,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A,",
+    "Appendix A.",
+    "Appendix B along with plans for each of the walking routes and their",
+    "Appendix B.",
+    "Appendix C. Routes were scored against the following criteria",
+    "Appendix D for reference.",
+    "Appendix D.",
+    "Appendix D. However, should the development go ahead, this",
+    "Appendix E."
+  ],
+  "authors": "Sustrans, WSP"
 }

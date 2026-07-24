@@ -43,5 +43,19 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A Stakeholder Mapping",
+    "Appendix A.",
+    "Appendix B PCT Desire Lines",
+    "Appendix B.",
+    "Appendix C Walking Route Audit Tool",
+    "Appendix D Proposed Cycling Interventions",
+    "Appendix D.",
+    "Appendix E Proposed Walking Interventions",
+    "Appendix E.",
+    "Appendix F Economic Appraisal Summary"
+  ],
+  "authors": "Jacobs, Sustrans, WSP"
 }

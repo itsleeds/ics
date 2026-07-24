@@ -45,5 +45,14 @@
   "total_cost_pounds": null,
   "routes": 65,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "APPENDIX A Cycle Intervention Prioritisation Matrix",
+    "APPENDIX B Walking Intervention Prioritisation Matrix",
+    "Appendix A 72",
+    "Appendix B 74",
+    "Appendix B."
+  ],
+  "authors": "Sustrans"
 }

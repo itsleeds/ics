@@ -43,5 +43,11 @@
   "total_cost_pounds": null,
   "routes": 30,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix 1 \u2013 Active Travel Fund 4 and Capability Fund \u2013 Business Case",
+    "Appendix 1."
+  ],
+  "authors": "West"
 }

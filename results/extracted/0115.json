@@ -33,5 +33,12 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A at the end of the",
+    "Appendix A focus on potential improvements to support",
+    "Appendix A has"
+  ],
+  "authors": "Sustrans, WSP"
 }

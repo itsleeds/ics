@@ -33,5 +33,19 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A Summary of Relevant Policy and Guidance 32",
+    "Appendix A, describing",
+    "Appendix A, describing how",
+    "Appendix B Cycle Route Network Plans 36",
+    "Appendix B contains a network plan",
+    "Appendix B. It includes routes which extend",
+    "Appendix C Eastern Area Cycle Routes 39",
+    "Appendix C and Appendix D and the",
+    "Appendix C contains the summary of",
+    "Appendix D Newbury and Thatcham Prioritised 42"
+  ],
+  "authors": "WSP"
 }

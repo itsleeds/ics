@@ -46,5 +46,15 @@
   "total_cost_pounds": 76280000,
   "routes": 33,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix F has more",
+    "Appendix G). Table 10 sets out indicative costs for the primary route",
+    "Appendix G.",
+    "Appendix H The indicative costings have",
+    "Appendix J has a more detailed breakdown of VfM scores.",
+    "Appendix L."
+  ],
+  "authors": "Sustrans"
 }

@@ -33,5 +33,11 @@
   "total_cost_pounds": null,
   "routes": 6,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A.",
+    "Appendix B for further information."
+  ],
+  "authors": "Sunderland"
 }

@@ -46,6 +46,9 @@
     "routes": 31,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -96,6 +99,11 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix K Car and Cycling Parking Standards"
+    ],
+    "authors": "PJA, Phil Jones Associates, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -134,6 +142,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "GM",
     "_source_tag": "2026"
   },
   {
@@ -181,6 +192,16 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A and the Junction Assessment tools (JAT) at",
+      "Appendix A. This includes a",
+      "Appendix B are new mechanisms introduced to set",
+      "Appendix B which enables designers to assess how well",
+      "Appendix C). The issues around separating",
+      "Appendix C."
+    ],
+    "authors": "PJA, Phil Jones Associates, Steer, Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -219,6 +240,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "ATE",
     "_source_tag": "2026"
   },
   {
@@ -268,6 +292,9 @@
     "routes": 25,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -306,6 +333,18 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A is the completed and published Brentwood LCWIP.",
+      "Appendix A \u2013 Brentwood LCWIP Document",
+      "Appendix A) and the technical report (Appendix D).",
+      "Appendix B is the rural strategic cycle routes across Essex",
+      "Appendix B \u2013 Proposed routes for upgrade",
+      "Appendix C shows the proposed routes for upgrade",
+      "Appendix C \u2013 Essex Wide LCWIP (rural strategic)",
+      "Appendix D \u2013 Brentwood LCWIP Technical Report"
+    ],
+    "authors": "Brentwood",
     "_source_tag": "2026"
   },
   {
@@ -350,6 +389,14 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A.",
+      "Appendix A\u2013 Cycle route maps",
+      "Appendix B \u2013 Core Walking Zone Maps",
+      "Appendix B."
+    ],
+    "authors": "Jacobs, PJA, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -397,6 +444,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "PJA, Phil Jones Associates",
     "_source_tag": "2026"
   },
   {
@@ -445,6 +495,20 @@
     "routes": 16,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 2.1 Geographical scope",
+      "Appendix 2.2 Governance",
+      "Appendix 2.3 Public survey",
+      "Appendix 2.3 Public survey questionnaire",
+      "Appendix 3a.1 Public consultation on draft LCWIP",
+      "Appendix 3a.2 Local Plan policies relating to cycling and walking",
+      "Appendix 3b.1 Crawley Cycle Network Review 2017",
+      "Appendix 3b.1 Crawley Cycle Network Review 2017 \u2013 ii",
+      "Appendix 4.1 LCWIP routes",
+      "Appendix 4.2 Summary LTN 1/20 guidance on protection and lane and tra"
+    ],
+    "authors": "Sustrans, Urban Movement, WSP",
     "_source_tag": "2026"
   },
   {
@@ -485,6 +549,13 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A \u2013 LCWIP Network Plans",
+      "Appendix B \u2013 Prioritised Network Plan",
+      "Appendix C for copies of the Consultation"
+    ],
+    "authors": "Cumbria",
     "_source_tag": "2026"
   },
   {
@@ -525,6 +596,15 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A for a copy of the Cycling Network Map",
+      "Appendix A \u2013 Cycling Network Plan and Walking Network Plan",
+      "Appendix B \u2013 Cycling Prioritised Network Plan",
+      "Appendix C for copies of the Consultation Reports",
+      "Appendix C \u2013 Supporting Information"
+    ],
+    "authors": "Cumbria",
     "_source_tag": "2026"
   },
   {
@@ -563,6 +643,17 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1 \u2013 BCP LCWIP",
+      "Appendix 2 \u2013 LCWIP Consultation Report January 2022",
+      "Appendix 3 \u2013 EIA Conversation Screening LCWIP",
+      "Appendix 4 \u2013 DOTS Disability \u2013 LCWIP Review",
+      "Appendix 5 \u2013 LCWIP Technical Report",
+      "Appendix 6 \u2013 LCWIP Technical Report Appendices A \u2013 E",
+      "Appendix 7 - LCWIP Technical Report Appendices F - I"
+    ],
+    "authors": "BCP",
     "_source_tag": "2026"
   },
   {
@@ -601,6 +692,17 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1 to this report.",
+      "Appendix 1)",
+      "Appendix 1.",
+      "Appendix 2 and includes the following",
+      "Appendix 2 to this report) as a basis for the strategic planning of",
+      "Appendix 2). Further detail is included in the",
+      "Appendix 2). Having an LCWIP in place will ensure the"
+    ],
+    "authors": "Brighton",
     "_source_tag": "2026"
   },
   {
@@ -642,6 +744,13 @@
     "routes": 3,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "appendix of the LCWIP Technical Report which is",
+      "appendix of the LCWIP Technical Report.",
+      "appendix to the LCWIP Technical Report which is"
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -689,6 +798,15 @@
     "routes": 3,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A.",
+      "Appendix B.",
+      "Appendix C).",
+      "Appendix D.",
+      "Appendix E."
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -736,6 +854,15 @@
     "routes": 3,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A.",
+      "Appendix B.",
+      "Appendix C).",
+      "Appendix D.",
+      "Appendix E."
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -777,6 +904,13 @@
     "routes": 3,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "appendix of the LCWIP Technical Report which is",
+      "appendix of the LCWIP Technical Report.",
+      "appendix to the LCWIP Technical Report which is"
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -825,6 +959,9 @@
     "routes": 51,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -863,6 +1000,13 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1 - Continued",
+      "Appendix 2 Bee Network Plan",
+      "Appendix 2."
+    ],
+    "authors": "GM",
     "_source_tag": "2026"
   },
   {
@@ -901,6 +1045,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "GM",
     "_source_tag": "2026"
   },
   {
@@ -939,6 +1086,9 @@
     "routes": 10,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -990,6 +1140,9 @@
     "routes": 12,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -1028,6 +1181,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Steer",
     "_source_tag": "2026"
   },
   {
@@ -1078,6 +1234,20 @@
     "routes": 22,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 121",
+      "Appendix A - LCWIP technical 121",
+      "Appendix A - LCWIP technical guidance core design principles",
+      "Appendix A \u2013 LCWIP technical",
+      "Appendix A), Department for Transport, July 2020.",
+      "Appendix B - AMAT user 122",
+      "Appendix B - AMAT user interface inputs",
+      "Appendix B \u2013 AMAT user interface inputs",
+      "Appendix B), Department for Transport, July 2020.",
+      "Appendix C - Proposed cycling and 124"
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -1126,6 +1296,12 @@
     "routes": 31,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A.",
+      "Appendix C). The suggested schemes were"
+    ],
+    "authors": "Peterborough",
     "_source_tag": "2026"
   },
   {
@@ -1176,6 +1352,11 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix K Car and Cycling Parking Standards"
+    ],
+    "authors": "PJA, Phil Jones Associates, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -1225,6 +1406,20 @@
     "routes": 37,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 24/01/2023 Page 10/",
+      "Appendix 24/01/2023 Page 11/",
+      "Appendix 24/01/2023 Page 12/",
+      "Appendix 24/01/2023 Page 13/",
+      "Appendix 24/01/2023 Page 14/",
+      "Appendix 24/01/2023 Page 15/",
+      "Appendix 24/01/2023 Page 16/",
+      "Appendix 24/01/2023 Page 17/",
+      "Appendix 24/01/2023 Page 18/",
+      "Appendix 24/01/2023 Page 19/"
+    ],
+    "authors": "Sustrans, Systra",
     "_source_tag": "2026"
   },
   {
@@ -1263,6 +1458,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Devon",
     "_source_tag": "2026"
   },
   {
@@ -1301,6 +1499,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Devon",
     "_source_tag": "2026"
   },
   {
@@ -1345,6 +1546,14 @@
     "routes": 9,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A).",
+      "Appendix A. Members were provided with the draft phase 1",
+      "Appendix B.",
+      "Appendix C and it is the view of officers"
+    ],
+    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -1394,6 +1603,17 @@
     "routes": 16,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A \u2013 Ripon LCWAIP",
+      "Appendix A.",
+      "Appendix B \u2013 Catterick LCWIP",
+      "Appendix C \u2013 Climate Change Impact Assessment",
+      "Appendix C. It is worth noting that fully",
+      "Appendix D and it is the view of officers that the",
+      "Appendix D \u2013 Equalities Impact Assessment Screening Form"
+    ],
+    "authors": "Integrated Transport Planning, Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -1443,6 +1663,20 @@
     "routes": 18,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A & B)",
+      "Appendix A \u2013 Thirsk LCWIP",
+      "Appendix A.",
+      "Appendix A1.",
+      "Appendix A2.",
+      "Appendix A3.",
+      "Appendix B along with scoring criteria, and completed assessments for",
+      "Appendix B \u2013 Whitby LCWIP",
+      "Appendix C \u2013 Climate Change Impact Assessment",
+      "Appendix C. It is worth noting that fully"
+    ],
+    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -1492,6 +1726,11 @@
     "routes": 11,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1."
+    ],
+    "authors": "Phil Jones Associates, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -1537,6 +1776,20 @@
     "routes": 12,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix B.",
+      "Appendix C)",
+      "Appendix D sets",
+      "Appendix E)",
+      "Appendix F sets out",
+      "Appendix G, including schemes highlighted by the",
+      "Appendix G, will be",
+      "Appendix G.",
+      "Appendix H).",
+      "Appendix I, will continue"
+    ],
+    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -1577,6 +1830,18 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A \u2013 LCWIP Network Plans",
+      "Appendix B \u2013 Prioritised Network Plan",
+      "\uf0a1 Appendix A \u2013 LCWIP Network Plans",
+      "\uf0a1 Appendix B \u2013 Prioritised Network Plan",
+      "\uf0a1 Consultation Reports",
+      "\uf0a1 Cycling Network Plan",
+      "\uf0a1 Plans",
+      "\uf0a1 Walking Network Plan"
+    ],
+    "authors": "Cumbria",
     "_source_tag": "2026"
   },
   {
@@ -1623,6 +1888,15 @@
     "routes": 20,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "APPENDIX B PRIORITISED NETWORK PLAN",
+      "Appendix A.",
+      "Appendix A. 3.7.2. The LCWIP guidance sets out a recommended approach",
+      "Appendix A. Figure 4.3. Draft Walking Network Map",
+      "Appendix A. Figure 4.4. Kendal Priority Walking Map"
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -1672,6 +1946,13 @@
     "routes": 22,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "APPENDIX B PRIORITISED NETWORK PLAN",
+      "Appendix A.",
+      "Appendix A. Figure 4.3. Draft Walking Network Map"
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -1721,6 +2002,11 @@
     "routes": 20,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A."
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -1770,6 +2056,11 @@
     "routes": 15,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A."
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -1808,6 +2099,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Kent",
     "_source_tag": "2026"
   },
   {
@@ -1846,6 +2140,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Oxfordshire",
     "_source_tag": "2026"
   },
   {
@@ -1894,6 +2191,20 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A Stakeholder Mapping",
+      "Appendix A.",
+      "Appendix B PCT Desire Lines",
+      "Appendix B.",
+      "Appendix C Walking Route Audit Tool",
+      "Appendix D Proposed Cycling Interventions",
+      "Appendix D.",
+      "Appendix E Proposed Walking Interventions",
+      "Appendix E.",
+      "Appendix F Economic Appraisal Summary"
+    ],
+    "authors": "Jacobs, Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -1940,6 +2251,13 @@
     "routes": 23,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix Government Vision for Walking and Cycling",
+      "Appendix of this report for",
+      "Appendix of this report."
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -1986,6 +2304,20 @@
     "routes": 27,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "APPENDIX B \u2013 Detailed District Cycle Route Map",
+      "APPENDIX D \u2013 Policy Context",
+      "Appendix A - Key Destinations",
+      "Appendix A \u2013 Key destinations",
+      "Appendix A. Figure 4.3 shows a",
+      "Appendix B \u2013 Detailed District Cycle Route Map",
+      "Appendix C \u2013 Glossary of Potential Route",
+      "Appendix C \u2013 Glossary of Potential Route Interventions",
+      "Appendix C.",
+      "Appendix D \u2013 Policy Context"
+    ],
+    "authors": "Mott MacDonald, WSP",
     "_source_tag": "2026"
   },
   {
@@ -2035,6 +2367,9 @@
     "routes": 25,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2081,6 +2416,20 @@
     "routes": 29,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A - Didcot LCWIP Consultation Stage 1 Technical Note",
+      "Appendix A, the report for the second round of engagement is provided",
+      "Appendix B - Network Map",
+      "Appendix B in higher quality.",
+      "Appendix C - Core Walking Zone Map",
+      "Appendix D - Proposal Maps",
+      "Appendix D.",
+      "Appendix D. Indicative costings for these are",
+      "Appendix E \u2013 Programme of Walking an Cycling",
+      "Appendix E)"
+    ],
+    "authors": "Sustrans, Systra",
     "_source_tag": "2026"
   },
   {
@@ -2124,6 +2473,17 @@
     "routes": 170,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A ), walking route audi ts ( Appendix C ) and",
+      "Appendix A and Appendix B).",
+      "Appendix A.",
+      "Appendix B provides detailed information about their locations and",
+      "Appendix B.",
+      "Appendix C provides detailed",
+      "Appendix C."
+    ],
+    "authors": "Chipping",
     "_source_tag": "2026"
   },
   {
@@ -2171,6 +2531,17 @@
     "routes": 93,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A shows trip",
+      "Appendix A.",
+      "Appendix B) and stakeholder engagement including the Steering Group.",
+      "Appendix B. This resulted in the identification of a network that was",
+      "Appendix C), local",
+      "Appendix C.",
+      "appendix Section 12 due to the links to Cherwell Local Plan and"
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2217,6 +2588,14 @@
     "routes": 22,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A.",
+      "Appendix B.",
+      "Appendix C.",
+      "Appendix D."
+    ],
+    "authors": "Carterton",
     "_source_tag": "2026"
   },
   {
@@ -2255,6 +2634,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Wantage",
     "_source_tag": "2026"
   },
   {
@@ -2293,6 +2675,12 @@
     "routes": 115,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1.",
+      "Appendix 2."
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2331,6 +2719,9 @@
     "routes": 31,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2369,6 +2760,19 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A and B",
+      "Appendix A of this",
+      "Appendix A of this report as a Council policy document",
+      "Appendix A of this report.",
+      "Appendix A) is",
+      "Appendix A) then",
+      "Appendix B of the",
+      "Appendix B of the draft Wellingborough and Rushden Area LCWIP",
+      "Appendix B of this report."
+    ],
+    "authors": "Wellingborough",
     "_source_tag": "2026"
   },
   {
@@ -2407,6 +2811,9 @@
     "routes": 85,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Royal",
     "_source_tag": "2026"
   },
   {
@@ -2452,6 +2859,13 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1 continued",
+      "Appendix 1.",
+      "Appendix 2."
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2490,6 +2904,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2531,6 +2948,12 @@
     "routes": 17,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1 \u2013 Schools Survey Full Results",
+      "Appendix 1 \u2013 Schools Survey Full Results)"
+    ],
+    "authors": "Shropshire",
     "_source_tag": "2026"
   },
   {
@@ -2575,6 +2998,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -2621,6 +3047,17 @@
     "routes": 11,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A for a full list). In summary, this includes",
+      "Appendix A \u2013 LTA Policy Log",
+      "Appendix B - LCWIP",
+      "Appendix B - LCWIP Status Log",
+      "Appendix B \u2013 LCWIP Status Log",
+      "Appendix C \u2013 Active Travel Progression Model Category",
+      "Appendix C \u2013 Active Travel Progression Model Category Levels"
+    ],
+    "authors": "ITP, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2659,6 +3096,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -2697,6 +3137,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Portsmouth",
     "_source_tag": "2026"
   },
   {
@@ -2735,6 +3178,9 @@
     "routes": 16,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -2783,6 +3229,12 @@
     "routes": 30,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1 \u2013 Active Travel Fund 4 and Capability Fund \u2013 Business Case",
+      "Appendix 1."
+    ],
+    "authors": "West",
     "_source_tag": "2026"
   },
   {
@@ -2821,6 +3273,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2868,6 +3323,9 @@
     "routes": 10,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "AtkinsRealis",
     "_source_tag": "2026"
   },
   {
@@ -2916,6 +3374,11 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix Page 111"
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -2954,6 +3417,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -2995,6 +3461,19 @@
     "routes": 73,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1 \u2013 Broads LCWIP Draft V 1.1",
+      "Appendix 1 \u2013 Draft Broads LCWIP V1.1",
+      "Appendix 1. The",
+      "Appendix x for a list of key partners.",
+      "\u2022 Glossary and abbreviations (may not be needed)",
+      "\u2022 Government ambition by 2040 (see below)",
+      "\u2022 Key partners",
+      "\u2022 Maps (check how other LCWIPS include maps within PDF versions)",
+      "\u2022 Related plans and policies (if not included within main text)"
+    ],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -3033,6 +3512,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -3074,6 +3556,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Cambridgeshire",
     "_source_tag": "2026"
   },
   {
@@ -3121,6 +3606,13 @@
     "routes": 19,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix One.",
+      "Appendix Two and will be kept under",
+      "Appendix Two \u2013 Potential longer-term schemes for future review"
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -3170,6 +3662,20 @@
     "routes": 41,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A).",
+      "Appendix A. Glossary",
+      "Appendix B (see Plan 27 for example of Route A).",
+      "Appendix B has RSTs for all",
+      "Appendix B.",
+      "Appendix B.1 Car and van availability (2011)",
+      "Appendix C contains full details of the assessment.",
+      "Appendix C for the full scoring criteria from",
+      "Appendix C rather than in the main LCWIP.",
+      "Appendix C) has been"
+    ],
+    "authors": "PJA",
     "_source_tag": "2026"
   },
   {
@@ -3218,6 +3724,14 @@
     "routes": 18,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "APPENDIX B PRIORITISED NETWORK PLAN",
+      "Appendix A.",
+      "Appendix A. 4.5.6. Note that all the routes promoted in the priority",
+      "Appendix A. Figure 4.3. Draft Walking Network Map"
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -3256,6 +3770,11 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A."
+    ],
+    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -3303,6 +3822,9 @@
     "routes": 13,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Devon",
     "_source_tag": "2026"
   },
   {
@@ -3341,6 +3863,19 @@
     "routes": 7,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A,",
+      "Appendix A.",
+      "Appendix B along with plans for each of the walking routes and their",
+      "Appendix B.",
+      "Appendix C. Routes were scored against the following criteria",
+      "Appendix D for reference.",
+      "Appendix D.",
+      "Appendix D. However, should the development go ahead, this",
+      "Appendix E."
+    ],
+    "authors": "Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -3392,6 +3927,13 @@
     "routes": 12,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "appendix 2a and 2b",
+      "appendix 3a and 3b",
+      "appendix 9a and 9b"
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -3430,6 +3972,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -3468,6 +4013,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -3515,6 +4063,9 @@
     "routes": 85,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -3553,6 +4104,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Hertfordshire",
     "_source_tag": "2026"
   },
   {
@@ -3591,6 +4145,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -3629,6 +4186,20 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "APPENDIX 1 \u2013 DRAFT IPSWICH LCWIP SCHEME DETAIL",
+      "APPENDIX 2 \u2013 DRAFT IPSWICH LCWIP MULTI CRITERIA ASSESSMENT FRAMEWORK",
+      "APPENDIX 3 \u2013 SUPPORTING POLICIES",
+      "APPENDIX 4 \u2013 MAP OF DRAFT IPSWICH LCWIP ROUTES AND SCHEMES",
+      "APPENDIX 5 \u2013 LIST OF PRIORITISED SCHEMES",
+      "APPENDIX 6 \u2013 OPPORTUNITY AREA MAP (SITE ALLOCATIONS DEVELOPMENT PLAN",
+      "APPENDIX 7 \u2013 SUSTRANS REPORT",
+      "Appendix 1 and a map showing their locations in Appendix 4.",
+      "Appendix 1. Sustrans is a charity",
+      "Appendix 2, to be allocated"
+    ],
+    "authors": "Atkins, Sustrans, WSP",
     "_source_tag": "2026"
   },
   {
@@ -3676,6 +4247,9 @@
     "routes": 43,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -3724,6 +4298,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -3768,6 +4345,9 @@
     "routes": 1012,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -3818,6 +4398,15 @@
     "routes": 65,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "APPENDIX A Cycle Intervention Prioritisation Matrix",
+      "APPENDIX B Walking Intervention Prioritisation Matrix",
+      "Appendix A 72",
+      "Appendix B 74",
+      "Appendix B."
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -3867,6 +4456,9 @@
     "routes": 108,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "PJA",
     "_source_tag": "2026"
   },
   {
@@ -3914,6 +4506,20 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A Nottingham City Council",
+      "Appendix A Nottingham City Council .................................",
+      "Appendix A to D.",
+      "Appendix A). It will also look to",
+      "Appendix A). This will deliver all of our",
+      "Appendix B Nottinghamshire County Council",
+      "Appendix B Nottinghamshire County Council ..........................",
+      "Appendix C Derbyshire County Council",
+      "Appendix C Derbyshire County Council ...............................",
+      "Appendix D Derby City Council"
+    ],
+    "authors": "PJA, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -3952,6 +4558,20 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix 1 Design",
+      "Appendix 1 Design Principles ___________________________ 56",
+      "Appendix 2 Potential",
+      "Appendix 2 Potential Funding Sources ____________________ 60",
+      "Appendix 3 Cycle route maps",
+      "Appendix 3 Cycle route maps ___________________________ 61",
+      "Appendix 3 also includes a map for each settlement, which shows these",
+      "Appendix 3.",
+      "Appendix 4 Walking route maps",
+      "Appendix 4 Walking route maps _________________________ 68"
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -3995,6 +4615,11 @@
     "routes": 170,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix G)"
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -4038,6 +4663,9 @@
     "routes": 101,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [],
+    "authors": "Atkins, Sustrans, Urban Movement",
     "_source_tag": "2026"
   },
   {
@@ -4081,6 +4709,9 @@
     "routes": 93,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Oxfordshire",
     "_source_tag": "2026"
   },
   {
@@ -4119,6 +4750,17 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A ), walking route audits (Appendix C ) and",
+      "Appendix A and Appendix B).",
+      "Appendix A.",
+      "Appendix B provides detailed information about their locations and",
+      "Appendix B.",
+      "Appendix C provides detailed",
+      "Appendix C."
+    ],
+    "authors": "Oxfordshire",
     "_source_tag": "2026"
   },
   {
@@ -4164,6 +4806,19 @@
     "routes": 12,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A), consultation feedback from",
+      "Appendix A), consultation feedback from \u2018Let\u2019s Talk",
+      "Appendix A, section 13.",
+      "Appendix A.",
+      "Appendix B.",
+      "Appendix B. This resulted in the identification of a network that was",
+      "Appendix C.",
+      "Appendix D.",
+      "Appendix E. This is a live document and will be regularly reviewed to"
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -4212,6 +4867,16 @@
     "routes": 32,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A shows trip generators in the Woodstock Area.",
+      "Appendix A.",
+      "Appendix B . This resulted in the identification of a network that wa",
+      "Appendix B) and stakeholder engagement including the Steering Group.",
+      "Appendix C), local",
+      "Appendix C."
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -4250,6 +4915,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Plymouth",
     "_source_tag": "2026"
   },
   {
@@ -4288,6 +4956,14 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A.",
+      "Appendix C.",
+      "Appendix E.",
+      "Appendix F."
+    ],
+    "authors": "The",
     "_source_tag": "2026"
   },
   {
@@ -4326,6 +5002,17 @@
     "routes": 200,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A Background Information Plans .............................",
+      "Appendix B RST and WRAT Tables ................................ ....",
+      "Appendix B.",
+      "Appendix C ,",
+      "Appendix C Design Recommendations ................................ .",
+      "Appendix C.",
+      "Appendix D and summarised in Table 5-1 and Table 5-2."
+    ],
+    "authors": "PJA",
     "_source_tag": "2026"
   },
   {
@@ -4364,6 +5051,9 @@
     "routes": 200,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -4402,6 +5092,9 @@
     "routes": 5,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Somerset",
     "_source_tag": "2026"
   },
   {
@@ -4445,6 +5138,17 @@
     "routes": 9,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A. The policies cover the following key issues",
+      "Appendix B. The analysis has determined the cycle",
+      "Appendix C which includes a Cycle",
+      "Appendix D.",
+      "Appendix E which includes a Walking",
+      "Appendix F indicates that at least \u00a32.07m for walking",
+      "Appendix F. The programme will be subject to ongoing review,"
+    ],
+    "authors": "PJA, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -4483,6 +5187,17 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A. The policies cover the following key issues",
+      "Appendix B. The analysis has determined the cycle",
+      "Appendix C which includes a Cycle",
+      "Appendix D.",
+      "Appendix E which includes a Walking",
+      "Appendix F indicates that at least \u00a32.07m for walking",
+      "Appendix F. The programme will be subject to ongoing review,"
+    ],
+    "authors": "PJA, Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -4521,6 +5236,20 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A - Rural Connectivity",
+      "Appendix A . These areas will include (but",
+      "Appendix A as there is work underway",
+      "Appendix A contains details of some ongoing additional",
+      "Appendix A has a special focus on rural connections.",
+      "Appendix A \u2018Rural Connectivity\u2019",
+      "Appendix A.",
+      "Appendix B - Policy Context",
+      "Appendix B) were mapped and considered when developing the draft",
+      "Appendix B."
+    ],
+    "authors": "WSP",
     "_source_tag": "2026"
   },
   {
@@ -4563,6 +5292,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "PJA",
     "_source_tag": "2026"
   },
   {
@@ -4601,6 +5333,12 @@
     "routes": 6,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A.",
+      "Appendix B for further information."
+    ],
+    "authors": "Sunderland",
     "_source_tag": "2026"
   },
   {
@@ -4647,6 +5385,9 @@
     "routes": 7,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -4685,6 +5426,9 @@
     "routes": 55,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Swindon",
     "_source_tag": "2026"
   },
   {
@@ -4726,6 +5470,9 @@
     "routes": 6,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Three",
     "_source_tag": "2026"
   },
   {
@@ -4764,6 +5511,11 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix A - LCWIP"
+    ],
+    "authors": "Urban Movement",
     "_source_tag": "2026"
   },
   {
@@ -4802,6 +5554,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -4840,6 +5595,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -4878,6 +5636,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -4916,6 +5677,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -4967,6 +5731,16 @@
     "routes": 33,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix F has more",
+      "Appendix G). Table 10 sets out indicative costs for the primary route",
+      "Appendix G.",
+      "Appendix H The indicative costings have",
+      "Appendix J has a more detailed breakdown of VfM scores.",
+      "Appendix L."
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -5005,6 +5779,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Hull",
     "_source_tag": "2026"
   },
   {
@@ -5043,6 +5820,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -5081,6 +5861,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -5119,6 +5902,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -5157,6 +5943,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -5195,6 +5984,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -5233,6 +6025,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": null,
     "_source_tag": "2026"
   },
   {
@@ -5284,6 +6079,16 @@
     "routes": 33,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": true,
+    "linked_documents": [
+      "Appendix F has more",
+      "Appendix G). Table 10 sets out indicative costs for the primary route",
+      "Appendix G.",
+      "Appendix H The indicative costings have",
+      "Appendix J has a more detailed breakdown of VfM scores.",
+      "Appendix L."
+    ],
+    "authors": "Sustrans",
     "_source_tag": "2026"
   },
   {
@@ -5322,6 +6127,9 @@
     "routes": null,
     "has_text_layer": true,
     "extraction_notes": "",
+    "is_multipart": false,
+    "linked_documents": [],
+    "authors": "Hull",
     "_source_tag": "2026"
   }
 ]

@@ -42,5 +42,19 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A Nottingham City Council",
+    "Appendix A Nottingham City Council .................................",
+    "Appendix A to D.",
+    "Appendix A). It will also look to",
+    "Appendix A). This will deliver all of our",
+    "Appendix B Nottinghamshire County Council",
+    "Appendix B Nottinghamshire County Council ..........................",
+    "Appendix C Derbyshire County Council",
+    "Appendix C Derbyshire County Council ...............................",
+    "Appendix D Derby City Council"
+  ],
+  "authors": "PJA, Sustrans"
 }

@@ -46,5 +46,8 @@
   "total_cost_pounds": null,
   "routes": 12,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [],
+  "authors": "Sustrans"
 }

@@ -33,5 +33,8 @@
   "total_cost_pounds": 110000000,
   "routes": 31,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": false,
+  "linked_documents": [],
+  "authors": "Sustrans"
 }

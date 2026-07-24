@@ -43,5 +43,19 @@
   "total_cost_pounds": 68000000,
   "routes": 16,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix 2.1 Geographical scope",
+    "Appendix 2.2 Governance",
+    "Appendix 2.3 Public survey",
+    "Appendix 2.3 Public survey questionnaire",
+    "Appendix 3a.1 Public consultation on draft LCWIP",
+    "Appendix 3a.2 Local Plan policies relating to cycling and walking",
+    "Appendix 3b.1 Crawley Cycle Network Review 2017",
+    "Appendix 3b.1 Crawley Cycle Network Review 2017 \u2013 ii",
+    "Appendix 4.1 LCWIP routes",
+    "Appendix 4.2 Summary LTN 1/20 guidance on protection and lane and tra"
+  ],
+  "authors": "Sustrans, Urban Movement, WSP"
 }

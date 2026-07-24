@@ -35,5 +35,14 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A for a copy of the Cycling Network Map",
+    "Appendix A \u2013 Cycling Network Plan and Walking Network Plan",
+    "Appendix B \u2013 Cycling Prioritised Network Plan",
+    "Appendix C for copies of the Consultation Reports",
+    "Appendix C \u2013 Supporting Information"
+  ],
+  "authors": "Cumbria"
 }

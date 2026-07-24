@@ -35,5 +35,17 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A \u2013 LCWIP Network Plans",
+    "Appendix B \u2013 Prioritised Network Plan",
+    "\uf0a1 Appendix A \u2013 LCWIP Network Plans",
+    "\uf0a1 Appendix B \u2013 Prioritised Network Plan",
+    "\uf0a1 Consultation Reports",
+    "\uf0a1 Cycling Network Plan",
+    "\uf0a1 Plans",
+    "\uf0a1 Walking Network Plan"
+  ],
+  "authors": "Cumbria"
 }

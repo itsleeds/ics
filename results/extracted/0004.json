@@ -42,5 +42,15 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A and the Junction Assessment tools (JAT) at",
+    "Appendix A. This includes a",
+    "Appendix B are new mechanisms introduced to set",
+    "Appendix B which enables designers to assess how well",
+    "Appendix C). The issues around separating",
+    "Appendix C."
+  ],
+  "authors": "PJA, Phil Jones Associates, Steer, Sustrans, WSP"
 }

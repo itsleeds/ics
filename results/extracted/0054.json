@@ -33,5 +33,18 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A and B",
+    "Appendix A of this",
+    "Appendix A of this report as a Council policy document",
+    "Appendix A of this report.",
+    "Appendix A) is",
+    "Appendix A) then",
+    "Appendix B of the",
+    "Appendix B of the draft Wellingborough and Rushden Area LCWIP",
+    "Appendix B of this report."
+  ],
+  "authors": "Wellingborough"
 }

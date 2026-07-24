@@ -40,5 +40,19 @@
   "total_cost_pounds": null,
   "routes": 12,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix B.",
+    "Appendix C)",
+    "Appendix D sets",
+    "Appendix E)",
+    "Appendix F sets out",
+    "Appendix G, including schemes highlighted by the",
+    "Appendix G, will be",
+    "Appendix G.",
+    "Appendix H).",
+    "Appendix I, will continue"
+  ],
+  "authors": "Sustrans, WSP"
 }

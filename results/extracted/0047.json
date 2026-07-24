@@ -41,5 +41,19 @@
   "total_cost_pounds": null,
   "routes": 29,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A - Didcot LCWIP Consultation Stage 1 Technical Note",
+    "Appendix A, the report for the second round of engagement is provided",
+    "Appendix B - Network Map",
+    "Appendix B in higher quality.",
+    "Appendix C - Core Walking Zone Map",
+    "Appendix D - Proposal Maps",
+    "Appendix D.",
+    "Appendix D. Indicative costings for these are",
+    "Appendix E \u2013 Programme of Walking an Cycling",
+    "Appendix E)"
+  ],
+  "authors": "Sustrans, Systra"
 }

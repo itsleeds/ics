@@ -44,5 +44,16 @@
   "total_cost_pounds": null,
   "routes": 16,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A \u2013 Ripon LCWAIP",
+    "Appendix A.",
+    "Appendix B \u2013 Catterick LCWIP",
+    "Appendix C \u2013 Climate Change Impact Assessment",
+    "Appendix C. It is worth noting that fully",
+    "Appendix D and it is the view of officers that the",
+    "Appendix D \u2013 Equalities Impact Assessment Screening Form"
+  ],
+  "authors": "Integrated Transport Planning, Sustrans, WSP"
 }

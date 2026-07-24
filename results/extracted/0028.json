@@ -44,5 +44,19 @@
   "total_cost_pounds": null,
   "routes": 37,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix 24/01/2023 Page 10/",
+    "Appendix 24/01/2023 Page 11/",
+    "Appendix 24/01/2023 Page 12/",
+    "Appendix 24/01/2023 Page 13/",
+    "Appendix 24/01/2023 Page 14/",
+    "Appendix 24/01/2023 Page 15/",
+    "Appendix 24/01/2023 Page 16/",
+    "Appendix 24/01/2023 Page 17/",
+    "Appendix 24/01/2023 Page 18/",
+    "Appendix 24/01/2023 Page 19/"
+  ],
+  "authors": "Sustrans, Systra"
 }

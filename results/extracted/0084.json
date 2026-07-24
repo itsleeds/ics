@@ -33,5 +33,19 @@
   "total_cost_pounds": null,
   "routes": null,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "APPENDIX 1 \u2013 DRAFT IPSWICH LCWIP SCHEME DETAIL",
+    "APPENDIX 2 \u2013 DRAFT IPSWICH LCWIP MULTI CRITERIA ASSESSMENT FRAMEWORK",
+    "APPENDIX 3 \u2013 SUPPORTING POLICIES",
+    "APPENDIX 4 \u2013 MAP OF DRAFT IPSWICH LCWIP ROUTES AND SCHEMES",
+    "APPENDIX 5 \u2013 LIST OF PRIORITISED SCHEMES",
+    "APPENDIX 6 \u2013 OPPORTUNITY AREA MAP (SITE ALLOCATIONS DEVELOPMENT PLAN",
+    "APPENDIX 7 \u2013 SUSTRANS REPORT",
+    "Appendix 1 and a map showing their locations in Appendix 4.",
+    "Appendix 1. Sustrans is a charity",
+    "Appendix 2, to be allocated"
+  ],
+  "authors": "Atkins, Sustrans, WSP"
 }

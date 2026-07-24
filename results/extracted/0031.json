@@ -39,5 +39,13 @@
   "total_cost_pounds": null,
   "routes": 9,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A).",
+    "Appendix A. Members were provided with the draft phase 1",
+    "Appendix B.",
+    "Appendix C and it is the view of officers"
+  ],
+  "authors": "Sustrans, WSP"
 }

@@ -42,5 +42,16 @@
   "total_cost_pounds": null,
   "routes": 93,
   "has_text_layer": true,
-  "extraction_notes": ""
+  "extraction_notes": "",
+  "is_multipart": true,
+  "linked_documents": [
+    "Appendix A shows trip",
+    "Appendix A.",
+    "Appendix B) and stakeholder engagement including the Steering Group.",
+    "Appendix B. This resulted in the identification of a network that was",
+    "Appendix C), local",
+    "Appendix C.",
+    "appendix Section 12 due to the links to Cherwell Local Plan and"
+  ],
+  "authors": "Sustrans"
 }
