@@ -104,7 +104,9 @@ library(ggplot2)
 library(dplyr)
 
 df <- read_csv("results/results_flat.csv", show_col_types = FALSE) %>%
+  mutate(year = readr::parse_number(as.character(date_published))) %>%
   filter(!is.na(year), year >= 2018, year <= 2026)
+
 
 df_summary <- df %>%
   mutate(pct_label = if_else(mentions_pct, "Mentions PCT", "Does not mention PCT")) %>%
