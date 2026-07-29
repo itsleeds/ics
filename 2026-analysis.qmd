@@ -52,9 +52,8 @@ has grown**.
 
 ```{python}
 #| label: corpus-composition
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 print(f"Total merged records: {len(df)}")
 print(f"  2026-only: {(df['_source_tag']=='2026').sum()}")
 print(f"  from existing 94-DB: {(df['_source_tag']=='existing94').sum()}")
@@ -70,9 +69,8 @@ explicitly mention the Propensity to Cycle Tool.
 
 ```{python}
 #| label: pct-mentions
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 pct = df['mentions_pct']
 n = pct.notna().sum()
 mentioned = (pct == True).sum()
@@ -86,9 +84,8 @@ print(f"Unknown (no content / failed download): {pct.isna().sum()}")
 
 ```{python}
 #| label: pct-by-doctype
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 ct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('unknown'))
 print(ct)
 ```
@@ -138,14 +135,20 @@ Among documents that mention the PCT, which future scenarios are referenced?
 
 ```{python}
 #| label: scenarios
-import json, os, pandas as pd
+import json, pandas as pd
 from collections import Counter
-res = json.load(open("results/results.json"))
+df = pd.read_csv("results/results_flat.csv")
 c = Counter()
-for r in res:
-    if r.get('mentions_pct') is True:
-        for s in (r.get('pct_scenarios_used') or []):
-            c[str(s).strip()] += 1
+for _, r in df.iterrows():
+    if r.get('mentions_pct') is True or r.get('mentions_pct') == True:
+        scs = r.get('pct_scenarios_used')
+        if pd.notna(scs):
+            if isinstance(scs, str):
+                try: scs = json.loads(scs)
+                except: pass
+            if isinstance(scs, list):
+                for s in scs:
+                    c[str(s).strip()] += 1
 sc = pd.Series(dict(c)).sort_values(ascending=False)
 print("Scenario mentions (across PCT-mentioning docs):")
 print(sc.to_string())
@@ -159,9 +162,8 @@ Coverage against the higher-tier authorities in
 
 ```{python}
 #| label: geographic
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 print("Records by region (England):")
 print(df['region'].fillna('(not stated)').value_counts().to_string())
 print()
@@ -175,9 +177,8 @@ Where stated, LCWIPs propose substantial networks and investment.
 
 ```{python}
 #| label: cost-length
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 cost = pd.to_numeric(df['total_cost_pounds'], errors='coerce')
 km = pd.to_numeric(df['length_of_network_km'], errors='coerce')
 print(f"Documents stating a total cost: {cost.notna().sum()}")
@@ -193,15 +194,14 @@ A sample of LCWIPs that mention the PCT, with how it was used:
 
 ```{python}
 #| label: examples
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 ex = df[(df['mentions_pct']==True) & (df['doc_type']=='LCWIP')].head(10)
 for _, r in ex.iterrows():
     print(f"### {r.get('report_name')} ({r.get('local_authority_name')})")
     print(f"- Date: {r.get('date_published')}")
     print(f"- Scenarios: {r.get('pct_scenarios_used')}")
-    print(f"- How used: {(r.get('how_pct_was_used') or '')[:300]}")
+    print(f"- How used: {str(r.get('how_pct_was_used') or '')[:300]}")
     print()
 ```
 
