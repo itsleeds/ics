@@ -11,4 +11,7 @@ results/extracted/_progress.json
 logs/
 results/extracted_passes/
 results/extracted_v1/
+results/*.json
+results/extracted/
+
 

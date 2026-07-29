@@ -132,5 +132,10 @@ with open(os.path.join(OUT, "results_flat.csv"), "w", newline="") as f:
             row[k] = val
         writer.writerow(row)
 
+# Also update results.csv
+import shutil
+shutil.copyfile(os.path.join(OUT, "results_flat.csv"), os.path.join(OUT, "results.csv"))
+
 print(f"Wrote {os.path.join(OUT, 'results.json')} ({len(final_list)} merged records)")
-print(f"Wrote {os.path.join(OUT, 'results_flat.csv')}")
+print(f"Wrote {os.path.join(OUT, 'results_flat.csv')} and {os.path.join(OUT, 'results.csv')}")
+
