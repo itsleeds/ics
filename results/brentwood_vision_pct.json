@@ -1,0 +1,72 @@
+[
+  {
+    "has_pct": false,
+    "verbatim_quote": null,
+    "section": null,
+    "context_summary": "The provided image is the cover page of the report and does not contain any mention of the Propensity to Cycle Tool, PCT, or pct.bike.",
+    "page_num": 1
+  },
+  {
+    "has_pct": false,
+    "verbatim_quote": null,
+    "section": null,
+    "context_summary": "The page is a quality control and title page containing project document revision details, authorship, and the contact address for WSP. It does not contain any technical references or mentions of the Propensity to Cycle Tool.",
+    "page_num": 2
+  },
+  {
+    "has_pct": false,
+    "verbatim_quote": "",
+    "section": "",
+    "context_summary": "The page does not mention the Propensity to Cycle Tool (PCT). It provides an introduction, project objectives, and a high-level overview of the LCWIP methodology for Brentwood and Shenfield.",
+    "page_num": 3
+  },
+  {
+    "has_pct": true,
+    "verbatim_quote": "Available data sources. Training and support in use of Propensity to Cycle Tool (PCT).",
+    "section": "Stage 2 - Gathering Information",
+    "context_summary": "The Propensity to Cycle Tool (PCT) is listed as an available data source under the 'Collating Information' sub-section of Stage 2 of the LCWIP process.",
+    "page_num": 4
+  },
+  {
+    "has_pct": true,
+    "verbatim_quote": "It allows a custom network to be built using OS Mastermap Roads and Paths layers. It also produces a custom selection of key destinations beyond the commute and school run trips analysed in the PCT.",
+    "section": "Gathering Data",
+    "context_summary": "The PCT is mentioned to contrast the scope of the WSP LCWIP GIS model, which looks at broader destinations beyond the commute and school trips covered by the PCT.",
+    "page_num": 5
+  },
+  {
+    "has_pct": false,
+    "verbatim_quote": null,
+    "section": null,
+    "context_summary": "The page discusses various national policies and guidance documents (such as Gear Change, LTN 1/20, and the Cycling and Walking Investment Strategy), but it does not mention the Propensity to Cycle Tool (PCT) or pct.bike.",
+    "page_num": 6
+  },
+  {
+    "has_pct": false,
+    "verbatim_quote": null,
+    "section": null,
+    "context_summary": "The page discusses various regional and local policy documents such as the Essex Cycling Strategy, Transport East Transport Strategy, and Active Travel Strategy, but does not mention the Propensity to Cycle Tool (PCT).",
+    "page_num": 7
+  },
+  {
+    "has_pct": false,
+    "verbatim_quote": null,
+    "section": null,
+    "context_summary": "The page discusses the alignment of the Brentwood & Shenfield Local Walking and Cycling Infrastructure Plan (LCWIP) with the upcoming Essex Local Transport Plan 4 (LTP4), but does not reference the Propensity to Cycle Tool (PCT).",
+    "page_num": 8
+  },
+  {
+    "has_pct": false,
+    "verbatim_quote": null,
+    "section": null,
+    "context_summary": "The provided page discusses current travel patterns, census data, key destination points, and accessibility to cars. There is no mention of the Propensity to Cycle Tool (PCT) on this page.",
+    "page_num": 9
+  },
+  {
+    "has_pct": false,
+    "verbatim_quote": null,
+    "section": null,
+    "context_summary": "The page focuses on pedestrian collision data and analysis in Brentwood; it does not contain any references to the Propensity to Cycle Tool (PCT).",
+    "page_num": 10
+  }
+]

@@ -8,3 +8,7 @@ scripts/reference/
 scripts/__pycache__/
 results/extracted/_progress.json
 .quarto/
+logs/
+results/extracted_passes/
+results/extracted_v1/
+
