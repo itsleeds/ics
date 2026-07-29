@@ -25,8 +25,8 @@ def repair_pdf(raw_pdf_path, md_file_path):
     prefix = os.path.basename(raw_pdf_path).replace(".pdf", "")
     tmp_pattern = f"/tmp/repair_{prefix}_page"
     
-    # Render PNGs
-    os.system(f"pdftoppm -png -r 125 '{raw_pdf_path}' '{tmp_pattern}'")
+    # Render PNGs suppressing stderr warnings
+    os.system(f"pdftoppm -png -r 125 '{raw_pdf_path}' '{tmp_pattern}' 2>/dev/null")
     pngs = sorted(glob.glob(f"{tmp_pattern}-*.png"))
     print(f"  Rendered {len(pngs)} pages to PNG.")
     

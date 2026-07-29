@@ -174,7 +174,7 @@ def call_gemini_direct_api(api_key: str, model_name: str, file_path: Optional[st
         except Exception as e:
             err_str = str(e).lower()
             if "429" in err_str or "quota" in err_str or "resource_exhausted" in err_str or "503" in err_str:
-                wait_time = min(15 * (2 ** attempt), 120)
+                wait_time = min(20 * (2 ** attempt), 150)
                 print(f"    [Rate Limit Retry] Sleeping {wait_time}s before attempt {attempt + 2}...")
                 time.sleep(wait_time)
             else:
@@ -322,7 +322,7 @@ def main():
                     with open(pass_file, "w") as f:
                         json.dump(res, f, indent=2)
                     print(f"  [Pass {pass_num}] Success")
-                    time.sleep(4.5)
+                    time.sleep(6.5)
 
         # Pass 3: Metadata & Metrics
         pass3_file = os.path.join(PASSES_DIR, f"{sidx}_pass3.json")
@@ -341,7 +341,7 @@ def main():
             with open(pass3_file, "w") as f:
                 json.dump(res, f, indent=2)
             print(f"  [Pass 3] Success")
-            time.sleep(4.5)
+            time.sleep(6.5)
 
         # Combine output
         combined = {
