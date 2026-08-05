@@ -26,9 +26,18 @@ DISCOVERED_PATH = os.path.join(ROOT, "scripts", "discovered_urls.txt")
 HERMES_BIN = os.path.expanduser("~/.local/bin/hermes")
 
 def norm_url(u):
+    if not u:
+        return ""
     u = u.strip()
-    u = re.sub(r"[?#].*$", "", u).rstrip("/")
-    return u.lower()
+    parsed = urllib.parse.urlparse(u)
+    if any(k in parsed.query.lower() for k in ["id=", "doc=", "file=", "sourceurl=", "document=", "viewid=", "path=", "download="]):
+        qs = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+        clean_qs = {k: v for k, v in qs.items() if k.lower() not in ["utm_source", "utm_medium", "utm_campaign", "ga", "fbclid", "gclid"]}
+        new_query = urllib.parse.urlencode(clean_qs, doseq=True)
+        return urllib.parse.urlunparse(parsed._replace(query=new_query)).lower()
+    else:
+        u = re.sub(r"[?#].*$", "", u).rstrip("/")
+        return u.lower()
 
 def load_existing_urls():
     existing = set()

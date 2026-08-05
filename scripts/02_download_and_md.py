@@ -11,8 +11,8 @@ Outputs:
 
 Run: python scripts/02_download_and_md.py
 """
-import json, os, re, sys, time, html, io
-from urllib.parse import urlparse, unquote
+import json, os, re, sys, time, html, io, urllib.parse
+from urllib.parse import urlparse, unquote, parse_qs
 import requests
 from pypdf import PdfReader
 
@@ -22,12 +22,21 @@ MD = os.path.join(ROOT, "data-govuk-2026-md")
 os.makedirs(RAW, exist_ok=True)
 os.makedirs(MD, exist_ok=True)
 
-UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
+UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
 def norm(u):
+    if not u:
+        return ""
     u = u.strip()
-    u = re.sub(r"[?#].*$", "", u).rstrip("/")
-    return u.lower()
+    parsed = urllib.parse.urlparse(u)
+    if any(k in parsed.query.lower() for k in ["id=", "doc=", "file=", "sourceurl=", "document=", "viewid=", "path=", "download="]):
+        qs = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+        clean_qs = {k: v for k, v in qs.items() if k.lower() not in ["utm_source", "utm_medium", "utm_campaign", "ga", "fbclid", "gclid"]}
+        new_query = urllib.parse.urlencode(clean_qs, doseq=True)
+        return urllib.parse.urlunparse(parsed._replace(query=new_query)).lower()
+    else:
+        u = re.sub(r"[?#].*$", "", u).rstrip("/")
+        return u.lower()
 
 def slugify(u, idx):
     p = urlparse(u)
@@ -64,6 +73,59 @@ def html_text(raw):
     s = re.sub(r"\n\s*\n+", "\n\n", s)
     return s
 
+def fetch_url(u):
+    session = requests.Session()
+    session.headers.update({"User-Agent": UA})
+
+    # Special handling for SharePoint URLs
+    if "sharepoint.com" in u.lower():
+        try:
+            # If cccandpcc sharepoint, bootstrap guest session via guest link
+            if "cccandpcc.sharepoint.com" in u.lower():
+                session.get("https://cccandpcc.sharepoint.com/:f:/s/CCCwebsitedocumentlibrary/Eiw77HVjkSRMmX0mu09EqkYB-IkZrbyj2K5SFUl35nRx0w?e=TfzoCX", allow_redirects=True, timeout=30)
+            else:
+                session.get(u, allow_redirects=True, timeout=30)
+
+            orig_parsed = urlparse(u)
+            orig_qs = parse_qs(orig_parsed.query)
+            file_path = orig_qs.get("id", [""])[0] or orig_qs.get("SourceUrl", [""])[0]
+
+            if file_path:
+                site_prefix = unquote(orig_parsed.path).split("/Shared Documents")[0]
+                dl_url = f"{orig_parsed.scheme}://{orig_parsed.netloc}{site_prefix}/_layouts/15/download.aspx?SourceUrl={urllib.parse.quote(file_path, safe='/')}"
+                r_dl = session.get(dl_url, allow_redirects=True, timeout=45)
+                if r_dl.status_code == 200 and len(r_dl.content) > 1000 and (r_dl.content.startswith(b"%PDF") or "pdf" in r_dl.headers.get("Content-Type","").lower()):
+                    return r_dl.content, r_dl.headers.get("Content-Type", "application/pdf")
+        except Exception as e:
+            print(f"   [SharePoint Fetch Warning]: {e}", flush=True)
+
+    # Standard HTTP GET
+    r = session.get(u, allow_redirects=True, timeout=45)
+    r.raise_for_status()
+    raw = r.content
+    ctype = r.headers.get("Content-Type", "")
+
+    # 2-Stage HTML Link Inspection for Embedded PDFs/SharePoint
+    if "pdf" not in ctype.lower() and not u.lower().endswith(".pdf") and len(raw) < 500000:
+        try:
+            html_str = raw.decode("utf-8", "ignore")
+            # Find embedded PDF links or SharePoint guest links
+            found = re.findall(r'href=[\"\'](https?://[^\s\"\'<>]+|\/[^\s\"\'<>]+\.pdf)[\"\']', html_str, re.IGNORECASE)
+            for link in found:
+                if link.startswith("/"):
+                    link = urllib.parse.urljoin(u, link)
+                if link.lower().endswith(".pdf") or "sharepoint.com" in link.lower() or "lcwip" in link.lower():
+                    if "sharepoint.com" in link.lower():
+                        return fetch_url(link)
+                    else:
+                        r_sub = session.get(link, allow_redirects=True, timeout=30)
+                        if r_sub.status_code == 200 and (("pdf" in r_sub.headers.get("Content-Type", "").lower()) or r_sub.content.startswith(b"%PDF")):
+                            return r_sub.content, r_sub.headers.get("Content-Type", "application/pdf")
+        except Exception:
+            pass
+
+    return raw, ctype
+
 MANIFEST = os.path.join(ROOT, "scripts", "done_urls.txt")
 done_set = set()
 if os.path.exists(MANIFEST):
@@ -85,10 +147,7 @@ for i, c in enumerate(cands):
     sid = slugify(u, idx)
     print(f"[{idx}/{total}] {u}", flush=True)
     try:
-        r = requests.get(u, headers={"User-Agent": UA}, timeout=45)
-        r.raise_for_status()
-        ctype = r.headers.get("Content-Type", "")
-        raw = r.content
+        raw, ctype = fetch_url(u)
     except Exception as e:
         print(f"   DOWNLOAD FAIL: {e}", flush=True)
         with open(os.path.join(MD, f"{sid}.md"), "w") as f:
@@ -96,7 +155,7 @@ for i, c in enumerate(cands):
         done_set.add(norm(u))
         continue
 
-    is_pdf = ("pdf" in ctype.lower()) or u.lower().endswith(".pdf")
+    is_pdf = ("pdf" in ctype.lower()) or u.lower().endswith(".pdf") or raw.startswith(b"%PDF")
     if is_pdf:
         ext = "pdf"
         txt, npages = pdf_text(raw)
@@ -125,3 +184,4 @@ for i, c in enumerate(cands):
 with open(MANIFEST, "w") as f:
     f.write("\n".join(sorted(done_set)) + "\n")
 print(f"\nDONE. Newly downloaded this run: {new}. Total candidates: {total}")
+
