@@ -10,8 +10,10 @@ https://councillors.herefordshire.gov.uk/documents/s50113886/herefordshire%20loc
 https://crawley.gov.uk/sites/default/files/2023-08/local%20cycling%20and%20walking%20infrastructure%20plan%20report%20and%20appendices.pdf
 https://cumbria.gov.uk/elibrary/content/internet/538/18110/38384/44749114236.pdf
 https://cumbria.gov.uk/elibrary/content/internet/538/18110/38384/44819111034.pdf
+https://dartford.moderngov.co.uk/documents/s75830/appendix%20a%20-%20local%20cycling%20and%20walking%20infrastructure%20plan.pdf
 https://democracy.bcpcouncil.gov.uk/documents/s32638/local%20cycling%20and%20walking%20infrastructure%20plan.pdf
 https://democracy.brighton-hove.gov.uk/documents/s175857/local%20cycling%20and%20walking%20infrastructure%20plan%20lcwip.pdf
+https://democracy.devon.gov.uk/documents/s47566/devon%20local%20cycling%20and%20walking%20infrastructure%20plans%20-%20final.pdf
 https://democracy.devon.gov.uk/documents/s50968/countywide%20lcwip%20report.pdf
 https://democracy.devon.gov.uk/documents/s50969/lcwip%20plan.pdf
 https://democracy.durham.gov.uk/documents/s145571/local%20cycling%20app%20b%20durham%20city%20local%20cycling%20walking%20infrastructure%20plan.pdf
@@ -42,8 +44,11 @@ https://legacy.westmorlandandfurness.gov.uk/elibrary/content/internet/538/18110/
 https://legacy.westmorlandandfurness.gov.uk/elibrary/content/internet/538/18110/38384/4481911413.pdf
 https://letstalk.kent.gov.uk/27288/widgets/77329/documents/72175
 https://letstalk.oxfordshire.gov.uk/40548/widgets/120199/documents/84124
+https://localplan.gravesham.gov.uk/gf2.ti/f/1805858/284231237.1/pdf/-/gravesham%20lcwip.pdf
+https://meetings.maidstone.gov.uk/documents/s97755/lcwip%20report.pdf
 https://moderngov.cheshireeast.gov.uk/documents/s83625/local%20cycling%20and%20walking%20infrastructure%20plans%20-%20app%202%20ne.pdf
 https://moderngov.dover.gov.uk/documents/s60537/local%20cycling%20walking%20appendix.pdf
+https://moderngov.dover.gov.uk/documents/s64071/lcwip%20report.pdf
 https://moderngov.threerivers.gov.uk/documents/s13679/appendix+a+-+local+cycling+and+walking+infrastructure+plan+including+appendices.pdf
 https://mycouncil.oxfordshire.gov.uk/documents/s66592/cmdhm20230720r05a%20annex%20a%20banbury%20lcwip%20final_10072023%20version.pdf
 https://mycouncil.oxfordshire.gov.uk/documents/s68729/cmdtm20231214r06%20annex%201%20-%20didcot%20lcwip%20report.pdf
@@ -66,6 +71,7 @@ https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/lcwip-draft-for-cons
 https://tunbridgewells.gov.uk/__data/assets/pdf_file/0007/385333/05_lcwip-phase-2_final-report.pdf
 https://westyorkshire.moderngov.co.uk/mgconvert2pdf.aspx
 https://www.adur-worthing.gov.uk/media/media,158651,smxx.pdf
+https://www.ashford.gov.uk/media/24eb1cla/lcwip-ashford.pdf
 https://www.atkinsrealis.com
 https://www.blaby.gov.uk/media/r0zjdj5m/blaby-district-council-lcwip-2024-230724.pdf
 https://www.bracknell-forest.gov.uk/sites/default/files/2024-11/local-cycling-and-walking-infrastructure-plan.pdf
@@ -78,11 +84,13 @@ https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technic
 https://www.cumberland.gov.uk/sites/default/files/2025-04/whitehaven_lcwip_technical_report.pdf
 https://www.devon.gov.uk/roads-and-transport/traffic-information/transport-planning/local-cycling-and-walking-infrastructure-plans-lcwips
 https://www.essexhighways.org/uploads/files/getting%20around/cycling/basildon-lcwip-report.pdf
+https://www.folkestone-hythe.gov.uk/planning/local-cycling-walking-infrastructure-plan
 https://www.guildford.gov.uk/article/27192/local-cycling-and-walking-infrastructure-plan
 https://www.guildford.gov.uk/media/36793/guildford-lcwip-chapter-2/pdf/guildford_lcwip_chapter_2.pdf
 https://www.hants.gov.uk/transport/transportschemes/winchesterlcwip
 https://www.hart.gov.uk/sites/default/files/2024-08/hart-district-lcwip-v17ac.pdf
 https://www.hertfordshire.gov.uk/about-the-council/consultations/transport-and-highways/lcwips-2022/lcwips-2022.aspx
+https://www.honiton.gov.uk/_userfiles/files/local%20cycling%20and%20walking%20infrastructure%20plan%20lcwip%20consultation.pdf
 https://www.horsham.gov.uk/__data/assets/pdf_file/0017/113165/horsham-district-local-cycling-and-walking-infrastructure-plan.pdf
 https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/final%20ipswich%20lcwip%2007.07.25.pdf
 https://www.lancashire.gov.uk/media/951846/lancaster.pdf
@@ -112,8 +120,10 @@ https://www.surreycc.gov.uk/transport-and-streets/road-safety-and-active-travel/
 https://www.swindon.gov.uk/downloads/file/8394/swindon_local_cycling_and_walking_infrastructure_plan
 https://www.threerivers.gov.uk/news/lcwip-approved-herts-county-council
 https://www.thurrock.gov.uk/sites/default/files/assets/documents/thurrock_local_cycling_and_walking_infrastructure_plan_january_2025-compressed.pdf
+https://www.torbay.gov.uk/media/15790/torbay-local-cycling-and-walking-infrastructure-plan-lcwip.pdf
 https://www.west-norfolk.gov.uk/download/downloads/id/8479/f67_-_local_cycling_and_walking_infrastructure_plan_lcwip.pdf
 https://www.westberks.gov.uk/media/50987/local-cycling-walking-infrastructure-plan-lcwip-june-2021/pdf/lcwip_june_2021.pdf
+https://www.westdevon.gov.uk/sites/default/files/2025-06/06928%20lcwip%20report%2020250203%20-%20compressed.pdf
 https://www.westofengland-ca.gov.uk/wp-content/uploads/2021/09/west-of-england-local-cycling-and-walking-infrastructure-plan-2020-2036.pdf
 https://www.westsussex.gov.uk/media/chjdcz0u/local_cycling_and_walking_infrastructure_plan.pdf
 https://www.westyorks-ca.gov.uk/media/3424/bradford-phase-one-lcwip-final.pdf
