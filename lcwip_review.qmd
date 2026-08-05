@@ -35,17 +35,17 @@ sample(1:117, 10)
 
 - *how pct was used*: summarises well how PCT was used in LCWIP methodology
 - *pct data sources*: commuting and school travel
-    - **ERROR** -- also identifies desire lines as scenario
-- *desire lines used*: true
-    - **ERROR** -- PCT desire lines were not used in the LCWIP methodology, but the LCWIP does include desire lines for walking and cycling routes.
-- *priorisation integration*: true
-    - **ERROR** -- LCWIP does deal with prioritisation of routes, but it is not clear how the PCT data was integrated into this process.
-- *length of cycle network proposed*: summarises well that total length not provided
-- *total cost of network*: summarises well that total cost not provided
+    - **Resolved prev ERROR** -- ~~also identifies desire lines as scenario~~
+- *pct desire lines used*: false ~~true~~
+    - **Resolved prev ERROR** -- ~~PCT desire lines were not used in the LCWIP methodology, but the LCWIP does include desire lines for walking and cycling routes.~~
+- *priorisation integration*: false ~~true~~
+    - **Resolved prev ERROR** -- ~~LCWIP does deal with prioritisation of routes, but it is not clear how the PCT data was integrated into this process.~~
+- *length of cycle network proposed*: **NOTE (subseq review)** ~~summarises well that total length not provided~~
+- *total cost of network*: **NOTE (subseq review)** now shows as null ~~summarises well that total cost not provided~~
     - **NOTE** -- review of priorisation matrix (p67) shows cost for "easy wins" is £11.5m
-- *specific evidence of impact of using pct*: summarises well how PCT shows cycling increases for different regions in different scenarios
-    - **ERROR** -- review of LCWIP does not support claim result that "evidence directly shaped understanding of potential demand and justification for proposed network"
-
+- *specific evidence of impact ~~of using pct~~*: Discusses funding for LCWIP plan and intention to enable access to further funding ~~summarises well how PCT shows cycling increases for different regions in different scenarios~~
+    - **Resolved prev ERROR** -- ~~review of LCWIP does not support claim result that "evidence directly shaped understanding of potential demand and justification for proposed network"~~
+- *pct usage quote*: quote present in document
 
 ## Durham County
 
@@ -59,10 +59,11 @@ sample(1:117, 10)
 
 - *how pct was used*: summarises well how PCT was used in LCWIP methodology
 - *pct scenarios used*: Government Target
-    - **NOTE** -- more specifically mentions the Government Target Near Market scenario (LSOA)
+    - ~~**NOTE** -- more specifically mentions the Government Target Near Market scenario (LSOA)~~
 - *pct data sources*: correctly identifies commuting based on LCWIP description of "journeys to work"
 - *total cost of network*: summarises indicated cost estimate using bands
-- *specific evidence of impact of using pct*: summarises well
+- *specific evidence of impact ~~of using pct~~*: summarises well
+- *pct usage quote*: quote present in document
 
 
 ## West Birkshire
@@ -77,12 +78,12 @@ sample(1:117, 10)
 
 - *how pct was used*: summarises well how PCT was used in LCWIP methodology
 - *pct scenarios used*: Go Dutch
-    - **ERROR** -- misses that baseline was also used
-- *desire lines used*: true
-    - **ERROR** -- doesn't specifically mention that PCT desire lines were used, but does mention that desire lines were used in the LCWIP methodology
+    - **ERROR still present** -- misses that baseline was also used
+- *desire lines used*: false ~~true~~
+    - **Resolved prev ERROR** -- ~~doesn't specifically mention that PCT desire lines were used, but does mention that desire lines were used in the LCWIP methodology~~
 - *specific evidence of impact*: summarises well how PCT had impact on the LCWIP methodology
-
-
+    - **NOTE (subseq review)** -- subsequent AI analysis addresses the funding secured in the Active Travel Fund phase 1 for schemes developed and enhanced in recent years. This is more PRE than POST LCWIP and not related to PCT.
+- *pct usage quote*: quote present in document
 
 ## Shropshire
 
@@ -96,10 +97,11 @@ sample(1:117, 10)
 
 - *how pct was used*: summarises well how PCT was used in LCWIP methodology
 - *pct scenarios used*: Government Target
-    - **ERROR** -- misses that baseline was also used
+    - **ERROR still present** -- misses that baseline was also used
 - *specific evidence of impact*: summarises well how PCT had impact on the LCWIP methodology
-- *quotes on using pct*: quote captured describes the tool itself (most other LCWIPS reviewed have similar quotes)
-    - **ERROR** -- did not capture following important quote which is more specific to Shropshire's situation: "the model accounts for the local socio-economic and demographic factors which may impact cycling levels in Shropshire,including the notably higher proportion of older people living in Shropshire (25% of the population is aged over 65 compared to 19% of the population for the West Midlands and England as a whole)"
+    - **NOTE (subseq review)** -- subsequent AI analaysis addresses the impact of the LCWIP process rather than impact of PCT.
+- *pct usage quote* ~~*quotes on using pct*~~: quote captured describes the tool itself (most other LCWIPS reviewed have similar quotes)
+    - **ERROR still present** -- did not capture following important quote which is more specific to Shropshire's situation: "the model accounts for the local socio-economic and demographic factors which may impact cycling levels in Shropshire,including the notably higher proportion of older people living in Shropshire (25% of the population is aged over 65 compared to 19% of the population for the West Midlands and England as a whole)"
 
 
 ## Carlisle
@@ -112,11 +114,12 @@ sample(1:117, 10)
 
 **Notes**
 - *how pct was used*: 
-    - **ERROR** -- the report only mentions PCT as being used to identify that most popular routs for both school and commuting are within the Carlisle urban area with specific mentions of certain routes. Unclear whether PCT was used in the LCWIP methodology itself.
+    - **NOTE** -- the report only mentions PCT as being used to identify that most popular routes for both school and commuting are within the Carlisle urban area with specific mentions of certain routes. Unclear whether PCT was used in the LCWIP methodology itself.
 - *specific evidence of impact*:
-    - **ERROR** -- the report is unclear on PCT's impact on the methodology. Therefore, it is unclear to what extent the proposed priorisation cycling network is based on PCT data, if at all.
-- *quotes on using pct*:
-    - **ERROR** -- the quote captured does not appear in the LCWIP report. Possible hallucination of the AI model. The report does not provide any specific quotes on using PCT other than as a reference.
+    - **ERROR still present** -- the report is unclear on PCT's impact on the methodology. Therefore, it is unclear to what extent the proposed priorisation cycling network is based on PCT data, if at all.
+    - **NOTE (subseq review)** -- subsequent AI analaysis addresses funding that Carlise has secured for various active travel projects and schemes, but this is more PRE than POST LCWIP and not related to PCT.
+- *pct usage quote* ~~*quotes on using pct*~~:
+    - **Resolved prev ERROR** -- ~~the quote captured does not appear in the LCWIP report. Possible hallucination of the AI model. The report does not provide any specific quotes on using PCT other than as a reference.~~
 
 
 ## Banbury
@@ -131,10 +134,11 @@ sample(1:117, 10)
 
 - *how pct was used*: summarises well how PCT was used in LCWIP methodology
 - *pct scenarios used*: E-bike, Go Dutch
-    - **ERROR** -- misses that baseline was also used
+    - **Resolved Prev ERROR** -- ~~misses that baseline was also used~~
 - *specific evidence of impact*: summarises well how PCT had impact on the LCWIP methodology. The impact itself was that it directly informed the proposed cycling network routes and priorisation.
-- *quotes on using pct*:
-    - **ERROR** -- the quote captured does not appear in the LCWIP report. Possible hallucination of the AI model.
+    - **NOTE (subseq review)** -- subsequent AI analaysis addresses the impact of the LCWIP process rather than impact of PCT.
+- *pct usagage quote* ~~*quotes on using pct*~~:
+    - **Resolved Prev ERROR** -- ~~the quote captured does not appear in the LCWIP report. Possible hallucination of the AI model.~~
 
 - **NOTE**: Images taken directly from PCT website to be used as figures in report including:
     - base map of LSOA overview
@@ -154,17 +158,19 @@ sample(1:117, 10)
 
 - *how pct was used*: summarises well how PCT was used in LCWIP methodology
 - *pct scenarios used*: Government Target, Go Dutch, E-bike
-    - **ERROR** -- misses that baseline was also used
+    - **Resolved Prev ERROR** -- ~~misses that baseline was also used~~
 - *pct data sources*: commuting and school travel
-    - **ERROR** -- also identifies desire lines as scenario
-- *desire lines used": true
-    - **ERROR** -- PCT desire lines were not used in the LCWIP methodology, but the LCWIP does include desire lines for walking and cycling routes.
+    - **Resolved Prev ERROR** -- ~~also identifies desire lines as scenario~~
+- *pct desire lines used* ~~*desire lines used"~~: false ~~true~~
+    - **Resolved Prev ERROR** -- ~~PCT desire lines were not used in the LCWIP methodology, but the LCWIP does include desire lines for walking and cycling routes.~~
     - **NOTE** -- the LCWIP does use the *Route Network* and *Fast Routes* outputs from PCT to inform the proposed cycling network and prioritisation.
 - *specific evidence of impact*: summarises well how PCT had impact on the LCWIP methodology. The impact itself was that it directly informed the proposed cycling network routes and priorisation.
+    - **NOTE (subseq review)** -- subsequent AI analaysis addresses the impact of the LCWIP process rather than impact of PCT. In addressing the impact of the LCWIP, the AI analyis states that the plan *HAS* informed the development of the Green Grid. The LCWIP states that it *WILL* inform the development of the Green Grid.
 - *length of cycle network proposed*: plan does provide details of primary and secondary routes as part of proposed network. All proposed routes will not be ultimately developed as they are subject to a prioritisation process.
     - **NOTE** -- in the route audit it does provide distances for 12 primary cycle routes (total length 55km)
+    -**NOTE (subseq review)** -- AI analysis returned `null`
 - *routes*: correctly identifies the aforementioned 12 primary cycle routes
-
+- *pct usage quote*: quote present in document
 
 ## Wantage and Grove
 
@@ -192,7 +198,7 @@ sample(1:117, 10)
 - *how pct was used*: summarises well how PCT was used in LCWIP methodology
 - *pct scenarios used*: Government Target, Go Dutch, E-bike
 - *pct data sources*: commuting and school travel
-    - **ERROR** -- also identifies desire lines as a data source. **NOTE**: desire lines are used but this isn't a data source but rather an output of PCT which is used by the LCWIP
+    - **Resolved Prev ERROR** -- ~~also identifies desire lines as a data source. **NOTE**: desire lines are used but this isn't a data source but rather an output of PCT which is used by the LCWIP~~
 - *routes*: correctly identifies 11 primary cycle routes analysed as part of audit process. Lengths not provided
 
 
@@ -207,3 +213,4 @@ sample(1:117, 10)
 **Notes**
 
 - Correctly identifies that PCT was not used.
+
