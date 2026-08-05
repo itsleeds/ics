@@ -262,12 +262,44 @@ def main():
     success_count = 0
     skipped_count = 0
 
+    # Map existing extracted files by their internal URL so we are URL-keyed,
+    # not idx-keyed (idx shifts whenever the candidate list changes).
+    def existing_extracted_by_url():
+        m = {}
+        if os.path.exists(OUTDIR):
+            for fn in os.listdir(OUTDIR):
+                if not fn.endswith(".json") or fn == "_progress.json":
+                    continue
+                try:
+                    e = json.load(open(os.path.join(OUTDIR, fn)))
+                    u = (e.get("pdf_url") or e.get("url") or "").strip().lower()
+                    if u:
+                        m[u] = fn
+                except Exception:
+                    pass
+        return m
+
+    existing_by_url = existing_extracted_by_url()
+
     for d in filtered_docs:
         idx = d["idx"]
         sidx = f"{idx:04d}"
         out_file = os.path.join(OUTDIR, f"{sidx}.json")
+        doc_url_norm = (d.get("url") or "").strip().lower()
 
-        if os.path.exists(out_file) and not args.force and not args.sample_idxs and not args.doc_idx:
+        already_done = os.path.exists(out_file) and not args.force and not args.sample_idxs and not args.doc_idx
+        if already_done:
+            # Only skip when the file at this idx actually corresponds to THIS url
+            try:
+                cur = json.load(open(out_file))
+                cur_url = (cur.get("pdf_url") or cur.get("url") or "").strip().lower()
+                if cur_url != doc_url_norm:
+                    already_done = False
+                    print(f"  [Idx shift] {out_file} holds a different URL; re-extracting this document.")
+            except Exception:
+                already_done = False
+
+        if already_done:
             print(f"  [Skip] Document [{idx}] already extracted ({out_file}).")
             skipped_count += 1
             continue

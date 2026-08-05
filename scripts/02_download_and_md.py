@@ -80,6 +80,14 @@ def fetch_url(u):
     # Special handling for SharePoint URLs
     if "sharepoint.com" in u.lower():
         try:
+            # Guest file links of the form .../:b:/s/<site>/<fileid>?e=<token>
+            # resolve to the file directly when "download=1" is appended.
+            if ":b:/" in u.lower():
+                sep = "&" if "?" in u else "?"
+                r_dl = session.get(u + sep + "download=1", allow_redirects=True, timeout=45)
+                if r_dl.status_code == 200 and (r_dl.content.startswith(b"%PDF") or "pdf" in r_dl.headers.get("Content-Type", "").lower()):
+                    return r_dl.content, r_dl.headers.get("Content-Type", "application/pdf")
+                # fall back to treating the redirect target as a normal download
             # If cccandpcc sharepoint, bootstrap guest session via guest link
             if "cccandpcc.sharepoint.com" in u.lower():
                 session.get("https://cccandpcc.sharepoint.com/:f:/s/CCCwebsitedocumentlibrary/Eiw77HVjkSRMmX0mu09EqkYB-IkZrbyj2K5SFUl35nRx0w?e=TfzoCX", allow_redirects=True, timeout=30)

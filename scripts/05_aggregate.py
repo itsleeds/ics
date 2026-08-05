@@ -59,8 +59,9 @@ for e in extracted:
     if not k:
         k = f"idx_{e.get('idx')}"
     e["_source_tag"] = "2026"
+    if k not in merged:
+        order.append(k)
     merged[k] = e
-    order.append(k)
 
 for o in old:
     u = norm_url(o.get("pdf_url"))
