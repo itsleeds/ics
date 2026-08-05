@@ -1053,13 +1053,31 @@
     "idx": 117
   },
   {
+    "url": "https://www.plymouth.gov.uk/sites/default/files/2021%20LCWIP_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0148-2021-LCWIP-0-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0148-2021-LCWIP-0-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Plymouth LCWIP Main Document (2021)",
+    "idx": 118
+  },
+  {
+    "url": "https://www.plymouth.gov.uk/sites/default/files/2022-12/LCWIP-2022.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0149-LCWIP-2022-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0149-LCWIP-2022-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Plymouth LCWIP 2022 Update",
+    "idx": 119
+  },
+  {
     "url": "https://www.rbwm.gov.uk/sites/default/files/2024-06/transport_local_cycling_and_walking_infrastructure_plan.pdf",
     "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0074-transport-local-cycling-and-walking-infr.md",
     "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0074-transport-local-cycling-and-walking-infr.pdf",
     "download_status": "ok",
     "source": "seed-94db",
     "note": "The Royal Borough of Windsor & Maidenhead (RBWM)",
-    "idx": 118
+    "idx": 120
   },
   {
     "url": "https://www.rutland.gov.uk/sites/default/files/2025-03/ev11.7_cycling_and_walking_infrastructure_plan_august_2023.pdf",
@@ -1068,7 +1086,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Rutland County Council",
-    "idx": 119
+    "idx": 121
   },
   {
     "url": "https://www.scilly.gov.uk/environment-transport/highways/local-cycling-walking-infrastructure-plan",
@@ -1077,7 +1095,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Council of the ISLES OF SCILLY",
-    "idx": 120
+    "idx": 122
   },
   {
     "url": "https://www.somerset.gov.uk/roads-travel-and-parking/local-cycling-and-walking-infrastructure-plans/",
@@ -1086,7 +1104,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Somerset 8 town LCWIPs (2025)",
-    "idx": 121
+    "idx": 123
   },
   {
     "url": "https://www.sstaffs.gov.uk/sites/default/files/2023-03/local_cycling_and_walking_infrastructure_plan.pdf",
@@ -1095,7 +1113,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Staffordshire County Council [3]",
-    "idx": 122
+    "idx": 124
   },
   {
     "url": "https://www.staffordshire.gov.uk/sites/default/files/2025-09/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%202021%20-%202031.pdf",
@@ -1104,7 +1122,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Staffordshire LCWIP 2021-2031",
-    "idx": 123
+    "idx": 125
   },
   {
     "url": "https://www.stalbans.gov.uk/sites/default/files/attachments/St%20Albans%20District%20LCWIP%20-%20Final%20Report%20-%20FINAL%20accessible.pdf",
@@ -1113,7 +1131,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "St Albans District LCWIP",
-    "idx": 124
+    "idx": 126
   },
   {
     "url": "https://www.stoke.gov.uk/download/downloads/id/2757/draft_local_cycling_and_walking_infrastructure_plan.pdf",
@@ -1122,7 +1140,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Stoke-on-Trent LCWIP 2025-2035",
-    "idx": 125
+    "idx": 127
   },
   {
     "url": "https://www.sunderland.gov.uk/media/28328/Local-Cycling-and-Walking-Infrastructure-Plan-SCC/pdf/LocalCyclingAndWalkingInfrastructurePlan-SCC.pdf?m=638035103774900000",
@@ -1131,7 +1149,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Sunderland City Council",
-    "idx": 126
+    "idx": 128
   },
   {
     "url": "https://www.surreycc.gov.uk/transport-and-streets/road-safety-and-active-travel/active-travel-schemes/farnham-lcwip",
@@ -1140,7 +1158,7 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 127
+    "idx": 129
   },
   {
     "url": "https://www.swindon.gov.uk/downloads/file/8394/swindon_local_cycling_and_walking_infrastructure_plan",
@@ -1149,7 +1167,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Swindon Borough Council",
-    "idx": 128
+    "idx": 130
   },
   {
     "url": "https://www.threerivers.gov.uk/news/lcwip-approved-herts-county-council",
@@ -1158,7 +1176,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Three Rivers LCWIP (adopted Nov 2025)",
-    "idx": 129
+    "idx": 131
   },
   {
     "url": "https://www.thurrock.gov.uk/sites/default/files/assets/documents/thurrock_local_cycling_and_walking_infrastructure_plan_january_2025-compressed.pdf",
@@ -1167,7 +1185,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Thurrock Council",
-    "idx": 130
+    "idx": 132
   },
   {
     "url": "https://www.torbay.gov.uk/media/15790/torbay-local-cycling-and-walking-infrastructure-plan-lcwip.pdf",
@@ -1176,7 +1194,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Hermes Discovered: Torbay LCWIP",
-    "idx": 131
+    "idx": 133
   },
   {
     "url": "https://www.west-norfolk.gov.uk/download/downloads/id/8479/f67_-_local_cycling_and_walking_infrastructure_plan_lcwip.pdf",
@@ -1185,7 +1203,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Borough Council of King's Lynn and West Norfolk",
-    "idx": 132
+    "idx": 134
   },
   {
     "url": "https://www.westberks.gov.uk/media/50987/Local-Cycling-Walking-Infrastructure-Plan-LCWIP-June-2021/pdf/LCWIP_June_2021.pdf?m=1623079527393",
@@ -1194,7 +1212,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "West Berkshire Council",
-    "idx": 133
+    "idx": 135
   },
   {
     "url": "https://www.westdevon.gov.uk/sites/default/files/2025-06/06928%20LCWIP%20Report%2020250203%20-%20compressed.pdf",
@@ -1203,7 +1221,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Hermes Discovered: South Hams & West Devon LCWIP 2025",
-    "idx": 134
+    "idx": 136
   },
   {
     "url": "https://www.westofengland-ca.gov.uk/wp-content/uploads/2021/09/West-of-England-Local-Cycling-and-Walking-Infrastructure-Plan-2020-2036.pdf",
@@ -1212,7 +1230,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "West of England Combined Authority (WECA), Bath & North East Somerset, Bristol C",
-    "idx": 135
+    "idx": 137
   },
   {
     "url": "https://www.westsussex.gov.uk/media/chjdcz0u/local_cycling_and_walking_infrastructure_plan.pdf",
@@ -1221,7 +1239,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "West Sussex County Council",
-    "idx": 136
+    "idx": 138
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/3424/bradford-phase-one-lcwip-final.pdf",
@@ -1230,7 +1248,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 137
+    "idx": 139
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/3428/wakefield-phase-one-lcwip-final.pdf",
@@ -1239,7 +1257,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 138
+    "idx": 140
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/5792/kirklees-local-cycling-and-walking-infrastructure-plan.pdf",
@@ -1248,7 +1266,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 139
+    "idx": 141
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/5793/leeds-local-cycling-and-walking-infrastructure-plan.pdf",
@@ -1257,7 +1275,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 140
+    "idx": 142
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/5796/calderdale-local-cycling-and-walking-infrastructure-plan.pdf",
@@ -1266,7 +1284,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 141
+    "idx": 143
   },
   {
     "url": "https://www.wiltshire.gov.uk/media/10838/wiltshire-lcwip-executive-summary.pdf",
@@ -1275,7 +1293,7 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 142
+    "idx": 144
   },
   {
     "url": "https://www.wiltshire.gov.uk/media/10839/amesbury-lcwip.pdf",
@@ -1284,7 +1302,7 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 143
+    "idx": 145
   },
   {
     "url": "https://www.wiltshire.gov.uk/media/10840/devizes-lcwip.pdf",
@@ -1293,7 +1311,7 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 144
+    "idx": 146
   },
   {
     "url": "https://www.wiltshire.gov.uk/media/10841/trowbridge-lcwip.pdf",
@@ -1302,7 +1320,7 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 145
+    "idx": 147
   },
   {
     "url": "https://www.worcestershire.gov.uk/sites/default/files/2025-10/redditch_lcwip_final.pdf",
@@ -1311,7 +1329,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Redditch LCWIP 2025",
-    "idx": 146
+    "idx": 148
   },
   {
     "url": "https://yoursay.hull.gov.uk/42351/widgets/125945/documents/85658",
@@ -1320,6 +1338,6 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Hull City Council",
-    "idx": 147
+    "idx": 149
   }
 ]
