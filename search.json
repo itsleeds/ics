@@ -35,6 +35,27 @@
     "text": "The tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment. The research project described in this website aims to answer the questions:\n\nWhat tools and methods have been developed, building on the underlying research?\nWho is using the tools and methods?\nHow much has been invested in active travel in general and cycle infrastructure in particular in countries benefiting from the tools and methods?\nWhat proportion of the investment in active travel infrastructure has been influenced by the tools and methods?\nHow have investment and design decisions changed as a result of the tools and methods?\nHow has the research influenced international transport policy and funding frameworks?"
   },
   {
+    "objectID": "2026-analysis.html",
+    "href": "2026-analysis.html",
+    "title": "PCT / LCWIP Data Ingest 2026 — Exploratory Analysis",
+    "section": "",
+    "text": "This document reports the results of the 2026 re-run of the data-ingest process that collects evidence of the Propensity to Cycle Tool (PCT) and related active-travel planning tools in English Local Cycling and Walking Infrastructure Plans (LCWIPs) and related documents.\nThe 2026 run is a proof-of-concept for England (the first stage before an international roll-out). It improves on the previous (~2024) work in three ways:\n\nDistinction between LCWIP reports and related material — each document is classified LCWIP, LCWIP-related, or other, a distinction the previous work did not make.\nRicher “how PCT was used” detail — explicit scenario usage (Go Dutch, Government Target, E-bike, Go Cambridge), data sources, desire-line usage and prioritisation-integration flags.\nReproducible pipeline — every web page / PDF is downloaded to data-govuk-2026-raw and a .md text extract written to data-govuk-2026-md; structured fields are extracted with a single, unlimited local engine (Ollama gemma4-12b-hermes) so the results are fully reproducible without paid API credits.\n\nThe headline dataset merges the fresh 2026 collection with the existing 94-entry database (LCWIP_database.json), so the release shows how the evidence base has grown."
+  },
+  {
+    "objectID": "2026-analysis.html#pct-mentions-by-document-type",
+    "href": "2026-analysis.html#pct-mentions-by-document-type",
+    "title": "PCT / LCWIP Data Ingest 2026 — Exploratory Analysis",
+    "section": "4.1 PCT mentions by document type",
+    "text": "4.1 PCT mentions by document type\n\nimport pandas as pd\ndf = pd.read_csv(\"results/results_flat.csv\")\nct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('unknown'))\nprint(ct)\n\nmentions_pct   False  True \ndoc_type                   \nLCWIP             32     67\nLCWIP-related      3      2\nother             19      2"
+  },
+  {
+    "objectID": "2026-analysis.html#change-over-time",
+    "href": "2026-analysis.html#change-over-time",
+    "title": "PCT / LCWIP Data Ingest 2026 — Exploratory Analysis",
+    "section": "4.2 Change over time",
+    "text": "4.2 Change over time\nThe chart below shows the evolution of LCWIP and active travel document publications over time (2019–2025), categorized by whether the report mentions the Propensity to Cycle Tool.\n\nlibrary(readr)\nlibrary(ggplot2)\nlibrary(dplyr)\n\ndf &lt;- read_csv(\"results/results_flat.csv\", show_col_types = FALSE) %&gt;%\n  mutate(year = readr::parse_number(as.character(date_published))) %&gt;%\n  filter(!is.na(year), year &gt;= 2018, year &lt;= 2026)\n\n\ndf_summary &lt;- df %&gt;%\n  mutate(pct_label = if_else(mentions_pct, \"Mentions PCT\", \"Does not mention PCT\")) %&gt;%\n  group_by(year = factor(year), pct_label) %&gt;%\n  summarise(count = n(), .groups = \"drop\")\n\nggplot(df_summary, aes(x = year, y = count, fill = pct_label)) +\n  geom_col(position = \"stack\", width = 0.6) +\n  scale_fill_manual(values = c(\"Mentions PCT\" = \"#2b8cbe\", \"Does not mention PCT\" = \"#de2d26\")) +\n  labs(\n    title = \"LCWIP Document Publications and PCT Mentions Over Time (2019–2025)\",\n    subtitle = \"Annual count of published active travel strategy documents in England\",\n    x = \"Publication Year\",\n    y = \"Number of Documents\",\n    fill = \"PCT Status\"\n  ) +\n  theme_minimal(base_size = 12) +\n  theme(\n    legend.position = \"bottom\",\n    plot.title = element_text(face = \"bold\"),\n    panel.grid.minor = element_blank()\n  )\n\n\n\n\n\n\n\nFigure 1: Publication of LCWIP and active-travel planning documents over time by PCT mention status."
+  },
+  {
     "objectID": "plan.html",
     "href": "plan.html",
     "title": "Project Plan",
