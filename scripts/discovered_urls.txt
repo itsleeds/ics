@@ -40,3 +40,6 @@ https://www.wiltshire.gov.uk/media/10841/trowbridge-lcwip.pdf	Trowbridge LCWIP (
 https://www.hants.gov.uk/transport/transportschemes/winchesterlcwip	Winchester LCWIP (Hampshire)
 https://www.surreycc.gov.uk/transport-and-streets/road-safety-and-active-travel/active-travel-schemes/farnham-lcwip	Farnham LCWIP (Surrey)
 https://www.guildford.gov.uk/article/27192/Local-Cycling-and-Walking-Infrastructure-Plan	Guildford LCWIP (Surrey)
+https://democracy.devon.gov.uk/documents/s50968/Countywide%20LCWIP%20report.pdf	Devon - "Devon" "Local Cycling and Walking Infrastructure Plan" OR "LCWIP" filetype:pdf
+https://ottertrail.org/wp-content/uploads/2025/01/LCWIP_Plan_December_2024.pdf	Devon - "Devon" "Local Cycling and Walking Infrastructure Plan" OR "LCWIP" filetype:pdf
+https://democracy.devon.gov.uk/documents/s50969/LCWIP%20Plan.pdf	Devon - "Devon" "Local Cycling and Walking Infrastructure Plan" OR "LCWIP" filetype:pdf
