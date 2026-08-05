@@ -1,6 +1,6 @@
 # PCT / LCWIP Data Ingest 2026 — Exploratory Analysis
 
-2026-07-22
+2026-08-05
 
 - [<span class="toc-section-number">1</span> Overview](#overview)
 - [<span class="toc-section-number">2</span> Methods](#methods)
@@ -69,25 +69,24 @@ the evidence base has grown**.
 # Corpus composition
 
 ``` python
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 print(f"Total merged records: {len(df)}")
 ```
 
-    Total merged records: 112
+    Total merged records: 125
 
 ``` python
 print(f"  2026-only: {(df['_source_tag']=='2026').sum()}")
 ```
 
-      2026-only: 109
+      2026-only: 0
 
 ``` python
 print(f"  from existing 94-DB: {(df['_source_tag']=='existing94').sum()}")
 ```
 
-      from existing 94-DB: 3
+      from existing 94-DB: 0
 
 ``` python
 print()
@@ -104,10 +103,9 @@ print(df['doc_type'].fillna('(unknown)').value_counts())
 ```
 
     doc_type
-    LCWIP            86
-    (unknown)        15
-    LCWIP-related    10
-    other             1
+    LCWIP            99
+    other            21
+    LCWIP-related     5
     Name: count, dtype: int64
 
 # PCT mentions
@@ -116,28 +114,27 @@ The central finding for the REF case study is the share of documents
 that explicitly mention the Propensity to Cycle Tool.
 
 ``` python
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 pct = df['mentions_pct']
 n = pct.notna().sum()
 mentioned = (pct == True).sum()
 print(f"Documents with a usable mentions_pct flag: {n}")
 ```
 
-    Documents with a usable mentions_pct flag: 112
+    Documents with a usable mentions_pct flag: 125
 
 ``` python
 print(f"Mention PCT: {mentioned} ({mentioned/n*100:.1f}%)")
 ```
 
-    Mention PCT: 78 (69.6%)
+    Mention PCT: 71 (56.8%)
 
 ``` python
 print(f"Do not mention PCT: {(pct==False).sum()} ({ (pct==False).sum()/n*100:.1f}%)")
 ```
 
-    Do not mention PCT: 34 (30.4%)
+    Do not mention PCT: 54 (43.2%)
 
 ``` python
 print(f"Unknown (no content / failed download): {pct.isna().sum()}")
@@ -148,19 +145,17 @@ print(f"Unknown (no content / failed download): {pct.isna().sum()}")
 ## PCT mentions by document type
 
 ``` python
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 ct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('unknown'))
 print(ct)
 ```
 
     mentions_pct   False  True 
     doc_type                   
-    LCWIP             25     61
-    LCWIP-related      8      2
-    other              1      0
-    unknown            0     15
+    LCWIP             32     67
+    LCWIP-related      3      2
+    other             19      2
 
 ## Change over time
 
@@ -174,7 +169,9 @@ library(ggplot2)
 library(dplyr)
 
 df <- read_csv("results/results_flat.csv", show_col_types = FALSE) %>%
+  mutate(year = readr::parse_number(as.character(date_published))) %>%
   filter(!is.na(year), year >= 2018, year <= 2026)
+
 
 df_summary <- df %>%
   mutate(pct_label = if_else(mentions_pct, "Mentions PCT", "Does not mention PCT")) %>%
@@ -214,14 +211,20 @@ Among documents that mention the PCT, which future scenarios are
 referenced?
 
 ``` python
-import json, os, pandas as pd
+import json, pandas as pd
 from collections import Counter
-res = json.load(open("results/results.json"))
+df = pd.read_csv("results/results_flat.csv")
 c = Counter()
-for r in res:
-    if r.get('mentions_pct') is True:
-        for s in (r.get('pct_scenarios_used') or []):
-            c[str(s).strip()] += 1
+for _, r in df.iterrows():
+    if r.get('mentions_pct') is True or r.get('mentions_pct') == True:
+        scs = r.get('pct_scenarios_used')
+        if pd.notna(scs):
+            if isinstance(scs, str):
+                try: scs = json.loads(scs)
+                except: pass
+            if isinstance(scs, list):
+                for s in scs:
+                    c[str(s).strip()] += 1
 sc = pd.Series(dict(c)).sort_values(ascending=False)
 print("Scenario mentions (across PCT-mentioning docs):")
 ```
@@ -232,14 +235,11 @@ print("Scenario mentions (across PCT-mentioning docs):")
 print(sc.to_string())
 ```
 
-    Go Dutch             29
-    Government Target    20
-    E-bike               13
+    Go Dutch             38
+    Government Target    36
+    E-bike               18
+    Baseline             15
     Go Cambridge          2
-    Current/Baseline      1
-    Baseline              1
-    Baseline/Current      1
-    Dutch                 1
 
 # Geographic coverage
 
@@ -248,9 +248,8 @@ Coverage against the higher-tier authorities in
 (ATF allocations) gives a sense of how much of England is represented.
 
 ``` python
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 print("Records by region (England):")
 ```
 
@@ -261,17 +260,24 @@ print(df['region'].fillna('(not stated)').value_counts().to_string())
 ```
 
     region
-    South East                  33
-    North West                  16
-    (not stated)                15
-    East of England             12
-    West Midlands                8
-    Yorkshire and The Humber     7
-    South West                   6
-                                 5
-    East Midlands                5
-    North East                   4
-    England                      1
+    South East                  32
+    (not stated)                16
+    West Midlands               10
+    East of England              9
+    North West                   9
+    North West England           8
+    South West                   8
+    Yorkshire and the Humber     7
+    East Midlands                6
+    South East England           6
+    North East                   5
+    Hertfordshire                2
+    West of England              2
+    Kent                         1
+    West Yorkshire               1
+    Northwest England            1
+    D2N2                         1
+    East                         1
 
 ``` python
 print()
@@ -287,113 +293,111 @@ print("Records with a combined authority named:")
 print(df['combined_authority_name'].notna().sum())
 ```
 
-    82
+    21
 
 # Cost and network length
 
 Where stated, LCWIPs propose substantial networks and investment.
 
 ``` python
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 cost = pd.to_numeric(df['total_cost_pounds'], errors='coerce')
 km = pd.to_numeric(df['length_of_network_km'], errors='coerce')
 print(f"Documents stating a total cost: {cost.notna().sum()}")
 ```
 
-    Documents stating a total cost: 11
+    Documents stating a total cost: 22
 
 ``` python
 print(f"Total stated investment (£): {cost.sum():,.0f}")
 ```
 
-    Total stated investment (£): 11,669,280,000
+    Total stated investment (£): 12,313,846,381
 
 ``` python
 print(f"Median stated investment (£): {cost.median():,.0f}")
 ```
 
-    Median stated investment (£): 110,000,000
+    Median stated investment (£): 76,280,000
 
 ``` python
 print(f"Documents stating network length (km): {km.notna().sum()}")
 ```
 
-    Documents stating network length (km): 8
+    Documents stating network length (km): 16
 
 ``` python
 print(f"Total stated network length (km): {km.sum():,.0f}")
 ```
 
-    Total stated network length (km): 6,708
+    Total stated network length (km): 7,202
 
 # Illustrative examples
 
 A sample of LCWIPs that mention the PCT, with how it was used:
 
 ``` python
-import json, os, pandas as pd
-res = json.load(open("results/results.json"))
-df = pd.DataFrame(res)
+import pandas as pd
+df = pd.read_csv("results/results_flat.csv")
 ex = df[(df['mentions_pct']==True) & (df['doc_type']=='LCWIP')].head(10)
 for _, r in ex.iterrows():
     print(f"### {r.get('report_name')} ({r.get('local_authority_name')})")
     print(f"- Date: {r.get('date_published')}")
     print(f"- Scenarios: {r.get('pct_scenarios_used')}")
-    print(f"- How used: {(r.get('how_pct_was_used') or '')[:300]}")
+    print(f"- How used: {str(r.get('how_pct_was_used') or '')[:300]}")
     print()
 ```
 
-    ### Liverpool City Region Combined Authority Local Cycling and Walking Infrastructure Plan (LCWIP) (Halton, Knowsley, Liverpool, Sefton, St Helens, Wirral)
-    - Date: 2019
-    - Scenarios: ['Government Target', 'Go Dutch']
-    - How used: Used to identify existing patterns of walking and cycling, potential new journeys, and to highlight areas with low current cycling levels but high opportunity for change when compared against various scenarios.
+    ### Local Cycling and Walking Infrastructure Plan (LCWIP) (Liverpool City Region Combined Authority (LCRCA), in partnership with Halton, Knowsley, Liverpool, Sefton, St Helens, and Wirral councils.[1])
+    - Date: 2023-09
+    - Scenarios: ["Government Target", "Go Dutch"]
+    - How used: The PCT was used to identify potential for cycling growth, analyze existing low-cycling areas with high potential, and compare scenarios to demonstrate the impact of full implementation of the Government’s Cycling and Walking Investment Strategy (CWIS) in the LCR.
 
-    ### Warwickshire Local Cycling and Walking Infrastructure Plan | PART 1 (Warwickshire)
+    ### Warwickshire Local Cycling and Walking Infrastructure Plan (Warwickshire County Council)
     - Date: February 2024
-    - Scenarios: []
-    - How used: The Propensity to Cycle Tool (PCT) is listed as one of the assessment and audit tools used by Warwickshire County Council to review existing and planned facilities.
+    - Scenarios: nan
+    - How used: nan
 
-    ### Banbury Local Cycling and Walking Infrastructure Plan (LCWIP) (Cherwell District Council; Oxfordshire County Council)
-    - Date: 2023-07
-    - Scenarios: ['E-bike', 'Go Dutch']
-    - How used: Used to identify preferred routes for cycling journeys, model commuting cycle route networks under different scenarios (E-bike, Go Dutch), and determine school cycling route network flows.
+    ### Banbury Local Cycling and Walking Infrastructure Plan (LCWIP) (Oxfordshire County Council)
+    - Date: July 2023
+    - Scenarios: ["Baseline", "Go Dutch", "E-bike"]
+    - How used: The PCT was used to estimate cycling potential, identify existing and future cycling demand, and inform the prioritisation of the cycle network by highlighting routes with the largest numbers of potential cyclists.
 
-    ### Herefordshire Local Cycling and Walking Infrastructure Plan (Herefordshire)
-    - Date: November 2023
-    - Scenarios: ['E-bike']
-    - How used: Used to identify where increases in the rates of cycling can be expected through the provision of better infrastructure by analyzing commuting trips.
+    ### Local Cycling and Walking Infrastructure Plan – (LCWIP) (Brentwood)
+    - Date: 2025
+    - Scenarios: nan
+    - How used: Referenced in Appendix D (WSP Technical Report) as a primary data source under Stage 2 (Gathering Information) and contrasted against WSPs custom GIS network model which evaluates destinations beyond PCT commute and school trips.
 
-    ### Crawley Local Cycling and Walking Infrastructure Plan – 2021 (Crawley Borough Council)
-    - Date: March 2021
-    - Scenarios: ['Government Target', 'Go Dutch']
-    - How used: Used to identify likely route corridors where cycling has the greatest potential to grow and provide estimated figures for their use by linking census data to employment locations or schools.
+    ### Central Lancashire Local Cycling & Walking Infrastructure Plan (Preston City Council, South Ribble Borough Council, Chorley Council)
+    - Date: November 2024
+    - Scenarios: ["E-bike"]
+    - How used: The PCT was used to analyse travel-to-work trips between key origins and destinations, identifying potential demand for cycle commuter trips and informing the development of the LCWIP network.
 
-    ### Carlisle Local Cycling and Walking Infrastructure Plan (LCWIP) 2022 - 2037 (Carlisle)
+    ### Crawley Local Cycling and Walking Infrastructure Plan (Crawley Borough Council)
+    - Date: July 2023
+    - Scenarios: ["Government Target", "Go Dutch"]
+    - How used: The PCT was used to identify likely route corridors for cycling to work or school, compare them with manually mapped desire lines, and generate estimates of potential cycle rates based on policy targets.
+
+    ### Carlisle Local Cycling and Walking Infrastructure Plan (LCWIP) 2022 - 2037 (Cumbria County Council)
     - Date: March 2022
-    - Scenarios: []
-    - How used: Used to provide evidence of existing and future potential demand for cycling and walking.
+    - Scenarios: nan
+    - How used: The Propensity to Cycle Tool (PCT) was used as a data source to identify the most popular cycle routes for school and travel-to-work journeys within the district.
 
-    ### Workington Local Cycling and Walking Infrastructure Plan (2022 – 2037) (Cumbria County Council)
+    ### Workington Local Cycling and Walking Infrastructure Plan (LCWIP) 2022 - 2037 (Cumbria County Council)
     - Date: June 2022
-    - Scenarios: []
-    - How used: Used as a tool for network planning to identify origin and destination points and cycle flows.
+    - Scenarios: nan
+    - How used: The Propensity to Cycle Tool (PCT) was used as a data source to identify the most popular cycle routes for school and travel to work journeys.
 
-    ### LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN - Durham City (Durham County Council)
+    ### LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN Durham City (Durham County Council)
     - Date: January 2021
-    - Scenarios: []
-    - How used: Used as a key dataset in the evidence-based approach during Stage 2 (Information Gathering) to inform network planning for cycling and walking.
+    - Scenarios: nan
+    - How used: The Propensity to Cycle Tool (PCT) was used as one of the key datasets to inform the development of network plans for cycling.
 
     ### LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN Peterlee (Durham County Council)
     - Date: September 2022
-    - Scenarios: ['Government Target']
-    - How used: Used to assess the 'Effectiveness' of desire lines within a prioritization matrix and for validating initial key desire lines against existing data.
-
-    ### LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN Shildon (Durham County Council)
-    - Date: September 2022
-    - Scenarios: ['Government Target']
-    - How used: The Propensity to Cycle Tool (PCT) was used as a key dataset in Stage 2 (Information Gathering) and integrated into the Prioritisation Framework (Table 4-1) to assess 'Propensity to Cycle' based on forecast numbers of journeys to work.
+    - Scenarios: ["Government Target"]
+    - How used: The Propensity to Cycle Tool (PCT) was used as a data source to inform the identification of desire lines and to assess the effectiveness of potential cycling routes within the prioritisation framework.
 
 # Limitations & next steps
 

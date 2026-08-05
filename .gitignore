@@ -15,3 +15,8 @@ results/*.json
 results/extracted/
 
 
+
+/.quarto/
+**/*.quarto_ipynb
+*.csv
+*.json
