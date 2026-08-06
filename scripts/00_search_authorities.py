@@ -145,17 +145,23 @@ def main():
         queries = [
             f'"{ta}" "Local Cycling and Walking Infrastructure Plan" OR "LCWIP" filetype:pdf',
             f'"{ta}" "LCWIP" "appendix" OR "route selection" OR "network map"',
+            # PCT-usage probes: documents that MENTION the tool (found via this
+            # pattern: WYCA phase-one LCWIPs live on EHQ portals, not media URLs)
+            f'"{ta}" lcwip "propensity to cycle"',
+            f'"{ta}" lcwip "Propensity to Cycle Tool"',
+            f'"{ta}" lcwip pct.bike',
         ]
 
         for d in district_names:
             if d != ta:
                 queries.append(f'"{d}" "LCWIP" OR "Cycling and Walking" filetype:pdf')
-                
+                queries.append(f'"{d}" lcwip "propensity to cycle"')
+
         for d in districts:
             for prev in d.get("previous_names", []):
                 queries.append(f'"{prev}" "LCWIP" OR "Active Travel" filetype:pdf')
 
-        queries = queries[:6]
+        queries = queries[:9]
 
         for q in queries:
             print(f"  Searching: {q}")

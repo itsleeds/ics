@@ -100,6 +100,12 @@ OVERRIDES = [
     ("teesvalley-ca.gov.uk/wp-content/uploads/2023/09", "Tees Valley Combined Authority", "Tees Valley Combined Authority"),
     ("southyorkshire-ca.gov.uk", "South Yorkshire Combined Authority", "South Yorkshire Combined Authority"),
     ("gloucestershire.gov.uk/media/ty0bvtuo", "Gloucestershire County Council", "Gloucestershire"),
+    # WYCA district phase-one LCWIPs (live copies; old media URLs 404)
+    ("a1vpretp", "Leeds City Council / West Yorkshire Combined Authority", "West Yorkshire Combined Authority"),
+    ("2534/widgets/8424/documents/2778", "Kirklees Council / West Yorkshire Combined Authority", "West Yorkshire Combined Authority"),
+    ("2536/widgets/8440/documents/2779", "Wakefield Council / West Yorkshire Combined Authority", "West Yorkshire Combined Authority"),
+    ("2533/widgets/8416/documents/2775", "Calderdale Council / West Yorkshire Combined Authority", "West Yorkshire Combined Authority"),
+    ("2532/widgets/8408/documents/2773", "City of Bradford Metropolitan District Council / West Yorkshire Combined Authority", "West Yorkshire Combined Authority"),
 ]
 
 fixed = 0

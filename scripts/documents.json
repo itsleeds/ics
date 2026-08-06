@@ -1987,5 +1987,50 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Tewkesbury LCWIP (2024 update) - Gloucestershire County Council"
+  },
+  {
+    "idx": 222,
+    "url": "https://www.westyorks-ca.gov.uk/media/a1vpretp/leeds-phase-one-local-cycling-walking-infrastructure-plan-2019.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0222-leeds-phase-one-local-cycling-walking-infrastructure-pl.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0222-leeds-phase-one-local-cycling-walking-infrastructure-pl.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Leeds phase-one LCWIP (2019, WYCA media copy)"
+  },
+  {
+    "idx": 223,
+    "url": "https://www.yourvoice.westyorks-ca.gov.uk/2534/widgets/8424/documents/2778/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0223-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0223-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Kirklees phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
+  },
+  {
+    "idx": 224,
+    "url": "https://www.yourvoice.westyorks-ca.gov.uk/2536/widgets/8440/documents/2779/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0224-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0224-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Wakefield phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
+  },
+  {
+    "idx": 225,
+    "url": "https://www.yourvoice.westyorks-ca.gov.uk/2533/widgets/8416/documents/2775/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0225-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0225-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Calderdale phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
+  },
+  {
+    "idx": 226,
+    "url": "https://www.yourvoice.westyorks-ca.gov.uk/2532/widgets/8408/documents/2773/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0226-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0226-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Bradford phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
   }
 ]

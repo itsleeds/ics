@@ -107,6 +107,19 @@ def fetch_url(u):
         except Exception as e:
             print(f"   [SharePoint Fetch Warning]: {e}", flush=True)
 
+    # EngagementHQ (EHQ) widget document URLs: .../widgets/<w>/documents/<id>
+    # serve the real file at .../widgets/<w>/documents/<id>/download
+    # (EHQ portals use subdomains like yourvoice./yoursay./haveyoursay./letstalk.)
+    m = re.search(r"/(\d+)/widgets/(\d+)/documents/(\d+)(/download)?$", u.rstrip("/"))
+    if m:
+        dl = u.rstrip("/").rstrip("/download") + "/download"
+        try:
+            r_dl = session.get(dl, allow_redirects=True, timeout=45)
+            if r_dl.status_code == 200 and (r_dl.content.startswith(b"%PDF") or "pdf" in r_dl.headers.get("Content-Type", "").lower()):
+                return r_dl.content, r_dl.headers.get("Content-Type", "application/pdf")
+        except Exception as e:
+            print(f"   [EHQ Fetch Warning]: {e}", flush=True)
+
     # Standard HTTP GET
     r = session.get(u, allow_redirects=True, timeout=45)
     r.raise_for_status()
@@ -117,6 +130,16 @@ def fetch_url(u):
     if "pdf" not in ctype.lower() and not u.lower().endswith(".pdf") and len(raw) < 500000:
         try:
             html_str = raw.decode("utf-8", "ignore")
+            # Find EHQ widget document links on EngagementHQ project pages
+            for link in re.findall(r'href=["\']([^"\']*?/\d+/widgets/\d+/documents/\d+)["\']', html_str, re.IGNORECASE):
+                if link.startswith("/"):
+                    link = urllib.parse.urljoin(u, link)
+                try:
+                    r_sub = session.get(link + "/download", allow_redirects=True, timeout=30)
+                    if r_sub.status_code == 200 and (("pdf" in r_sub.headers.get("Content-Type", "").lower()) or r_sub.content.startswith(b"%PDF")):
+                        return r_sub.content, r_sub.headers.get("Content-Type", "application/pdf")
+                except Exception:
+                    pass
             # Find embedded PDF links or SharePoint guest links
             found = re.findall(r'href=[\"\'](https?://[^\s\"\'<>]+|\/[^\s\"\'<>]+\.pdf)[\"\']', html_str, re.IGNORECASE)
             for link in found:
