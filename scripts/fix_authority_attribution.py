@@ -106,6 +106,22 @@ OVERRIDES = [
     ("2536/widgets/8440/documents/2779", "Wakefield Council / West Yorkshire Combined Authority", "West Yorkshire Combined Authority"),
     ("2533/widgets/8416/documents/2775", "Calderdale Council / West Yorkshire Combined Authority", "West Yorkshire Combined Authority"),
     ("2532/widgets/8408/documents/2773", "City of Bradford Metropolitan District Council / West Yorkshire Combined Authority", "West Yorkshire Combined Authority"),
+    # East Riding settlement LCWIP (via web archive; originals 403 to bots)
+    ("downloads.eastriding.org.uk", "East Riding of Yorkshire Council", "East Riding of Yorkshire"),
+    # NELC LCWIP strategy update (assessment criteria use the DfT propensity to cycle toolkit)
+    ("nelincs.gov.uk/wp-content/uploads/2019/05/12.-Local", "North East Lincolnshire Council", "North East Lincolnshire"),
+    # District LCWIPs (constituent authorities of already-covered TAs)
+    ("bedford.gov.uk/files/activetravelstrategy", "Bedford Borough Council", "Bedford"),
+    ("surreyheath.gov.uk", "Surrey Heath Borough Council", "Surrey"),
+    ("tandridge.moderngov.co.uk", "Tandridge District Council", "Surrey"),
+    ("democracy.epsom-ewell.gov.uk", "Epsom and Ewell Borough Council", "Surrey"),
+    ("democracy.spelthorne.gov.uk", "Spelthorne Borough Council", "Surrey"),
+    ("moderngov.threerivers.gov.uk", "Three Rivers District Council", "Hertfordshire"),
+    ("midsussex.gov.uk/media/9010", "Mid Sussex District Council", "West Sussex"),
+    ("democracy.runnymede.gov.uk", "Runnymede Borough Council", "Surrey"),
+    ("watford.moderngov.co.uk", "Watford Borough Council", "Hertfordshire"),
+    ("rutland.gov.uk", "Rutland County Council", "East Midlands Combined Authority"),
+    ("tunbridgewells.gov.uk/__data/assets/pdf_file/0003/385329", "Tunbridge Wells Borough Council", "Kent"),
 ]
 
 fixed = 0

@@ -2032,5 +2032,122 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Bradford phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
+  },
+  {
+    "idx": 227,
+    "url": "https://downloads.eastriding.org.uk/corporate/pages/local-transport-plan/appendix%20d%20-%20example%20lcwip%20(anlaby,%20willerby,%20kirk%20ella).pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0227-appendix-d-example-lcwip-anlaby-willerby-kirk-ella.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0227-appendix-d-example-lcwip-anlaby-willerby-kirk-ella.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "East Riding LCWIP example (Anlaby, Willerby, Kirk Ella) - downloaded via web.archive.org (original downloads.eastriding.org.uk 403s to bots)"
+  },
+  {
+    "idx": 228,
+    "url": "https://www.nelincs.gov.uk/wp-content/uploads/2019/05/12.-Local-Cycling-and-Walking-Strategy-Update.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0228-12-local-cycling-and-walking-strategy-update.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0228-12-local-cycling-and-walking-strategy-update.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "NELC Local Cycling and Walking Strategy Update (May 2019, 4pp) - LCWIP scheme assessment criteria explicitly use the DfT 'Propensity to cycle toolkit'"
+  },
+  {
+    "idx": 229,
+    "url": "https://www.bedford.gov.uk/files/activetravelstrategy.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0229-activetravelstrategy-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0229-activetravelstrategy-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Bedford Borough Active Travel Strategy (8pp; no PCT mention)"
+  },
+  {
+    "idx": 230,
+    "url": "https://www.surreyheath.gov.uk/sites/default/files/2024-07/Surrey%20Heath%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0230-surrey-20heath-20local-20cycling-20and-20walk.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0230-surrey-20heath-20local-20cycling-20and-20walk.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Surrey Heath LCWIP (2024)"
+  },
+  {
+    "idx": 231,
+    "url": "https://tandridge.moderngov.co.uk/documents/s19499/Appendix%20A%20-%20Tandridge%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0231-appendix-20a-20-20tandridge-20local-20cycling.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0231-appendix-20a-20-20tandridge-20local-20cycling.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Tandridge LCWIP (moderngov appendix)"
+  },
+  {
+    "idx": 232,
+    "url": "https://democracy.epsom-ewell.gov.uk/documents/s32880/Appendix%201%20-%20LCWIP.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0232-appendix-201-20-20lcwip-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0232-appendix-201-20-20lcwip-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Epsom & Ewell LCWIP (democracy appendix)"
+  },
+  {
+    "idx": 233,
+    "url": "https://democracy.spelthorne.gov.uk/documents/s45947/220311_Spelthorne%20LCWIP_Report%20-%20Final%20draft.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0233-220311-spelthorne-20lcwip-report-20-20final-2.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0233-220311-spelthorne-20lcwip-report-20-20final-2.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Spelthorne LCWIP final draft (2022)"
+  },
+  {
+    "idx": 234,
+    "url": "https://moderngov.threerivers.gov.uk/documents/s13679/Appendix+A+-+Local+Cycling+and+Walking+Infrastructure+Plan+including+appendices.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0234-appendix-a-local-cycling-and-walking-infrastr.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0234-appendix-a-local-cycling-and-walking-infrastr.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Three Rivers District LCWIP incl. appendices"
+  },
+  {
+    "idx": 235,
+    "url": "https://www.midsussex.gov.uk/media/9010/mid-sussex-local-cycling-and-walking-infrastructure-plan-2023-vfinal.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0235-mid-sussex-local-cycling-and-walking-infrastr.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0235-mid-sussex-local-cycling-and-walking-infrastr.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Mid Sussex LCWIP (2023 final)"
+  },
+  {
+    "idx": 236,
+    "url": "https://democracy.runnymede.gov.uk/documents/s4163/Item%207%20-%20LCWIP%20Atkins%20Report.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0236-item-207-20-20lcwip-20atkins-20report-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0236-item-207-20-20lcwip-20atkins-20report-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Runnymede LCWIP (Atkins report)"
+  },
+  {
+    "idx": 237,
+    "url": "https://watford.moderngov.co.uk/documents/s36726/Appendix%20F%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0237-appendix-20f-20-20local-20cycling-20and-20wal.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0237-appendix-20f-20-20local-20cycling-20and-20wal.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Watford LCWIP (Appendix F)"
+  },
+  {
+    "idx": 238,
+    "url": "https://www.rutland.gov.uk/sites/default/files/2025-03/ev11.7_cycling_and_walking_infrastructure_plan_august_2023.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0238-ev11-7-cycling-and-walking-infrastructure-pla.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0238-ev11-7-cycling-and-walking-infrastructure-pla.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Rutland Cycling and Walking Infrastructure Plan (Aug 2023)"
+  },
+  {
+    "idx": 239,
+    "url": "https://tunbridgewells.gov.uk/__data/assets/pdf_file/0003/385329/01_LCWIP-Phase-1-March-2021.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0239-01-lcwip-phase-1-march-2021.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0239-01-lcwip-phase-1-march-2021.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Tunbridge Wells LCWIP Phase 1 (Mar 2021) - via web archive (originals 403 to bots)"
   }
 ]

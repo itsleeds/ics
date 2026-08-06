@@ -147,3 +147,18 @@ https://www.yourvoice.westyorks-ca.gov.uk/2534/widgets/8424/documents/2778/downl
 https://www.yourvoice.westyorks-ca.gov.uk/2536/widgets/8440/documents/2779/download	Wakefield phase-one LCWIP full (2019, WYCA yourvoice EHQ)
 https://www.yourvoice.westyorks-ca.gov.uk/2533/widgets/8416/documents/2775/download	Calderdale phase-one LCWIP full (2019, WYCA yourvoice EHQ)
 https://www.yourvoice.westyorks-ca.gov.uk/2532/widgets/8408/documents/2773/download	Bradford phase-one LCWIP full (2019, WYCA yourvoice EHQ)
+
+https://downloads.eastriding.org.uk/corporate/pages/local-transport-plan/appendix%20d%20-%20example%20lcwip%20(anlaby,%20willerby,%20kirk%20ella).pdf	East Riding LCWIP example (Anlaby, Willerby, Kirk Ella) - downloaded via web.archive.org (original downloads.eastriding.org.uk 403s to bots)
+
+https://www.nelincs.gov.uk/wp-content/uploads/2019/05/12.-Local-Cycling-and-Walking-Strategy-Update.pdf	NELC Local Cycling and Walking Strategy Update (May 2019, 4pp) - LCWIP scheme assessment criteria explicitly use the DfT 'Propensity to cycle toolkit'
+
+https://www.bedford.gov.uk/files/activetravelstrategy.pdf	Bedford Borough Active Travel Strategy (8pp; no PCT mention)
+https://www.surreyheath.gov.uk/sites/default/files/2024-07/Surrey%20Heath%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf	Surrey Heath LCWIP (2024)
+https://tandridge.moderngov.co.uk/documents/s19499/Appendix%20A%20-%20Tandridge%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf	Tandridge LCWIP (moderngov appendix)
+https://democracy.epsom-ewell.gov.uk/documents/s32880/Appendix%201%20-%20LCWIP.pdf	Epsom & Ewell LCWIP (democracy appendix)
+https://democracy.spelthorne.gov.uk/documents/s45947/220311_Spelthorne%20LCWIP_Report%20-%20Final%20draft.pdf	Spelthorne LCWIP final draft (2022)
+https://moderngov.threerivers.gov.uk/documents/s13679/Appendix+A+-+Local+Cycling+and+Walking+Infrastructure+Plan+including+appendices.pdf	Three Rivers District LCWIP incl. appendices
+https://www.midsussex.gov.uk/media/9010/mid-sussex-local-cycling-and-walking-infrastructure-plan-2023-vfinal.pdf	Mid Sussex LCWIP (2023 final)
+
+https://democracy.runnymede.gov.uk/documents/s4163/Item%207%20-%20LCWIP%20Atkins%20Report.pdf	Runnymede LCWIP (Atkins report)
+https://www.rutland.gov.uk/sites/default/files/2025-03/ev11.7_cycling_and_walking_infrastructure_plan_august_2023.pdf	Rutland Cycling and Walking Infrastructure Plan (Aug 2023)

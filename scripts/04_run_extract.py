@@ -73,6 +73,12 @@ def pre_extraction_pct_scan(md_path: Optional[str], raw_path: Optional[str]) -> 
     if md_path and os.path.exists(md_path):
         try:
             text = open(md_path, "r", encoding="utf-8", errors="ignore").read()
+            # Strip the md header (url/source/note/status front-matter) so the
+            # scan only sees document body text - notes like "no PCT mention"
+            # must not count as hits.
+            sep = text.find("\n---\n")
+            if sep != -1:
+                text = text[sep + 5:]
         except Exception:
             pass
 
