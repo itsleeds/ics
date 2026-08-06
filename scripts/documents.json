@@ -2149,5 +2149,14 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Tunbridge Wells LCWIP Phase 1 (Mar 2021) - via web archive (originals 403 to bots)"
+  },
+  {
+    "idx": 240,
+    "url": "https://www.sheffield.gov.uk/sites/default/files/docs/travel-and-transport/cycling/cycle-forum-notes%20-%207%20Jun%2018.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0240-cycle-forum-notes-7-jun-2018.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0240-cycle-forum-notes-7-jun-2018.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Sheffield Cycle Forum notes (7 Jun 2018): 'The propensity to cycle tool will be used but is not definitive, considering the expansion of e bikes is a scenario that will be considered'"
   }
 ]

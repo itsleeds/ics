@@ -122,6 +122,8 @@ OVERRIDES = [
     ("watford.moderngov.co.uk", "Watford Borough Council", "Hertfordshire"),
     ("rutland.gov.uk", "Rutland County Council", "East Midlands Combined Authority"),
     ("tunbridgewells.gov.uk/__data/assets/pdf_file/0003/385329", "Tunbridge Wells Borough Council", "Kent"),
+    # Sheffield Cycle Forum notes (7 Jun 2018) - propensity to cycle tool used in Sheffield network planning
+    ("sheffield.gov.uk/sites/default/files/docs/travel-and-transport/cycling/cycle-forum", "Sheffield City Council", "South Yorkshire Combined Authority"),
 ]
 
 fixed = 0

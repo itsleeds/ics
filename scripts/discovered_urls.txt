@@ -162,3 +162,5 @@ https://www.midsussex.gov.uk/media/9010/mid-sussex-local-cycling-and-walking-inf
 
 https://democracy.runnymede.gov.uk/documents/s4163/Item%207%20-%20LCWIP%20Atkins%20Report.pdf	Runnymede LCWIP (Atkins report)
 https://www.rutland.gov.uk/sites/default/files/2025-03/ev11.7_cycling_and_walking_infrastructure_plan_august_2023.pdf	Rutland Cycling and Walking Infrastructure Plan (Aug 2023)
+
+https://www.sheffield.gov.uk/sites/default/files/docs/travel-and-transport/cycling/cycle-forum-notes%20-%207%20Jun%2018.pdf	Sheffield Cycle Forum notes (7 Jun 2018): 'The propensity to cycle tool will be used but is not definitive, considering the expansion of e bikes is a scenario that will be considered'
