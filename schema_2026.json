@@ -1,6 +1,6 @@
 {
-  "schema_version": "2026.3",
-  "description": "Updated extraction schema for LCWIP/PCT data ingest adding authors/consultancy tracking and multipart document metadata. All fields are nullable.",
+  "schema_version": "2026.4",
+  "description": "Updated extraction schema for LCWIP/PCT data ingest adding n_mentions_propensity_to_cycle (generic 'propensity to cycle' phrase count, implying PCT use without necessarily naming the tool). All fields are nullable.",
   "fields": [
     { "name": "pdf_url", "prompt": "What is the URL of the PDF or web document? Return null if unavailable." },
     { "name": "report_name", "prompt": "What is the name/title of the report or document? Return null if unavailable." },
@@ -11,7 +11,8 @@
     { "name": "doc_type", "prompt": "Classify the document type: 'LCWIP', 'LCWIP-related', or 'other'. Return null if unstated." },
     { "name": "mentions_pct", "prompt": "Does the report mention the Propensity to Cycle Tool (PCT) or PCT methodology? (true/false, or null if uncertain)." },
     { "name": "n_mentions_pct", "prompt": "Total count of explicit mentions of PCT / Propensity to Cycle Tool / pct.bike in text (integer, 0 if none)." },
-    { "name": "pct_term_breakdown", "prompt": "Breakdown of mention counts by key term: {'pct': N, 'propensity_to_cycle_tool': N, 'pct_bike': N}." },
+    { "name": "n_mentions_propensity_to_cycle", "prompt": "Total count of the generic phrase 'propensity to cycle' in text (case-insensitive, including occurrences inside 'Propensity to Cycle Tool'). Indicates implied PCT methodology use even when the tool is not named explicitly (integer, 0 if none)." },
+    { "name": "pct_term_breakdown", "prompt": "Breakdown of mention counts by key term: {'pct': N, 'propensity_to_cycle_tool': N, 'pct_bike': N, 'propensity_generic': N}." },
     { "name": "pct_usage_depth", "prompt": "Overall depth of PCT usage: '0 - None', '1 - Passing mention', '2 - Contextual background / data input', '3 - Network design & mapping', or '4 - Core prioritisation & funding framework'. Return null if unstated." },
     { "name": "other_tools_used", "prompt": "What other cycle/walk network planning tools or data sources were used in the report? Return list of strings or null if none." },
     { "name": "how_pct_was_used", "prompt": "How was the Propensity to Cycle Tool (PCT) used in the report? Summarize role in evidence, network design, or prioritisation. Return null if document does not state this." },

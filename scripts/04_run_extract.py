@@ -85,15 +85,20 @@ def pre_extraction_pct_scan(md_path: Optional[str], raw_path: Optional[str]) -> 
     pct_count = len(re.findall(r"\bPCT\b", text))
     propensity_count = len(re.findall(r"Propensity\s+to\s+Cycle\s+Tool", text, re.IGNORECASE))
     pct_bike_count = len(re.findall(r"pct\.bike", text, re.IGNORECASE))
+    # Generic 'propensity to cycle' phrase usage (implies PCT methodology use
+    # without necessarily naming the tool; a superset of propensity_to_cycle_tool)
+    propensity_generic_count = len(re.findall(r"propensity\s+to\s+cycle", text, re.IGNORECASE))
     total_mentions = pct_count + propensity_count + pct_bike_count
 
     return {
         "text": text,
         "n_mentions_pct": total_mentions,
+        "n_mentions_propensity_to_cycle": propensity_generic_count,
         "pct_term_breakdown": {
             "pct": pct_count,
             "propensity_to_cycle_tool": propensity_count,
-            "pct_bike": pct_bike_count
+            "pct_bike": pct_bike_count,
+            "propensity_generic": propensity_generic_count
         },
         "has_pct_mentions": total_mentions > 0
     }
@@ -389,6 +394,7 @@ def main():
             "md_file": d.get("md_file"),
             "raw_file": d.get("raw_file"),
             "n_mentions_pct": scan["n_mentions_pct"],
+            "n_mentions_propensity_to_cycle": scan["n_mentions_propensity_to_cycle"],
             "pct_term_breakdown": scan["pct_term_breakdown"]
         }
 

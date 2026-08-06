@@ -179,6 +179,43 @@ for r in res:
     else:
         unmatched.append((label, r.get("idx"), r.get("report_name")))
 
+
+def _no_explicit_tool(r):
+    tb = r.get("pct_term_breakdown") or {}
+    return (tb.get("pct") or 0) + (tb.get("propensity_to_cycle_tool") or 0) + (tb.get("pct_bike") or 0) == 0
+
+
+def _prop_count(r):
+    return r.get("n_mentions_propensity_to_cycle") or 0
+
+
+# --- propensity-to-cycle (implied use) metrics ---
+n_docs = len(res)
+n_exp = sum(1 for r in res if r.get("mentions_pct") is True)
+n_prop = sum(1 for r in res if _prop_count(r) > 0)
+n_prop_only = sum(1 for r in res if _prop_count(r) > 0 and _no_explicit_tool(r))
+print()
+print("=== PCT vs 'propensity to cycle' (implied use) — document level ===")
+print(f"  documents: {n_docs}")
+print(f"  explicit PCT mention:             {n_exp} ({100 * n_exp / n_docs:.1f}%)")
+print(f"  any 'propensity to cycle' phrase:  {n_prop} ({100 * n_prop / n_docs:.1f}%)")
+print(f"  propensity WITHOUT explicit tool:  {n_prop_only} ({100 * n_prop_only / n_docs:.1f}%)")
+
+ta_prop = defaultdict(list)
+for r in res:
+    for t in (match_tas(r) or []):
+        ta_prop[t].append(r)
+t_exp = sorted(t for t, rs in ta_prop.items() if any(x.get("mentions_pct") is True for x in rs))
+t_prop = sorted(t for t, rs in ta_prop.items() if any(_prop_count(x) > 0 for x in rs))
+t_prop_only = sorted(t for t, rs in ta_prop.items()
+                     if any(_prop_count(x) > 0 and _no_explicit_tool(x) for x in rs))
+print()
+print("=== PCT vs 'propensity to cycle' (implied use) — transport-authority level ===")
+print(f"  explicit PCT-mentioning TA:              {len(t_exp)} / {len(TA_NAMES)} ({100 * len(t_exp) / len(TA_NAMES):.1f}%)")
+print(f"  any 'propensity to cycle' TA:             {len(t_prop)} / {len(TA_NAMES)} ({100 * len(t_prop) / len(TA_NAMES):.1f}%)")
+print(f"  propensity WITHOUT explicit tool TA:      {len(t_prop_only)} / {len(TA_NAMES)} ({100 * len(t_prop_only) / len(TA_NAMES):.1f}%)")
+print(f"    -> {t_prop_only}")
+
 print(f"documents: {len(res)}, matched to a TA: {len(doc_ta)}, unmatched: {len(unmatched)}")
 if unmatched:
     print("  unmatched labels (idx | label | report):")
