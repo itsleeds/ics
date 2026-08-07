@@ -1,6 +1,6 @@
 # PCT / LCWIP Data Ingest 2026 — Exploratory Analysis
 
-2026-08-05
+2026-08-07
 
 - [<span class="toc-section-number">1</span> Overview](#overview)
 - [<span class="toc-section-number">2</span> Methods](#methods)
@@ -74,19 +74,19 @@ df = pd.read_csv("results/results_flat.csv")
 print(f"Total merged records: {len(df)}")
 ```
 
-    Total merged records: 125
+    Total merged records: 232
 
 ``` python
 print(f"  2026-only: {(df['_source_tag']=='2026').sum()}")
 ```
 
-      2026-only: 0
+      2026-only: 228
 
 ``` python
 print(f"  from existing 94-DB: {(df['_source_tag']=='existing94').sum()}")
 ```
 
-      from existing 94-DB: 0
+      from existing 94-DB: 4
 
 ``` python
 print()
@@ -103,9 +103,10 @@ print(df['doc_type'].fillna('(unknown)').value_counts())
 ```
 
     doc_type
-    LCWIP            99
-    other            21
-    LCWIP-related     5
+    LCWIP            196
+    other             23
+    LCWIP-related     10
+    (unknown)          3
     Name: count, dtype: int64
 
 # PCT mentions
@@ -122,25 +123,25 @@ mentioned = (pct == True).sum()
 print(f"Documents with a usable mentions_pct flag: {n}")
 ```
 
-    Documents with a usable mentions_pct flag: 125
+    Documents with a usable mentions_pct flag: 228
 
 ``` python
 print(f"Mention PCT: {mentioned} ({mentioned/n*100:.1f}%)")
 ```
 
-    Mention PCT: 71 (56.8%)
+    Mention PCT: 148 (64.9%)
 
 ``` python
 print(f"Do not mention PCT: {(pct==False).sum()} ({ (pct==False).sum()/n*100:.1f}%)")
 ```
 
-    Do not mention PCT: 54 (43.2%)
+    Do not mention PCT: 80 (35.1%)
 
 ``` python
 print(f"Unknown (no content / failed download): {pct.isna().sum()}")
 ```
 
-    Unknown (no content / failed download): 0
+    Unknown (no content / failed download): 4
 
 ## PCT mentions by document type
 
@@ -151,11 +152,12 @@ ct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('un
 print(ct)
 ```
 
-    mentions_pct   False  True 
-    doc_type                   
-    LCWIP             32     67
-    LCWIP-related      3      2
-    other             19      2
+    mentions_pct   False  True  unknown
+    doc_type                           
+    LCWIP             56   136        4
+    LCWIP-related      5     5        0
+    other             17     6        0
+    unknown            2     1        0
 
 ## Change over time
 
@@ -235,11 +237,12 @@ print("Scenario mentions (across PCT-mentioning docs):")
 print(sc.to_string())
 ```
 
-    Go Dutch             38
-    Government Target    36
-    E-bike               18
-    Baseline             15
-    Go Cambridge          2
+    Go Dutch             79
+    Government Target    62
+    E-bike               35
+    Baseline             24
+    Go Cambridge          4
+    Gender Equality       1
 
 # Geographic coverage
 
@@ -260,24 +263,27 @@ print(df['region'].fillna('(not stated)').value_counts().to_string())
 ```
 
     region
-    South East                  32
-    (not stated)                16
-    West Midlands               10
-    East of England              9
-    North West                   9
-    North West England           8
-    South West                   8
-    Yorkshire and the Humber     7
-    East Midlands                6
-    South East England           6
-    North East                   5
-    Hertfordshire                2
+    South East                  51
+    South West                  34
+    (not stated)                21
+    East of England             18
+    North West                  18
+    West Midlands               16
+    Yorkshire and the Humber    14
+    North West England          10
+    East Midlands               10
+    North East                   9
+    South East England           8
+    West Yorkshire               7
+    Hertfordshire                3
+    Surrey                       2
     West of England              2
+    Northwest England            2
+    D2N2                         2
+    East                         2
     Kent                         1
-    West Yorkshire               1
-    Northwest England            1
-    D2N2                         1
-    East                         1
+    South West England           1
+    South Yorkshire              1
 
 ``` python
 print()
@@ -293,7 +299,7 @@ print("Records with a combined authority named:")
 print(df['combined_authority_name'].notna().sum())
 ```
 
-    21
+    43
 
 # Cost and network length
 
@@ -307,31 +313,31 @@ km = pd.to_numeric(df['length_of_network_km'], errors='coerce')
 print(f"Documents stating a total cost: {cost.notna().sum()}")
 ```
 
-    Documents stating a total cost: 22
+    Documents stating a total cost: 46
 
 ``` python
 print(f"Total stated investment (£): {cost.sum():,.0f}")
 ```
 
-    Total stated investment (£): 12,313,846,381
+    Total stated investment (£): 23,596,927,576
 
 ``` python
 print(f"Median stated investment (£): {cost.median():,.0f}")
 ```
 
-    Median stated investment (£): 76,280,000
+    Median stated investment (£): 53,000,000
 
 ``` python
 print(f"Documents stating network length (km): {km.notna().sum()}")
 ```
 
-    Documents stating network length (km): 16
+    Documents stating network length (km): 33
 
 ``` python
 print(f"Total stated network length (km): {km.sum():,.0f}")
 ```
 
-    Total stated network length (km): 7,202
+    Total stated network length (km): 12,304
 
 # Illustrative examples
 
@@ -369,10 +375,10 @@ for _, r in ex.iterrows():
     - Scenarios: nan
     - How used: Referenced in Appendix D (WSP Technical Report) as a primary data source under Stage 2 (Gathering Information) and contrasted against WSPs custom GIS network model which evaluates destinations beyond PCT commute and school trips.
 
-    ### Central Lancashire Local Cycling & Walking Infrastructure Plan (Preston City Council, South Ribble Borough Council, Chorley Council)
-    - Date: November 2024
-    - Scenarios: ["E-bike"]
-    - How used: The PCT was used to analyse travel-to-work trips between key origins and destinations, identifying potential demand for cycle commuter trips and informing the development of the LCWIP network.
+    ### Cambridgeshire’s Local Cycling and Walking Infrastructure Plan (Cambridgeshire County Council)
+    - Date: 2022
+    - Scenarios: nan
+    - How used: The tool was used to establish the propensity to cycle based on trip distance, identifying that the peak distance for cycling is 2km, with the majority of trips between 1km and 5km. It helped analyze the cycling distance for mapped trips from the 2011 Census data.
 
     ### Crawley Local Cycling and Walking Infrastructure Plan (Crawley Borough Council)
     - Date: July 2023
@@ -394,10 +400,10 @@ for _, r in ex.iterrows():
     - Scenarios: nan
     - How used: The Propensity to Cycle Tool (PCT) was used as one of the key datasets to inform the development of network plans for cycling.
 
-    ### LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN Peterlee (Durham County Council)
+    ### LOCAL CYCLING AND WALKING INFRASTRUCTURE PLAN Shildon (Blackburn with Darwen Borough Council)
     - Date: September 2022
-    - Scenarios: ["Government Target"]
-    - How used: The Propensity to Cycle Tool (PCT) was used as a data source to inform the identification of desire lines and to assess the effectiveness of potential cycling routes within the prioritisation framework.
+    - Scenarios: nan
+    - How used: PCT-derived cycling demand data (PCTx6) used in route prioritisation scoring criteria.
 
 # Limitations & next steps
 

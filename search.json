@@ -46,7 +46,7 @@
     "href": "2026-analysis.html#pct-mentions-by-document-type",
     "title": "PCT / LCWIP Data Ingest 2026 — Exploratory Analysis",
     "section": "4.1 PCT mentions by document type",
-    "text": "4.1 PCT mentions by document type\n\nimport pandas as pd\ndf = pd.read_csv(\"results/results_flat.csv\")\nct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('unknown'))\nprint(ct)\n\nmentions_pct   False  True \ndoc_type                   \nLCWIP             32     67\nLCWIP-related      3      2\nother             19      2"
+    "text": "4.1 PCT mentions by document type\n\nimport pandas as pd\ndf = pd.read_csv(\"results/results_flat.csv\")\nct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('unknown'))\nprint(ct)\n\nmentions_pct   False  True  unknown\ndoc_type                           \nLCWIP             56   136        4\nLCWIP-related      5     5        0\nother             17     6        0\nunknown            2     1        0"
   },
   {
     "objectID": "2026-analysis.html#change-over-time",
