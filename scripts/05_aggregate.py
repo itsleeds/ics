@@ -115,7 +115,7 @@ preferred_cols = [
     "_source_tag", "idx", "report_name", "authors", "is_multipart", "linked_documents",
     "local_authority_name", "transport_authority",
     "region", "doc_type", "date_published", "year_published", "mentions_pct", "pct_mentioned",
-    "n_mentions_pct", "n_mentions_propensity_to_cycle", "pct_usage_depth", "pct_scenarios_used", "pct_desire_lines_used",
+    "n_mentions_pct", "pct_usage_depth", "pct_scenarios_used", "pct_desire_lines_used",
     "pct_usage_quote", "download_status", "pdf_url"
 ]
 other_cols = sorted(list(all_keys - set(preferred_cols)))
