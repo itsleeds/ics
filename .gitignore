@@ -20,3 +20,4 @@ results/extracted/
 **/*.quarto_ipynb
 *.csv
 *.json
+.DS_Store
