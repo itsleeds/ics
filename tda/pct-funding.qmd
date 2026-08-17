@@ -1,0 +1,683 @@
+---
+title: "Compare PCT statistics against funding data"
+format: html
+toc: true
+number-sections: true
+execute:
+    echo: false
+---
+
+
+[Active travel LTA allocations](https://www.gov.uk/government/publications/active-travel-local-transport-authority-allocations/active-travel-local-transport-authority-allocations)
+
+[RDEL and CDEL](https://www.gov.uk/government/publications/how-to-understand-public-sector-spending/how-to-understand-public-sector-spending#departmental-expenditure-limits-del)
+
+
+```{r}
+#| label: packages
+
+# load packages
+
+# install.packages("fuzzyjoin") # install fuzzyjoin package if not already installed
+
+library(tidyverse) # for general functions
+library(readr) # for reading csv files
+library(sf) # for spatial data manipulation
+library(dplyr) # for data manipulation
+library(jsonlite) # for parsing JSON data
+library(stringdist) # for string distance calculations
+library(stringr) # for string manipulation
+
+
+
+
+library(fuzzyjoin) # for joining data with fuzzy matching
+
+
+
+
+# library(tmap) # for mapping
+library(ggplot2) # for plotting
+# library(knitr) # for tables
+
+
+```
+
+
+# Data
+
+
+## Results data
+
+Results data obtained from results.csv file located in results folder in repo.
+
+```{r}
+#| label: import-results-data
+
+# results.csv located in results folder
+
+results <- read_csv("results/results.csv")
+
+names(results) # check names in results
+
+```
+
+
+## LAD data search data
+
+LAD names data was obtained from [uktransportauthorities](https://github.com/itsleeds/uktransportauthorities) repo.
+
+Names of local authoriteis located in [transport_authorities_2026.geojson](https://github.com/itsleeds/uktransportauthorities/blob/main/transport_authorities_2026.geojson) file.
+
+```{r}
+#| label: import-lad-name-data
+
+ltas <- sf::read_sf("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/transport_authorities_2026.geojson")
+
+names(ltas) # check names in ltas
+
+```
+
+
+## Funding data
+
+Funding for each local authority was obtained from [uktransportauthorities](https://github.com/itsleeds/uktransportauthorities/tree/main) repo. 
+
+Data from 20_21 to 24_25 located in [atf_table_aggregated.csv](https://github.com/itsleeds/uktransportauthorities/blob/main/atf_table_aggregated.csv) file.
+
+```{r}
+#| label: import-funding-data
+
+# Read data from atf_table_aggregated.csv file located in uktransportauthorities repo.
+
+atf <- read_csv("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/atf_table_aggregated.csv")
+
+names(atf) # check names in atf
+
+```
+
+Data allocations from 2026 to 2030 located in [lad_active_travel_allocations.csv](https://github.com/itsleeds/uktransportauthorities/blob/main/lad_active_travel_allocations.csv) file.
+
+```{r}
+#| label: import-funding-data-future
+
+# Read data from lad_active_travel_allocations.csv file located in uktransportauthorities repo.
+
+atf_future <- read_csv("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/lad_active_travel_allocations.csv")
+
+names(atf_future) # check names in atf_future
+
+```
+
+# Match LAD names
+
+## Select relevant variables from results and ltas
+Selected names from results and ltas to check against each other and match.
+
+```{r}
+#| label: select-names
+
+# get list of unique la names
+results_names <- results |>
+    select(local_authority_name, combined_authority_name) |> # select name variables
+    mutate(name = ifelse(
+        !is.na(local_authority_name), 
+        local_authority_name, 
+        combined_authority_name
+    )) |> # if lan not na, use it, otherwise can, then create new variable called "name"
+    distinct(name) |> # unique values
+    arrange(name) |> # sort alphabetically
+    filter(!is.na(name)) # remove na values
+
+# get list of names in ltas and remove geometry
+ltas_names <- ltas |>
+    st_drop_geometry() |> # remove geometry column
+    select(name, lad_lookup) |> # select name and lad_lookup variables
+    arrange(name) |> # sort alphabetically
+    rename(name_lookup = lad_lookup) # rename lad_lookup to name_lookup
+
+```
+
+
+Unpack lad name from name_lookup column in ltas data to make it easier to match against results names.
+
+```{r}
+#| label: name-lookup-unpack
+
+# unpack lad_lookup column in ltas_names data to make it easier to match against results names
+
+ltas_lookup_names <- ltas_names |>
+    mutate(name_lookup = map(
+        name_lookup, 
+        ~ fromJSON(.x)$lad_name
+    )) |>
+    select(name, name_lookup) |>
+    unnest(name_lookup)
+
+# if observation in name doesn't have exact match in name_lookup, add observation to name_lookup with same value as name
+
+ltas_lookup_names <- bind_rows(
+    ltas_lookup_names,
+    ltas_lookup_names |>
+        distinct(name) |>
+        filter(!name %in% ltas_lookup_names$name_lookup) |>
+        mutate(name_lookup = name)
+)
+
+# arrange alphabetically
+
+ltas_lookup_names <- ltas_lookup_names |>
+    arrange(name, name_lookup)
+
+```
+
+
+## Clean names for easier search and matching
+
+Clean up results name to remove text such as "city" and "council" to make matching easier.
+
+```{r}
+#| label: results-names-clean
+
+# remove unwanted text (not case sensitive)
+results_names <- results_names |>
+    mutate(name_clean = name |>
+        str_remove_all("(?i)city") |>
+        str_remove_all("(?i)councils") |>
+        str_remove_all("(?i)council") |>
+        str_remove_all("Borough") |>
+        str_remove_all("(?i)district") |>
+        str_remove_all("(?i)county") |>
+        str_remove_all("(?i)of") |>
+        str_remove_all("(?i)the") |>
+        str_remove_all("(?i) and") |>
+        str_remove_all("(?i)royal") |>
+        str_remove_all("(?i)combined authority") |>
+        str_remove_all("(?i)metropolitan") |>
+        str_remove_all("(?i)(national guidance)") |>
+        str_remove_all("(?i)&") |>
+        str_remove_all("(?i),") |>
+        str_remove_all("(?i)/") |>
+        str_squish()
+    )
+
+```
+
+
+## Add manual aliases for known mismatches
+
+Add manual aliases for false positives and missing matches. This step may need to be updated and/or repeated after match-names step below.
+
+```{r}
+#| label: correct-ltas-lookup-names
+
+# create tibble table of known aliases
+manual_aliases_ltas <- tibble(
+    name = c(
+        "Kent",
+        "West Yorkshire Combined Authority",
+        "Bournemouth, Christchurch and Poole",
+        "West of England Combined Authority",
+        "Leicestershire",
+        "Norfolk",
+        "East Midlands Combined Authority",
+        "North East Combined Authority",
+        "East Riding of Yorkshire",
+        "West Yorkshire Combined Authority",
+        "Liverpool City Region Combined Authority",
+        "Leicestershire",
+        "Lancashire",
+        "Leicestershire"
+    ),
+    name_lookup = c(
+        "Faversham Town",
+        "West Yorkshire",
+        "BCP",
+        "Bath North East Somerset Bristol South Gloucestershire North Somerset",
+        "Blaby",
+        "Broads Authority",
+        "Derby Derbyshire Nottingham Nottinghamshire",
+        "Durham",
+        "Hull",
+        "Leeds West Yorkshire",
+        "Liverpool Region (LCRCA) in partnership with Halton Knowsley Liverpool Sefton St Helens Wirral",
+        "North West Leicestershire",
+        "Preston South Ribble Chorley",
+        "Rutland"
+    )
+)
+
+# append rows from manual_aliases to ltas_lookup_names
+ltas_lookup_names <- bind_rows(ltas_lookup_names, manual_aliases_ltas) |>
+    arrange(name, name_lookup)
+
+
+```
+
+
+Remove duplicates from ltas_lookup_names where there is a duplicate of name_lookup and name, keeping the first observation.
+
+```{r}
+#| label: remove-duplicates
+
+ltas_lookup_names <- ltas_lookup_names |>
+    distinct(name, name_lookup, .keep_all = TRUE) |>
+    arrange(name, name_lookup)
+
+```
+
+
+## Match names between results and ltas
+
+For each name obversation in results_names, search obversations in ltas_lookup_names$name_lookup to find the best match. If a best match is found, return the corresponding value in ltas_lookup_names$name. If there is no best match found, return NA. 
+
+```{r}
+#| label: match-names
+
+# for each obversation in results_names$name_clean, search obversations in ltas_lookup_names$name_lookup to find the best match. If a best match is found, return the corresponding value in ltas_lookup_names$name. If there is no best match found, return NA.
+
+results_names <- results_names |>
+    mutate(
+        match_index = amatch(
+            name_clean, # search term
+            ltas_lookup_names$name_lookup, # where to search
+            method = "jw", # use Jaro-Winkler distance method
+            maxDist = 0.25 # maximum distance for a match
+        ),
+        matched_name = ifelse(
+            !is.na(match_index), # if match_index is not NA
+            ltas_lookup_names$name_lookup[match_index], # return corresponding value in ltas_lookup_names$name_lookup
+            NA_character_ # otherwise return NA
+        ),
+        ltas_name = ifelse(
+            !is.na(match_index), # if match_index is not NA
+            ltas_lookup_names$name[match_index], # return corresponding value in ltas_lookup_names$name
+            NA_character_ # otherwise return NA
+        )
+    )
+
+```
+
+
+# atf name clean up
+
+## Remove total row
+
+CSV contains a total row which is not needed for analysis. Remove this row from atf data.
+
+```{r}
+#| label: remove-total-atf
+
+# remove total row
+atf <- atf |>
+    filter(name != "Total")
+
+```
+
+## Update and add ATF names to match ltas_lookup_names
+
+Change names in atf$name to match names in ltas_lookup_names$name. This step may need to be updated and/or repeated after check step below (check-ltas-against-atf).
+
+
+```{r}
+#| label: correct-atf-names
+
+# change certain values in atf$name to match values in ltas_lookup_names$name.
+atf_names <- atf |>
+    mutate(name = case_when(
+        name == "West Midlands ITA" ~ "West Midlands Combined Authority",
+        name == "North East Joint Transport Committee" ~ "North East Combined Authority",
+        TRUE ~ name
+    ))
+
+```
+
+
+## Check ltas_lookup_names againts ATF LAD names
+
+Check that all LAD names in ltas_lookup_names$name have an exact match to a LAD name in atf$name. If there are any mismatches, print them out.
+
+```{r}
+#| label: check-ltas-against-atf
+
+# check which names in ltas_lookup_names$name do not have an exact match to a name in atf_names$name
+
+ltas_mismatches <- ltas_lookup_names |>
+    filter(!name %in% atf_names$name) |>
+    distinct(name) |>
+    arrange(name)
+
+# check which names in atf_names$name do not have an exact match to a name in ltas_lookup_names$name
+
+atf_mismatches <- atf_names |>
+    filter(!name %in% ltas_lookup_names$name) |>
+    distinct(name) |>
+    arrange(name)
+
+```
+
+
+The following mismatches are not in ltas_lookup_name but are in atf names - these are not an issue as they are older authorities which have been replaced by newer authorities which are present in both lists (these mismatches can be ignored for now):
+
+- Northhamptonshire - replaced by North Northamptonshire
+- Cumbria - replaced by Cumberland
+
+
+The following mismatches in ltas_mismatches are not in atf_names but are present in the  atf_future (these mismatches can be ignored for now):
+
+- Leicestershire
+- North East Lincolnshire
+- North Lincolnshire
+
+
+
+# atf future name clean up
+
+## Update atf future names
+
+In atf_future need to:
+
+- combine Derby, Derbyshire, Nottingham, Nottinghamshire, Leicester, Leicestershire, North East Lincolnshire, North Lincolnshire, Lincolnshire and Rutland into East Midlands Combined Authority.
+
+This step may need to be updated and/or repeated after match check step below.
+
+```{r}
+#| label: correct-atf-future-names
+
+# lower authorities in East Midlands Combined Authority
+emca_la_list <- c(
+    "Derby", 
+    "Derbyshire", 
+    "Nottingham", 
+    "Nottinghamshire", 
+    "Leicester", 
+    "Leicestershire", 
+    "North East Lincolnshire", 
+    "North Lincolnshire", 
+    "Lincolnshire", 
+    "Rutland"
+)
+
+# filter values
+emca_la <- atf_future |>
+    filter(name %in% emca_la_list) |>
+    summarise(across(where(is.numeric), sum, na.rm = TRUE)) |>
+    mutate(
+        name = "East Midlands Combined Authority", 
+        name_atf = "East Midlands Combined County Authority"
+    )
+
+# bind emca_la to atf_future, removing lower authorities
+atf_future_names <- atf_future |>
+    filter(!name %in% emca_la_list) |>
+    bind_rows(emca_la) |>
+    arrange(name)
+
+# remove duplicate rows
+atf_future_names <- atf_future_names |>
+    distinct(name, .keep_all = TRUE) |>
+    arrange(name)
+
+```
+
+## check atf against atf future names
+
+```{r}
+#| label: check-ltas-against-atf
+
+# check which names in ltas_lookup_names$name do not have an exact match to a name in atf_names$name
+
+atf_future_mismatches_1 <- atf_future_names |>
+    filter(!name %in% atf_names$name) |>
+    distinct(name) |>
+    arrange(name)
+
+# check which names in atf_names$name do not have an exact match to a name in ltas_lookup_names$name
+
+atf_future_mismatches_2 <- atf_names |>
+    filter(!name %in% atf_future_names$name) |>
+    distinct(name) |>
+    arrange(name)
+
+```
+
+The following mismatches in atf_names are not in atf_future_names however can be ignored as they are older authorities that have been replaced:
+
+- Cumbria
+- Northamptionshire
+
+Greater London is not in atf_future_names per future allocation figures being for authorities ["inside England **outside London**"](https://www.gov.uk/government/publications/active-travel-local-transport-authority-allocations/active-travel-local-transport-authority-allocations).
+
+# Analysis
+
+## Combine names into single table
+
+```{r}
+#| label: analysis-create-table
+
+# combine name columns from results_names
+analysis <- ltas_lookup_names |>
+    select(name) |>
+    distinct(name) |>
+    arrange(name)
+
+
+```
+
+## Check names
+
+Check to see what names (if any) are in data sources but not in analysis table
+
+```{r}
+#| label: check-names
+# check what names in results$ltas_name are not in analysis$name
+final_check <- results_names |>
+    filter(!ltas_name %in% analysis$name) |>
+    distinct(ltas_name) |>
+    arrange(ltas_name) |>
+    mutate(check = "results_names") |>
+    rename(name = ltas_name)
+
+# Create final_check_full table with names
+final_check_full <- final_check
+
+
+# check what names in atf_names$name are not in analysis$name
+
+final_check <- atf_names |>
+    filter(!name %in% analysis$name) |>
+    distinct(name) |>
+    arrange(name) |>
+    mutate(check = "atf_names")
+
+# append final_check to final_check_full
+final_check_full <- bind_rows(final_check_full, final_check)
+
+# check what names in atf_future_names$name are not in analysis$name
+
+final_check <- atf_future_names |>
+    filter(!name %in% analysis$name) |>
+    distinct(name) |>
+    arrange(name) |>
+    mutate(check = "atf_future_names")
+
+# append final_check to final_check_full
+final_check_full <- bind_rows(final_check_full, final_check)
+
+```
+
+
+## Combine data
+
+Match ltas_name from results_names to results
+
+```{r}
+#| label: results-ltas-name
+
+results_analysis <- results |>
+    left_join(
+        results_names |>
+            select(local_authority_name = name, ltas_name),
+            by = "local_authority_name"
+    )
+```
+
+
+Data wanted from results_analysis:
+
+- number of observations for each ltas
+- n_mentions_pct for each ltas
+- for each ltas, pct_usage_depth of 1, 2, 3
+- number of pct_desire_lines_used for each ltas
+
+
+```{r}
+#| label: analysis-add-results
+
+# data from results_analysis
+
+analysis_data <- analysis |>
+    left_join(
+        results_analysis |>
+            mutate(pct_usage_depth = parse_number(pct_usage_depth)) |> # convert pct_usage_depth to numeric
+            group_by(ltas_name) |>
+            summarise(
+                n_observations = n(), # number of observations for each ltas
+                n_mentions_pct = sum(n_mentions_pct, na.rm = TRUE), # sum of n_mentions_pct for each ltas
+                pct_usage_depth_1 = sum(pct_usage_depth == 1, na.rm = TRUE), # number of pct_usage_depth of 1 for each ltas
+                pct_usage_depth_2 = sum(pct_usage_depth == 2, na.rm = TRUE), # number of pct_usage_depth of 2 for each ltas
+                pct_usage_depth_3 = sum(pct_usage_depth == 3, na.rm = TRUE), # number of pct_usage_depth of 3 for each ltas
+                n_pct_desire_lines_used = sum(pct_desire_lines_used, na.rm = TRUE) # number of pct_desire_lines_used for each ltas
+            ),
+            by = c("name" = "ltas_name")
+    )
+
+```
+
+
+Data wanted from atf_names:
+
+- atf20_21
+- atf21_22
+- atf22_23
+- atf23_24
+- atf24_25
+
+Data wanted from atf_future_names:
+
+- cdel_per_year_4yr
+- rdel_per_year_3yr
+- total_over_4yr
+
+
+```{r}
+#| label: analysis-add-atf
+
+# add atf data. If no match, make value NA
+
+analysis_data <- analysis_data |>
+    left_join(
+        atf_names |>
+            select(name, atf20_21, atf21_22, atf22_23, atf23_24, atf24_25),
+            by = "name"
+    ) 
+
+# add atf_future data
+
+analysis_data <- analysis_data |>
+    left_join(
+        atf_future_names |>
+            select(name, cdel_per_year_4yr, rdel_per_year_3yr, total_over_4yr),
+            by = "name"
+    )
+
+# Clean funding columns: convert Invalid Number variants to NA, then parse numeric.
+analysis_data <- analysis_data |>
+    mutate(across(
+        c(
+            atf20_21,
+            atf21_22,
+            atf22_23,
+            atf23_24,
+            atf24_25,
+            cdel_per_year_4yr,
+            rdel_per_year_3yr,
+            total_over_4yr
+        ),
+        ~ {
+            x <- as.character(.x)
+            x <- stringr::str_squish(x)
+            x[stringr::str_detect(x, stringr::regex("^invalid\\s*number$", ignore_case = TRUE))] <- NA_character_
+            readr::parse_number(x)
+        }
+    ))
+
+
+
+```
+
+
+# Compare PCT Usage Against Funding
+
+## Build Comparable Metrics
+
+```{r}
+#| label: analysis-build-metrics
+
+funding_5yr_cols <- c("atf20_21", "atf21_22", "atf22_23", "atf23_24", "atf24_25")
+
+analysis_metrics <- analysis_data |>
+    mutate(
+        n_observations = replace_na(n_observations, 0),
+        n_mentions_pct = replace_na(n_mentions_pct, 0),
+        n_pct_desire_lines_used = replace_na(n_pct_desire_lines_used, 0),
+        pct_usage_depth_1 = replace_na(pct_usage_depth_1, 0),
+        pct_usage_depth_2 = replace_na(pct_usage_depth_2, 0),
+        pct_usage_depth_3 = replace_na(pct_usage_depth_3, 0),
+        n_depth_scored = pct_usage_depth_1 + pct_usage_depth_2 + pct_usage_depth_3,
+        depth_score_mean = if_else(
+            n_depth_scored > 0,
+            (1 * pct_usage_depth_1 + 2 * pct_usage_depth_2 + 3 * pct_usage_depth_3) / n_depth_scored,
+            NA_real_
+        ),
+        total_over_5yr = if_else(
+            rowSums(!is.na(across(all_of(funding_5yr_cols)))) > 0,
+            rowSums(across(all_of(funding_5yr_cols)), na.rm = TRUE),
+            NA_real_
+        ),
+        pct_mention_rate = if_else(n_observations > 0, n_mentions_pct / n_observations, NA_real_),
+        desire_lines_rate = if_else(n_observations > 0, n_pct_desire_lines_used / n_observations, NA_real_),
+        mentions_per_million_funding = if_else(
+            !is.na(total_over_5yr) & total_over_5yr > 0,
+            n_mentions_pct / (total_over_5yr / 1e6),
+            NA_real_
+        )
+    )
+
+```
+
+```{r}
+#| label: analysis-rank-metrics
+
+# variable to rank by
+rank_variable <- "total_over_5yr" # variable to rank by
+
+# ranked by rank_variable
+ranked_analysis_metrics <- analysis_metrics |>
+    select(
+        name,
+        n_observations,
+        n_mentions_pct,
+        pct_mention_rate,
+        desire_lines_rate,
+        depth_score_mean,
+        total_over_5yr,
+        total_over_4yr,
+        mentions_per_million_funding
+    ) |>
+    arrange(desc(!!sym(rank_variable))) |>
+    mutate(rank = row_number())
+
+```
+
+https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf
