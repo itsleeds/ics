@@ -55,12 +55,21 @@
   },
   {
     "url": "https://brentwood.moderngov.co.uk/documents/s29126/Brentwood%20Committee%20Report%20Template%202025%20LCWIP%20final.pdf",
-    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0101-Brentwood-Committee-Report-Template-2025.md",
-    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0101-Brentwood-Committee-Report-Template-2025.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0101-brentwood-combined.md",
+    "raw_file": null,
     "download_status": "ok",
     "source": "web-search",
     "note": "Brentwood LCWIP (2025)",
     "idx": 7
+  },
+  {
+    "url": "https://cccandpcc.sharepoint.com/sites/CCCwebsitedocumentlibrary/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCCCwebsitedocumentlibrary%2FShared%20Documents%2FTransport%20Plans%2FLocal%20cycling%20and%20walking%20infrastructure%20plan%2FLocal%20Cycling%20and%20Walking%20Infrastructure%20Plan%202022%2FLCWIP%20main%20document%2Epdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0139-AllItems-aspx.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0139-AllItems-aspx.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Cambridgeshire LCWIP Main Document Discovery",
+    "idx": 8
   },
   {
     "url": "https://centrallocalplan.lancashire.gov.uk/media/2053/it03-central-lancashire-local-cycling-and-walking-infrastructure-plan.pdf",
@@ -69,7 +78,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Central Lancashire (Preston City Council, South Ribble Borough Council, Chorley ",
-    "idx": 8
+    "idx": 9
+  },
+  {
+    "url": "https://cms.wiltshire.gov.uk/documents/s215882/Wiltshire%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0141-Wiltshire-Local-Cycling-and-Walking-Infr.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0141-Wiltshire-Local-Cycling-and-Walking-Infr.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Wiltshire LCWIP Main Document Discovery",
+    "idx": 10
   },
   {
     "url": "https://councillors.herefordshire.gov.uk/documents/s50113886/Herefordshire%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
@@ -78,7 +96,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Herefordshire Council",
-    "idx": 9
+    "idx": 11
   },
   {
     "url": "https://crawley.gov.uk/sites/default/files/2023-08/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20report%20and%20appendices.pdf",
@@ -87,7 +105,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Crawley Borough Council",
-    "idx": 10
+    "idx": 12
   },
   {
     "url": "https://cumbria.gov.uk/elibrary/Content/Internet/538/18110/38384/44749114236.pdf",
@@ -96,7 +114,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council",
-    "idx": 11
+    "idx": 13
   },
   {
     "url": "https://cumbria.gov.uk/elibrary/Content/Internet/538/18110/38384/44819111034.pdf",
@@ -105,7 +123,25 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council",
-    "idx": 12
+    "idx": 14
+  },
+  {
+    "url": "https://dartford.moderngov.co.uk/documents/s75830/Appendix%20A%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0134-Appendix-A-Local-Cycling-and-Walking-Inf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0134-Appendix-A-Local-Cycling-and-Walking-Inf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Dartford LCWIP",
+    "idx": 15
+  },
+  {
+    "url": "https://data.hull.gov.uk/wp-content/uploads/LCWIP-2025-Summary-Results.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0199-LCWIP-2025-Summary-Results-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0199-LCWIP-2025-Summary-Results-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hull LCWIP 2025 consultation survey summary results",
+    "idx": 16
   },
   {
     "url": "https://democracy.bcpcouncil.gov.uk/documents/s32638/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
@@ -114,7 +150,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "BCP Council (Bournemouth, Christchurch and Poole)",
-    "idx": 13
+    "idx": 17
+  },
+  {
+    "url": "https://democracy.blackburn.gov.uk/documents/s22790/BwD%20LCWIP%20Phase%203%20Prioritisation%20report%20final.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0199-BwD-LCWIP-Phase-3-Prioritisation-report.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0199-BwD-LCWIP-Phase-3-Prioritisation-report.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Blackburn with Darwen LCWIP Phase 3 Prioritisation final",
+    "idx": 18
   },
   {
     "url": "https://democracy.brighton-hove.gov.uk/documents/s175857/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP.pdf",
@@ -123,7 +168,34 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Brighton & Hove City Council",
-    "idx": 14
+    "idx": 19
+  },
+  {
+    "url": "https://democracy.devon.gov.uk/documents/s47566/Devon%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plans%20-%20Final.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0129-Devon-Local-Cycling-and-Walking-Infrastr.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0129-Devon-Local-Cycling-and-Walking-Infrastr.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Devon LCWIP committee update",
+    "idx": 20
+  },
+  {
+    "url": "https://democracy.devon.gov.uk/documents/s50968/Countywide%20LCWIP%20report.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0126-Countywide-LCWIP-report-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0126-Countywide-LCWIP-report-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon - \"Devon\" \"Local Cycling and Walking Infrastructure Plan\" OR \"LCWIP\" filetype:pdf",
+    "idx": 21
+  },
+  {
+    "url": "https://democracy.devon.gov.uk/documents/s50969/LCWIP%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0128-LCWIP-Plan-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0128-LCWIP-Plan-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon - \"Devon\" \"Local Cycling and Walking Infrastructure Plan\" OR \"LCWIP\" filetype:pdf",
+    "idx": 22
   },
   {
     "url": "https://democracy.durham.gov.uk/documents/s145571/Local%20Cycling%20App%20b%20Durham%20City%20Local%20Cycling%20Walking%20Infrastructure%20Plan.pdf",
@@ -132,7 +204,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Durham County Council [3]",
-    "idx": 15
+    "idx": 23
   },
   {
     "url": "https://democracy.durham.gov.uk/documents/s174866/Item%207%20Peterlee%20LCWIP%20Final%20inc%20Appendices_opt.pdf",
@@ -141,7 +213,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Durham County Council",
-    "idx": 16
+    "idx": 24
   },
   {
     "url": "https://democracy.durham.gov.uk/documents/s174868/Item%207%20Shildon%20LCWIP%20Final%20inc%20Appendices_opt.pdf",
@@ -150,7 +222,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Durham County Council [3]",
-    "idx": 17
+    "idx": 25
   },
   {
     "url": "https://democracy.durham.gov.uk/documents/s174927/Background%20Document%203.pdf",
@@ -159,7 +231,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Durham County Council",
-    "idx": 18
+    "idx": 26
   },
   {
     "url": "https://democracy.epsom-ewell.gov.uk/documents/s32880/Appendix%201%20-%20LCWIP.pdf",
@@ -168,7 +240,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Epsom & Ewell Borough Council / Surrey County Council",
-    "idx": 19
+    "idx": 27
   },
   {
     "url": "https://democracy.greatermanchester-ca.gov.uk/documents/s3398/15%20GMCA%20Cycling%20and%20Walking%20Challenge%20Fund%20Update.pdf",
@@ -177,7 +249,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "GM Cycling and Walking Challenge Fund Update (LCWIP-related)",
-    "idx": 20
+    "idx": 28
   },
   {
     "url": "https://democracy.greatermanchester-ca.gov.uk/documents/s40952/GMCA%20OS%2020251126%20Draft%20Local%20Transport%20Plan%20-%20Appendix%204%20GM%20Transport%20Delivery%20Plan%20Consultation%20Dr.pdf",
@@ -186,7 +258,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "GM Transport Delivery Plan 2027-2037 (active travel)",
-    "idx": 21
+    "idx": 29
   },
   {
     "url": "https://democracy.hants.gov.uk/documents/s105949/5%20Basingstoke%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan-2023-03-09-LEMH2050%20Decision%20Day.pdf",
@@ -195,7 +267,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Hampshire County Council / Basingstoke and Deane Borough Council",
-    "idx": 22
+    "idx": 30
   },
   {
     "url": "https://democracy.hants.gov.uk/documents/s122153/2024-06-27%202i%20Hart%20LCWIP%20-%20Appendix%20A-2024-06-27-EMH2050%20Decision%20Day.pdf",
@@ -204,7 +276,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Hampshire County Council / Hart District Council",
-    "idx": 23
+    "idx": 31
+  },
+  {
+    "url": "https://democracy.kent.gov.uk/documents/s118223/Active%20Travel%20Strategy.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0143-Active-Travel-Strategy-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0143-Active-Travel-Strategy-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Kent LCWIP Main Document Discovery",
+    "idx": 32
   },
   {
     "url": "https://democracy.kirklees.gov.uk/documents/s61927/Kirklees%20Transport%20Strategy_Draft%20DTP_130125.pdf",
@@ -213,16 +294,16 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Kirklees Transport Strategy (references LCWIP) 2025",
-    "idx": 24
+    "idx": 33
   },
   {
     "url": "https://democracy.leics.gov.uk/documents/s179818/Appendix%20C%20-%20Loughborough%20Area%20LCWIP%20and%20Appendices.pdf",
-    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0051-Appendix-C-Loughborough-Area-LCWIP-and-A.md",
-    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0051-Appendix-C-Loughborough-Area-LCWIP-and-A.pdf",
-    "download_status": "ok",
+    "md_file": null,
+    "raw_file": null,
+    "download_status": "missing",
     "source": "seed-94db",
     "note": "Leicestershire County Council",
-    "idx": 25
+    "idx": 34
   },
   {
     "url": "https://democracy.peterborough.gov.uk/documents/s53301/Item%205.%20Appendix%201%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP%2016072024%20Cabinet.pdf",
@@ -231,7 +312,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Peterborough City Council",
-    "idx": 26
+    "idx": 35
   },
   {
     "url": "https://democracy.warwickshire.gov.uk/documents/s35370/Appendix%203%20for%20Warwickshire%20LCWIP%20Part%201%20Introduction.pdf",
@@ -240,7 +321,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Warwickshire County Council",
-    "idx": 27
+    "idx": 36
   },
   {
     "url": "https://democracy.york.gov.uk/documents/s166024/Annex%20A%20LCWIP%20Draft%20Background%20Evaluation%20Report.pdf",
@@ -249,7 +330,34 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "City of York Council",
-    "idx": 28
+    "idx": 37
+  },
+  {
+    "url": "https://devoncc.sharepoint.com/:b:/s/PublicDocs/Corporate/EQfXU7KHrKFKg8m3-bUREK4BpWPpWmRpxXcvEucn4bG8cw?e=ISQOUK",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0164-EQfXU7KHrKFKg8m3-bUREK4BpWPpWmRpxXcvEucn.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0164-EQfXU7KHrKFKg8m3-bUREK4BpWPpWmRpxXcvEucn.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon Exeter LCWIP adopted Jan 2024",
+    "idx": 38
+  },
+  {
+    "url": "https://devoncc.sharepoint.com/:b:/s/PublicDocs/Corporate/ERZ8e2qsbJ9GjhUbHr2WFXgBlC12CbIM32S6CzdgOSBMSw",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0167-ERZ8e2qsbJ9GjhUbHr2WFXgBlC12CbIM32S6Czdg.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0167-ERZ8e2qsbJ9GjhUbHr2WFXgBlC12CbIM32S6Czdg.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon Cullompton and Tiverton LCWIP adopted Mar 2025",
+    "idx": 39
+  },
+  {
+    "url": "https://devoncc.sharepoint.com/:b:/s/PublicDocs/Corporate/ERuIoF-oOkpMoKdsxAcxyrkB5pvBHlVbnr3IgbTGA6LRMg?e=zWO26h",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0163-ERuIoF-oOkpMoKdsxAcxyrkB5pvBHlVbnr3IgbTG.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0163-ERuIoF-oOkpMoKdsxAcxyrkB5pvBHlVbnr3IgbTG.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon BBN (Barnstaple-Bideford-Northam) LCWIP adopted",
+    "idx": 40
   },
   {
     "url": "https://devoncc.sharepoint.com/:b:/s/PublicDocs/Corporate/EXS84IQjtrdGjPnQPta3bzwBE0FHzXNcIeJh4YzymlE_Ug?e=UeP8eO",
@@ -258,7 +366,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Devon County Council / Mid Devon District Council",
-    "idx": 29
+    "idx": 41
+  },
+  {
+    "url": "https://devoncc.sharepoint.com/:b:/s/PublicDocs/Corporate/EeJwZo7atrNMu-Wm_PxK4P8B4pL3khBvIRz5qhepIyE82w?e=WVORrm",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0162-EeJwZo7atrNMu-Wm-PxK4P8B4pL3khBvIRz5qhep.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0162-EeJwZo7atrNMu-Wm-PxK4P8B4pL3khBvIRz5qhep.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon Countywide LCWIP (adopted Mar 2025)",
+    "idx": 42
   },
   {
     "url": "https://devoncc.sharepoint.com/:b:/s/PublicDocs/Corporate/Ef9MfxjbJ6xBrTt2rc02v44BKju2349kdZ75MP8eqymg-A?e=IkSolR",
@@ -267,7 +384,25 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Devon County Council",
-    "idx": 30
+    "idx": 43
+  },
+  {
+    "url": "https://devoncc.sharepoint.com/:b:/s/PublicDocs/Highways/EU4nM80Nn0dJgord0EjNRrgB7mD0SaIJvB2WNe-dds-Z4w?e=WzZKrh",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0166-EU4nM80Nn0dJgord0EjNRrgB7mD0SaIJvB2WNe-d.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0166-EU4nM80Nn0dJgord0EjNRrgB7mD0SaIJvB2WNe-d.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon Heart of Teignbridge LCWIP adopted Jan 2024",
+    "idx": 44
+  },
+  {
+    "url": "https://devoncc.sharepoint.com/sites/PublicDocs/Corporate/HaveYourSay/Forms/AllItems.aspx?id=%2Fsites%2FPublicDocs%2FCorporate%2FHaveYourSay%2FTransport%2FClyst%20Valley%20and%20New%20Communities%20LCWIP%2F70103323%2D001%20Clyst%20Valley%20and%20New%20Communities%20LCWIP%5Fv4%2Epdf&parent=%2Fsites%2FPublicDocs%2FCorporate%2FHaveYourSay%2FTransport%2FClyst%20Valley%20and%20New%20Communities%20LCWIP&p=true&ga=1",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0165-AllItems-aspx.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0165-AllItems-aspx.html",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon Clyst Valley and New Communities LCWIP adopted Mar 2025",
+    "idx": 45
   },
   {
     "url": "https://edemocracy.northyorks.gov.uk/documents/s10084/Malton%20and%20Norton%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
@@ -276,7 +411,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "North Yorkshire Council",
-    "idx": 31
+    "idx": 46
   },
   {
     "url": "https://edemocracy.northyorks.gov.uk/documents/s47233/Ripon%20and%20Catterick%20Phase%201%20LCWIPs.pdf",
@@ -285,7 +420,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "North Yorkshire Council (for Ripon)",
-    "idx": 32
+    "idx": 47
   },
   {
     "url": "https://edemocracy.northyorks.gov.uk/documents/s52849/Thirsk%20and%20Whitby%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plans.pdf",
@@ -294,7 +429,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "North Yorkshire Council (for Thirsk)",
-    "idx": 33
+    "idx": 48
   },
   {
     "url": "https://favershamtowncouncil.gov.uk/wp-content/uploads/2025/09/Faversham-LCWIP-Aug-25.pdf",
@@ -303,7 +438,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Faversham LCWIP (Aug 2025)",
-    "idx": 34
+    "idx": 49
   },
   {
     "url": "https://images.reading.gov.uk/2020/01/Local-Cycling-and-Walking-Infrastructure-Plan_Accessible-Low-Res_March-2020.pdf",
@@ -312,7 +447,25 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Reading Borough Council",
-    "idx": 35
+    "idx": 50
+  },
+  {
+    "url": "https://kccmedia.kent.gov.uk/documents/cycling/active-travel-strategy-final.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0142-active-travel-strategy-final-pdf.md",
+    "raw_file": null,
+    "download_status": "failed",
+    "source": "web-search",
+    "note": "",
+    "idx": 51
+  },
+  {
+    "url": "https://legacy.cumberland.gov.uk/elibrary/Content/Internet/538/18110/38384/44819114227.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0196-44819114227-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0196-44819114227-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Cumberland Whitehaven LCWIP Technical Report (WSP)",
+    "idx": 52
   },
   {
     "url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474911322.pdf",
@@ -321,7 +474,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council, South Lakeland District Council, and Kendal Town Council",
-    "idx": 36
+    "idx": 53
   },
   {
     "url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474911344.pdf",
@@ -330,7 +483,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council [3]",
-    "idx": 37
+    "idx": 54
   },
   {
     "url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4474912710.pdf",
@@ -339,7 +492,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council",
-    "idx": 38
+    "idx": 55
   },
   {
     "url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/44819113937.pdf",
@@ -348,7 +501,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council [3]",
-    "idx": 39
+    "idx": 56
   },
   {
     "url": "https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4481911413.pdf",
@@ -357,7 +510,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council [3]",
-    "idx": 40
+    "idx": 57
   },
   {
     "url": "https://letstalk.kent.gov.uk/27288/widgets/77329/documents/72175",
@@ -366,7 +519,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Kent County Council",
-    "idx": 41
+    "idx": 58
   },
   {
     "url": "https://letstalk.oxfordshire.gov.uk/40548/widgets/120199/documents/84124",
@@ -375,7 +528,25 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 42
+    "idx": 59
+  },
+  {
+    "url": "https://localplan.gravesham.gov.uk/gf2.ti/f/1805858/284231237.1/PDF/-/Gravesham%20LCWIP.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0136-Gravesham-LCWIP-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0136-Gravesham-LCWIP-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Gravesham LCWIP",
+    "idx": 60
+  },
+  {
+    "url": "https://meetings.maidstone.gov.uk/documents/s97755/LCWIP%20Report.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0137-LCWIP-Report-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0137-LCWIP-Report-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Maidstone LCWIP",
+    "idx": 61
   },
   {
     "url": "https://moderngov.cheshireeast.gov.uk/documents/s83625/Local%20Cycling%20and%20Walking%20Infrastructure%20Plans%20-%20app%202%20NE.pdf",
@@ -384,7 +555,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cheshire East Council",
-    "idx": 43
+    "idx": 62
   },
   {
     "url": "https://moderngov.dover.gov.uk/documents/s60537/Local%20Cycling%20Walking%20Appendix.pdf",
@@ -393,7 +564,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Dover District Council and Kent County Council [3]",
-    "idx": 44
+    "idx": 63
+  },
+  {
+    "url": "https://moderngov.dover.gov.uk/documents/s64071/LCWIP%20Report.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0135-LCWIP-Report-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0135-LCWIP-Report-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Dover LCWIP",
+    "idx": 64
   },
   {
     "url": "https://moderngov.threerivers.gov.uk/documents/s13679/Appendix+A+-+Local+Cycling+and+Walking+Infrastructure+Plan+including+appendices.pdf",
@@ -402,7 +582,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Three Rivers District Council",
-    "idx": 45
+    "idx": 65
   },
   {
     "url": "https://mycouncil.oxfordshire.gov.uk/documents/s66592/CMDHM20230720R05a%20Annex%20A%20Banbury%20LCWIP%20FINAL_10072023%20version.pdf",
@@ -411,7 +591,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 46
+    "idx": 66
   },
   {
     "url": "https://mycouncil.oxfordshire.gov.uk/documents/s68729/CMDTM20231214R06%20Annex%201%20-%20Didcot%20LCWIP%20Report.pdf",
@@ -420,7 +600,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 47
+    "idx": 67
   },
   {
     "url": "https://mycouncil.oxfordshire.gov.uk/documents/s75882/CMDTMT25042025%20-%20Chipping%20Norton%20LCWIP.pdf",
@@ -429,7 +609,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Chipping Norton LCWIP (Apr 2025)",
-    "idx": 48
+    "idx": 68
   },
   {
     "url": "https://mycouncil.oxfordshire.gov.uk/documents/s75883/CMDTMT25042025%20-%20Woodstock%20LCWIP.pdf",
@@ -438,7 +618,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Woodstock LCWIP (Apr 2025)",
-    "idx": 49
+    "idx": 69
   },
   {
     "url": "https://mycouncil.oxfordshire.gov.uk/documents/s78135/CMDTM091025%20-%20Carterton%20LCWIP%20Final%20Draft%20LCWIP.pdf",
@@ -447,7 +627,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Carterton LCWIP (2025)",
-    "idx": 50
+    "idx": 70
   },
   {
     "url": "https://mycouncil.oxfordshire.gov.uk/documents/s79633/CMDTM11122025%20-%20Wantage%20and%20Grove%20LCWIP.pdf",
@@ -456,7 +636,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Wantage and Grove LCWIP (Nov 2025)",
-    "idx": 51
+    "idx": 71
   },
   {
     "url": "https://n-somerset.gov.uk/sites/default/files/2026-05/CD7.47%20West%20of%20England%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%202020-2036.pdf",
@@ -465,7 +645,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "North Somerset LCWIP (2020-2036)",
-    "idx": 52
+    "idx": 72
   },
   {
     "url": "https://norfolk.citizenspace.com/environment-transport-and-development/aclelcwip/supporting_documents/Countywide%20LCWIP_Summary%20Report_Accessible.pdf",
@@ -474,7 +654,25 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Norfolk Countywide LCWIP Summary (2023)",
-    "idx": 53
+    "idx": 73
+  },
+  {
+    "url": "https://norfolk.citizenspace.com/environment-transport-and-development/norwichlcwip/supporting_documents/Norwich_LCWIP_Report.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0144-Norwich-LCWIP-Report-pdf.md",
+    "raw_file": null,
+    "download_status": "failed",
+    "source": "web-search",
+    "note": "",
+    "idx": 74
+  },
+  {
+    "url": "https://northnorthants.moderngov.co.uk/documents/s21269/Appendix%20A.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0174-Appendix-A-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0174-Appendix-A-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "North Northamptonshire Corby LCWIP",
+    "idx": 75
   },
   {
     "url": "https://northnorthants.moderngov.co.uk/documents/s28884/Wellingborough+and+Rushden+Area+Local+Cycling+and+Walking+Infrastructure+Plan.pdf",
@@ -483,7 +681,16 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Wellingborough and Rushden LCWIP (Mar 2025)",
-    "idx": 54
+    "idx": 76
+  },
+  {
+    "url": "https://ottertrail.org/wp-content/uploads/2025/01/LCWIP_Plan_December_2024.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0127-LCWIP-Plan-December-2024-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0127-LCWIP-Plan-December-2024-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Devon - \"Devon\" \"Local Cycling and Walking Infrastructure Plan\" OR \"LCWIP\" filetype:pdf",
+    "idx": 77
   },
   {
     "url": "https://rbwmtogether.rbwm.gov.uk/15306/widgets/44982/documents/25696",
@@ -492,7 +699,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Royal Borough of Windsor & Maidenhead [3]",
-    "idx": 55
+    "idx": 78
   },
   {
     "url": "https://s3-eu-west-1.amazonaws.com/travelwest/wp-content/uploads/2020/07/LCWIP.pdf",
@@ -501,7 +708,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "West of England LCWIP (alt)",
-    "idx": 56
+    "idx": 79
   },
   {
     "url": "https://shropshire.gov.uk/committee-services/documents/s34213/Shropshire%20LCWIP%20Final%20Draft.pdf",
@@ -510,7 +717,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Shropshire Council",
-    "idx": 57
+    "idx": 80
   },
   {
     "url": "https://shropshire.gov.uk/committee-services/documents/s37227/Appendix%209%20-%20Shropshire%20LCWIP%20Consultation%20Report_v1.0.pdf",
@@ -519,7 +726,79 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Shropshire Council",
-    "idx": 58
+    "idx": 81
+  },
+  {
+    "url": "https://somersetcc.sharepoint.com/:b:/s/SCCPublic/EQUkjhzzB71HhgCuaPSNSdAB_h-dvao7hjBFam3yLlFazQ?e=TNMmo1",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0161-EQUkjhzzB71HhgCuaPSNSdAB-h-dvao7hjBFam3y.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0161-EQUkjhzzB71HhgCuaPSNSdAB-h-dvao7hjBFam3y.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Somerset Chard LCWIP (1.6MB)",
+    "idx": 82
+  },
+  {
+    "url": "https://somersetcc.sharepoint.com/:b:/s/SCCPublic/EVQQirlXPN5Nq9p_oSJ4FHkBaU225l8bEckFDKCsIRrmLw?e=MlN1pJ",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0160-EVQQirlXPN5Nq9p-oSJ4FHkBaU225l8bEckFDKCs.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0160-EVQQirlXPN5Nq9p-oSJ4FHkBaU225l8bEckFDKCs.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Somerset Burnham-On-Sea and Highbridge LCWIP (1.5MB)",
+    "idx": 83
+  },
+  {
+    "url": "https://somersetcc.sharepoint.com/:b:/s/SCCPublic/EVjxZcxHLRlKm7g40uVhezEBMgppAX3EjtdKwtimpg9HoQ?e=1070c6",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0155-EVjxZcxHLRlKm7g40uVhezEBMgppAX3EjtdKwtim.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0155-EVjxZcxHLRlKm7g40uVhezEBMgppAX3EjtdKwtim.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Somerset Taunton LCWIP (4.29MB)",
+    "idx": 84
+  },
+  {
+    "url": "https://somersetcc.sharepoint.com/:b:/s/SCCPublic/EXokQSqTqNVNrM6qI99gJTkBGVdIHB48erdxfs8JiOBhMg?e=LTfXpn",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0156-EXokQSqTqNVNrM6qI99gJTkBGVdIHB48erdxfs8J.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0156-EXokQSqTqNVNrM6qI99gJTkBGVdIHB48erdxfs8J.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Somerset Yeovil LCWIP (3.90MB)",
+    "idx": 85
+  },
+  {
+    "url": "https://somersetcc.sharepoint.com/:b:/s/SCCPublic/EbcroMhJms9Fh8VKPS-utW8BPNLkVhBwqe4csjmf3VXRoQ?e=jhagME",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0159-EbcroMhJms9Fh8VKPS-utW8BPNLkVhBwqe4csjmf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0159-EbcroMhJms9Fh8VKPS-utW8BPNLkVhBwqe4csjmf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Somerset Wellington LCWIP (1.6MB)",
+    "idx": 86
+  },
+  {
+    "url": "https://somersetcc.sharepoint.com/:b:/s/SCCPublic/Ec8zo9gJJ4dJt6yOs9cG4QIBFZZQj2h3RFOAy7h6NXx5UA?e=NAJtLs",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0158-Ec8zo9gJJ4dJt6yOs9cG4QIBFZZQj2h3RFOAy7h6.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0158-Ec8zo9gJJ4dJt6yOs9cG4QIBFZZQj2h3RFOAy7h6.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Somerset Frome LCWIP (18.7MB)",
+    "idx": 87
+  },
+  {
+    "url": "https://somersetcc.sharepoint.com/:b:/s/SCCPublic/EcfwFLGyfuBOiYYbyOa8e20BxQQtCiCatCHCLKpQ6T2APA?e=RF3nyk",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0157-EcfwFLGyfuBOiYYbyOa8e20BxQQtCiCatCHCLKpQ.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0157-EcfwFLGyfuBOiYYbyOa8e20BxQQtCiCatCHCLKpQ.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Somerset Mendip LCWIP (22.4MB)",
+    "idx": 88
+  },
+  {
+    "url": "https://somersetcc.sharepoint.com/:b:/s/SCCPublic/Ee94bKyfwSRLusyvrErJ6YoBIRNcgFpTeDFuk1suiquEuw?e=hbE8pC",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0154-Ee94bKyfwSRLusyvrErJ6YoBIRNcgFpTeDFuk1su.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0154-Ee94bKyfwSRLusyvrErJ6YoBIRNcgFpTeDFuk1su.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Somerset Bridgwater LCWIP (3.17MB)",
+    "idx": 89
   },
   {
     "url": "https://sthelens.gov.uk/media/4732/St-Helens-Borough-LCWIP/pdf/St_Helens_LCWIP_FINAL.pdf?m=637998005068170000",
@@ -528,7 +807,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "St.Helens Borough Council",
-    "idx": 59
+    "idx": 90
   },
   {
     "url": "https://transportforthesoutheast.org.uk/app/uploads/2025/06/TfSE-RATSAP-Evidence-Base-Report-2025.pdf",
@@ -537,7 +816,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "TfSE RATSAP Evidence Base (Jun 2025) - 64 LCWIPs status log",
-    "idx": 60
+    "idx": 91
   },
   {
     "url": "https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf",
@@ -546,7 +825,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Portsmouth City Council",
-    "idx": 61
+    "idx": 92
   },
   {
     "url": "https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/LCWIP-Draft-for-consultation_web.pdf",
@@ -555,7 +834,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Portsmouth City Council",
-    "idx": 62
+    "idx": 93
+  },
+  {
+    "url": "https://tunbridgewells.gov.uk/__data/assets/pdf_file/0003/385329/01_LCWIP-Phase-1-March-2021.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0176-01-LCWIP-Phase-1-March-2021-pdf.md",
+    "raw_file": null,
+    "download_status": "failed",
+    "source": "web-search",
+    "note": "",
+    "idx": 94
   },
   {
     "url": "https://tunbridgewells.gov.uk/__data/assets/pdf_file/0007/385333/05_LCWIP-Phase-2_Final-Report.pdf",
@@ -564,7 +852,34 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 63
+    "idx": 95
+  },
+  {
+    "url": "https://watford.moderngov.co.uk/documents/s36726/Appendix%20F%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0186-Appendix-F-Local-Cycling-and-Walking-Inf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0186-Appendix-F-Local-Cycling-and-Walking-Inf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hertfordshire Watford LCWIP (adopted Jan 2022)",
+    "idx": 96
+  },
+  {
+    "url": "https://westnorthants.moderngov.co.uk/documents/s23340/Adoption+of+Local+Cycling+and+Walking+Infrastructure+Plans+for+Brackley+Daventry+and+Towcester+-+Ap.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0193-Adoption-of-Local-Cycling-and-Walking-In.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0193-Adoption-of-Local-Cycling-and-Walking-In.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "West Northamptonshire Brackley/Daventry/Towcester LCWIPs",
+    "idx": 97
+  },
+  {
+    "url": "https://westyorkshire.moderngov.co.uk/documents/s31798/West%20Yorkshire%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0146-West-Yorkshire-Local-Cycling-and-Walking.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0146-West-Yorkshire-Local-Cycling-and-Walking.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "West Yorkshire LCWIP Main Document Discovery",
+    "idx": 98
   },
   {
     "url": "https://westyorkshire.moderngov.co.uk/mgConvert2PDF.aspx?ID=31798",
@@ -573,7 +888,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "West Yorkshire ATF4 / LCWIP programme (2025)",
-    "idx": 64
+    "idx": 99
   },
   {
     "url": "https://www.adur-worthing.gov.uk/media/Media,158651,smxx.pdf",
@@ -582,7 +897,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Adur & Worthing Councils",
-    "idx": 65
+    "idx": 100
+  },
+  {
+    "url": "https://www.ashford.gov.uk/media/24eb1cla/lcwip-ashford.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0133-lcwip-ashford-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0133-lcwip-ashford-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Ashford LCWIP",
+    "idx": 101
   },
   {
     "url": "https://www.atkinsrealis.com",
@@ -591,7 +915,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Lancashire County Council & Blackpool Council (and Fylde Council, Wyre Council)",
-    "idx": 66
+    "idx": 102
+  },
+  {
+    "url": "https://www.bcpcouncil.gov.uk/Assets/About-the-council/Local-Cycling-and-Walking-Infrastructure-Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0150-Local-Cycling-and-Walking-Infrastructure.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0150-Local-Cycling-and-Walking-Infrastructure.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "BCP Council LCWIP Main Document",
+    "idx": 103
   },
   {
     "url": "https://www.blaby.gov.uk/media/r0zjdj5m/blaby-district-council-lcwip-2024-230724.pdf",
@@ -600,7 +933,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Blaby District Council",
-    "idx": 67
+    "idx": 104
   },
   {
     "url": "https://www.bracknell-forest.gov.uk/sites/default/files/2024-11/local-cycling-and-walking-infrastructure-plan.pdf",
@@ -609,7 +942,25 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Bracknell Forest Council [3]",
-    "idx": 68
+    "idx": 105
+  },
+  {
+    "url": "https://www.brighton-hove.gov.uk/sites/default/files/2022-07/LCWIP_Brighton_Hove_Feb%202022_finals.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0147-LCWIP-Brighton-Hove-Feb-2022-finals-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0147-LCWIP-Brighton-Hove-Feb-2022-finals-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Brighton & Hove City Council LCWIP (Feb 2022)",
+    "idx": 106
+  },
+  {
+    "url": "https://www.brixworthparishcouncil.gov.uk/wp-content/uploads/2026/06/Adoption-of-Local-Cycling-and-Walking-Infrastructure-Plan-for-Northampton-Appendix-B.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0192-Adoption-of-Local-Cycling-and-Walking-In.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0192-Adoption-of-Local-Cycling-and-Walking-In.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "West Northamptonshire Northampton LCWIP Appendix B",
+    "idx": 107
   },
   {
     "url": "https://www.broads-authority.gov.uk/__data/assets/pdf_file/0017/152342/Broads_Local_Cycling_and_Walking_Infrastructure_Plan.pdf",
@@ -618,7 +969,7 @@
     "download_status": "ok",
     "source": "retry",
     "note": "",
-    "idx": 69
+    "idx": 108
   },
   {
     "url": "https://www.buckinghamshire.gov.uk/documents/35977/Buckinghamshire_Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf",
@@ -627,7 +978,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Buckinghamshire Council",
-    "idx": 70
+    "idx": 109
   },
   {
     "url": "https://www.cambridgeshire.gov.uk/residents/travel-roads-and-parking/transport-plans-and-policies/cambridgeshires-local-cycling-and-walking-infrastructure-plan-lcwip",
@@ -636,7 +987,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cambridgeshire County Council",
-    "idx": 71
+    "idx": 110
   },
   {
     "url": "https://www.cheshirewestandchester.gov.uk/asset-library/transport/cycling/local-cycling-and-walking-infrastructure-plan-2020-2030.pdf",
@@ -645,7 +996,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cheshire West and Chester Council [3]",
-    "idx": 72
+    "idx": 111
   },
   {
     "url": "https://www.chichester.gov.uk/media/39558/Local-Cycling-and-Walking-Infrastructure-Plan-LCWIP/pdf/Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf?m=1714123154250",
@@ -654,7 +1005,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Chichester District Council",
-    "idx": 73
+    "idx": 112
+  },
+  {
+    "url": "https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_document.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0194-carlisle-lcwip-document-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0194-carlisle-lcwip-document-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Cumberland Carlisle LCWIP 2022",
+    "idx": 113
   },
   {
     "url": "https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technical_report.pdf",
@@ -663,7 +1023,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council [3]",
-    "idx": 74
+    "idx": 114
   },
   {
     "url": "https://www.cumberland.gov.uk/sites/default/files/2025-04/whitehaven_lcwip_technical_report.pdf",
@@ -672,7 +1032,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Cumbria County Council [3]",
-    "idx": 75
+    "idx": 115
+  },
+  {
+    "url": "https://www.cumberland.gov.uk/sites/default/files/2025-04/workington_follow-up_consultation_report.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0195-workington-follow-up-consultation-report.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0195-workington-follow-up-consultation-report.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Cumberland Workington LCWIP follow-up consultation report",
+    "idx": 116
   },
   {
     "url": "https://www.devon.gov.uk/roads-and-transport/traffic-information/transport-planning/local-cycling-and-walking-infrastructure-plans-lcwips/",
@@ -681,7 +1050,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Devon countywide LCWIP (adopted Mar 2025)",
-    "idx": 76
+    "idx": 117
   },
   {
     "url": "https://www.essexhighways.org/uploads/files/getting%20around/cycling/basildon-lcwip-report.pdf",
@@ -690,7 +1059,16 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Basildon LCWIP+ (2021)",
-    "idx": 77
+    "idx": 118
+  },
+  {
+    "url": "https://www.folkestone-hythe.gov.uk/planning/local-cycling-walking-infrastructure-plan",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0138-local-cycling-walking-infrastructure-pla.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0138-local-cycling-walking-infrastructure-pla.html",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Folkestone & Hythe LCWIP",
+    "idx": 119
   },
   {
     "url": "https://www.guildford.gov.uk/article/27192/Local-Cycling-and-Walking-Infrastructure-Plan",
@@ -699,7 +1077,16 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Guildford LCWIP (Surrey)",
-    "idx": 78
+    "idx": 120
+  },
+  {
+    "url": "https://www.guildford.gov.uk/media/36792/Guildford-LCWIP-Chapter-1/pdf/Guildford_LCWIP_Chapter_1.pdf?m=1746179679717",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0151-Guildford-LCWIP-Chapter-1-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0151-Guildford-LCWIP-Chapter-1-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Guildford LCWIP Main Document (Chapter 1)",
+    "idx": 121
   },
   {
     "url": "https://www.guildford.gov.uk/media/36793/Guildford-LCWIP-Chapter-2/pdf/Guildford_LCWIP_Chapter_2.pdf?m=1746179680000",
@@ -708,7 +1095,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Guildford Borough Council / Surrey County Council",
-    "idx": 79
+    "idx": 122
   },
   {
     "url": "https://www.hants.gov.uk/transport/transportschemes/winchesterlcwip",
@@ -717,7 +1104,7 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 80
+    "idx": 123
   },
   {
     "url": "https://www.hart.gov.uk/sites/default/files/2024-08/Hart-District-LCWIP-v17ac.pdf",
@@ -726,7 +1113,25 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Hart District Council",
-    "idx": 81
+    "idx": 124
+  },
+  {
+    "url": "https://www.hertfordshire.gov.uk/about-the-council/consultations/transport-and-highways/lcwips-2022/dacorum-local-cycling-and-walking-infrastructure-plan.aspx",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0187-dacorum-local-cycling-and-walking-infras.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0187-dacorum-local-cycling-and-walking-infras.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hertfordshire Dacorum LCWIP (adopted Apr 2026)",
+    "idx": 125
+  },
+  {
+    "url": "https://www.hertfordshire.gov.uk/about-the-council/consultations/transport-and-highways/lcwips-2022/eastherts-local-cycling-and-walking-infrastructure-plan.aspx",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0188-eastherts-local-cycling-and-walking-infr.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0188-eastherts-local-cycling-and-walking-infr.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hertfordshire East Herts LCWIP (adopted Jun 2026)",
+    "idx": 126
   },
   {
     "url": "https://www.hertfordshire.gov.uk/about-the-council/consultations/transport-and-highways/lcwips-2022/lcwips-2022.aspx",
@@ -735,7 +1140,52 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Hertfordshire LCWIPs hub (8 adopted)",
-    "idx": 82
+    "idx": 127
+  },
+  {
+    "url": "https://www.hertfordshire.gov.uk/about-the-council/consultations/transport-and-highways/lcwips-2022/north-hertfordshire-local-cycling-and-walking-infrastructure-plan.aspx",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0189-north-hertfordshire-local-cycling-and-wa.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0189-north-hertfordshire-local-cycling-and-wa.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hertfordshire North Herts LCWIP (adopted Sep 2023)",
+    "idx": 128
+  },
+  {
+    "url": "https://www.hertfordshire.gov.uk/about-the-council/consultations/transport-and-highways/lcwips-2022/three-rivers-cycling-and-walking-infrastructure-plan.aspx",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0190-three-rivers-cycling-and-walking-infrast.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0190-three-rivers-cycling-and-walking-infrast.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hertfordshire Three Rivers LCWIP (adopted Nov 2025)",
+    "idx": 129
+  },
+  {
+    "url": "https://www.hertfordshire.gov.uk/about-the-council/consultations/transport-and-highways/lcwips-2022/welwyn-hatfield-lcwip.aspx",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0191-welwyn-hatfield-lcwip-aspx.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0191-welwyn-hatfield-lcwip-aspx.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hertfordshire Welwyn Hatfield LCWIP (adopted Mar 2023)",
+    "idx": 130
+  },
+  {
+    "url": "https://www.hertfordshire.gov.uk/media-library/documents/about-the-council/consultations/active-travel-strategy.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0145-active-travel-strategy-pdf.md",
+    "raw_file": null,
+    "download_status": "failed",
+    "source": "web-search",
+    "note": "",
+    "idx": 131
+  },
+  {
+    "url": "https://www.honiton.gov.uk/_UserFiles/Files/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20LCWIP%20consultation.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0130-Local-Cycling-and-Walking-Infrastructure.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0130-Local-Cycling-and-Walking-Infrastructure.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Honiton LCWIP draft",
+    "idx": 132
   },
   {
     "url": "https://www.horsham.gov.uk/__data/assets/pdf_file/0017/113165/Horsham-District-Local-Cycling-and-Walking-Infrastructure-Plan.pdf",
@@ -744,7 +1194,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 83
+    "idx": 133
   },
   {
     "url": "https://www.ipswich.gov.uk/sites/ipswich/files/2025-07/FINAL%20Ipswich%20LCWIP%2007.07.25.pdf",
@@ -753,7 +1203,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Ipswich Borough Council",
-    "idx": 84
+    "idx": 134
+  },
+  {
+    "url": "https://www.ketteringtowncouncil.gov.uk/uploads/kettering-lcwip-report-sept-2023-1.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0175-kettering-lcwip-report-sept-2023-1-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0175-kettering-lcwip-report-sept-2023-1-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "North Northamptonshire Kettering LCWIP (Sept 2023)",
+    "idx": 135
   },
   {
     "url": "https://www.lancashire.gov.uk/media/951846/lancaster.pdf",
@@ -762,7 +1221,16 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 85
+    "idx": 136
+  },
+  {
+    "url": "https://www.lancashire.gov.uk/media/kzqpnp05/fylde-coast.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0173-fylde-coast-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0173-fylde-coast-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Lancashire Fylde Coast LCWIP (Blackpool/Fylde/Wyre)",
+    "idx": 137
   },
   {
     "url": "https://www.leicestershire.gov.uk/sites/default/files/2023-11/Loughborough-Area-Local-Cycling-and-Walking-Infrastructure-Plan-Executive-Summary.pdf",
@@ -771,7 +1239,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 86
+    "idx": 138
   },
   {
     "url": "https://www.luton.gov.uk/Transport_and_streets/Lists/LutonDocuments/PDF/Responsible%20travel/lcwip.pdf",
@@ -780,7 +1248,16 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 87
+    "idx": 139
+  },
+  {
+    "url": "https://www.luton.gov.uk/sites/default/files/2026-03/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0172-Local-Cycling-and-Walking-Infrastructure.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0172-Local-Cycling-and-Walking-Infrastructure.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Luton LCWIP (Mar 2026)",
+    "idx": 140
   },
   {
     "url": "https://www.merseycycle.org.uk/wp-content/uploads/2025/03/LCWIP-Report-Consultation-Draft.pdf",
@@ -789,7 +1266,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Knowsley LCWIP (Mar 2025)",
-    "idx": 88
+    "idx": 141
   },
   {
     "url": "https://www.midsussex.gov.uk/media/9010/mid-sussex-local-cycling-and-walking-infrastructure-plan-2023-vfinal.pdf",
@@ -798,7 +1275,25 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Mid Sussex District Council",
-    "idx": 89
+    "idx": 142
+  },
+  {
+    "url": "https://www.norfolk.gov.uk/media/20116/Greater-Norwich-Lcwip-Main-Report/pdf/2egreater-norwich-lcwip-main-report.pdf?m=1713194576383",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0153-2egreater-norwich-lcwip-main-report-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0153-2egreater-norwich-lcwip-main-report-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Norfolk Greater Norwich LCWIP Main Report",
+    "idx": 143
+  },
+  {
+    "url": "https://www.norfolk.gov.uk/media/33545/Countywide-Local-Cycling-and-Walking-Infrastructure-Plan---main-report---February-2024/pdf/hmCountywide_LCWIP_2024_Accessible.pdf?m=1718357720090",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0152-hmCountywide-LCWIP-2024-Accessible-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0152-hmCountywide-LCWIP-2024-Accessible-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Norfolk Countywide LCWIP Main Report Feb 2024",
+    "idx": 144
   },
   {
     "url": "https://www.nottinghamshire.gov.uk/media/5081421/d2n2localcyclingandwalkinginfrastructureplan.pdf",
@@ -807,7 +1302,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Derby City Council, Derbyshire County Council, Nottingham City Council, and Nott",
-    "idx": 90
+    "idx": 145
   },
   {
     "url": "https://www.nwleics.gov.uk/files/documents/lcwip/Appendix%204%20NWLDC-LCWIP-.pdf",
@@ -816,7 +1311,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "North West Leicestershire District Council",
-    "idx": 91
+    "idx": 146
   },
   {
     "url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-connecting-oxfordshire/Abingdon_LCWIP.pdf",
@@ -825,7 +1320,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 92
+    "idx": 147
   },
   {
     "url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf",
@@ -834,7 +1329,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 93
+    "idx": 148
   },
   {
     "url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/BicesterLCWIPTownUpdate2023.pdf",
@@ -843,7 +1338,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 94
+    "idx": 149
   },
   {
     "url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/ChippingNortonLCWIP.pdf",
@@ -852,7 +1347,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 95
+    "idx": 150
   },
   {
     "url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/Witney_LCWIP.pdf",
@@ -861,7 +1356,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 96
+    "idx": 151
   },
   {
     "url": "https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-policies-and-plans/WoodstockAreaLCWIP.pdf",
@@ -870,7 +1365,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Oxfordshire County Council",
-    "idx": 97
+    "idx": 152
   },
   {
     "url": "https://www.plymouth.gov.uk/local-cycling-and-walking-infrastructure-plan",
@@ -879,7 +1374,25 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Plymouth LCWIP",
-    "idx": 98
+    "idx": 153
+  },
+  {
+    "url": "https://www.plymouth.gov.uk/sites/default/files/2021%20LCWIP_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0148-2021-LCWIP-0-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0148-2021-LCWIP-0-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Plymouth LCWIP Main Document (2021)",
+    "idx": 154
+  },
+  {
+    "url": "https://www.plymouth.gov.uk/sites/default/files/2022-12/LCWIP-2022.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0149-LCWIP-2022-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0149-LCWIP-2022-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Plymouth LCWIP 2022 Update",
+    "idx": 155
   },
   {
     "url": "https://www.rbwm.gov.uk/sites/default/files/2024-06/transport_local_cycling_and_walking_infrastructure_plan.pdf",
@@ -888,7 +1401,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "The Royal Borough of Windsor & Maidenhead (RBWM)",
-    "idx": 99
+    "idx": 156
   },
   {
     "url": "https://www.rutland.gov.uk/sites/default/files/2025-03/ev11.7_cycling_and_walking_infrastructure_plan_august_2023.pdf",
@@ -897,7 +1410,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Rutland County Council",
-    "idx": 100
+    "idx": 157
   },
   {
     "url": "https://www.scilly.gov.uk/environment-transport/highways/local-cycling-walking-infrastructure-plan",
@@ -906,7 +1419,79 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Council of the ISLES OF SCILLY",
-    "idx": 101
+    "idx": 158
+  },
+  {
+    "url": "https://www.scilly.gov.uk/sites/default/files/document/environment-transport/Introduction%20and%20Forward_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0177-Introduction-and-Forward-0-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0177-Introduction-and-Forward-0-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isles of Scilly LCWIP Introduction and Forward",
+    "idx": 159
+  },
+  {
+    "url": "https://www.scilly.gov.uk/sites/default/files/document/environment-transport/Stage%201%20-%20Determining%20Scope_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0178-Stage-1-Determining-Scope-0-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0178-Stage-1-Determining-Scope-0-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isles of Scilly LCWIP Stage 1",
+    "idx": 160
+  },
+  {
+    "url": "https://www.scilly.gov.uk/sites/default/files/document/environment-transport/Stage%202%20-%20Gathering%20Information_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0179-Stage-2-Gathering-Information-0-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0179-Stage-2-Gathering-Information-0-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isles of Scilly LCWIP Stage 2",
+    "idx": 161
+  },
+  {
+    "url": "https://www.scilly.gov.uk/sites/default/files/document/environment-transport/Stage%203%20%26%204%20-%20Walking%20and%20Cycling%20Assessment%20Tables_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0181-Stage-3-4-Walking-and-Cycling-Assessment.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0181-Stage-3-4-Walking-and-Cycling-Assessment.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isles of Scilly LCWIP Stage 3&4 Tables",
+    "idx": 162
+  },
+  {
+    "url": "https://www.scilly.gov.uk/sites/default/files/document/environment-transport/Stage%203%20-%20Network%20Planning%20for%20Cycling_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0180-Stage-3-Network-Planning-for-Cycling-0-p.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0180-Stage-3-Network-Planning-for-Cycling-0-p.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isles of Scilly LCWIP Stage 3 Cycling",
+    "idx": 163
+  },
+  {
+    "url": "https://www.scilly.gov.uk/sites/default/files/document/environment-transport/Stage%204%20-%20Network%20Planning%20for%20Walking_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0182-Stage-4-Network-Planning-for-Walking-0-p.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0182-Stage-4-Network-Planning-for-Walking-0-p.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isles of Scilly LCWIP Stage 4 Walking",
+    "idx": 164
+  },
+  {
+    "url": "https://www.scilly.gov.uk/sites/default/files/document/environment-transport/Stage%205%20-%20Prioritising%20Improvements_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0183-Stage-5-Prioritising-Improvements-0-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0183-Stage-5-Prioritising-Improvements-0-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isles of Scilly LCWIP Stage 5",
+    "idx": 165
+  },
+  {
+    "url": "https://www.scilly.gov.uk/sites/default/files/document/environment-transport/Stage%206%20-%20Policy%20Integration%20and%20Application_0.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0184-Stage-6-Policy-Integration-and-Applicati.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0184-Stage-6-Policy-Integration-and-Applicati.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isles of Scilly LCWIP Stage 6",
+    "idx": 166
   },
   {
     "url": "https://www.somerset.gov.uk/roads-travel-and-parking/local-cycling-and-walking-infrastructure-plans/",
@@ -915,7 +1500,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Somerset 8 town LCWIPs (2025)",
-    "idx": 102
+    "idx": 167
   },
   {
     "url": "https://www.sstaffs.gov.uk/sites/default/files/2023-03/local_cycling_and_walking_infrastructure_plan.pdf",
@@ -924,7 +1509,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Staffordshire County Council [3]",
-    "idx": 103
+    "idx": 168
   },
   {
     "url": "https://www.staffordshire.gov.uk/sites/default/files/2025-09/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%202021%20-%202031.pdf",
@@ -933,7 +1518,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Staffordshire LCWIP 2021-2031",
-    "idx": 104
+    "idx": 169
   },
   {
     "url": "https://www.stalbans.gov.uk/sites/default/files/attachments/St%20Albans%20District%20LCWIP%20-%20Final%20Report%20-%20FINAL%20accessible.pdf",
@@ -942,7 +1527,16 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "St Albans District LCWIP",
-    "idx": 105
+    "idx": 170
+  },
+  {
+    "url": "https://www.stevenage.gov.uk/documents/planning-policy/evidential-studies/transport-infrastructure/local-cycling-and-walking-infrastructure-plan-2019.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0185-local-cycling-and-walking-infrastructure.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0185-local-cycling-and-walking-infrastructure.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hertfordshire Stevenage LCWIP 2019",
+    "idx": 171
   },
   {
     "url": "https://www.stoke.gov.uk/download/downloads/id/2757/draft_local_cycling_and_walking_infrastructure_plan.pdf",
@@ -951,7 +1545,16 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Stoke-on-Trent LCWIP 2025-2035",
-    "idx": 106
+    "idx": 172
+  },
+  {
+    "url": "https://www.suffolk.gov.uk/asset-library/local-cycling-and-walking-infrastructure-plan-for-suffolk.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0197-local-cycling-and-walking-infrastructure.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0197-local-cycling-and-walking-infrastructure.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Suffolk County LCWIP",
+    "idx": 173
   },
   {
     "url": "https://www.sunderland.gov.uk/media/28328/Local-Cycling-and-Walking-Infrastructure-Plan-SCC/pdf/LocalCyclingAndWalkingInfrastructurePlan-SCC.pdf?m=638035103774900000",
@@ -960,7 +1563,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Sunderland City Council",
-    "idx": 107
+    "idx": 174
   },
   {
     "url": "https://www.surreycc.gov.uk/transport-and-streets/road-safety-and-active-travel/active-travel-schemes/farnham-lcwip",
@@ -969,16 +1572,16 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 108
+    "idx": 175
   },
   {
-    "url": "https://www.swindon.gov.uk/downloads/file/8394/swindon_local_cycling_and_walking_infrastructure_plan",
-    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0083-swindon-local-cycling-and-walking-infras.md",
-    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0083-swindon-local-cycling-and-walking-infras.html",
+    "url": "https://www.swindon.gov.uk/download/downloads/id/8394/swindon_local_cycling_and_walking_infrastructure_plan",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0201-swindon-lcwip.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0201-swindon-lcwip.pdf",
     "download_status": "ok",
     "source": "seed-94db",
-    "note": "Swindon Borough Council",
-    "idx": 109
+    "note": "Swindon Local Cycling and Walking Infrastructure Plan (full document)",
+    "idx": 176
   },
   {
     "url": "https://www.threerivers.gov.uk/news/lcwip-approved-herts-county-council",
@@ -987,7 +1590,7 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Three Rivers LCWIP (adopted Nov 2025)",
-    "idx": 110
+    "idx": 177
   },
   {
     "url": "https://www.thurrock.gov.uk/sites/default/files/assets/documents/thurrock_local_cycling_and_walking_infrastructure_plan_january_2025-compressed.pdf",
@@ -996,7 +1599,16 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Thurrock Council",
-    "idx": 111
+    "idx": 178
+  },
+  {
+    "url": "https://www.torbay.gov.uk/media/15790/torbay-local-cycling-and-walking-infrastructure-plan-lcwip.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0132-torbay-local-cycling-and-walking-infrast.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0132-torbay-local-cycling-and-walking-infrast.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: Torbay LCWIP",
+    "idx": 179
   },
   {
     "url": "https://www.west-norfolk.gov.uk/download/downloads/id/8479/f67_-_local_cycling_and_walking_infrastructure_plan_lcwip.pdf",
@@ -1005,7 +1617,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "Borough Council of King's Lynn and West Norfolk",
-    "idx": 112
+    "idx": 180
   },
   {
     "url": "https://www.westberks.gov.uk/media/50987/Local-Cycling-Walking-Infrastructure-Plan-LCWIP-June-2021/pdf/LCWIP_June_2021.pdf?m=1623079527393",
@@ -1014,7 +1626,25 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "West Berkshire Council",
-    "idx": 113
+    "idx": 181
+  },
+  {
+    "url": "https://www.westdevon.gov.uk/sites/default/files/2025-06/06928%20LCWIP%20Report%2020250203%20-%20compressed.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0131-06928-LCWIP-Report-20250203-compressed-p.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0131-06928-LCWIP-Report-20250203-compressed-p.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Hermes Discovered: South Hams & West Devon LCWIP 2025",
+    "idx": 182
+  },
+  {
+    "url": "https://www.westmorlandandfurness.gov.uk/sites/default/files/2026-06/Barrow%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plans%20%28LCWIPs%29%20document.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0198-Barrow-Local-Cycling-and-Walking-Infrast.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0198-Barrow-Local-Cycling-and-Walking-Infrast.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Westmorland and Furness Barrow LCWIP",
+    "idx": 183
   },
   {
     "url": "https://www.westofengland-ca.gov.uk/wp-content/uploads/2021/09/West-of-England-Local-Cycling-and-Walking-Infrastructure-Plan-2020-2036.pdf",
@@ -1023,7 +1653,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "West of England Combined Authority (WECA), Bath & North East Somerset, Bristol C",
-    "idx": 114
+    "idx": 184
   },
   {
     "url": "https://www.westsussex.gov.uk/media/chjdcz0u/local_cycling_and_walking_infrastructure_plan.pdf",
@@ -1032,7 +1662,7 @@
     "download_status": "ok",
     "source": "seed-94db",
     "note": "West Sussex County Council",
-    "idx": 115
+    "idx": 185
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/3424/bradford-phase-one-lcwip-final.pdf",
@@ -1041,7 +1671,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 116
+    "idx": 186
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/3428/wakefield-phase-one-lcwip-final.pdf",
@@ -1050,7 +1680,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 117
+    "idx": 187
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/5792/kirklees-local-cycling-and-walking-infrastructure-plan.pdf",
@@ -1059,7 +1689,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 118
+    "idx": 188
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/5793/leeds-local-cycling-and-walking-infrastructure-plan.pdf",
@@ -1068,7 +1698,7 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 119
+    "idx": 189
   },
   {
     "url": "https://www.westyorks-ca.gov.uk/media/5796/calderdale-local-cycling-and-walking-infrastructure-plan.pdf",
@@ -1077,7 +1707,16 @@
     "download_status": "failed",
     "source": "seed-94db",
     "note": "",
-    "idx": 120
+    "idx": 190
+  },
+  {
+    "url": "https://www.wiltshire.gov.uk/media/10838/wiltshire-lcwip-executive-summary.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0140-wiltshire-lcwip-executive-summary-pdf.md",
+    "raw_file": null,
+    "download_status": "failed",
+    "source": "web-search",
+    "note": "",
+    "idx": 191
   },
   {
     "url": "https://www.wiltshire.gov.uk/media/10839/amesbury-lcwip.pdf",
@@ -1086,7 +1725,7 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 121
+    "idx": 192
   },
   {
     "url": "https://www.wiltshire.gov.uk/media/10840/devizes-lcwip.pdf",
@@ -1095,7 +1734,7 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 122
+    "idx": 193
   },
   {
     "url": "https://www.wiltshire.gov.uk/media/10841/trowbridge-lcwip.pdf",
@@ -1104,7 +1743,43 @@
     "download_status": "failed",
     "source": "web-search",
     "note": "",
-    "idx": 123
+    "idx": 194
+  },
+  {
+    "url": "https://www.wiltshire.gov.uk/media/19933/Calne-Local-Cycling-and-Walking-Infrastructure-Plan-LCWIP/pdf/Calne_Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf?m=1776879791457",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0168-Calne-Local-Cycling-and-Walking-Infrastr.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0168-Calne-Local-Cycling-and-Walking-Infrastr.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Wiltshire Calne LCWIP",
+    "idx": 195
+  },
+  {
+    "url": "https://www.wiltshire.gov.uk/media/19934/Chippenham-Local-Cycling-and-Walking-Infrastructure-Plan-LCWIP/pdf/Chippenham_Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf?m=1776879791667",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0170-Chippenham-Local-Cycling-and-Walking-Inf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0170-Chippenham-Local-Cycling-and-Walking-Inf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Wiltshire Chippenham LCWIP",
+    "idx": 196
+  },
+  {
+    "url": "https://www.wiltshire.gov.uk/media/19936/Melksham-Local-Cycling-and-Walking-Infrastructure-Plan-LCWIP/pdf/Melksham_Local_Cycling_and_Walking_Infrastructure_Plan_LCWIP.pdf?m=1776879792650",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0169-Melksham-Local-Cycling-and-Walking-Infra.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0169-Melksham-Local-Cycling-and-Walking-Infra.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Wiltshire Melksham LCWIP",
+    "idx": 197
+  },
+  {
+    "url": "https://www.wiltshire.gov.uk/media/9640/Wiltshire-draft-LCWIP/pdf/Wiltshire_LCWIP_Framework_and_Interurban_Routes_Consultation_Draft_1i9m0rloi854u.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0171-Wiltshire-LCWIP-Framework-and-Interurban.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0171-Wiltshire-LCWIP-Framework-and-Interurban.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Wiltshire LCWIP Framework and Interurban Routes draft",
+    "idx": 198
   },
   {
     "url": "https://www.worcestershire.gov.uk/sites/default/files/2025-10/redditch_lcwip_final.pdf",
@@ -1113,15 +1788,375 @@
     "download_status": "ok",
     "source": "web-search",
     "note": "Redditch LCWIP 2025",
-    "idx": 124
+    "idx": 199
   },
   {
-    "url": "https://yoursay.hull.gov.uk/42351/widgets/125945/documents/85658",
-    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0059-85658.md",
-    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0059-85658.html",
+    "url": "https://yoursay.hull.gov.uk/42351/widgets/125945/documents/85658/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0200-hull-lcwip-consultation-draft-june-2025.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0200-hull-lcwip-consultation-draft-june-2025.pdf",
     "download_status": "ok",
     "source": "seed-94db",
-    "note": "Hull City Council",
-    "idx": 125
+    "note": "Hull LCWIP (Consultation Draft June 2025) - direct PDF",
+    "idx": 200
+  },
+  {
+    "idx": 201,
+    "url": "https://www.lancashire.gov.uk/media/kzqpnp05/fylde-coast.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0202-fylde-coast-lcwip.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0202-fylde-coast-lcwip.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Fylde Coast Local Cycling & Walking Infrastructure Plan (Blackpool/Fylde/Wyre)"
+  },
+  {
+    "idx": 202,
+    "url": "https://www.cornwall.gov.uk/media/ldinn5mw/cornwall-lcwip-report_cpir_final_issued_240522-compressed_7mb.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0202-cornwall-lcwip-report-cpir-final-issued-240522-compressed-7m.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0202-cornwall-lcwip-report-cpir-final-issued-240522-compressed-7m.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Cornwall CPIR (Camborne-Pool-Illogan-Redruth) LCWIP final 2022"
+  },
+  {
+    "idx": 203,
+    "url": "https://www.slough.gov.uk/download/downloads/id/900/sbc-local-cycling-and-walking-infrastructure-plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0203-sbc-local-cycling-and-walking-infrastructure-plan-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0203-sbc-local-cycling-and-walking-infrastructure-plan-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Slough Borough Council LCWIP"
+  },
+  {
+    "idx": 204,
+    "url": "https://www.milton-keynes.gov.uk/sites/default/files/2023-02/MKCC%20LCWIP%20Report.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0204-mkcc-20lcwip-20report-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0204-mkcc-20lcwip-20report-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Milton Keynes Council LCWIP Report (2023)"
+  },
+  {
+    "idx": 205,
+    "url": "https://www.eastsussex.gov.uk/roads-transport/cycling-walking-cycling-plans/cycling-walking-infrastructure-plan",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0205-cycling-walking-infrastructure-plan.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0205-cycling-walking-infrastructure-plan.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "East Sussex LCWIP Part 1 ('Get Cycling & Walking')"
+  },
+  {
+    "idx": 206,
+    "url": "https://www.eastsussex.gov.uk/roads-transport/cycling-walking-cycling-plans/cycling-walking-infrastructure-plan",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0206-cycling-walking-infrastructure-plan.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0206-cycling-walking-infrastructure-plan.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "East Sussex LCWIP Part 2 ('Get Cycling & Walking')"
+  },
+  {
+    "idx": 207,
+    "url": "https://iow.moderngov.co.uk/documents/s21352/Item%206b%20-%20Appendix%201%20-%20ITP4%20V4%201702.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0207-item-206b-20-20appendix-201-20-20itp4-20v4-201702-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0207-item-206b-20-20appendix-201-20-20itp4-20v4-201702-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Isle of Wight LCWIP (ITP4 v4, adopted as SPD)"
+  },
+  {
+    "idx": 208,
+    "url": "https://consultation.dorsetcouncil.gov.uk/transport-policy/active-travel-infrastructure-plan/results/dorsetatipdec2025.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0208-dorsetatipdec2025-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0208-dorsetatipdec2025-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Dorset Active Travel Infrastructure Plan (Dec 2025)"
+  },
+  {
+    "idx": 209,
+    "url": "https://www.medway.gov.uk/downloads/200761/medway_local_cycling_and_walking_infrastructure_plan_lcwip",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0209-medway-local-cycling-and-walking-infrastructure-plan-lcwip.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0209-medway-local-cycling-and-walking-infrastructure-plan-lcwip.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Medway LCWIP"
+  },
+  {
+    "idx": 210,
+    "url": "https://transport.southampton.gov.uk/media/4056/southampton-lwip-full-final.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0210-southampton-lwip-full-final-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0210-southampton-lwip-full-final-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Southampton LCWIP (full final)"
+  },
+  {
+    "idx": 211,
+    "url": "https://www.warrington.gov.uk/sites/default/files/2023-04/Local%20Cycling%20and%20Walking%20Infrastructure%20Plan%20-%20November%202019.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0211-local-20cycling-20and-20walking-20infrastructure-20plan-20-2.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0211-local-20cycling-20and-20walking-20infrastructure-20plan-20-2.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Warrington LCWIP (Nov 2019)"
+  },
+  {
+    "idx": 212,
+    "url": "https://www.myjourneywokingham.com/cycling/local-cycling-and-walking-infrastructure-plan-lcwip/",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0212-doc.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0212-doc.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Wokingham LCWIP"
+  },
+  {
+    "idx": 213,
+    "url": "https://www.birmingham.gov.uk/download/downloads/id/28472/interim_local_walking_and_cycling_infrastructure_plan_2023.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0213-interim-local-walking-and-cycling-infrastructure-plan-2023-p.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0213-interim-local-walking-and-cycling-infrastructure-plan-2023-p.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Birmingham Interim Local Walking and Cycling Infrastructure Plan (2023)"
+  },
+  {
+    "idx": 214,
+    "url": "https://yoursay.southend.gov.uk/46809/widgets/141583/documents/99470/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0214-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0214-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Southend-on-Sea LCWIP (Jan 2026)"
+  },
+  {
+    "idx": 215,
+    "url": "https://www.telford.gov.uk/roadworks-transport-and-streets/travel-telford/cycling/local-cycling-and-walking-infrastructure-plan/",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0215-doc.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0215-doc.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Telford & Wrekin LCWIP (2022)"
+  },
+  {
+    "idx": 216,
+    "url": "https://www.sandwell.gov.uk/downloads/download/352/west-midlands-local-cycling-and-walking-infrastructure-plan",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0216-west-midlands-local-cycling-and-walking-infrastructure-plan.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0216-west-midlands-local-cycling-and-walking-infrastructure-plan.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "West Midlands LCWIP Report (regional, WMCA area)"
+  },
+  {
+    "idx": 217,
+    "url": "https://consult.nottinghamshire.gov.uk/transport/d2n2-local-cycling-and-walking-infrastructure-plan/",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0217-doc.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0217-doc.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "D2N2 (Derby, Derbyshire, Nottingham, Nottinghamshire) LCWIP"
+  },
+  {
+    "idx": 218,
+    "url": "https://cms-centralbedfordshire-uk.azeusconvene.com/data/0af29d2a-9313-4661-bc61-fb82e4180cee/parts/15.5%20Appendix%20D%20-%20Ampthill%20%20Flitwick%20LCWIP%20(2023).pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0218-15-5-20appendix-20d-20-20ampthill-20-20flitwick-20lcwip-20-2.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0218-15-5-20appendix-20d-20-20ampthill-20-20flitwick-20lcwip-20-2.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Central Bedfordshire Ampthill & Flitwick LCWIP (2023)"
+  },
+  {
+    "idx": 219,
+    "url": "https://teesvalley-ca.gov.uk/wp-content/uploads/2023/09/Local-Cycling-and-Walking-Programme-Executive-Summary.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0219-local-cycling-and-walking-programme-executive-summary-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0219-local-cycling-and-walking-programme-executive-summary-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Tees Valley LCWIP Programme Executive Summary"
+  },
+  {
+    "idx": 220,
+    "url": "https://www.southyorkshire-ca.gov.uk/explore/active-travel",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0220-active-travel.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0220-active-travel.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "South Yorkshire Walking, Wheeling & Cycling Strategy (draft)"
+  },
+  {
+    "idx": 221,
+    "url": "https://www.gloucestershire.gov.uk/media/ty0bvtuo/tewks-lcwip-v2-2024-final.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0221-tewks-lcwip-v2-2024-final.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0221-tewks-lcwip-v2-2024-final.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Tewkesbury LCWIP (2024 update) - Gloucestershire County Council"
+  },
+  {
+    "idx": 222,
+    "url": "https://www.westyorks-ca.gov.uk/media/a1vpretp/leeds-phase-one-local-cycling-walking-infrastructure-plan-2019.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0222-leeds-phase-one-local-cycling-walking-infrastructure-pl.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0222-leeds-phase-one-local-cycling-walking-infrastructure-pl.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Leeds phase-one LCWIP (2019, WYCA media copy)"
+  },
+  {
+    "idx": 223,
+    "url": "https://www.yourvoice.westyorks-ca.gov.uk/2534/widgets/8424/documents/2778/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0223-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0223-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Kirklees phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
+  },
+  {
+    "idx": 224,
+    "url": "https://www.yourvoice.westyorks-ca.gov.uk/2536/widgets/8440/documents/2779/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0224-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0224-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Wakefield phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
+  },
+  {
+    "idx": 225,
+    "url": "https://www.yourvoice.westyorks-ca.gov.uk/2533/widgets/8416/documents/2775/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0225-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0225-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Calderdale phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
+  },
+  {
+    "idx": 226,
+    "url": "https://www.yourvoice.westyorks-ca.gov.uk/2532/widgets/8408/documents/2773/download",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0226-download.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0226-download.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Bradford phase-one LCWIP full (2019, WYCA yourvoice EHQ)"
+  },
+  {
+    "idx": 227,
+    "url": "https://downloads.eastriding.org.uk/corporate/pages/local-transport-plan/appendix%20d%20-%20example%20lcwip%20(anlaby,%20willerby,%20kirk%20ella).pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0227-appendix-d-example-lcwip-anlaby-willerby-kirk-ella.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0227-appendix-d-example-lcwip-anlaby-willerby-kirk-ella.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "East Riding LCWIP example (Anlaby, Willerby, Kirk Ella) - downloaded via web.archive.org (original downloads.eastriding.org.uk 403s to bots)"
+  },
+  {
+    "idx": 228,
+    "url": "https://www.nelincs.gov.uk/wp-content/uploads/2019/05/12.-Local-Cycling-and-Walking-Strategy-Update.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0228-12-local-cycling-and-walking-strategy-update.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0228-12-local-cycling-and-walking-strategy-update.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "NELC Local Cycling and Walking Strategy Update (May 2019, 4pp) - LCWIP scheme assessment criteria explicitly use the DfT 'Propensity to cycle toolkit'"
+  },
+  {
+    "idx": 229,
+    "url": "https://www.bedford.gov.uk/files/activetravelstrategy.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0229-activetravelstrategy-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0229-activetravelstrategy-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Bedford Borough Active Travel Strategy (8pp; no PCT mention)"
+  },
+  {
+    "idx": 230,
+    "url": "https://www.surreyheath.gov.uk/sites/default/files/2024-07/Surrey%20Heath%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0230-surrey-20heath-20local-20cycling-20and-20walk.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0230-surrey-20heath-20local-20cycling-20and-20walk.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Surrey Heath LCWIP (2024)"
+  },
+  {
+    "idx": 231,
+    "url": "https://tandridge.moderngov.co.uk/documents/s19499/Appendix%20A%20-%20Tandridge%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0231-appendix-20a-20-20tandridge-20local-20cycling.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0231-appendix-20a-20-20tandridge-20local-20cycling.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Tandridge LCWIP (moderngov appendix)"
+  },
+  {
+    "idx": 232,
+    "url": "https://democracy.epsom-ewell.gov.uk/documents/s32880/Appendix%201%20-%20LCWIP.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0232-appendix-201-20-20lcwip-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0232-appendix-201-20-20lcwip-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Epsom & Ewell LCWIP (democracy appendix)"
+  },
+  {
+    "idx": 233,
+    "url": "https://democracy.spelthorne.gov.uk/documents/s45947/220311_Spelthorne%20LCWIP_Report%20-%20Final%20draft.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0233-220311-spelthorne-20lcwip-report-20-20final-2.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0233-220311-spelthorne-20lcwip-report-20-20final-2.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Spelthorne LCWIP final draft (2022)"
+  },
+  {
+    "idx": 234,
+    "url": "https://moderngov.threerivers.gov.uk/documents/s13679/Appendix+A+-+Local+Cycling+and+Walking+Infrastructure+Plan+including+appendices.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0234-appendix-a-local-cycling-and-walking-infrastr.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0234-appendix-a-local-cycling-and-walking-infrastr.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Three Rivers District LCWIP incl. appendices"
+  },
+  {
+    "idx": 235,
+    "url": "https://www.midsussex.gov.uk/media/9010/mid-sussex-local-cycling-and-walking-infrastructure-plan-2023-vfinal.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0235-mid-sussex-local-cycling-and-walking-infrastr.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0235-mid-sussex-local-cycling-and-walking-infrastr.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Mid Sussex LCWIP (2023 final)"
+  },
+  {
+    "idx": 236,
+    "url": "https://democracy.runnymede.gov.uk/documents/s4163/Item%207%20-%20LCWIP%20Atkins%20Report.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0236-item-207-20-20lcwip-20atkins-20report-pdf.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0236-item-207-20-20lcwip-20atkins-20report-pdf.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Runnymede LCWIP (Atkins report)"
+  },
+  {
+    "idx": 237,
+    "url": "https://watford.moderngov.co.uk/documents/s36726/Appendix%20F%20-%20Local%20Cycling%20and%20Walking%20Infrastructure%20Plan.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0237-appendix-20f-20-20local-20cycling-20and-20wal.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0237-appendix-20f-20-20local-20cycling-20and-20wal.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Watford LCWIP (Appendix F)"
+  },
+  {
+    "idx": 238,
+    "url": "https://www.rutland.gov.uk/sites/default/files/2025-03/ev11.7_cycling_and_walking_infrastructure_plan_august_2023.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0238-ev11-7-cycling-and-walking-infrastructure-pla.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0238-ev11-7-cycling-and-walking-infrastructure-pla.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Rutland Cycling and Walking Infrastructure Plan (Aug 2023)"
+  },
+  {
+    "idx": 239,
+    "url": "https://tunbridgewells.gov.uk/__data/assets/pdf_file/0003/385329/01_LCWIP-Phase-1-March-2021.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0239-01-lcwip-phase-1-march-2021.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0239-01-lcwip-phase-1-march-2021.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Tunbridge Wells LCWIP Phase 1 (Mar 2021) - via web archive (originals 403 to bots)"
+  },
+  {
+    "idx": 240,
+    "url": "https://www.sheffield.gov.uk/sites/default/files/docs/travel-and-transport/cycling/cycle-forum-notes%20-%207%20Jun%2018.pdf",
+    "md_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-md/0240-cycle-forum-notes-7-jun-2018.md",
+    "raw_file": "/mnt/secondary/home/robin/github/itsleeds/ics/data-govuk-2026-raw/0240-cycle-forum-notes-7-jun-2018.pdf",
+    "download_status": "ok",
+    "source": "web-search",
+    "note": "Sheffield Cycle Forum notes (7 Jun 2018): 'The propensity to cycle tool will be used but is not definitive, considering the expansion of e bikes is a scenario that will be considered'"
   }
 ]

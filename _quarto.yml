@@ -9,6 +9,9 @@ project:
 
 website:
   title: "Transforming Strategic Active Travel Network Planning Internationally"
+  repo-url: https://github.com/itsleeds/ics
+  repo-branch: main
+  repo-actions: [edit, issue]
   navbar:
     background: primary
     search: true
@@ -23,3 +26,7 @@ website:
         href: plan.qmd
       - text: "Ideas"
         href: ideas.qmd
+    right:
+      - icon: github
+        href: https://github.com/itsleeds/ics
+        aria-label: GitHub

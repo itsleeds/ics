@@ -2,10 +2,11 @@
 title: "PCT / LCWIP Data Ingest 2026 — Exploratory Analysis"
 subtitle: "REF 2029 impact case study — England proof-of-concept"
 date: last-modified
+toc: true
+number-sections: true
 format:
-  gfm:
-    toc: true
-    number-sections: true
+  gfm: default
+  html: default
 ---
 
 # Overview

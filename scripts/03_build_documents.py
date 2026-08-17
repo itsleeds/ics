@@ -15,8 +15,21 @@ import json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MD = os.path.join(ROOT, "data-govuk-2026-md")
 
+import urllib.parse
+
 def norm(u):
-    return re.sub(r"[?#].*$", "", u or "").rstrip("/").lower()
+    if not u:
+        return ""
+    u = u.strip()
+    parsed = urllib.parse.urlparse(u)
+    if any(k in parsed.query.lower() for k in ["id=", "doc=", "file=", "sourceurl=", "document=", "viewid=", "path=", "download="]):
+        qs = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+        clean_qs = {k: v for k, v in qs.items() if k.lower() not in ["utm_source", "utm_medium", "utm_campaign", "ga", "fbclid", "gclid"]}
+        new_query = urllib.parse.urlencode(clean_qs, doseq=True)
+        return urllib.parse.urlunparse(parsed._replace(query=new_query)).lower()
+    else:
+        u = re.sub(r"[?#].*$", "", u).rstrip("/")
+        return u.lower()
 
 docs = {}
 if os.path.exists(MD):
