@@ -28,14 +28,6 @@ library(jsonlite) # for parsing JSON data
 library(stringdist) # for string distance calculations
 library(stringr) # for string manipulation
 
-
-
-
-library(fuzzyjoin) # for joining data with fuzzy matching
-
-
-
-
 # library(tmap) # for mapping
 library(ggplot2) # for plotting
 # library(knitr) # for tables
@@ -72,7 +64,12 @@ Names of local authoriteis located in [transport_authorities_2026.geojson](https
 ```{r}
 #| label: import-lad-name-data
 
-ltas <- sf::read_sf("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/transport_authorities_2026.geojson")
+geojson_exists_locally <- file.exists("transport_authorities_2026.geojson")
+if (geojson_exists_locally) {
+    ltas <- sf::read_sf("transport_authorities_2026.geojson")
+} else {
+    ltas <- sf::read_sf("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/transport_authorities_2026.geojson")
+}
 
 names(ltas) # check names in ltas
 
@@ -89,8 +86,12 @@ Data from 20_21 to 24_25 located in [atf_table_aggregated.csv](https://github.co
 #| label: import-funding-data
 
 # Read data from atf_table_aggregated.csv file located in uktransportauthorities repo.
-
-atf <- read_csv("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/atf_table_aggregated.csv")
+csv_exists_locally <- file.exists("atf_table_aggregated.csv")
+if (!csv_exists_locally) {
+    atf <- read_csv("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/atf_table_aggregated.csv")
+} else {
+    atf <- read_csv("atf_table_aggregated.csv")
+}
 
 names(atf) # check names in atf
 
@@ -102,8 +103,13 @@ Data allocations from 2026 to 2030 located in [lad_active_travel_allocations.csv
 #| label: import-funding-data-future
 
 # Read data from lad_active_travel_allocations.csv file located in uktransportauthorities repo.
-
-atf_future <- read_csv("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/lad_active_travel_allocations.csv")
+lad_exists_locally <- file.exists("lad_active_travel_allocations.csv")
+if (!lad_exists_locally) {
+    atf_future <- read_csv("https://raw.githubusercontent.com/itsleeds/uk
+transportauthorities/refs/heads/main/lad_active_travel_allocations.csv")
+} else {
+    atf_future <- read_csv("lad_active_travel_allocations.csv")
+}
 
 names(atf_future) # check names in atf_future
 
@@ -338,8 +344,6 @@ atf_names <- atf |>
 Check that all LAD names in ltas_lookup_names$name have an exact match to a LAD name in atf$name. If there are any mismatches, print them out.
 
 ```{r}
-#| label: check-ltas-against-atf
-
 # check which names in ltas_lookup_names$name do not have an exact match to a name in atf_names$name
 
 ltas_mismatches <- ltas_lookup_names |>
@@ -676,8 +680,11 @@ ranked_analysis_metrics <- analysis_metrics |>
         mentions_per_million_funding
     ) |>
     arrange(desc(!!sym(rank_variable))) |>
-    mutate(rank = row_number())
-
+    mutate(rank = row_number()) |>
+    # Reduce number of decimal places to 1
+    mutate(across(c(pct_mention_rate, desire_lines_rate, depth_score_mean, mentions_per_million_funding), ~ round(.x, 1)))
+# knitr::kable(ranked_analysis_metrics, caption = paste("Ranked by", rank_variable))
+DT::datatable(ranked_analysis_metrics, caption = paste("Ranked by", rank_variable), options = list(pageLength = 10, scrollX = TRUE))
 ```
 
 https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf
