@@ -16,6 +16,9 @@ execute:
 library(tidyverse) # for data manipulation and visualization
 library(readr) # for reading csv files
 library(scales) # for formatting numbers
+library(sf) # for spatial boundary data
+library(leaflet) # for interactive mapping
+library(htmltools) # for escaping HTML labels
 
 ```
 
@@ -261,8 +264,109 @@ print(paste0("Average funding per region without mentions of PCT (atf_future): "
 
 ```
 
+# Geographic Distribution of Depth of Use
+
+The interactive map below illustrates the depth of PCT adoption across all 74 Local Transport Authorities in England. Hover over any authority boundary to inspect its classification, document count, mention count, and Active Travel Fund (ATF) historical and future allocations.
+
 ```{r}
-#| label: print top 10 atf and atf_future ranked regions
+#| label: map-depth-of-use
+#| output: true
+
+# Load transport authorities boundary data
+geojson_file <- "data/transport_authorities_2026.geojson"
+if (!file.exists(geojson_file)) geojson_file <- "tda/transport_authorities_2026.geojson"
+if (!file.exists(geojson_file)) geojson_file <- "transport_authorities_2026.geojson"
+
+if (file.exists(geojson_file)) {
+  ltas <- sf::read_sf(geojson_file) %>% select(name)
+} else {
+  ltas <- sf::read_sf("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/transport_authorities_2026.geojson") %>% select(name)
+}
+
+if (is.na(sf::st_crs(ltas)$epsg) || sf::st_crs(ltas)$epsg != 4326) {
+  ltas <- sf::st_transform(ltas, 4326)
+}
+
+# Merge boundary geometry with ranked metrics
+map_data <- ltas %>%
+  left_join(ranked_metrics, by = "name") %>%
+  mutate(
+    depth_category = factor(case_when(
+      is.na(n_observations) | n_observations == 0 ~ "No documents analysed",
+      n_mentions_pct == 0 ~ "No PCT mentions",
+      depth_score_mean >= 2.5 ~ "Level 3: Quantitative Prioritisation",
+      depth_score_mean >= 1.5 ~ "Level 2: Corridor & Desire Line Design",
+      depth_score_mean >= 1.0 ~ "Level 1: Contextual Mention",
+      TRUE ~ "Mentioned (Unclassified)"
+    ), levels = c(
+      "Level 3: Quantitative Prioritisation",
+      "Level 2: Corridor & Desire Line Design",
+      "Level 1: Contextual Mention",
+      "Mentioned (Unclassified)",
+      "No PCT mentions",
+      "No documents analysed"
+    )),
+    labels = paste0(
+      "<strong>", htmltools::htmlEscape(name), "</strong><br/>",
+      "<strong>Status:</strong> ", depth_category, "<br/>",
+      "<strong>PCT Mentions:</strong> ", ifelse(is.na(n_mentions_pct), "0", as.character(n_mentions_pct)),
+      " across ", ifelse(is.na(n_observations), "0", as.character(n_observations)), " doc(s)<br/>",
+      "<strong>Historical ATF (5-yr):</strong> ", ifelse(!is.na(atf), dollar(atf, prefix = "£", big.mark = ",", accuracy = 1), "N/A"), "<br/>",
+      "<strong>Future ATF (4-yr):</strong> ", ifelse(!is.na(atf_future), dollar(atf_future, prefix = "£", big.mark = ",", accuracy = 1), "N/A")
+    )
+  )
+
+palette_colors <- c(
+  "Level 3: Quantitative Prioritisation" = "#08519c",
+  "Level 2: Corridor & Desire Line Design" = "#41b6c4",
+  "Level 1: Contextual Mention" = "#a1dab4",
+  "Mentioned (Unclassified)" = "#fecc5c",
+  "No PCT mentions" = "#e31a1c",
+  "No documents analysed" = "#bdbdbd"
+)
+
+pal <- colorFactor(
+  palette = palette_colors,
+  domain = map_data$depth_category
+)
+
+leaflet(map_data, width = "100%", height = "650px") %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addPolygons(
+    fillColor = ~pal(depth_category),
+    weight = 1.2,
+    opacity = 1,
+    color = "white",
+    dashArray = "1",
+    fillOpacity = 0.75,
+    highlightOptions = highlightOptions(
+      weight = 3,
+      color = "#333",
+      dashArray = "",
+      fillOpacity = 0.9,
+      bringToFront = TRUE
+    ),
+    label = lapply(map_data$labels, HTML),
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "4px 8px"),
+      textsize = "13px",
+      direction = "auto"
+    )
+  ) %>%
+  addLegend(
+    pal = pal,
+    values = ~depth_category,
+    opacity = 0.85,
+    title = "Depth of PCT Usage",
+    position = "bottomright"
+  )
+
+```
+
+# Top Ranked Regions
+
+```{r}
+#| label: print-top-10-ranked-regions
 #| output: true
 
 # Print top 10 regions by atf and atf_future using Knitr::kable for better formatting

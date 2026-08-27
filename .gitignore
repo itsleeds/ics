@@ -18,6 +18,7 @@ results/extracted/
 
 /.quarto/
 _site/
+site_libs/
 *_files/
 *.html
 **/*.quarto_ipynb
