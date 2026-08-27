@@ -9,17 +9,9 @@ author:
   - name: Tom Auer
     affiliations:
       - University of Leeds
-  - name: Anna Goodman
-    orcid: 0000-0002-9488-9183
-    affiliations:
-      - London School of Hygiene & Tropical Medicine
-  - name: Rachel Aldred
-    orcid: 0000-0002-9251-1844
-    affiliations:
-      - University of Westminster
 date: last-modified
 abstract: |
-  Governments worldwide are committing billions in capital funding toward active travel infrastructure to meet net-zero, public health, and urban mobility targets. However, funding alone does not guarantee cost-effective or joined-up network delivery. This paper evaluates the multi-year implementation of the open-source Propensity to Cycle Tool (PCT) and its role in supporting England's parallel statutory planning policy, the Local Cycling and Walking Infrastructure Plan (LCWIP) framework (2017–2026). Using a reproducible automated pipeline combining LLM-assisted document extraction across published LCWIP strategies with official Department for Transport (DfT) and Active Travel England (ATE) funding datasets, we analyse the depth of tool adoption and its alignment with £1.5B+ in capital and revenue allocations. We find that 91% of analysed transport authorities embed the PCT, with 95% using it substantively for route prioritisation, corridor design, and scenario validation. Furthermore, 93–95% of national funding flowed to authorities adopting the tool, with adopters receiving over double the average funding of non-adopters (£9.4m vs £4.5m). We conclude with a core policy recommendation: when governments fund active travel infrastructure, they should simultaneously commission and maintain open-source planning tools to build local authority capacity, ensure transparent scheme prioritisation, and maximise the return on public investment.
+  Governments worldwide are committing billions in capital funding toward active travel infrastructure to meet net-zero, public health, and urban mobility targets. However, funding alone does not guarantee cost-effective or joined-up network delivery. This paper evaluates the multi-year implementation of the open-source Propensity to Cycle Tool (PCT) and its role in supporting England's parallel statutory planning policy, the Local Cycling and Walking Infrastructure Plan (LCWIP) framework (2017–2026). Using a reproducible automated pipeline combining LLM-assisted document extraction across published LCWIP strategies with official Department for Transport (DfT) and Active Travel England (ATE) funding datasets, we analyse the depth of tool adoption and its alignment with £1.5B+ in capital and revenue allocations. 
 keywords: [active travel, transport policy, open-source software, infrastructure investment, cycle network planning, LCWIP, Propensity to Cycle Tool, public spending cost-effectiveness]
 bibliography: references.bib
 format: 
