@@ -1,7 +1,6 @@
 ---
 title: "Transforming Strategic Active Travel Network Planning Internationally"
 subtitle: "Research project to inform a Case Study for REF 2029 Submission"
-# author: "Robin Lovelace and Team"
 date: last-modified
 ---
 
@@ -20,6 +19,20 @@ The research has been used as the basis for the following tools:
 - [biclaR](https://biclar.tmlmobilidade.pt/index/) - A cycle network planning tool for the Lisbon Metropolitan Area that shows existing and planned cycling infrastructure alongside modeling cycling trip potential by municipality.
 - [Network Planning Tool for Scotland](https://www.npt.scot/#/) - A web-based application designed to support strategic cycle network planning and investment decisions, primarily for use by Scottish local authorities.
 
+## Latest Findings (2026 Proof-of-Concept)
+
+Our recent 2026 data re-run evaluated evidence of tool adoption across Local Cycling and Walking Infrastructure Plans (LCWIPs) in England and matched them with official UK Government **Active Travel Fund (ATF)** capital and revenue allocations:
+
+- **91% Adoption Rate**: 91% of analysed transport authority regions explicitly use the PCT, referencing it an average of 12 times per strategy document.
+- **95% Substantive Use**: Among authorities with measurable depth-of-use scores, 95% demonstrate substantive application (route prioritisation, desire line validation, scenario modeling) rather than token citation.
+- **93%–95% Funding Linkage**: 93% of current ATF funding (£2020–2025) and 95% of future multi-year allocations (£2026–2030) are directed to authorities whose planning documents embed the PCT.
+- **Substantially Higher Allocations**: Authorities embedding the PCT received an average of **£9.4m** in funding compared to **£4.5m** for non-adopting authorities.
+
+Explore the detailed findings:
+- [Impact Summary](impact-summary.qmd) — Executive summary, headline metrics, and funding distributions.
+- [2026 Analysis](2026-analysis.qmd) — Reproducible data ingest pipeline, entity reconciliation, and interactive ranked data table.
+- [REF 2029 Report Draft](report-pct.qmd) — Full impact case study report structure.
+
 ## Research Questions
 
 The tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment.
@@ -31,3 +44,4 @@ The research project described in this website aims to answer the questions:
 - What proportion of the investment in active travel infrastructure has been influenced by the tools and methods?
 - How have investment and design decisions changed as a result of the tools and methods?
 - How has the research influenced international transport policy and funding frameworks?
+

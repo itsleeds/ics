@@ -1,11 +1,11 @@
 ---
-title: "PCT / LCWIP Data Ingest 2026 — Exploratory Analysis"
+title: "PCT / LCWIP Data Ingest & Funding Analysis (2026)"
 subtitle: "REF 2029 impact case study — England proof-of-concept"
+author: "Tom Auer"
 date: last-modified
 toc: true
 number-sections: true
 format:
-  gfm: default
   html: default
 ---
 
@@ -14,28 +14,31 @@ format:
 This document reports the results of the **2026 re-run** of the data-ingest
 process that collects evidence of the Propensity to Cycle Tool (PCT) and related
 active-travel planning tools in English Local Cycling and Walking Infrastructure
-Plans (LCWIPs) and related documents.
+Plans (LCWIPs) and related documents, integrated with official **Active Travel Fund (ATF)** allocation data.
 
 The 2026 run is a **proof-of-concept for England** (the first stage before an
-international roll-out). It improves on the previous (~2024) work in three ways:
+international roll-out). It improves on previous (~2024) work in four key ways:
 
 1. **Distinction between LCWIP reports and related material** — each document is
    classified `LCWIP`, `LCWIP-related`, or `other`, a distinction the previous
    work did not make.
 2. **Richer "how PCT was used" detail** — explicit scenario usage
    (`Go Dutch`, `Government Target`, `E-bike`, `Go Cambridge`), data sources,
-   desire-line usage and prioritisation-integration flags.
+   desire-line usage, and prioritisation-integration flags.
 3. **Reproducible pipeline** — every web page / PDF is downloaded to
    `data-govuk-2026-raw` and a `.md` text extract written to
    `data-govuk-2026-md`; structured fields are extracted with a single,
    unlimited local engine (Ollama `gemma4-12b-hermes`) so the results are fully
    reproducible without paid API credits.
+4. **Integration with Capital & Revenue Funding Data** — matching local authority
+   entities to historical ATF funding (2020/21–2024/25) and multi-year future funding
+   allocations (2026–2030) to evaluate how tool adoption aligns with infrastructure investment.
 
 The headline dataset merges the fresh 2026 collection with the existing 94-entry
 database (`LCWIP_database.json`), so the release shows **how the evidence base
 has grown**.
 
-# Methods
+# Ingest Methods
 
 - **Discovery.** Seed URLs came from the existing 94-entry database, supplemented
   by web searches for 2024–2026 LCWIPs and related active-travel strategies, plus
@@ -49,7 +52,7 @@ has grown**.
 - **Aggregation.** Extracted records were merged with the 94-entry database by
   URL/name and written to `results.json` and a flat `results.csv`.
 
-# Corpus composition
+# Corpus Composition
 
 ```{python}
 #| label: corpus-composition
@@ -63,7 +66,7 @@ print("Document type:")
 print(df['doc_type'].fillna('(unknown)').value_counts())
 ```
 
-# PCT mentions
+# PCT Mentions
 
 The central finding for the REF case study is the share of documents that
 explicitly mention the Propensity to Cycle Tool.
@@ -81,7 +84,7 @@ print(f"Do not mention PCT: {(pct==False).sum()} ({ (pct==False).sum()/n*100:.1f
 print(f"Unknown (no content / failed download): {pct.isna().sum()}")
 ```
 
-## PCT mentions by document type
+## PCT Mentions by Document Type
 
 ```{python}
 #| label: pct-by-doctype
@@ -91,9 +94,9 @@ ct = pd.crosstab(df['doc_type'].fillna('unknown'), df['mentions_pct'].fillna('un
 print(ct)
 ```
 
-## Change over time
+## Change Over Time
 
-The chart below shows the evolution of LCWIP and active travel document publications over time (2019–2025), categorized by whether the report mentions the Propensity to Cycle Tool.
+The chart below shows the evolution of LCWIP and active travel document publications over time (2018–2026), categorized by whether the report mentions the Propensity to Cycle Tool.
 
 ```{r}
 #| label: fig-pct-over-time
@@ -104,10 +107,12 @@ library(readr)
 library(ggplot2)
 library(dplyr)
 
-df <- read_csv("results/results_flat.csv", show_col_types = FALSE) %>%
+csv_path <- "results/results_flat.csv"
+if (!file.exists(csv_path)) csv_path <- "../results/results_flat.csv"
+
+df <- read_csv(csv_path, show_col_types = FALSE) %>%
   mutate(year = readr::parse_number(as.character(date_published))) %>%
   filter(!is.na(year), year >= 2018, year <= 2026)
-
 
 df_summary <- df %>%
   mutate(pct_label = if_else(mentions_pct, "Mentions PCT", "Does not mention PCT")) %>%
@@ -118,7 +123,7 @@ ggplot(df_summary, aes(x = year, y = count, fill = pct_label)) +
   geom_col(position = "stack", width = 0.6) +
   scale_fill_manual(values = c("Mentions PCT" = "#2b8cbe", "Does not mention PCT" = "#de2d26")) +
   labs(
-    title = "LCWIP Document Publications and PCT Mentions Over Time (2019–2025)",
+    title = "LCWIP Document Publications and PCT Mentions Over Time",
     subtitle = "Annual count of published active travel strategy documents in England",
     x = "Publication Year",
     y = "Number of Documents",
@@ -132,7 +137,7 @@ ggplot(df_summary, aes(x = year, y = count, fill = pct_label)) +
   )
 ```
 
-# Scenario usage
+# Scenario Usage
 
 Among documents that mention the PCT, which future scenarios are referenced?
 
@@ -157,11 +162,9 @@ print("Scenario mentions (across PCT-mentioning docs):")
 print(sc.to_string())
 ```
 
-# Geographic coverage
+# Geographic Coverage
 
-Coverage against the higher-tier authorities in
-[uktransportauthorities](https://github.com/itsleeds/uktransportauthorities)
-(ATF allocations) gives a sense of how much of England is represented.
+Coverage against higher-tier authorities in England gives a sense of how much of the country is represented in the corpus.
 
 ```{python}
 #| label: geographic
@@ -174,7 +177,7 @@ print("Records with a combined authority named:")
 print(df['combined_authority_name'].notna().sum())
 ```
 
-# Cost and network length
+# Cost and Network Length
 
 Where stated, LCWIPs propose substantial networks and investment.
 
@@ -191,7 +194,7 @@ print(f"Documents stating network length (km): {km.notna().sum()}")
 print(f"Total stated network length (km): {km.sum():,.0f}")
 ```
 
-# Illustrative examples
+# Illustrative Examples
 
 A sample of LCWIPs that mention the PCT, with how it was used:
 
@@ -208,13 +211,353 @@ for _, r in ex.iterrows():
     print()
 ```
 
-# Limitations & next steps
+# Comparing PCT Evidence with Active Travel Funding
 
-- This 2026 run covers **England only**; the international tools (NPT Scotland,
-  CRUSE Ireland, biclaR Portugal, Norway PCT) are the next stage.
-- `doc_type` and free-text fields are model-extracted; treat as indicative and
-  spot-check before citation.
-- 10 candidate URLs could not be downloaded (blocked/relocated); their records are
-  retained with `download_status: failed` for transparency.
-- Reproducibility: re-run `scripts/run_extract_ollama.py` against the downloaded
-  corpus; no paid API credits are required.
+To evaluate the real-world policy and financial impact of the Propensity to Cycle Tool, we link the extracted LCWIP evidence with official UK Government funding datasets from the [Active Travel Local Transport Authority Allocations](https://www.gov.uk/government/publications/active-travel-local-transport-authority-allocations/active-travel-local-transport-authority-allocations), Departmental Expenditure Limits ([RDEL and CDEL](https://www.gov.uk/government/publications/how-to-understand-public-sector-spending/how-to-understand-public-sector-spending#departmental-expenditure-limits-del)), and [Active Travel England Capability Ratings 2025](https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf).
+
+```{r}
+#| label: packages-funding
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(readr)
+library(sf)
+library(dplyr)
+library(jsonlite)
+library(stringdist)
+library(stringr)
+library(DT)
+```
+
+## Data Sources
+
+```{r}
+#| label: import-funding-sources
+#| message: false
+#| warning: false
+
+# 1. Results data from extraction
+results_file <- "results/results.csv"
+if (!file.exists(results_file)) results_file <- "results/results_flat.csv"
+if (!file.exists(results_file)) results_file <- "results_flat.csv"
+results <- read_csv(results_file, show_col_types = FALSE)
+
+# 2. LAD and Transport Authority geometry/names from uktransportauthorities
+geojson_file <- "data/transport_authorities_2026.geojson"
+if (!file.exists(geojson_file)) geojson_file <- "tda/transport_authorities_2026.geojson"
+if (!file.exists(geojson_file)) geojson_file <- "transport_authorities_2026.geojson"
+
+if (file.exists(geojson_file)) {
+    ltas <- sf::read_sf(geojson_file)
+} else {
+    ltas <- sf::read_sf("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/transport_authorities_2026.geojson")
+}
+
+# 3. Historical ATF Allocations (2020/21 - 2024/25)
+atf_file <- "data/atf_table_aggregated.csv"
+if (!file.exists(atf_file)) atf_file <- "tda/atf_table_aggregated.csv"
+if (!file.exists(atf_file)) atf_file <- "scripts/atf_table_aggregated.csv"
+if (!file.exists(atf_file)) atf_file <- "atf_table_aggregated.csv"
+
+if (file.exists(atf_file)) {
+    atf <- read_csv(atf_file, show_col_types = FALSE)
+} else {
+    atf <- read_csv("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/atf_table_aggregated.csv", show_col_types = FALSE)
+}
+
+# 4. Future ATF Multi-Year Allocations (2026 - 2030)
+future_file <- "data/lad_active_travel_allocations.csv"
+if (!file.exists(future_file)) future_file <- "tda/lad_active_travel_allocations.csv"
+if (!file.exists(future_file)) future_file <- "lad_active_travel_allocations.csv"
+
+if (file.exists(future_file)) {
+    atf_future <- read_csv(future_file, show_col_types = FALSE)
+} else {
+    atf_future <- read_csv("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/lad_active_travel_allocations.csv", show_col_types = FALSE)
+}
+```
+
+## Entity Reconciliation & Name Matching
+
+To ensure accurate joins between LCWIP reports and funding allocations, local authority names are cleaned and matched using Jaro-Winkler string distance with manual alias rules for reconfigured unitary and combined authorities.
+
+```{r}
+#| label: match-lad-names
+#| message: false
+#| warning: false
+
+# Extract unique authority names from extraction results
+results_names <- results |>
+    select(local_authority_name, combined_authority_name) |>
+    mutate(name = ifelse(
+        !is.na(local_authority_name), 
+        local_authority_name, 
+        combined_authority_name
+    )) |>
+    distinct(name) |>
+    arrange(name) |>
+    filter(!is.na(name))
+
+# Extract names from LTAs and unpack JSON lookup
+ltas_names <- ltas |>
+    st_drop_geometry() |>
+    select(name, lad_lookup) |>
+    arrange(name) |>
+    rename(name_lookup = lad_lookup)
+
+ltas_lookup_names <- ltas_names |>
+    mutate(name_lookup = map(
+        name_lookup, 
+        ~ fromJSON(.x)$lad_name
+    )) |>
+    select(name, name_lookup) |>
+    unnest(name_lookup)
+
+ltas_lookup_names <- bind_rows(
+    ltas_lookup_names,
+    ltas_lookup_names |>
+        distinct(name) |>
+        filter(!name %in% ltas_lookup_names$name_lookup) |>
+        mutate(name_lookup = name)
+)
+
+# Standardise names by stripping council boilerplate
+results_names <- results_names |>
+    mutate(name_clean = name |>
+        str_remove_all("(?i)city") |>
+        str_remove_all("(?i)councils") |>
+        str_remove_all("(?i)council") |>
+        str_remove_all("Borough") |>
+        str_remove_all("(?i)district") |>
+        str_remove_all("(?i)county") |>
+        str_remove_all("(?i)of") |>
+        str_remove_all("(?i)the") |>
+        str_remove_all("(?i) and") |>
+        str_remove_all("(?i)royal") |>
+        str_remove_all("(?i)combined authority") |>
+        str_remove_all("(?i)metropolitan") |>
+        str_remove_all("(?i)(national guidance)") |>
+        str_remove_all("(?i)&") |>
+        str_remove_all("(?i),") |>
+        str_remove_all("(?i)/") |>
+        str_squish()
+    )
+
+# Add manual aliases for known boundary reconfigurations
+manual_aliases_ltas <- tibble(
+    name = c(
+        "Kent",
+        "West Yorkshire Combined Authority",
+        "Bournemouth, Christchurch and Poole",
+        "West of England Combined Authority",
+        "Leicestershire",
+        "Norfolk",
+        "East Midlands Combined Authority",
+        "North East Combined Authority",
+        "East Riding of Yorkshire",
+        "West Yorkshire Combined Authority",
+        "Liverpool City Region Combined Authority",
+        "Leicestershire",
+        "Lancashire",
+        "Leicestershire"
+    ),
+    name_lookup = c(
+        "Faversham Town",
+        "West Yorkshire",
+        "BCP",
+        "Bath North East Somerset Bristol South Gloucestershire North Somerset",
+        "Blaby",
+        "Broads Authority",
+        "Derby Derbyshire Nottingham Nottinghamshire",
+        "Durham",
+        "Hull",
+        "Leeds West Yorkshire",
+        "Liverpool Region (LCRCA) in partnership with Halton Knowsley Liverpool Sefton St Helens Wirral",
+        "North West Leicestershire",
+        "Preston South Ribble Chorley",
+        "Rutland"
+    )
+)
+
+ltas_lookup_names <- bind_rows(ltas_lookup_names, manual_aliases_ltas) |>
+    distinct(name, name_lookup, .keep_all = TRUE) |>
+    arrange(name, name_lookup)
+
+# String distance fuzzy matching (Jaro-Winkler)
+results_names <- results_names |>
+    mutate(
+        match_index = amatch(
+            name_clean,
+            ltas_lookup_names$name_lookup,
+            method = "jw",
+            maxDist = 0.25
+        ),
+        matched_name = ifelse(!is.na(match_index), ltas_lookup_names$name_lookup[match_index], NA_character_),
+        ltas_name = ifelse(!is.na(match_index), ltas_lookup_names$name[match_index], NA_character_)
+    )
+```
+
+## ATF Name Harmonisation
+
+```{r}
+#| label: clean-atf-names
+#| message: false
+#| warning: false
+
+# Clean historical ATF table
+atf <- atf |> filter(name != "Total")
+atf_names <- atf |>
+    mutate(name = case_when(
+        name == "West Midlands ITA" ~ "West Midlands Combined Authority",
+        name == "North East Joint Transport Committee" ~ "North East Combined Authority",
+        TRUE ~ name
+    ))
+
+# Clean future allocations & aggregate East Midlands Combined County Authority
+emca_la_list <- c(
+    "Derby", "Derbyshire", "Nottingham", "Nottinghamshire", 
+    "Leicester", "Leicestershire", "North East Lincolnshire", 
+    "North Lincolnshire", "Lincolnshire", "Rutland"
+)
+
+emca_la <- atf_future |>
+    filter(name %in% emca_la_list) |>
+    summarise(across(where(is.numeric), sum, na.rm = TRUE)) |>
+    mutate(
+        name = "East Midlands Combined Authority", 
+        name_atf = "East Midlands Combined County Authority"
+    )
+
+atf_future_names <- atf_future |>
+    filter(!name %in% emca_la_list) |>
+    bind_rows(emca_la) |>
+    distinct(name, .keep_all = TRUE) |>
+    arrange(name)
+```
+
+## Integrated Metric Construction
+
+We aggregate document observations, depth-of-use scores, desire-line usage, and total funding amounts:
+
+```{r}
+#| label: build-integrated-dataset
+#| message: false
+#| warning: false
+
+analysis <- ltas_lookup_names |>
+    select(name) |>
+    distinct(name) |>
+    arrange(name)
+
+results_analysis <- results |>
+    left_join(
+        results_names |> select(local_authority_name = name, ltas_name),
+        by = "local_authority_name"
+    )
+
+analysis_data <- analysis |>
+    left_join(
+        results_analysis |>
+            mutate(pct_usage_depth = parse_number(as.character(pct_usage_depth))) |>
+            group_by(ltas_name) |>
+            summarise(
+                n_observations = n(),
+                n_mentions_pct = sum(n_mentions_pct, na.rm = TRUE),
+                pct_usage_depth_1 = sum(pct_usage_depth == 1, na.rm = TRUE),
+                pct_usage_depth_2 = sum(pct_usage_depth == 2, na.rm = TRUE),
+                pct_usage_depth_3 = sum(pct_usage_depth == 3, na.rm = TRUE),
+                n_pct_desire_lines_used = sum(pct_desire_lines_used, na.rm = TRUE)
+            ),
+        by = c("name" = "ltas_name")
+    ) |>
+    left_join(
+        atf_names |> select(name, atf20_21, atf21_22, atf22_23, atf23_24, atf24_25),
+        by = "name"
+    ) |>
+    left_join(
+        atf_future_names |> select(name, cdel_per_year_4yr, rdel_per_year_3yr, total_over_4yr),
+        by = "name"
+    ) |>
+    mutate(across(
+        c(atf20_21, atf21_22, atf22_23, atf23_24, atf24_25, cdel_per_year_4yr, rdel_per_year_3yr, total_over_4yr),
+        ~ {
+            x <- stringr::str_squish(as.character(.x))
+            x[stringr::str_detect(x, stringr::regex("^invalid\\s*number$", ignore_case = TRUE))] <- NA_character_
+            readr::parse_number(x)
+        }
+    ))
+
+funding_5yr_cols <- c("atf20_21", "atf21_22", "atf22_23", "atf23_24", "atf24_25")
+
+analysis_metrics <- analysis_data |>
+    mutate(
+        n_observations = replace_na(n_observations, 0),
+        n_mentions_pct = replace_na(n_mentions_pct, 0),
+        n_pct_desire_lines_used = replace_na(n_pct_desire_lines_used, 0),
+        pct_usage_depth_1 = replace_na(pct_usage_depth_1, 0),
+        pct_usage_depth_2 = replace_na(pct_usage_depth_2, 0),
+        pct_usage_depth_3 = replace_na(pct_usage_depth_3, 0),
+        n_depth_scored = pct_usage_depth_1 + pct_usage_depth_2 + pct_usage_depth_3,
+        depth_score_mean = if_else(
+            n_depth_scored > 0,
+            (1 * pct_usage_depth_1 + 2 * pct_usage_depth_2 + 3 * pct_usage_depth_3) / n_depth_scored,
+            NA_real_
+        ),
+        total_over_5yr = if_else(
+            rowSums(!is.na(across(all_of(funding_5yr_cols)))) > 0,
+            rowSums(across(all_of(funding_5yr_cols)), na.rm = TRUE),
+            NA_real_
+        ),
+        pct_mention_rate = if_else(n_observations > 0, n_mentions_pct / n_observations, NA_real_),
+        desire_lines_rate = if_else(n_observations > 0, n_pct_desire_lines_used / n_observations, NA_real_)
+    )
+```
+
+## Ranked Metrics Table
+
+The table below displays the resulting dataset ranked by 5-year historical ATF funding allocations (£), showing document counts, mention counts, mean depth score, and multi-year future allocations:
+
+```{r}
+#| label: ranked-metrics-table
+
+ranked_analysis_metrics <- analysis_metrics |>
+    select(
+        name,
+        n_observations,
+        n_mentions_pct,
+        pct_mention_rate,
+        desire_lines_rate,
+        depth_score_mean,
+        total_over_5yr,
+        total_over_4yr
+    ) |>
+    arrange(desc(total_over_5yr)) |>
+    mutate(rank = row_number()) |>
+    mutate(across(c(pct_mention_rate, desire_lines_rate, depth_score_mean), ~ round(.x, 1)))
+
+DT::datatable(
+    ranked_analysis_metrics,
+    caption = "Local Transport Authorities ranked by 5-year ATF Allocations (£)",
+    options = list(pageLength = 10, scrollX = TRUE)
+)
+```
+
+```{r}
+#| label: export-ranked-metrics
+#| echo: false
+
+# Save ranked metrics CSV for downstream impact summary
+write_csv(ranked_analysis_metrics, "ranked_analysis_metrics.csv")
+if (dir.exists("tda")) {
+    write_csv(ranked_analysis_metrics, "tda/ranked_analysis_metrics.csv")
+}
+```
+
+# Limitations & Next Steps
+
+- **Geographic scope**: This 2026 run covers **England only**; international tools (NPT Scotland, CRUSE Ireland, biclaR Portugal, Norway PCT) are the focus of subsequent analysis stages.
+- **Normalisation by authority scale**: Funding allocations are heavily influenced by local authority population and geographic scale; further work will normalise funding per capita.
+- **Validation**: `doc_type` and free-text fields are model-extracted; key quotes and scoring should be spot-checked against source PDFs.
+- **Reproducibility**: Extraction can be re-run locally with `scripts/run_extract_ollama.py` without external paid API credits.
+
