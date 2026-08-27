@@ -17,7 +17,12 @@ results/extracted/
 
 
 /.quarto/
+_site/
+*_files/
+*.html
 **/*.quarto_ipynb
 *.csv
 *.json
 .DS_Store
+
+

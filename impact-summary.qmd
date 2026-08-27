@@ -1,5 +1,7 @@
 ---
-title: "PCT tool and funding impact analysis summary"
+title: "PCT Tool and Funding Impact Analysis Summary"
+author: "Tom Auer"
+date: last-modified
 format: html
 toc: true
 number-sections: true
@@ -19,22 +21,22 @@ library(scales) # for formatting numbers
 
 # Metrics data
 
-Analysis done in `pct-funding.qmd` generated ranked results of analysis metrics for each region, saved as `ranked_analysis_metrics.csv` in tda folder.
+Analysis performed in `2026-analysis.qmd` generated ranked metrics for each transport authority region, saved as `ranked_analysis_metrics.csv`.
 
 Load `ranked_analysis_metrics.csv` to view the ranked metrics data.
 
 ```{r}
 #| label: load-ranked-metrics
 
-# check if ranked_analysis_metrics.csv exists in tda folder
-file_exists <- file.exists("ranked_analysis_metrics.csv")
+metrics_path <- "ranked_analysis_metrics.csv"
+if (!file.exists(metrics_path)) {
+  metrics_path <- "tda/ranked_analysis_metrics.csv"
+}
 
-
-# if exists in tda folder, load ranked metrics data
-if (file_exists) {
-  ranked_metrics <- read_csv("ranked_analysis_metrics.csv")
+if (file.exists(metrics_path)) {
+  ranked_metrics <- read_csv(metrics_path, show_col_types = FALSE)
 } else {
-  stop("File 'ranked_analysis_metrics.csv' does not exist in tda folder. Please run the analysis in 'pct-funding.qmd' to generate the ranked metrics or check the file path.")
+  stop("File 'ranked_analysis_metrics.csv' does not exist. Please run the analysis in '2026-analysis.qmd' to generate the ranked metrics or check the file path.")
 }
 
 ```

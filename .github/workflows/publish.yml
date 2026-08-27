@@ -42,7 +42,13 @@ jobs:
             any::knitr
             any::rmarkdown
             any::reticulate
-
+            any::tidyverse
+            any::sf
+            any::jsonlite
+            any::stringdist
+            any::stringr
+            any::DT
+            any::scales
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
