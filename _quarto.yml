@@ -4,7 +4,7 @@ project:
     - index.qmd
     - 2026-analysis.qmd
     - report-pct.qmd
-    - ideas.qmd
+    - paper.qmd
 
 website:
   title: "Transforming Strategic Active Travel Network Planning Internationally"
@@ -19,8 +19,8 @@ website:
         href: index.qmd
       - text: "Impact Report"
         href: report-pct.qmd
-      - text: "Ideas"
-        href: ideas.qmd
+      - text: "Paper"
+        href: paper.qmd
     right:
       - icon: github
         href: https://github.com/itsleeds/ics
