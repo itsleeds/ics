@@ -1,45 +1,115 @@
 [
   {
-    "objectID": "ideas.html",
-    "href": "ideas.html",
-    "title": "Transforming Strategic Active Travel Network Planning Internationally",
+    "objectID": "paper.html",
+    "href": "paper.html",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
     "section": "",
-    "text": "Start on a paper about the the tool/tools\nContributions to ICS report\nAnalyse DfT data on tools used to inform active travel funding (if we can get it, Robin to ask)\nData from CRUSE and NPT suverys\nVideo explainer of the Network Planning Tool and Network Planning Workspace, showing basics"
+    "text": "The transition toward sustainable transport systems requires unprecedented investment in dedicated walking and cycling infrastructure. However, funding allocations frequently suffer from fragmented planning, ad-hoc project selection, and variable analytical capability across sub-national authorities.\nThis paper investigates how the provision of an open-source, evidence-based planning tool—the Propensity to Cycle Tool (PCT)—supported the implementation of national active travel policy in England over nearly a decade. We explore how an openly available digital tool became embedded in statutory local plans and evaluate the relationship between tool usage and capital funding allocation.\nA core message of this work is that when national governments establish capital funds for active travel, they must concurrently invest in open-source planning tools and data infrastructure. Providing accessible tools levels the playing field across resource-constrained local authorities, enhances scheme quality, and maximises the cost-effectiveness of taxpayer investment."
   },
   {
-    "objectID": "impact-summary.html",
-    "href": "impact-summary.html",
-    "title": "PCT Tool and Funding Impact Analysis Summary",
-    "section": "",
-    "text": "1 Metrics data\nAnalysis performed in 2026-analysis.qmd generated ranked metrics for each transport authority region, saved as ranked_analysis_metrics.csv.\nLoad ranked_analysis_metrics.csv to view the ranked metrics data.\nRename columns for clarity\nMake atf and atf_future ranking columns\n\n\n2 Formatting (hide)\nMake funding figures in format of £x,xxx,xxx\n\n\n3 Headline figures\nHeadline figures\n\nPCT adoption percentage\nAverage pct mentions per document (of regions with at least 1 mention)\nPercentage of funding allocated to regions with mentions of PCT\nbreakdown of depth score (e.g. x with 1, y with 2, z with 3, etc.)\n\nCorrelation - Average funding per region with mentions of PCT vs no mentions - caveat: authority size (larger authorities receive more funding more so based on size rather than PCT mentions)\n\n\n[1] \"PCT adoption percentage: 91.4%\"\n\n\n[1] \"Average PCT mentions per document (of regions with at least 1 mention): 11.92\"\n\n\n[1] \"Percentage of funding allocated to regions with mentions of PCT (atf): 92.8%\"\n\n\n[1] \"Percentage of funding allocated to regions with mentions of PCT (atf_future): 94.7%\"\n\n\n[1] \"Regions with depth score of 1: 3\"\n\n\n[1] \"Regions with depth score of 2: 40\"\n\n\n[1] \"Regions with depth score of 3: 19\"\n\n\n[1] \"Funding allocated to regions with depth score of 1 (atf): £71,128,740\"\n\n\n[1] \"Funding allocated to regions with depth score of 2 (atf): £345,184,611\"\n\n\n[1] \"Funding allocated to regions with depth score of 3 (atf): £161,688,676\"\n\n\n[1] \"Funding allocated to regions with depth score of 2 or more (atf): £506,873,287\"\n\n\n[1] \"Average funding per region with mentions of PCT (atf): £9,411,793\"\n\n\n[1] \"Average funding per region without mentions of PCT (atf): £4,549,596\"\n\n\n[1] \"Average funding per region with mentions of PCT (atf_future): £9,183,052\"\n\n\n[1] \"Average funding per region without mentions of PCT (atf_future): £3,505,644\"\n\n\n\n\n\nTop 10 regions ranked by atf\n\n\n\n\n\n\n\n\n\n\nname\natf\natf_future\nn_mentions_pct\npct_mention_rate\ndepth_score_mean\n\n\n\n\nGreater Manchester Combined Authority\n63182456\n35419725\n2\n0.7\n1.0\n\n\nWest Midlands Combined Authority\n54324251\n36009295\n134\n67.0\n3.0\n\n\nWest Yorkshire Combined Authority\n47477943\n29018362\n90\n6.9\n3.0\n\n\nNorth East Combined Authority\n42858845\n16165396\n19\n3.2\n2.0\n\n\nLiverpool City Region Combined Authority\n37714444\n12742158\n28\n9.3\n2.3\n\n\nEast Midlands Combined Authority\n34982349\n40481711\n48\n24.0\n2.0\n\n\nGloucestershire\n24008721\n17965685\n11\n11.0\n2.0\n\n\nGreater London\n20000000\nNA\n0\nNA\nNA\n\n\nSurrey\n19097747\n19800132\n377\n47.1\n2.7\n\n\nOxfordshire\n16885628\n20185686\n249\n15.6\n2.7\n\n\n\n\n\n\nTop 10 regions ranked by atf_future\n\n\n\n\n\n\n\n\n\n\nname\natf\natf_future\nn_mentions_pct\npct_mention_rate\ndepth_score_mean\n\n\n\n\nEast Midlands Combined Authority\n34982349\n40481711\n48\n24.0\n2.0\n\n\nWest Midlands Combined Authority\n54324251\n36009295\n134\n67.0\n3.0\n\n\nGreater Manchester Combined Authority\n63182456\n35419725\n2\n0.7\n1.0\n\n\nWest Yorkshire Combined Authority\n47477943\n29018362\n90\n6.9\n3.0\n\n\nKent\n12053115\n25924411\n43\n7.2\n2.5\n\n\nCambridgeshire and Peterborough Combined Authority\n8963049\n24915193\n21\n7.0\n2.5\n\n\nEssex\n15745226\n24739079\n21\n7.0\n2.0\n\n\nHampshire\n10813483\n23094356\n50\n12.5\n3.0\n\n\nLancashire\n9807846\n20299711\n42\n21.0\n3.0\n\n\nOxfordshire\n16885628\n20185686\n249\n15.6\n2.7\n\n\n\n\n\n\n\n4 Summary\n91% of regions analysed use PCT amount which referred to PCT an average of 12 times per document.\n93% of current and 95% of future funding is allocated to regions whose planning documents mention PCT.\nAmoung regions for which depth of use can be assesed, 95% use PCT substantively rather than just simply referring to it (average depth score of 2 or higher).\nRegions mentioning PCT received substanitally more funding on average:\n\n£9.4m compared to £4.5m for current funding\n£9.2m compared to £3.5m for future funding\n\nThis difference in funding should be caveated by the fact that funding is also influenced by authority size. For current funding, Greater Manchester has the largest allocation of £63.2m but only 2 PCT mentiones whereas Surrey has 377 mentions with only £19.1m funding. Without considering authority size through factoring for population, the evidence suggests that PCT has become embedded in the planning processes through which the vast majority of active-travel investment is being delivered. This is strongly supported by the fact that 95% of regions demonstrated a substantive use of PCT.\nElevator pitch:\n\n95% of assessed regions demonstrated a substantive use of PTC in LCWIPs\nover double the average amount of current funding and almost triple the average amount of future funding was allocated to regions mentioning PCT compared to those that did not\n93% of total current and 95% of total future funding is allocated to regions whose planning documents mention PCT\n\n\n\n5 Further Steps\nThe analysis could be further strengthened by considering the following:\n\nAuthority size: Consider normalising funding by authority size (e.g. population) to assess whether the difference in funding is due to PCT mentions or simply larger authorities receiving more funding\nDepth of use: Consider further analysis of the depth of use of PCT in planning documents to assess whether regions with more substantive use of PCT receive more funding than those with less substantive use\nTemporal analysis: Consider analysing the temporal aspect of PCT mentions in planning documents to assess whether regions that have been using PCT for longer periods of time receive more funding than those that have only recently started using PCT\nGeographical analysis: Consider analysing the geographical distribution of PCT mentions in planning documents to assess whether there are any regional patterns in the use of PCT and whether these patterns correlate with funding allocations"
+    "objectID": "paper.html#the-uk-lcwip-framework-20172026",
+    "href": "paper.html#the-uk-lcwip-framework-20172026",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "2.1 The UK LCWIP Framework (2017–2026)",
+    "text": "2.1 The UK LCWIP Framework (2017–2026)\n\nIn 2017, the UK Department for Transport introduced the Local Cycling and Walking Infrastructure Plan (LCWIP) technical guidance, encouraging local authorities to develop 10-year strategic plans for active travel networks."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Transforming Strategic Active Travel Network Planning Internationally",
-    "section": "",
-    "text": "The development of open-source tools and methodologies for strategic active travel network planning has changed transport planning practices internationally. As documented in a 2021 Impact Case Study, the Propensity to Cycle Tool (PCT) in England and Wales has influenced how millions of pounds are invested in active travel infrastructure, leading to more joined-up networks, better cycling conditions, and increased cycling uptake.\nThe purpose of this project is to research the impacts of methods and tools developed at the University of Leeds since then. The research has been used as the basis for the following tools:\n\nThe Norwegian Propensity to Cycle Tool - A study modeling cycling potential in Trondheim and Nord-Jæren using Propensity to Cycle Tool methodology to calculate scenarios for increased everyday cycling.\nCRUSE - The Cycle Route Uptake & Scenario Estimation tool for Ireland, showing cycling trip percentages by county and cycle networks under different scenarios for everyday trips and cycle tourism.\nbiclaR - A cycle network planning tool for the Lisbon Metropolitan Area that shows existing and planned cycling infrastructure alongside modeling cycling trip potential by municipality.\nNetwork Planning Tool for Scotland - A web-based application designed to support strategic cycle network planning and investment decisions, primarily for use by Scottish local authorities.\n\n\n\n\nOur recent 2026 data re-run evaluated evidence of tool adoption across Local Cycling and Walking Infrastructure Plans (LCWIPs) in England and matched them with official UK Government Active Travel Fund (ATF) capital and revenue allocations:\n\n91% Adoption Rate: 91% of analysed transport authority regions explicitly use the PCT, referencing it an average of 12 times per strategy document.\n95% Substantive Use: Among authorities with measurable depth-of-use scores, 95% demonstrate substantive application (route prioritisation, desire line validation, scenario modeling) rather than token citation.\n93%–95% Funding Linkage: 93% of current ATF funding (£2020–2025) and 95% of future multi-year allocations (£2026–2030) are directed to authorities whose planning documents embed the PCT.\nSubstantially Higher Allocations: Authorities embedding the PCT received an average of £9.4m in funding compared to £4.5m for non-adopting authorities.\n\nExplore the detailed findings: - Impact Summary — Executive summary, headline metrics, and funding distributions. - 2026 Analysis — Reproducible data ingest pipeline, entity reconciliation, and interactive ranked data table. - REF 2029 Report Draft — Full impact case study report structure.\n\n\n\nThe tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment. The research project described in this website aims to answer the questions:\n\nWhat tools and methods have been developed, building on the underlying research?\nWho is using the tools and methods?\nHow much has been invested in active travel in general and cycle infrastructure in particular in countries benefiting from the tools and methods?\nWhat proportion of the investment in active travel infrastructure has been influenced by the tools and methods?\nHow have investment and design decisions changed as a result of the tools and methods?\nHow has the research influenced international transport policy and funding frameworks?"
+    "objectID": "paper.html#the-role-of-open-tools-in-national-policy-delivery",
+    "href": "paper.html#the-role-of-open-tools-in-national-policy-delivery",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "2.2 The Role of Open Tools in National Policy Delivery",
+    "text": "2.2 The Role of Open Tools in National Policy Delivery\n\nThe parallel development and national rollout of the PCT provided local authorities—many of which lacked dedicated GIS or transport modelling teams—with free, immediate access to spatial travel demand forecasts and corridor analysis."
   },
   {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "Transforming Strategic Active Travel Network Planning Internationally",
-    "section": "",
-    "text": "The development of open-source tools and methodologies for strategic active travel network planning has changed transport planning practices internationally. As documented in a 2021 Impact Case Study, the Propensity to Cycle Tool (PCT) in England and Wales has influenced how millions of pounds are invested in active travel infrastructure, leading to more joined-up networks, better cycling conditions, and increased cycling uptake.\nThe purpose of this project is to research the impacts of methods and tools developed at the University of Leeds since then. The research has been used as the basis for the following tools:\n\nThe Norwegian Propensity to Cycle Tool - A study modeling cycling potential in Trondheim and Nord-Jæren using Propensity to Cycle Tool methodology to calculate scenarios for increased everyday cycling.\nCRUSE - The Cycle Route Uptake & Scenario Estimation tool for Ireland, showing cycling trip percentages by county and cycle networks under different scenarios for everyday trips and cycle tourism.\nbiclaR - A cycle network planning tool for the Lisbon Metropolitan Area that shows existing and planned cycling infrastructure alongside modeling cycling trip potential by municipality.\nNetwork Planning Tool for Scotland - A web-based application designed to support strategic cycle network planning and investment decisions, primarily for use by Scottish local authorities."
+    "objectID": "paper.html#evolution-of-active-travel-funding-atf",
+    "href": "paper.html#evolution-of-active-travel-funding-atf",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "2.3 Evolution of Active Travel Funding (ATF)",
+    "text": "2.3 Evolution of Active Travel Funding (ATF)"
   },
   {
-    "objectID": "index.html#latest-findings-2026-proof-of-concept",
-    "href": "index.html#latest-findings-2026-proof-of-concept",
-    "title": "Transforming Strategic Active Travel Network Planning Internationally",
-    "section": "",
-    "text": "Our recent 2026 data re-run evaluated evidence of tool adoption across Local Cycling and Walking Infrastructure Plans (LCWIPs) in England and matched them with official UK Government Active Travel Fund (ATF) capital and revenue allocations:\n\n91% Adoption Rate: 91% of analysed transport authority regions explicitly use the PCT, referencing it an average of 12 times per strategy document.\n95% Substantive Use: Among authorities with measurable depth-of-use scores, 95% demonstrate substantive application (route prioritisation, desire line validation, scenario modeling) rather than token citation.\n93%–95% Funding Linkage: 93% of current ATF funding (£2020–2025) and 95% of future multi-year allocations (£2026–2030) are directed to authorities whose planning documents embed the PCT.\nSubstantially Higher Allocations: Authorities embedding the PCT received an average of £9.4m in funding compared to £4.5m for non-adopting authorities.\n\nExplore the detailed findings: - Impact Summary — Executive summary, headline metrics, and funding distributions. - 2026 Analysis — Reproducible data ingest pipeline, entity reconciliation, and interactive ranked data table. - REF 2029 Report Draft — Full impact case study report structure."
+    "objectID": "paper.html#corpus-assembly-discovery",
+    "href": "paper.html#corpus-assembly-discovery",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "3.1 Corpus Assembly & Discovery",
+    "text": "3.1 Corpus Assembly & Discovery"
   },
   {
-    "objectID": "index.html#research-questions",
-    "href": "index.html#research-questions",
-    "title": "Transforming Strategic Active Travel Network Planning Internationally",
-    "section": "",
-    "text": "The tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment. The research project described in this website aims to answer the questions:\n\nWhat tools and methods have been developed, building on the underlying research?\nWho is using the tools and methods?\nHow much has been invested in active travel in general and cycle infrastructure in particular in countries benefiting from the tools and methods?\nWhat proportion of the investment in active travel infrastructure has been influenced by the tools and methods?\nHow have investment and design decisions changed as a result of the tools and methods?\nHow has the research influenced international transport policy and funding frameworks?"
+    "objectID": "paper.html#automated-llm-assisted-extraction-pipeline",
+    "href": "paper.html#automated-llm-assisted-extraction-pipeline",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "3.2 Automated LLM-Assisted Extraction Pipeline",
+    "text": "3.2 Automated LLM-Assisted Extraction Pipeline"
+  },
+  {
+    "objectID": "paper.html#entity-reconciliation-funding-integration",
+    "href": "paper.html#entity-reconciliation-funding-integration",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "3.3 Entity Reconciliation & Funding Integration",
+    "text": "3.3 Entity Reconciliation & Funding Integration"
+  },
+  {
+    "objectID": "paper.html#metric-formulation",
+    "href": "paper.html#metric-formulation",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "3.4 Metric Formulation",
+    "text": "3.4 Metric Formulation"
+  },
+  {
+    "objectID": "paper.html#widespread-and-sustained-national-adoption",
+    "href": "paper.html#widespread-and-sustained-national-adoption",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "4.1 Widespread and Sustained National Adoption",
+    "text": "4.1 Widespread and Sustained National Adoption"
+  },
+  {
+    "objectID": "paper.html#substantive-application-vs.-tokenistic-citation",
+    "href": "paper.html#substantive-application-vs.-tokenistic-citation",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "4.2 Substantive Application vs. Tokenistic Citation",
+    "text": "4.2 Substantive Application vs. Tokenistic Citation"
+  },
+  {
+    "objectID": "paper.html#geographic-coverage-spatial-distribution",
+    "href": "paper.html#geographic-coverage-spatial-distribution",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "4.3 Geographic Coverage & Spatial Distribution",
+    "text": "4.3 Geographic Coverage & Spatial Distribution"
+  },
+  {
+    "objectID": "paper.html#capital-allocation-alignment",
+    "href": "paper.html#capital-allocation-alignment",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "4.4 Capital Allocation Alignment",
+    "text": "4.4 Capital Allocation Alignment"
+  },
+  {
+    "objectID": "paper.html#overcoming-analytical-inequalities-across-local-authorities",
+    "href": "paper.html#overcoming-analytical-inequalities-across-local-authorities",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "5.1 Overcoming Analytical Inequalities Across Local Authorities",
+    "text": "5.1 Overcoming Analytical Inequalities Across Local Authorities"
+  },
+  {
+    "objectID": "paper.html#preventing-stranded-assets-through-evidence-based-prioritisation",
+    "href": "paper.html#preventing-stranded-assets-through-evidence-based-prioritisation",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "5.2 Preventing Stranded Assets Through Evidence-Based Prioritisation",
+    "text": "5.2 Preventing Stranded Assets Through Evidence-Based Prioritisation"
+  },
+  {
+    "objectID": "paper.html#open-science-transparency-and-public-trust",
+    "href": "paper.html#open-science-transparency-and-public-trust",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "5.3 Open Science, Transparency, and Public Trust",
+    "text": "5.3 Open Science, Transparency, and Public Trust"
+  },
+  {
+    "objectID": "paper.html#the-policy-imperative-fund-the-tools-with-the-infrastructure",
+    "href": "paper.html#the-policy-imperative-fund-the-tools-with-the-infrastructure",
+    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "section": "5.4 The Policy Imperative: Fund the Tools with the Infrastructure",
+    "text": "5.4 The Policy Imperative: Fund the Tools with the Infrastructure"
   },
   {
     "objectID": "2026-analysis.html",
@@ -98,6 +168,34 @@
     "text": "9.5 Ranked Metrics Table\nThe table below displays the resulting dataset ranked by 5-year historical ATF funding allocations (£), showing document counts, mention counts, mean depth score, and multi-year future allocations:\n\nranked_analysis_metrics &lt;- analysis_metrics |&gt;\n    select(\n        name,\n        n_observations,\n        n_mentions_pct,\n        pct_mention_rate,\n        desire_lines_rate,\n        depth_score_mean,\n        total_over_5yr,\n        total_over_4yr\n    ) |&gt;\n    arrange(desc(total_over_5yr)) |&gt;\n    mutate(rank = row_number()) |&gt;\n    mutate(across(c(pct_mention_rate, desire_lines_rate, depth_score_mean), ~ round(.x, 1)))\n\nDT::datatable(\n    ranked_analysis_metrics,\n    caption = \"Local Transport Authorities ranked by 5-year ATF Allocations (£)\",\n    options = list(pageLength = 10, scrollX = TRUE)\n)"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Transforming Strategic Active Travel Network Planning Internationally",
+    "section": "",
+    "text": "The development of open-source tools and methodologies for strategic active travel network planning has changed transport planning practices internationally. As documented in a 2021 Impact Case Study, the Propensity to Cycle Tool (PCT) in England and Wales has influenced how millions of pounds are invested in active travel infrastructure, leading to more joined-up networks, better cycling conditions, and increased cycling uptake.\nThe purpose of this project is to research the impacts of methods and tools developed at the University of Leeds since then. The research has been used as the basis for the following tools:\n\nThe Norwegian Propensity to Cycle Tool - A study modeling cycling potential in Trondheim and Nord-Jæren using Propensity to Cycle Tool methodology to calculate scenarios for increased everyday cycling.\nCRUSE - The Cycle Route Uptake & Scenario Estimation tool for Ireland, showing cycling trip percentages by county and cycle networks under different scenarios for everyday trips and cycle tourism.\nbiclaR - A cycle network planning tool for the Lisbon Metropolitan Area that shows existing and planned cycling infrastructure alongside modeling cycling trip potential by municipality.\nNetwork Planning Tool for Scotland - A web-based application designed to support strategic cycle network planning and investment decisions, primarily for use by Scottish local authorities.\n\n\n\n\nOur recent 2026 data re-run evaluated evidence of tool adoption across Local Cycling and Walking Infrastructure Plans (LCWIPs) in England and matched them with official UK Government Active Travel Fund (ATF) capital and revenue allocations:\n\n91% Adoption Rate: 91% of analysed transport authority regions explicitly use the PCT, referencing it an average of 12 times per strategy document.\n95% Substantive Use: Among authorities with measurable depth-of-use scores, 95% demonstrate substantive application (route prioritisation, desire line validation, scenario modeling) rather than token citation.\n93%–95% Funding Linkage: 93% of current ATF funding (£2020–2025) and 95% of future multi-year allocations (£2026–2030) are directed to authorities whose planning documents embed the PCT.\nSubstantially Higher Allocations: Authorities embedding the PCT received an average of £9.4m in funding compared to £4.5m for non-adopting authorities.\n\nExplore the detailed findings: - REF 2029 Impact Case Study Report — Full impact case study report, interactive depth-of-use map, and ranked funding tables. - 2026 Ingest & Funding Analysis — Reproducible data ingest pipeline, entity reconciliation, and interactive authority dataset.\n\n\n\nThe tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment. The research project described in this website aims to answer the questions:\n\nWhat tools and methods have been developed, building on the underlying research?\nWho is using the tools and methods?\nHow much has been invested in active travel in general and cycle infrastructure in particular in countries benefiting from the tools and methods?\nWhat proportion of the investment in active travel infrastructure has been influenced by the tools and methods?\nHow have investment and design decisions changed as a result of the tools and methods?\nHow has the research influenced international transport policy and funding frameworks?"
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Transforming Strategic Active Travel Network Planning Internationally",
+    "section": "",
+    "text": "The development of open-source tools and methodologies for strategic active travel network planning has changed transport planning practices internationally. As documented in a 2021 Impact Case Study, the Propensity to Cycle Tool (PCT) in England and Wales has influenced how millions of pounds are invested in active travel infrastructure, leading to more joined-up networks, better cycling conditions, and increased cycling uptake.\nThe purpose of this project is to research the impacts of methods and tools developed at the University of Leeds since then. The research has been used as the basis for the following tools:\n\nThe Norwegian Propensity to Cycle Tool - A study modeling cycling potential in Trondheim and Nord-Jæren using Propensity to Cycle Tool methodology to calculate scenarios for increased everyday cycling.\nCRUSE - The Cycle Route Uptake & Scenario Estimation tool for Ireland, showing cycling trip percentages by county and cycle networks under different scenarios for everyday trips and cycle tourism.\nbiclaR - A cycle network planning tool for the Lisbon Metropolitan Area that shows existing and planned cycling infrastructure alongside modeling cycling trip potential by municipality.\nNetwork Planning Tool for Scotland - A web-based application designed to support strategic cycle network planning and investment decisions, primarily for use by Scottish local authorities."
+  },
+  {
+    "objectID": "index.html#latest-findings-2026-proof-of-concept",
+    "href": "index.html#latest-findings-2026-proof-of-concept",
+    "title": "Transforming Strategic Active Travel Network Planning Internationally",
+    "section": "",
+    "text": "Our recent 2026 data re-run evaluated evidence of tool adoption across Local Cycling and Walking Infrastructure Plans (LCWIPs) in England and matched them with official UK Government Active Travel Fund (ATF) capital and revenue allocations:\n\n91% Adoption Rate: 91% of analysed transport authority regions explicitly use the PCT, referencing it an average of 12 times per strategy document.\n95% Substantive Use: Among authorities with measurable depth-of-use scores, 95% demonstrate substantive application (route prioritisation, desire line validation, scenario modeling) rather than token citation.\n93%–95% Funding Linkage: 93% of current ATF funding (£2020–2025) and 95% of future multi-year allocations (£2026–2030) are directed to authorities whose planning documents embed the PCT.\nSubstantially Higher Allocations: Authorities embedding the PCT received an average of £9.4m in funding compared to £4.5m for non-adopting authorities.\n\nExplore the detailed findings: - REF 2029 Impact Case Study Report — Full impact case study report, interactive depth-of-use map, and ranked funding tables. - 2026 Ingest & Funding Analysis — Reproducible data ingest pipeline, entity reconciliation, and interactive authority dataset."
+  },
+  {
+    "objectID": "index.html#research-questions",
+    "href": "index.html#research-questions",
+    "title": "Transforming Strategic Active Travel Network Planning Internationally",
+    "section": "",
+    "text": "The tools have been adopted by transport planners, policy-makers, and advocacy groups internationally, influencing substantial amounts of active travel infrastructure investment. The research project described in this website aims to answer the questions:\n\nWhat tools and methods have been developed, building on the underlying research?\nWho is using the tools and methods?\nHow much has been invested in active travel in general and cycle infrastructure in particular in countries benefiting from the tools and methods?\nWhat proportion of the investment in active travel infrastructure has been influenced by the tools and methods?\nHow have investment and design decisions changed as a result of the tools and methods?\nHow has the research influenced international transport policy and funding frameworks?"
+  },
+  {
     "objectID": "report-pct.html",
     "href": "report-pct.html",
     "title": "Transforming Strategic Active Travel Network Planning Internationally",
@@ -119,10 +217,17 @@
     "text": "5.2 Shaping Network Design and Route Prioritisation\nThe PCT directly influences the physical design of proposed cycling networks:\n\nCorridor Selection: In Portsmouth City Council’s LCWIP Background Report, the PCT’s ‘Government Target’ scenario was used to identify highest forecast future commuter flows, directly determining the primary cycle routes [4].\nValidating Desire Lines: In Cumberland and Westmorland & Furness (formerly Cumbria County Council) reports for Carlisle [5] and Workington [6], ‘Go Dutch’ scenario outputs validated the strategic desire lines forming the backbone of the proposed network.\nPrioritisation Matrices: In Durham County Council’s LCWIP for Shildon, PCT demand scores were directly incorporated into the multi-criteria prioritisation matrix, directly determining which schemes received delivery funding [7]."
   },
   {
+    "objectID": "report-pct.html#geographic-distribution-of-depth-of-use",
+    "href": "report-pct.html#geographic-distribution-of-depth-of-use",
+    "title": "Transforming Strategic Active Travel Network Planning Internationally",
+    "section": "5.3 Geographic Distribution of Depth of Use",
+    "text": "5.3 Geographic Distribution of Depth of Use\nThe interactive map below illustrates the depth of PCT adoption across all 74 Local Transport Authorities in England. Hover over any authority boundary to inspect its classification, document count, mention count, and Active Travel Fund (ATF) historical and future allocations."
+  },
+  {
     "objectID": "report-pct.html#direct-link-to-active-travel-funding-atf-allocations",
     "href": "report-pct.html#direct-link-to-active-travel-funding-atf-allocations",
     "title": "Transforming Strategic Active Travel Network Planning Internationally",
-    "section": "5.3 Direct Link to Active Travel Funding (ATF) Allocations",
-    "text": "5.3 Direct Link to Active Travel Funding (ATF) Allocations\nEntity-matching with official Department for Transport and Active Travel England allocation datasets shows that:\n\n93% of all allocated historical ATF funding (£2020/21–2024/25) was awarded to authorities whose published planning documents incorporate the PCT [8].\n95% of future multi-year allocations (£2026–2030) are directed to PCT-adopting authorities.\nOn average, authorities embedding the PCT secured more than double the funding of non-adopting authorities (£9.4m vs £4.5m current, and £9.2m vs £3.5m future multi-year allocations) [9]."
+    "section": "5.4 Direct Link to Active Travel Funding (ATF) Allocations",
+    "text": "5.4 Direct Link to Active Travel Funding (ATF) Allocations\nEntity-matching with official Department for Transport and Active Travel England allocation datasets reveals a powerful connection between analytical planning tools and active travel capital allocation:\n\n93% of all allocated historical ATF funding (£2020/21–2024/25) was awarded to authorities whose published planning documents incorporate the PCT [8].\n95% of future multi-year allocations (£2026–2030) are directed to PCT-adopting authorities.\nOn average, authorities embedding the PCT secured more than double the funding of non-adopting authorities (£9.4m vs £4.5m current, and £9.2m vs £3.5m future multi-year allocations) [9].\n\n\n\n\nTop 10 Local Transport Authorities Ranked by Historical Active Travel Fund (ATF) Allocations\n\n\n\n\n\n\n\n\n\nAuthority\nHistorical ATF (5-yr)\nFuture ATF (4-yr)\nPCT Mentions\nMean Depth Score\n\n\n\n\nGreater Manchester Combined Authority\n£63,182,456\n£35,419,725\n2\n1.0\n\n\nWest Midlands Combined Authority\n£54,324,251\n£36,009,295\n134\n3.0\n\n\nWest Yorkshire Combined Authority\n£47,477,943\n£29,018,362\n90\n3.0\n\n\nNorth East Combined Authority\n£42,858,845\n£16,165,396\n19\n2.0\n\n\nLiverpool City Region Combined Authority\n£37,714,444\n£12,742,158\n28\n2.3\n\n\nEast Midlands Combined Authority\n£34,982,349\n£40,481,711\n48\n2.0\n\n\nGloucestershire\n£24,008,721\n£17,965,685\n11\n2.0\n\n\nGreater London\n£20,000,000\nNA\n0\nNA\n\n\nSurrey\n£19,097,747\n£19,800,132\n377\n2.7\n\n\nOxfordshire\n£16,885,628\n£20,185,686\n249\n2.7"
   }
 ]
