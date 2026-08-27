@@ -47,11 +47,12 @@ Results data obtained from results.csv file located in results folder in repo.
 #| label: import-results-data
 
 # results.csv located in results folder
-
-results <- read_csv("../results/results.csv") #../ means go up one directory to find results folder
-
+csv_file <- "../results/results.csv"
+if (!file.exists(csv_file)) {
+    csv_file <- "results/results.csv"
+}
+results <- read_csv(csv_file) #../ means go up one directory to find results folder
 names(results) # check names in results
-
 ```
 
 
@@ -706,6 +707,10 @@ Ranked metrics table (ranked_analysis_metrics) saved to CSV file in tda folder.
 #| label: save-ranked-metrics
 
 # save ranked_analysis_metrics to CSV file in tda folder
-write_csv(ranked_analysis_metrics, "tda/ranked_analysis_metrics.csv")
+output_file <- "tda/ranked_analysis_metrics.csv"
+if (!dir.exists(dirname(output_file))) {
+    output_file <- "ranked_analysis_metrics.csv"
+}
+write_csv(ranked_analysis_metrics, output_file)
 
 ```
