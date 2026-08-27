@@ -1,5 +1,5 @@
 ---
-title: "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment"
+title: "Open-Source Tools for Policy Delivery"
 subtitle: "Evidence from English Local Cycling and Walking Infrastructure Plans (LCWIPs) and Active Travel Fund Allocations"
 author:
   - name: Robin Lovelace
