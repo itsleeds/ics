@@ -49,6 +49,8 @@ jobs:
             any::stringr
             any::DT
             any::scales
+            any::leaflet
+            any::htmltools
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
