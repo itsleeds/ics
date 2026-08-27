@@ -1,7 +1,7 @@
 ---
 title: "Transforming Strategic Active Travel Network Planning Internationally"
 subtitle: "Impact Case Study Report for REF 2029"
-# author: "Robin Lovelace and Team"
+author: "Robin Lovelace and Team"
 date: last-modified
 format: 
   html:
@@ -9,7 +9,45 @@ format:
     toc-depth: 2
     number-sections: true
 bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
+
+```{r}
+#| label: setup-impact-data
+
+library(tidyverse)
+library(readr)
+library(scales)
+library(sf)
+library(leaflet)
+library(htmltools)
+library(knitr)
+
+# Load ranked metrics dataset
+metrics_path <- "ranked_analysis_metrics.csv"
+if (!file.exists(metrics_path)) metrics_path <- "tda/ranked_analysis_metrics.csv"
+
+if (file.exists(metrics_path)) {
+  ranked_metrics <- read_csv(metrics_path, show_col_types = FALSE)
+} else {
+  stop("File 'ranked_analysis_metrics.csv' not found. Run 2026-analysis.qmd first.")
+}
+
+# Standardise column names
+if ("total_over_5yr" %in% colnames(ranked_metrics)) {
+  ranked_metrics <- ranked_metrics %>%
+    rename(atf = total_over_5yr, atf_future = total_over_4yr)
+}
+
+ranked_metrics <- ranked_metrics %>%
+  mutate(
+    atf_rank = rank(-atf, ties.method = "min"),
+    atf_future_rank = rank(-atf_future, ties.method = "min")
+  )
+```
 
 # Summary of Impact
 
@@ -60,17 +98,137 @@ The PCT directly influences the physical design of proposed cycling networks:
 - **Validating Desire Lines:** In Cumberland and Westmorland & Furness (formerly Cumbria County Council) reports for Carlisle [5] and Workington [6], 'Go Dutch' scenario outputs validated the strategic desire lines forming the backbone of the proposed network.
 - **Prioritisation Matrices:** In Durham County Council's LCWIP for Shildon, PCT demand scores were directly incorporated into the multi-criteria prioritisation matrix, directly determining which schemes received delivery funding [7].
 
+## Geographic Distribution of Depth of Use
+
+The interactive map below illustrates the depth of PCT adoption across all 74 Local Transport Authorities in England. Hover over any authority boundary to inspect its classification, document count, mention count, and Active Travel Fund (ATF) historical and future allocations.
+
+```{r}
+#| label: map-depth-of-use
+#| output: true
+
+# Load transport authorities boundary data
+geojson_file <- "data/transport_authorities_2026.geojson"
+if (!file.exists(geojson_file)) geojson_file <- "tda/transport_authorities_2026.geojson"
+if (!file.exists(geojson_file)) geojson_file <- "transport_authorities_2026.geojson"
+
+if (file.exists(geojson_file)) {
+  ltas <- sf::read_sf(geojson_file) %>% select(name)
+} else {
+  ltas <- sf::read_sf("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/transport_authorities_2026.geojson") %>% select(name)
+}
+
+if (is.na(sf::st_crs(ltas)$epsg) || sf::st_crs(ltas)$epsg != 4326) {
+  ltas <- sf::st_transform(ltas, 4326)
+}
+
+# Merge boundary geometry with ranked metrics
+map_data <- ltas %>%
+  left_join(ranked_metrics, by = "name") %>%
+  mutate(
+    depth_category = factor(case_when(
+      is.na(n_observations) | n_observations == 0 ~ "No documents analysed",
+      n_mentions_pct == 0 ~ "No PCT mentions",
+      depth_score_mean >= 2.5 ~ "Level 3: Quantitative Prioritisation",
+      depth_score_mean >= 1.5 ~ "Level 2: Corridor & Desire Line Design",
+      depth_score_mean >= 1.0 ~ "Level 1: Contextual Mention",
+      TRUE ~ "Mentioned (Unclassified)"
+    ), levels = c(
+      "Level 3: Quantitative Prioritisation",
+      "Level 2: Corridor & Desire Line Design",
+      "Level 1: Contextual Mention",
+      "Mentioned (Unclassified)",
+      "No PCT mentions",
+      "No documents analysed"
+    )),
+    labels = paste0(
+      "<strong>", htmltools::htmlEscape(name), "</strong><br/>",
+      "<strong>Status:</strong> ", depth_category, "<br/>",
+      "<strong>PCT Mentions:</strong> ", ifelse(is.na(n_mentions_pct), "0", as.character(n_mentions_pct)),
+      " across ", ifelse(is.na(n_observations), "0", as.character(n_observations)), " doc(s)<br/>",
+      "<strong>Historical ATF (5-yr):</strong> ", ifelse(!is.na(atf), dollar(atf, prefix = "£", big.mark = ",", accuracy = 1), "N/A"), "<br/>",
+      "<strong>Future ATF (4-yr):</strong> ", ifelse(!is.na(atf_future), dollar(atf_future, prefix = "£", big.mark = ",", accuracy = 1), "N/A")
+    )
+  )
+
+palette_colors <- c(
+  "Level 3: Quantitative Prioritisation" = "#08519c",
+  "Level 2: Corridor & Desire Line Design" = "#41b6c4",
+  "Level 1: Contextual Mention" = "#a1dab4",
+  "Mentioned (Unclassified)" = "#fecc5c",
+  "No PCT mentions" = "#e31a1c",
+  "No documents analysed" = "#bdbdbd"
+)
+
+pal <- colorFactor(
+  palette = palette_colors,
+  domain = map_data$depth_category
+)
+
+leaflet(map_data, width = "100%", height = "650px") %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addPolygons(
+    fillColor = ~pal(depth_category),
+    weight = 1.2,
+    opacity = 1,
+    color = "white",
+    dashArray = "1",
+    fillOpacity = 0.75,
+    highlightOptions = highlightOptions(
+      weight = 3,
+      color = "#333",
+      dashArray = "",
+      fillOpacity = 0.9,
+      bringToFront = TRUE
+    ),
+    label = lapply(map_data$labels, HTML),
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "4px 8px"),
+      textsize = "13px",
+      direction = "auto"
+    )
+  ) %>%
+  addLegend(
+    pal = pal,
+    values = ~depth_category,
+    opacity = 0.85,
+    title = "Depth of PCT Usage",
+    position = "bottomright"
+  )
+```
+
 ## Direct Link to Active Travel Funding (ATF) Allocations
 
-Entity-matching with official Department for Transport and Active Travel England allocation datasets shows that:
+Entity-matching with official Department for Transport and Active Travel England allocation datasets reveals a powerful connection between analytical planning tools and active travel capital allocation:
 
 - **93% of all allocated historical ATF funding** (£2020/21–2024/25) was awarded to authorities whose published planning documents incorporate the PCT [8].
 - **95% of future multi-year allocations** (£2026–2030) are directed to PCT-adopting authorities.
 - On average, authorities embedding the PCT secured more than double the funding of non-adopting authorities (£9.4m vs £4.5m current, and £9.2m vs £3.5m future multi-year allocations) [9].
 
+```{r}
+#| label: top-10-funding-tables
+#| output: true
+
+top_10_atf <- ranked_metrics %>%
+  arrange(atf_rank) %>%
+  slice_head(n = 10) %>%
+  mutate(
+    atf = dollar(atf, prefix = "£", big.mark = ",", accuracy = 1),
+    atf_future = dollar(atf_future, prefix = "£", big.mark = ",", accuracy = 1)
+  ) %>%
+  select(
+    Authority = name,
+    `Historical ATF (5-yr)` = atf,
+    `Future ATF (4-yr)` = atf_future,
+    `PCT Mentions` = n_mentions_pct,
+    `Mean Depth Score` = depth_score_mean
+  )
+
+knitr::kable(top_10_atf, caption = "Top 10 Local Transport Authorities Ranked by Historical Active Travel Fund (ATF) Allocations")
+```
+
 # Sources to Corroborate the Impact
 
-[1] Research Project Repository and Data Pipeline: https://github.com/itsleeds/ics
+[1] Research Project Repository and Data Pipeline: https://github.com/itsleeds/ics (see also the [2026 Ingest & Funding Analysis](2026-analysis.qmd) technical report)
 
 [2] Liverpool City Region Combined Authority LCWIP: https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf
 
@@ -87,4 +245,5 @@ Entity-matching with official Department for Transport and Active Travel England
 [8] DfT Active Travel Local Transport Authority Allocations: https://www.gov.uk/government/publications/active-travel-local-transport-authority-allocations/active-travel-local-transport-authority-allocations
 
 [9] Active Travel England Capability Ratings 2025: https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf
+
 

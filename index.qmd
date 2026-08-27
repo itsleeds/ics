@@ -29,9 +29,9 @@ Our recent 2026 data re-run evaluated evidence of tool adoption across Local Cyc
 - **Substantially Higher Allocations**: Authorities embedding the PCT received an average of **£9.4m** in funding compared to **£4.5m** for non-adopting authorities.
 
 Explore the detailed findings:
-- [Impact Summary](impact-summary.qmd) — Executive summary, headline metrics, and funding distributions.
-- [2026 Analysis](2026-analysis.qmd) — Reproducible data ingest pipeline, entity reconciliation, and interactive ranked data table.
-- [REF 2029 Report Draft](report-pct.qmd) — Full impact case study report structure.
+- [REF 2029 Impact Case Study Report](report-pct.qmd) — Full impact case study report, interactive depth-of-use map, and ranked funding tables.
+- [2026 Ingest & Funding Analysis](2026-analysis.qmd) — Reproducible data ingest pipeline, entity reconciliation, and interactive authority dataset.
+
 
 ## Research Questions
 

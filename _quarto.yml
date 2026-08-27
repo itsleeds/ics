@@ -3,7 +3,6 @@ project:
   render:
     - index.qmd
     - 2026-analysis.qmd
-    - impact-summary.qmd
     - report-pct.qmd
     - ideas.qmd
 
@@ -18,11 +17,7 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "2026 Analysis"
-        href: 2026-analysis.qmd
-      - text: "Impact Summary"
-        href: impact-summary.qmd
-      - text: "Report"
+      - text: "Impact Report"
         href: report-pct.qmd
       - text: "Ideas"
         href: ideas.qmd
