@@ -2,112 +2,112 @@
   {
     "objectID": "paper.html",
     "href": "paper.html",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "",
     "text": "The transition toward sustainable transport systems requires unprecedented investment in dedicated walking and cycling infrastructure. However, funding allocations frequently suffer from fragmented planning, ad-hoc project selection, and variable analytical capability across sub-national authorities.\nThis paper investigates how the provision of an open-source, evidence-based planning tool—the Propensity to Cycle Tool (PCT)—supported the implementation of national active travel policy in England over nearly a decade. We explore how an openly available digital tool became embedded in statutory local plans and evaluate the relationship between tool usage and capital funding allocation.\nA core message of this work is that when national governments establish capital funds for active travel, they must concurrently invest in open-source planning tools and data infrastructure. Providing accessible tools levels the playing field across resource-constrained local authorities, enhances scheme quality, and maximises the cost-effectiveness of taxpayer investment."
   },
   {
     "objectID": "paper.html#the-uk-lcwip-framework-20172026",
     "href": "paper.html#the-uk-lcwip-framework-20172026",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "2.1 The UK LCWIP Framework (2017–2026)",
     "text": "2.1 The UK LCWIP Framework (2017–2026)\n\nIn 2017, the UK Department for Transport introduced the Local Cycling and Walking Infrastructure Plan (LCWIP) technical guidance, encouraging local authorities to develop 10-year strategic plans for active travel networks."
   },
   {
     "objectID": "paper.html#the-role-of-open-tools-in-national-policy-delivery",
     "href": "paper.html#the-role-of-open-tools-in-national-policy-delivery",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "2.2 The Role of Open Tools in National Policy Delivery",
     "text": "2.2 The Role of Open Tools in National Policy Delivery\n\nThe parallel development and national rollout of the PCT provided local authorities—many of which lacked dedicated GIS or transport modelling teams—with free, immediate access to spatial travel demand forecasts and corridor analysis."
   },
   {
     "objectID": "paper.html#evolution-of-active-travel-funding-atf",
     "href": "paper.html#evolution-of-active-travel-funding-atf",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "2.3 Evolution of Active Travel Funding (ATF)",
     "text": "2.3 Evolution of Active Travel Funding (ATF)"
   },
   {
     "objectID": "paper.html#corpus-assembly-discovery",
     "href": "paper.html#corpus-assembly-discovery",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "3.1 Corpus Assembly & Discovery",
     "text": "3.1 Corpus Assembly & Discovery"
   },
   {
     "objectID": "paper.html#automated-llm-assisted-extraction-pipeline",
     "href": "paper.html#automated-llm-assisted-extraction-pipeline",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "3.2 Automated LLM-Assisted Extraction Pipeline",
     "text": "3.2 Automated LLM-Assisted Extraction Pipeline"
   },
   {
     "objectID": "paper.html#entity-reconciliation-funding-integration",
     "href": "paper.html#entity-reconciliation-funding-integration",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "3.3 Entity Reconciliation & Funding Integration",
     "text": "3.3 Entity Reconciliation & Funding Integration"
   },
   {
     "objectID": "paper.html#metric-formulation",
     "href": "paper.html#metric-formulation",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "3.4 Metric Formulation",
     "text": "3.4 Metric Formulation"
   },
   {
     "objectID": "paper.html#widespread-and-sustained-national-adoption",
     "href": "paper.html#widespread-and-sustained-national-adoption",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "4.1 Widespread and Sustained National Adoption",
     "text": "4.1 Widespread and Sustained National Adoption"
   },
   {
     "objectID": "paper.html#substantive-application-vs.-tokenistic-citation",
     "href": "paper.html#substantive-application-vs.-tokenistic-citation",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "4.2 Substantive Application vs. Tokenistic Citation",
     "text": "4.2 Substantive Application vs. Tokenistic Citation"
   },
   {
     "objectID": "paper.html#geographic-coverage-spatial-distribution",
     "href": "paper.html#geographic-coverage-spatial-distribution",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "4.3 Geographic Coverage & Spatial Distribution",
     "text": "4.3 Geographic Coverage & Spatial Distribution"
   },
   {
     "objectID": "paper.html#capital-allocation-alignment",
     "href": "paper.html#capital-allocation-alignment",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "4.4 Capital Allocation Alignment",
     "text": "4.4 Capital Allocation Alignment"
   },
   {
     "objectID": "paper.html#overcoming-analytical-inequalities-across-local-authorities",
     "href": "paper.html#overcoming-analytical-inequalities-across-local-authorities",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "5.1 Overcoming Analytical Inequalities Across Local Authorities",
     "text": "5.1 Overcoming Analytical Inequalities Across Local Authorities"
   },
   {
     "objectID": "paper.html#preventing-stranded-assets-through-evidence-based-prioritisation",
     "href": "paper.html#preventing-stranded-assets-through-evidence-based-prioritisation",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "5.2 Preventing Stranded Assets Through Evidence-Based Prioritisation",
     "text": "5.2 Preventing Stranded Assets Through Evidence-Based Prioritisation"
   },
   {
     "objectID": "paper.html#open-science-transparency-and-public-trust",
     "href": "paper.html#open-science-transparency-and-public-trust",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "5.3 Open Science, Transparency, and Public Trust",
     "text": "5.3 Open Science, Transparency, and Public Trust"
   },
   {
     "objectID": "paper.html#the-policy-imperative-fund-the-tools-with-the-infrastructure",
     "href": "paper.html#the-policy-imperative-fund-the-tools-with-the-infrastructure",
-    "title": "Open-Source Tools for Policy Delivery: Evaluating the Long-Term Impact of the Propensity to Cycle Tool on Infrastructure Investment",
+    "title": "Open-Source Tools for Policy Delivery",
     "section": "5.4 The Policy Imperative: Fund the Tools with the Infrastructure",
     "text": "5.4 The Policy Imperative: Fund the Tools with the Infrastructure"
   },
