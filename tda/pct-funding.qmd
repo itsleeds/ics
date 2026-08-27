@@ -29,7 +29,7 @@ library(stringdist) # for string distance calculations
 library(stringr) # for string manipulation
 
 # library(tmap) # for mapping
-library(ggplot2) # for plotting
+# library(ggplot2) # for plotting
 # library(knitr) # for tables
 
 
@@ -48,7 +48,7 @@ Results data obtained from results.csv file located in results folder in repo.
 
 # results.csv located in results folder
 
-results <- read_csv("results/results.csv")
+results <- read_csv("../results/results.csv") #../ means go up one directory to find results folder
 
 names(results) # check names in results
 
@@ -105,8 +105,7 @@ Data allocations from 2026 to 2030 located in [lad_active_travel_allocations.csv
 # Read data from lad_active_travel_allocations.csv file located in uktransportauthorities repo.
 lad_exists_locally <- file.exists("lad_active_travel_allocations.csv")
 if (!lad_exists_locally) {
-    atf_future <- read_csv("https://raw.githubusercontent.com/itsleeds/uk
-transportauthorities/refs/heads/main/lad_active_travel_allocations.csv")
+    atf_future <- read_csv("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/lad_active_travel_allocations.csv")
 } else {
     atf_future <- read_csv("lad_active_travel_allocations.csv")
 }
@@ -114,6 +113,10 @@ transportauthorities/refs/heads/main/lad_active_travel_allocations.csv")
 names(atf_future) # check names in atf_future
 
 ```
+
+### ATE Capability ratings 2025
+
+ATE's [Local Authority Active Travel Capability Ratings 2025](https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf) report provides a rating for each local authority in England based on their capability to deliver active travel infrastructure. This will be useful for determining funding **per person** in each region.
 
 # Match LAD names
 
@@ -660,6 +663,8 @@ analysis_metrics <- analysis_data |>
 
 ```
 
+
+## Ranked Metrics
 ```{r}
 #| label: analysis-rank-metrics
 
@@ -676,15 +681,31 @@ ranked_analysis_metrics <- analysis_metrics |>
         desire_lines_rate,
         depth_score_mean,
         total_over_5yr,
-        total_over_4yr,
-        mentions_per_million_funding
+        total_over_4yr 
+        # mentions_per_million_funding
     ) |>
     arrange(desc(!!sym(rank_variable))) |>
     mutate(rank = row_number()) |>
     # Reduce number of decimal places to 1
-    mutate(across(c(pct_mention_rate, desire_lines_rate, depth_score_mean, mentions_per_million_funding), ~ round(.x, 1)))
+    mutate(across(c(
+        pct_mention_rate, 
+        desire_lines_rate, 
+        depth_score_mean 
+        # mentions_per_million_funding
+        ), ~ round(.x, 1)))
 # knitr::kable(ranked_analysis_metrics, caption = paste("Ranked by", rank_variable))
 DT::datatable(ranked_analysis_metrics, caption = paste("Ranked by", rank_variable), options = list(pageLength = 10, scrollX = TRUE))
+
 ```
 
-https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf
+# Save Ranked Metrics to CSV
+
+Ranked metrics table (ranked_analysis_metrics) saved to CSV file in tda folder.
+
+```{r}
+#| label: save-ranked-metrics
+
+# save ranked_analysis_metrics to CSV file in tda folder
+write_csv(ranked_analysis_metrics, "tda/ranked_analysis_metrics.csv")
+
+```
