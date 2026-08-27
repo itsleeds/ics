@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Tom Auer">
 <meta name="dcterms.date" content="2026-08-27">
 
-<title>PCT / LCWIP Data Ingest 2026 — Exploratory Analysis – Transforming Strategic Active Travel Network Planning Internationally</title>
+<title>PCT / LCWIP Data Ingest &amp; Funding Analysis (2026) – Transforming Strategic Active Travel Network Planning Internationally</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -109,6 +110,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="site_libs/datatables-binding-0.34.0/datatables.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
 
 
 </head>
@@ -139,12 +150,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">2026 Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./report-pct.html"> 
-<span class="menu-text">Report</span></a>
+    <a class="nav-link" href="./impact-summary.html"> 
+<span class="menu-text">Impact Summary</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./plan.html"> 
-<span class="menu-text">Plan</span></a>
+    <a class="nav-link" href="./report-pct.html"> 
+<span class="menu-text">Report</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./ideas.html"> 
@@ -174,27 +185,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">2</span> Methods</a></li>
-  <li><a href="#corpus-composition" id="toc-corpus-composition" class="nav-link" data-scroll-target="#corpus-composition"><span class="header-section-number">3</span> Corpus composition</a></li>
-  <li><a href="#pct-mentions" id="toc-pct-mentions" class="nav-link" data-scroll-target="#pct-mentions"><span class="header-section-number">4</span> PCT mentions</a>
+  <li><a href="#ingest-methods" id="toc-ingest-methods" class="nav-link" data-scroll-target="#ingest-methods"><span class="header-section-number">2</span> Ingest Methods</a></li>
+  <li><a href="#corpus-composition" id="toc-corpus-composition" class="nav-link" data-scroll-target="#corpus-composition"><span class="header-section-number">3</span> Corpus Composition</a></li>
+  <li><a href="#pct-mentions" id="toc-pct-mentions" class="nav-link" data-scroll-target="#pct-mentions"><span class="header-section-number">4</span> PCT Mentions</a>
   <ul class="collapse">
-  <li><a href="#pct-mentions-by-document-type" id="toc-pct-mentions-by-document-type" class="nav-link" data-scroll-target="#pct-mentions-by-document-type"><span class="header-section-number">4.1</span> PCT mentions by document type</a></li>
-  <li><a href="#change-over-time" id="toc-change-over-time" class="nav-link" data-scroll-target="#change-over-time"><span class="header-section-number">4.2</span> Change over time</a></li>
+  <li><a href="#pct-mentions-by-document-type" id="toc-pct-mentions-by-document-type" class="nav-link" data-scroll-target="#pct-mentions-by-document-type"><span class="header-section-number">4.1</span> PCT Mentions by Document Type</a></li>
+  <li><a href="#change-over-time" id="toc-change-over-time" class="nav-link" data-scroll-target="#change-over-time"><span class="header-section-number">4.2</span> Change Over Time</a></li>
   </ul></li>
-  <li><a href="#scenario-usage" id="toc-scenario-usage" class="nav-link" data-scroll-target="#scenario-usage"><span class="header-section-number">5</span> Scenario usage</a></li>
-  <li><a href="#geographic-coverage" id="toc-geographic-coverage" class="nav-link" data-scroll-target="#geographic-coverage"><span class="header-section-number">6</span> Geographic coverage</a></li>
-  <li><a href="#cost-and-network-length" id="toc-cost-and-network-length" class="nav-link" data-scroll-target="#cost-and-network-length"><span class="header-section-number">7</span> Cost and network length</a></li>
-  <li><a href="#illustrative-examples" id="toc-illustrative-examples" class="nav-link" data-scroll-target="#illustrative-examples"><span class="header-section-number">8</span> Illustrative examples</a></li>
-  <li><a href="#limitations-next-steps" id="toc-limitations-next-steps" class="nav-link" data-scroll-target="#limitations-next-steps"><span class="header-section-number">9</span> Limitations &amp; next steps</a></li>
+  <li><a href="#scenario-usage" id="toc-scenario-usage" class="nav-link" data-scroll-target="#scenario-usage"><span class="header-section-number">5</span> Scenario Usage</a></li>
+  <li><a href="#geographic-coverage" id="toc-geographic-coverage" class="nav-link" data-scroll-target="#geographic-coverage"><span class="header-section-number">6</span> Geographic Coverage</a></li>
+  <li><a href="#cost-and-network-length" id="toc-cost-and-network-length" class="nav-link" data-scroll-target="#cost-and-network-length"><span class="header-section-number">7</span> Cost and Network Length</a></li>
+  <li><a href="#illustrative-examples" id="toc-illustrative-examples" class="nav-link" data-scroll-target="#illustrative-examples"><span class="header-section-number">8</span> Illustrative Examples</a></li>
+  <li><a href="#comparing-pct-evidence-with-active-travel-funding" id="toc-comparing-pct-evidence-with-active-travel-funding" class="nav-link" data-scroll-target="#comparing-pct-evidence-with-active-travel-funding"><span class="header-section-number">9</span> Comparing PCT Evidence with Active Travel Funding</a>
+  <ul class="collapse">
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="header-section-number">9.1</span> Data Sources</a></li>
+  <li><a href="#entity-reconciliation-name-matching" id="toc-entity-reconciliation-name-matching" class="nav-link" data-scroll-target="#entity-reconciliation-name-matching"><span class="header-section-number">9.2</span> Entity Reconciliation &amp; Name Matching</a></li>
+  <li><a href="#atf-name-harmonisation" id="toc-atf-name-harmonisation" class="nav-link" data-scroll-target="#atf-name-harmonisation"><span class="header-section-number">9.3</span> ATF Name Harmonisation</a></li>
+  <li><a href="#integrated-metric-construction" id="toc-integrated-metric-construction" class="nav-link" data-scroll-target="#integrated-metric-construction"><span class="header-section-number">9.4</span> Integrated Metric Construction</a></li>
+  <li><a href="#ranked-metrics-table" id="toc-ranked-metrics-table" class="nav-link" data-scroll-target="#ranked-metrics-table"><span class="header-section-number">9.5</span> Ranked Metrics Table</a></li>
+  </ul></li>
+  <li><a href="#limitations-next-steps" id="toc-limitations-next-steps" class="nav-link" data-scroll-target="#limitations-next-steps"><span class="header-section-number">10</span> Limitations &amp; Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/itsleeds/ics/edit/main/2026-analysis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/itsleeds/ics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="2026-analysis.md"><i class="bi bi-file-code"></i>Github (GFM)</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/itsleeds/ics/edit/main/2026-analysis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/itsleeds/ics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">PCT / LCWIP Data Ingest 2026 — Exploratory Analysis</h1>
+<h1 class="title">PCT / LCWIP Data Ingest &amp; Funding Analysis (2026)</h1>
 <p class="subtitle lead">REF 2029 impact case study — England proof-of-concept</p>
 </div>
 
@@ -202,6 +221,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tom Auer </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
@@ -220,17 +245,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
-<p>This document reports the results of the <strong>2026 re-run</strong> of the data-ingest process that collects evidence of the Propensity to Cycle Tool (PCT) and related active-travel planning tools in English Local Cycling and Walking Infrastructure Plans (LCWIPs) and related documents.</p>
-<p>The 2026 run is a <strong>proof-of-concept for England</strong> (the first stage before an international roll-out). It improves on the previous (~2024) work in three ways:</p>
+<p>This document reports the results of the <strong>2026 re-run</strong> of the data-ingest process that collects evidence of the Propensity to Cycle Tool (PCT) and related active-travel planning tools in English Local Cycling and Walking Infrastructure Plans (LCWIPs) and related documents, integrated with official <strong>Active Travel Fund (ATF)</strong> allocation data.</p>
+<p>The 2026 run is a <strong>proof-of-concept for England</strong> (the first stage before an international roll-out). It improves on previous (~2024) work in four key ways:</p>
 <ol type="1">
 <li><strong>Distinction between LCWIP reports and related material</strong> — each document is classified <code>LCWIP</code>, <code>LCWIP-related</code>, or <code>other</code>, a distinction the previous work did not make.</li>
-<li><strong>Richer “how PCT was used” detail</strong> — explicit scenario usage (<code>Go Dutch</code>, <code>Government Target</code>, <code>E-bike</code>, <code>Go Cambridge</code>), data sources, desire-line usage and prioritisation-integration flags.</li>
+<li><strong>Richer “how PCT was used” detail</strong> — explicit scenario usage (<code>Go Dutch</code>, <code>Government Target</code>, <code>E-bike</code>, <code>Go Cambridge</code>), data sources, desire-line usage, and prioritisation-integration flags.</li>
 <li><strong>Reproducible pipeline</strong> — every web page / PDF is downloaded to <code>data-govuk-2026-raw</code> and a <code>.md</code> text extract written to <code>data-govuk-2026-md</code>; structured fields are extracted with a single, unlimited local engine (Ollama <code>gemma4-12b-hermes</code>) so the results are fully reproducible without paid API credits.</li>
+<li><strong>Integration with Capital &amp; Revenue Funding Data</strong> — matching local authority entities to historical ATF funding (2020/21–2024/25) and multi-year future funding allocations (2026–2030) to evaluate how tool adoption aligns with infrastructure investment.</li>
 </ol>
 <p>The headline dataset merges the fresh 2026 collection with the existing 94-entry database (<code>LCWIP_database.json</code>), so the release shows <strong>how the evidence base has grown</strong>.</p>
 </section>
-<section id="methods" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Methods</h1>
+<section id="ingest-methods" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Ingest Methods</h1>
 <ul>
 <li><strong>Discovery.</strong> Seed URLs came from the existing 94-entry database, supplemented by web searches for 2024–2026 LCWIPs and related active-travel strategies, plus the Transport for the South East (TfSE) Regional Active Travel Strategy and Action Plan (RATSAP) Evidence Base (June 2025), which contains a 64-LCWIP status log for the South East.</li>
 <li><strong>Download.</strong> Each candidate URL was fetched and stored as a raw file (<code>data-govuk-2026-raw</code>) with a text/markdown extract (<code>data-govuk-2026-md</code>).</li>
@@ -239,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="corpus-composition" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Corpus composition</h1>
+<h1 data-number="3"><span class="header-section-number">3</span> Corpus Composition</h1>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"results/results_flat.csv"</span>)</span>
@@ -272,7 +298,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </section>
 <section id="pct-mentions" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> PCT mentions</h1>
+<h1 data-number="4"><span class="header-section-number">4</span> PCT Mentions</h1>
 <p>The central finding for the REF case study is the share of documents that explicitly mention the Propensity to Cycle Tool.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -298,7 +324,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <section id="pct-mentions-by-document-type" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="pct-mentions-by-document-type"><span class="header-section-number">4.1</span> PCT mentions by document type</h2>
+<h2 data-number="4.1" class="anchored" data-anchor-id="pct-mentions-by-document-type"><span class="header-section-number">4.1</span> PCT Mentions by Document Type</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"results/results_flat.csv"</span>)</span>
@@ -315,39 +341,41 @@ unknown            2     1        0</code></pre>
 </div>
 </section>
 <section id="change-over-time" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="change-over-time"><span class="header-section-number">4.2</span> Change over time</h2>
-<p>The chart below shows the evolution of LCWIP and active travel document publications over time (2019–2025), categorized by whether the report mentions the Propensity to Cycle Tool.</p>
+<h2 data-number="4.2" class="anchored" data-anchor-id="change-over-time"><span class="header-section-number">4.2</span> Change Over Time</h2>
+<p>The chart below shows the evolution of LCWIP and active travel document publications over time (2018–2026), categorized by whether the report mentions the Propensity to Cycle Tool.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"results/results_flat.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> readr<span class="sc">::</span><span class="fu">parse_number</span>(<span class="fu">as.character</span>(date_published))) <span class="sc">%&gt;%</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(year), year <span class="sc">&gt;=</span> <span class="dv">2018</span>, year <span class="sc">&lt;=</span> <span class="dv">2026</span>)</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>df_summary <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct_label =</span> <span class="fu">if_else</span>(mentions_pct, <span class="st">"Mentions PCT"</span>, <span class="st">"Does not mention PCT"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="at">year =</span> <span class="fu">factor</span>(year), pct_label) <span class="sc">%&gt;%</span></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_summary, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> count, <span class="at">fill =</span> pct_label)) <span class="sc">+</span></span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"stack"</span>, <span class="at">width =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Mentions PCT"</span> <span class="ot">=</span> <span class="st">"#2b8cbe"</span>, <span class="st">"Does not mention PCT"</span> <span class="ot">=</span> <span class="st">"#de2d26"</span>)) <span class="sc">+</span></span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"LCWIP Document Publications and PCT Mentions Over Time (2019–2025)"</span>,</span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Annual count of published active travel strategy documents in England"</span>,</span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Publication Year"</span>,</span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Documents"</span>,</span>
-<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"PCT Status"</span></span>
-<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>csv_path <span class="ot">&lt;-</span> <span class="st">"results/results_flat.csv"</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(csv_path)) csv_path <span class="ot">&lt;-</span> <span class="st">"../results/results_flat.csv"</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(csv_path, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> readr<span class="sc">::</span><span class="fu">parse_number</span>(<span class="fu">as.character</span>(date_published))) <span class="sc">%&gt;%</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(year), year <span class="sc">&gt;=</span> <span class="dv">2018</span>, year <span class="sc">&lt;=</span> <span class="dv">2026</span>)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>df_summary <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct_label =</span> <span class="fu">if_else</span>(mentions_pct, <span class="st">"Mentions PCT"</span>, <span class="st">"Does not mention PCT"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="at">year =</span> <span class="fu">factor</span>(year), pct_label) <span class="sc">%&gt;%</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_summary, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> count, <span class="at">fill =</span> pct_label)) <span class="sc">+</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"stack"</span>, <span class="at">width =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Mentions PCT"</span> <span class="ot">=</span> <span class="st">"#2b8cbe"</span>, <span class="st">"Does not mention PCT"</span> <span class="ot">=</span> <span class="st">"#de2d26"</span>)) <span class="sc">+</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"LCWIP Document Publications and PCT Mentions Over Time"</span>,</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Annual count of published active travel strategy documents in England"</span>,</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Publication Year"</span>,</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of Documents"</span>,</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"PCT Status"</span></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="fig-pct-over-time" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -364,7 +392,7 @@ Figure&nbsp;1: Publication of LCWIP and active-travel planning documents over ti
 </section>
 </section>
 <section id="scenario-usage" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Scenario usage</h1>
+<h1 data-number="5"><span class="header-section-number">5</span> Scenario Usage</h1>
 <p>Among documents that mention the PCT, which future scenarios are referenced?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json, pandas <span class="im">as</span> pd</span>
@@ -398,8 +426,8 @@ Gender Equality       1</code></pre>
 </div>
 </section>
 <section id="geographic-coverage" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Geographic coverage</h1>
-<p>Coverage against the higher-tier authorities in <a href="https://github.com/itsleeds/uktransportauthorities">uktransportauthorities</a> (ATF allocations) gives a sense of how much of England is represented.</p>
+<h1 data-number="6"><span class="header-section-number">6</span> Geographic Coverage</h1>
+<p>Coverage against higher-tier authorities in England gives a sense of how much of the country is represented in the corpus.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"results/results_flat.csv"</span>)</span>
@@ -444,7 +472,7 @@ South Yorkshire              1</code></pre>
 </div>
 </section>
 <section id="cost-and-network-length" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Cost and network length</h1>
+<h1 data-number="7"><span class="header-section-number">7</span> Cost and Network Length</h1>
 <p>Where stated, LCWIPs propose substantial networks and investment.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -474,7 +502,7 @@ South Yorkshire              1</code></pre>
 </div>
 </section>
 <section id="illustrative-examples" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Illustrative examples</h1>
+<h1 data-number="8"><span class="header-section-number">8</span> Illustrative Examples</h1>
 <p>A sample of LCWIPs that mention the PCT, with how it was used:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -539,13 +567,323 @@ South Yorkshire              1</code></pre>
 </div>
 </div>
 </section>
-<section id="limitations-next-steps" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Limitations &amp; next steps</h1>
+<section id="comparing-pct-evidence-with-active-travel-funding" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Comparing PCT Evidence with Active Travel Funding</h1>
+<p>To evaluate the real-world policy and financial impact of the Propensity to Cycle Tool, we link the extracted LCWIP evidence with official UK Government funding datasets from the <a href="https://www.gov.uk/government/publications/active-travel-local-transport-authority-allocations/active-travel-local-transport-authority-allocations">Active Travel Local Transport Authority Allocations</a>, Departmental Expenditure Limits (<a href="https://www.gov.uk/government/publications/how-to-understand-public-sector-spending/how-to-understand-public-sector-spending#departmental-expenditure-limits-del">RDEL and CDEL</a>), and <a href="https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf">Active Travel England Capability Ratings 2025</a>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringdist)</span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="data-sources" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="data-sources"><span class="header-section-number">9.1</span> Data Sources</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Results data from extraction</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>results_file <span class="ot">&lt;-</span> <span class="st">"results/results.csv"</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(results_file)) results_file <span class="ot">&lt;-</span> <span class="st">"results/results_flat.csv"</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(results_file)) results_file <span class="ot">&lt;-</span> <span class="st">"results_flat.csv"</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(results_file, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. LAD and Transport Authority geometry/names from uktransportauthorities</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>geojson_file <span class="ot">&lt;-</span> <span class="st">"data/transport_authorities_2026.geojson"</span></span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(geojson_file)) geojson_file <span class="ot">&lt;-</span> <span class="st">"tda/transport_authorities_2026.geojson"</span></span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(geojson_file)) geojson_file <span class="ot">&lt;-</span> <span class="st">"transport_authorities_2026.geojson"</span></span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(geojson_file)) {</span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a>    ltas <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">read_sf</span>(geojson_file)</span>
+<span id="cb49-14"><a href="#cb49-14" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb49-15"><a href="#cb49-15" aria-hidden="true" tabindex="-1"></a>    ltas <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">read_sf</span>(<span class="st">"https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/transport_authorities_2026.geojson"</span>)</span>
+<span id="cb49-16"><a href="#cb49-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb49-17"><a href="#cb49-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-18"><a href="#cb49-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Historical ATF Allocations (2020/21 - 2024/25)</span></span>
+<span id="cb49-19"><a href="#cb49-19" aria-hidden="true" tabindex="-1"></a>atf_file <span class="ot">&lt;-</span> <span class="st">"data/atf_table_aggregated.csv"</span></span>
+<span id="cb49-20"><a href="#cb49-20" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(atf_file)) atf_file <span class="ot">&lt;-</span> <span class="st">"tda/atf_table_aggregated.csv"</span></span>
+<span id="cb49-21"><a href="#cb49-21" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(atf_file)) atf_file <span class="ot">&lt;-</span> <span class="st">"scripts/atf_table_aggregated.csv"</span></span>
+<span id="cb49-22"><a href="#cb49-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(atf_file)) atf_file <span class="ot">&lt;-</span> <span class="st">"atf_table_aggregated.csv"</span></span>
+<span id="cb49-23"><a href="#cb49-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-24"><a href="#cb49-24" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(atf_file)) {</span>
+<span id="cb49-25"><a href="#cb49-25" aria-hidden="true" tabindex="-1"></a>    atf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(atf_file, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb49-26"><a href="#cb49-26" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb49-27"><a href="#cb49-27" aria-hidden="true" tabindex="-1"></a>    atf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/atf_table_aggregated.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb49-28"><a href="#cb49-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb49-29"><a href="#cb49-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-30"><a href="#cb49-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Future ATF Multi-Year Allocations (2026 - 2030)</span></span>
+<span id="cb49-31"><a href="#cb49-31" aria-hidden="true" tabindex="-1"></a>future_file <span class="ot">&lt;-</span> <span class="st">"data/lad_active_travel_allocations.csv"</span></span>
+<span id="cb49-32"><a href="#cb49-32" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(future_file)) future_file <span class="ot">&lt;-</span> <span class="st">"tda/lad_active_travel_allocations.csv"</span></span>
+<span id="cb49-33"><a href="#cb49-33" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(future_file)) future_file <span class="ot">&lt;-</span> <span class="st">"lad_active_travel_allocations.csv"</span></span>
+<span id="cb49-34"><a href="#cb49-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-35"><a href="#cb49-35" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(future_file)) {</span>
+<span id="cb49-36"><a href="#cb49-36" aria-hidden="true" tabindex="-1"></a>    atf_future <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(future_file, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb49-37"><a href="#cb49-37" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb49-38"><a href="#cb49-38" aria-hidden="true" tabindex="-1"></a>    atf_future <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/lad_active_travel_allocations.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb49-39"><a href="#cb49-39" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="entity-reconciliation-name-matching" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="entity-reconciliation-name-matching"><span class="header-section-number">9.2</span> Entity Reconciliation &amp; Name Matching</h2>
+<p>To ensure accurate joins between LCWIP reports and funding allocations, local authority names are cleaned and matched using Jaro-Winkler string distance with manual alias rules for reconfigured unitary and combined authorities.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract unique authority names from extraction results</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>results_names <span class="ot">&lt;-</span> results <span class="sc">|&gt;</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(local_authority_name, combined_authority_name) <span class="sc">|&gt;</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">ifelse</span>(</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>        <span class="sc">!</span><span class="fu">is.na</span>(local_authority_name), </span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>        local_authority_name, </span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>        combined_authority_name</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">|&gt;</span></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">distinct</span>(name) <span class="sc">|&gt;</span></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(name) <span class="sc">|&gt;</span></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(name))</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract names from LTAs and unpack JSON lookup</span></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>ltas_names <span class="ot">&lt;-</span> ltas <span class="sc">|&gt;</span></span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">st_drop_geometry</span>() <span class="sc">|&gt;</span></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, lad_lookup) <span class="sc">|&gt;</span></span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(name) <span class="sc">|&gt;</span></span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename</span>(<span class="at">name_lookup =</span> lad_lookup)</span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a>ltas_lookup_names <span class="ot">&lt;-</span> ltas_names <span class="sc">|&gt;</span></span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">name_lookup =</span> <span class="fu">map</span>(</span>
+<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a>        name_lookup, </span>
+<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>        <span class="sc">~</span> <span class="fu">fromJSON</span>(.x)<span class="sc">$</span>lad_name</span>
+<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a>    )) <span class="sc">|&gt;</span></span>
+<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, name_lookup) <span class="sc">|&gt;</span></span>
+<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(name_lookup)</span>
+<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a>ltas_lookup_names <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a>    ltas_lookup_names,</span>
+<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a>    ltas_lookup_names <span class="sc">|&gt;</span></span>
+<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a>        <span class="fu">distinct</span>(name) <span class="sc">|&gt;</span></span>
+<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(<span class="sc">!</span>name <span class="sc">%in%</span> ltas_lookup_names<span class="sc">$</span>name_lookup) <span class="sc">|&gt;</span></span>
+<span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">name_lookup =</span> name)</span>
+<span id="cb50-34"><a href="#cb50-34" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb50-35"><a href="#cb50-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-36"><a href="#cb50-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardise names by stripping council boilerplate</span></span>
+<span id="cb50-37"><a href="#cb50-37" aria-hidden="true" tabindex="-1"></a>results_names <span class="ot">&lt;-</span> results_names <span class="sc">|&gt;</span></span>
+<span id="cb50-38"><a href="#cb50-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">name_clean =</span> name <span class="sc">|&gt;</span></span>
+<span id="cb50-39"><a href="#cb50-39" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)city"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-40"><a href="#cb50-40" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)councils"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-41"><a href="#cb50-41" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)council"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-42"><a href="#cb50-42" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"Borough"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-43"><a href="#cb50-43" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)district"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-44"><a href="#cb50-44" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)county"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-45"><a href="#cb50-45" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)of"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-46"><a href="#cb50-46" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)the"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-47"><a href="#cb50-47" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i) and"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-48"><a href="#cb50-48" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)royal"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-49"><a href="#cb50-49" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)combined authority"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-50"><a href="#cb50-50" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)metropolitan"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-51"><a href="#cb50-51" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)(national guidance)"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-52"><a href="#cb50-52" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)&amp;"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-53"><a href="#cb50-53" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i),"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-54"><a href="#cb50-54" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_remove_all</span>(<span class="st">"(?i)/"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-55"><a href="#cb50-55" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_squish</span>()</span>
+<span id="cb50-56"><a href="#cb50-56" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb50-57"><a href="#cb50-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-58"><a href="#cb50-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Add manual aliases for known boundary reconfigurations</span></span>
+<span id="cb50-59"><a href="#cb50-59" aria-hidden="true" tabindex="-1"></a>manual_aliases_ltas <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb50-60"><a href="#cb50-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="fu">c</span>(</span>
+<span id="cb50-61"><a href="#cb50-61" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Kent"</span>,</span>
+<span id="cb50-62"><a href="#cb50-62" aria-hidden="true" tabindex="-1"></a>        <span class="st">"West Yorkshire Combined Authority"</span>,</span>
+<span id="cb50-63"><a href="#cb50-63" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Bournemouth, Christchurch and Poole"</span>,</span>
+<span id="cb50-64"><a href="#cb50-64" aria-hidden="true" tabindex="-1"></a>        <span class="st">"West of England Combined Authority"</span>,</span>
+<span id="cb50-65"><a href="#cb50-65" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Leicestershire"</span>,</span>
+<span id="cb50-66"><a href="#cb50-66" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Norfolk"</span>,</span>
+<span id="cb50-67"><a href="#cb50-67" aria-hidden="true" tabindex="-1"></a>        <span class="st">"East Midlands Combined Authority"</span>,</span>
+<span id="cb50-68"><a href="#cb50-68" aria-hidden="true" tabindex="-1"></a>        <span class="st">"North East Combined Authority"</span>,</span>
+<span id="cb50-69"><a href="#cb50-69" aria-hidden="true" tabindex="-1"></a>        <span class="st">"East Riding of Yorkshire"</span>,</span>
+<span id="cb50-70"><a href="#cb50-70" aria-hidden="true" tabindex="-1"></a>        <span class="st">"West Yorkshire Combined Authority"</span>,</span>
+<span id="cb50-71"><a href="#cb50-71" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Liverpool City Region Combined Authority"</span>,</span>
+<span id="cb50-72"><a href="#cb50-72" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Leicestershire"</span>,</span>
+<span id="cb50-73"><a href="#cb50-73" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Lancashire"</span>,</span>
+<span id="cb50-74"><a href="#cb50-74" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Leicestershire"</span></span>
+<span id="cb50-75"><a href="#cb50-75" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb50-76"><a href="#cb50-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">name_lookup =</span> <span class="fu">c</span>(</span>
+<span id="cb50-77"><a href="#cb50-77" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Faversham Town"</span>,</span>
+<span id="cb50-78"><a href="#cb50-78" aria-hidden="true" tabindex="-1"></a>        <span class="st">"West Yorkshire"</span>,</span>
+<span id="cb50-79"><a href="#cb50-79" aria-hidden="true" tabindex="-1"></a>        <span class="st">"BCP"</span>,</span>
+<span id="cb50-80"><a href="#cb50-80" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Bath North East Somerset Bristol South Gloucestershire North Somerset"</span>,</span>
+<span id="cb50-81"><a href="#cb50-81" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Blaby"</span>,</span>
+<span id="cb50-82"><a href="#cb50-82" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Broads Authority"</span>,</span>
+<span id="cb50-83"><a href="#cb50-83" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Derby Derbyshire Nottingham Nottinghamshire"</span>,</span>
+<span id="cb50-84"><a href="#cb50-84" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Durham"</span>,</span>
+<span id="cb50-85"><a href="#cb50-85" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Hull"</span>,</span>
+<span id="cb50-86"><a href="#cb50-86" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Leeds West Yorkshire"</span>,</span>
+<span id="cb50-87"><a href="#cb50-87" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Liverpool Region (LCRCA) in partnership with Halton Knowsley Liverpool Sefton St Helens Wirral"</span>,</span>
+<span id="cb50-88"><a href="#cb50-88" aria-hidden="true" tabindex="-1"></a>        <span class="st">"North West Leicestershire"</span>,</span>
+<span id="cb50-89"><a href="#cb50-89" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Preston South Ribble Chorley"</span>,</span>
+<span id="cb50-90"><a href="#cb50-90" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Rutland"</span></span>
+<span id="cb50-91"><a href="#cb50-91" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb50-92"><a href="#cb50-92" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb50-93"><a href="#cb50-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-94"><a href="#cb50-94" aria-hidden="true" tabindex="-1"></a>ltas_lookup_names <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(ltas_lookup_names, manual_aliases_ltas) <span class="sc">|&gt;</span></span>
+<span id="cb50-95"><a href="#cb50-95" aria-hidden="true" tabindex="-1"></a>    <span class="fu">distinct</span>(name, name_lookup, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-96"><a href="#cb50-96" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(name, name_lookup)</span>
+<span id="cb50-97"><a href="#cb50-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-98"><a href="#cb50-98" aria-hidden="true" tabindex="-1"></a><span class="co"># String distance fuzzy matching (Jaro-Winkler)</span></span>
+<span id="cb50-99"><a href="#cb50-99" aria-hidden="true" tabindex="-1"></a>results_names <span class="ot">&lt;-</span> results_names <span class="sc">|&gt;</span></span>
+<span id="cb50-100"><a href="#cb50-100" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb50-101"><a href="#cb50-101" aria-hidden="true" tabindex="-1"></a>        <span class="at">match_index =</span> <span class="fu">amatch</span>(</span>
+<span id="cb50-102"><a href="#cb50-102" aria-hidden="true" tabindex="-1"></a>            name_clean,</span>
+<span id="cb50-103"><a href="#cb50-103" aria-hidden="true" tabindex="-1"></a>            ltas_lookup_names<span class="sc">$</span>name_lookup,</span>
+<span id="cb50-104"><a href="#cb50-104" aria-hidden="true" tabindex="-1"></a>            <span class="at">method =</span> <span class="st">"jw"</span>,</span>
+<span id="cb50-105"><a href="#cb50-105" aria-hidden="true" tabindex="-1"></a>            <span class="at">maxDist =</span> <span class="fl">0.25</span></span>
+<span id="cb50-106"><a href="#cb50-106" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb50-107"><a href="#cb50-107" aria-hidden="true" tabindex="-1"></a>        <span class="at">matched_name =</span> <span class="fu">ifelse</span>(<span class="sc">!</span><span class="fu">is.na</span>(match_index), ltas_lookup_names<span class="sc">$</span>name_lookup[match_index], <span class="cn">NA_character_</span>),</span>
+<span id="cb50-108"><a href="#cb50-108" aria-hidden="true" tabindex="-1"></a>        <span class="at">ltas_name =</span> <span class="fu">ifelse</span>(<span class="sc">!</span><span class="fu">is.na</span>(match_index), ltas_lookup_names<span class="sc">$</span>name[match_index], <span class="cn">NA_character_</span>)</span>
+<span id="cb50-109"><a href="#cb50-109" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="atf-name-harmonisation" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="atf-name-harmonisation"><span class="header-section-number">9.3</span> ATF Name Harmonisation</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean historical ATF table</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>atf <span class="ot">&lt;-</span> atf <span class="sc">|&gt;</span> <span class="fu">filter</span>(name <span class="sc">!=</span> <span class="st">"Total"</span>)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>atf_names <span class="ot">&lt;-</span> atf <span class="sc">|&gt;</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">case_when</span>(</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>        name <span class="sc">==</span> <span class="st">"West Midlands ITA"</span> <span class="sc">~</span> <span class="st">"West Midlands Combined Authority"</span>,</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>        name <span class="sc">==</span> <span class="st">"North East Joint Transport Committee"</span> <span class="sc">~</span> <span class="st">"North East Combined Authority"</span>,</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>        <span class="cn">TRUE</span> <span class="sc">~</span> name</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean future allocations &amp; aggregate East Midlands Combined County Authority</span></span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>emca_la_list <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Derby"</span>, <span class="st">"Derbyshire"</span>, <span class="st">"Nottingham"</span>, <span class="st">"Nottinghamshire"</span>, </span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Leicester"</span>, <span class="st">"Leicestershire"</span>, <span class="st">"North East Lincolnshire"</span>, </span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"North Lincolnshire"</span>, <span class="st">"Lincolnshire"</span>, <span class="st">"Rutland"</span></span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a>emca_la <span class="ot">&lt;-</span> atf_future <span class="sc">|&gt;</span></span>
+<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(name <span class="sc">%in%</span> emca_la_list) <span class="sc">|&gt;</span></span>
+<span id="cb51-19"><a href="#cb51-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), sum, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb51-20"><a href="#cb51-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb51-21"><a href="#cb51-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">name =</span> <span class="st">"East Midlands Combined Authority"</span>, </span>
+<span id="cb51-22"><a href="#cb51-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">name_atf =</span> <span class="st">"East Midlands Combined County Authority"</span></span>
+<span id="cb51-23"><a href="#cb51-23" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb51-24"><a href="#cb51-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-25"><a href="#cb51-25" aria-hidden="true" tabindex="-1"></a>atf_future_names <span class="ot">&lt;-</span> atf_future <span class="sc">|&gt;</span></span>
+<span id="cb51-26"><a href="#cb51-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span>name <span class="sc">%in%</span> emca_la_list) <span class="sc">|&gt;</span></span>
+<span id="cb51-27"><a href="#cb51-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_rows</span>(emca_la) <span class="sc">|&gt;</span></span>
+<span id="cb51-28"><a href="#cb51-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">distinct</span>(name, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb51-29"><a href="#cb51-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="integrated-metric-construction" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="integrated-metric-construction"><span class="header-section-number">9.4</span> Integrated Metric Construction</h2>
+<p>We aggregate document observations, depth-of-use scores, desire-line usage, and total funding amounts:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>analysis <span class="ot">&lt;-</span> ltas_lookup_names <span class="sc">|&gt;</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name) <span class="sc">|&gt;</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">distinct</span>(name) <span class="sc">|&gt;</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(name)</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>results_analysis <span class="ot">&lt;-</span> results <span class="sc">|&gt;</span></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>        results_names <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="at">local_authority_name =</span> name, ltas_name),</span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="st">"local_authority_name"</span></span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a>analysis_data <span class="ot">&lt;-</span> analysis <span class="sc">|&gt;</span></span>
+<span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(</span>
+<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a>        results_analysis <span class="sc">|&gt;</span></span>
+<span id="cb52-15"><a href="#cb52-15" aria-hidden="true" tabindex="-1"></a>            <span class="fu">mutate</span>(<span class="at">pct_usage_depth =</span> <span class="fu">parse_number</span>(<span class="fu">as.character</span>(pct_usage_depth))) <span class="sc">|&gt;</span></span>
+<span id="cb52-16"><a href="#cb52-16" aria-hidden="true" tabindex="-1"></a>            <span class="fu">group_by</span>(ltas_name) <span class="sc">|&gt;</span></span>
+<span id="cb52-17"><a href="#cb52-17" aria-hidden="true" tabindex="-1"></a>            <span class="fu">summarise</span>(</span>
+<span id="cb52-18"><a href="#cb52-18" aria-hidden="true" tabindex="-1"></a>                <span class="at">n_observations =</span> <span class="fu">n</span>(),</span>
+<span id="cb52-19"><a href="#cb52-19" aria-hidden="true" tabindex="-1"></a>                <span class="at">n_mentions_pct =</span> <span class="fu">sum</span>(n_mentions_pct, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb52-20"><a href="#cb52-20" aria-hidden="true" tabindex="-1"></a>                <span class="at">pct_usage_depth_1 =</span> <span class="fu">sum</span>(pct_usage_depth <span class="sc">==</span> <span class="dv">1</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb52-21"><a href="#cb52-21" aria-hidden="true" tabindex="-1"></a>                <span class="at">pct_usage_depth_2 =</span> <span class="fu">sum</span>(pct_usage_depth <span class="sc">==</span> <span class="dv">2</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb52-22"><a href="#cb52-22" aria-hidden="true" tabindex="-1"></a>                <span class="at">pct_usage_depth_3 =</span> <span class="fu">sum</span>(pct_usage_depth <span class="sc">==</span> <span class="dv">3</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb52-23"><a href="#cb52-23" aria-hidden="true" tabindex="-1"></a>                <span class="at">n_pct_desire_lines_used =</span> <span class="fu">sum</span>(pct_desire_lines_used, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb52-24"><a href="#cb52-24" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb52-25"><a href="#cb52-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"name"</span> <span class="ot">=</span> <span class="st">"ltas_name"</span>)</span>
+<span id="cb52-26"><a href="#cb52-26" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb52-27"><a href="#cb52-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(</span>
+<span id="cb52-28"><a href="#cb52-28" aria-hidden="true" tabindex="-1"></a>        atf_names <span class="sc">|&gt;</span> <span class="fu">select</span>(name, atf20_21, atf21_22, atf22_23, atf23_24, atf24_25),</span>
+<span id="cb52-29"><a href="#cb52-29" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="st">"name"</span></span>
+<span id="cb52-30"><a href="#cb52-30" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb52-31"><a href="#cb52-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(</span>
+<span id="cb52-32"><a href="#cb52-32" aria-hidden="true" tabindex="-1"></a>        atf_future_names <span class="sc">|&gt;</span> <span class="fu">select</span>(name, cdel_per_year_4yr, rdel_per_year_3yr, total_over_4yr),</span>
+<span id="cb52-33"><a href="#cb52-33" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="st">"name"</span></span>
+<span id="cb52-34"><a href="#cb52-34" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb52-35"><a href="#cb52-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="fu">across</span>(</span>
+<span id="cb52-36"><a href="#cb52-36" aria-hidden="true" tabindex="-1"></a>        <span class="fu">c</span>(atf20_21, atf21_22, atf22_23, atf23_24, atf24_25, cdel_per_year_4yr, rdel_per_year_3yr, total_over_4yr),</span>
+<span id="cb52-37"><a href="#cb52-37" aria-hidden="true" tabindex="-1"></a>        <span class="sc">~</span> {</span>
+<span id="cb52-38"><a href="#cb52-38" aria-hidden="true" tabindex="-1"></a>            x <span class="ot">&lt;-</span> stringr<span class="sc">::</span><span class="fu">str_squish</span>(<span class="fu">as.character</span>(.x))</span>
+<span id="cb52-39"><a href="#cb52-39" aria-hidden="true" tabindex="-1"></a>            x[stringr<span class="sc">::</span><span class="fu">str_detect</span>(x, stringr<span class="sc">::</span><span class="fu">regex</span>(<span class="st">"^invalid</span><span class="sc">\\</span><span class="st">s*number$"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>))] <span class="ot">&lt;-</span> <span class="cn">NA_character_</span></span>
+<span id="cb52-40"><a href="#cb52-40" aria-hidden="true" tabindex="-1"></a>            readr<span class="sc">::</span><span class="fu">parse_number</span>(x)</span>
+<span id="cb52-41"><a href="#cb52-41" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb52-42"><a href="#cb52-42" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb52-43"><a href="#cb52-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-44"><a href="#cb52-44" aria-hidden="true" tabindex="-1"></a>funding_5yr_cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"atf20_21"</span>, <span class="st">"atf21_22"</span>, <span class="st">"atf22_23"</span>, <span class="st">"atf23_24"</span>, <span class="st">"atf24_25"</span>)</span>
+<span id="cb52-45"><a href="#cb52-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-46"><a href="#cb52-46" aria-hidden="true" tabindex="-1"></a>analysis_metrics <span class="ot">&lt;-</span> analysis_data <span class="sc">|&gt;</span></span>
+<span id="cb52-47"><a href="#cb52-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb52-48"><a href="#cb52-48" aria-hidden="true" tabindex="-1"></a>        <span class="at">n_observations =</span> <span class="fu">replace_na</span>(n_observations, <span class="dv">0</span>),</span>
+<span id="cb52-49"><a href="#cb52-49" aria-hidden="true" tabindex="-1"></a>        <span class="at">n_mentions_pct =</span> <span class="fu">replace_na</span>(n_mentions_pct, <span class="dv">0</span>),</span>
+<span id="cb52-50"><a href="#cb52-50" aria-hidden="true" tabindex="-1"></a>        <span class="at">n_pct_desire_lines_used =</span> <span class="fu">replace_na</span>(n_pct_desire_lines_used, <span class="dv">0</span>),</span>
+<span id="cb52-51"><a href="#cb52-51" aria-hidden="true" tabindex="-1"></a>        <span class="at">pct_usage_depth_1 =</span> <span class="fu">replace_na</span>(pct_usage_depth_1, <span class="dv">0</span>),</span>
+<span id="cb52-52"><a href="#cb52-52" aria-hidden="true" tabindex="-1"></a>        <span class="at">pct_usage_depth_2 =</span> <span class="fu">replace_na</span>(pct_usage_depth_2, <span class="dv">0</span>),</span>
+<span id="cb52-53"><a href="#cb52-53" aria-hidden="true" tabindex="-1"></a>        <span class="at">pct_usage_depth_3 =</span> <span class="fu">replace_na</span>(pct_usage_depth_3, <span class="dv">0</span>),</span>
+<span id="cb52-54"><a href="#cb52-54" aria-hidden="true" tabindex="-1"></a>        <span class="at">n_depth_scored =</span> pct_usage_depth_1 <span class="sc">+</span> pct_usage_depth_2 <span class="sc">+</span> pct_usage_depth_3,</span>
+<span id="cb52-55"><a href="#cb52-55" aria-hidden="true" tabindex="-1"></a>        <span class="at">depth_score_mean =</span> <span class="fu">if_else</span>(</span>
+<span id="cb52-56"><a href="#cb52-56" aria-hidden="true" tabindex="-1"></a>            n_depth_scored <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb52-57"><a href="#cb52-57" aria-hidden="true" tabindex="-1"></a>            (<span class="dv">1</span> <span class="sc">*</span> pct_usage_depth_1 <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> pct_usage_depth_2 <span class="sc">+</span> <span class="dv">3</span> <span class="sc">*</span> pct_usage_depth_3) <span class="sc">/</span> n_depth_scored,</span>
+<span id="cb52-58"><a href="#cb52-58" aria-hidden="true" tabindex="-1"></a>            <span class="cn">NA_real_</span></span>
+<span id="cb52-59"><a href="#cb52-59" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb52-60"><a href="#cb52-60" aria-hidden="true" tabindex="-1"></a>        <span class="at">total_over_5yr =</span> <span class="fu">if_else</span>(</span>
+<span id="cb52-61"><a href="#cb52-61" aria-hidden="true" tabindex="-1"></a>            <span class="fu">rowSums</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">across</span>(<span class="fu">all_of</span>(funding_5yr_cols)))) <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb52-62"><a href="#cb52-62" aria-hidden="true" tabindex="-1"></a>            <span class="fu">rowSums</span>(<span class="fu">across</span>(<span class="fu">all_of</span>(funding_5yr_cols)), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb52-63"><a href="#cb52-63" aria-hidden="true" tabindex="-1"></a>            <span class="cn">NA_real_</span></span>
+<span id="cb52-64"><a href="#cb52-64" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb52-65"><a href="#cb52-65" aria-hidden="true" tabindex="-1"></a>        <span class="at">pct_mention_rate =</span> <span class="fu">if_else</span>(n_observations <span class="sc">&gt;</span> <span class="dv">0</span>, n_mentions_pct <span class="sc">/</span> n_observations, <span class="cn">NA_real_</span>),</span>
+<span id="cb52-66"><a href="#cb52-66" aria-hidden="true" tabindex="-1"></a>        <span class="at">desire_lines_rate =</span> <span class="fu">if_else</span>(n_observations <span class="sc">&gt;</span> <span class="dv">0</span>, n_pct_desire_lines_used <span class="sc">/</span> n_observations, <span class="cn">NA_real_</span>)</span>
+<span id="cb52-67"><a href="#cb52-67" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="ranked-metrics-table" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="ranked-metrics-table"><span class="header-section-number">9.5</span> Ranked Metrics Table</h2>
+<p>The table below displays the resulting dataset ranked by 5-year historical ATF funding allocations (£), showing document counts, mention counts, mean depth score, and multi-year future allocations:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>ranked_analysis_metrics <span class="ot">&lt;-</span> analysis_metrics <span class="sc">|&gt;</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>        name,</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>        n_observations,</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>        n_mentions_pct,</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>        pct_mention_rate,</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>        desire_lines_rate,</span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>        depth_score_mean,</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>        total_over_5yr,</span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>        total_over_4yr</span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(total_over_5yr)) <span class="sc">|&gt;</span></span>
+<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">rank =</span> <span class="fu">row_number</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(pct_mention_rate, desire_lines_rate, depth_score_mean), <span class="sc">~</span> <span class="fu">round</span>(.x, <span class="dv">1</span>)))</span>
+<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
+<span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a>    ranked_analysis_metrics,</span>
+<span id="cb53-18"><a href="#cb53-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Local Transport Authorities ranked by 5-year ATF Allocations (£)"</span>,</span>
+<span id="cb53-19"><a href="#cb53-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">options =</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">10</span>, <span class="at">scrollX =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb53-20"><a href="#cb53-20" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-c50877ccd78fb1264c01" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c50877ccd78fb1264c01">{"x":{"filter":"none","vertical":false,"caption":"<caption>Local Transport Authorities ranked by 5-year ATF Allocations (£)<\/caption>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75"],["Greater Manchester Combined Authority","West Midlands Combined Authority","West Yorkshire Combined Authority","North East Combined Authority","Liverpool City Region Combined Authority","East Midlands Combined Authority","Gloucestershire","Greater London","Surrey","Oxfordshire","Essex","South Yorkshire Combined Authority","Hertfordshire","Suffolk","West of England Combined Authority","Kingston upon Hull","Kent","Slough","Hampshire","Lancashire","Cambridgeshire and Peterborough Combined Authority","Tees Valley Combined Authority","Warwickshire","Norfolk","Brighton and Hove","Devon","Bournemouth, Christchurch and Poole","Buckinghamshire","Wokingham","Reading","Staffordshire","West Sussex","Somerset","Plymouth","Southampton","East Sussex","Dorset","Cheshire East","Warrington","Cornwall","Cheshire West and Chester","East Riding of Yorkshire","Telford and Wrekin","York","Wiltshire","Milton Keynes","Worcestershire","Thurrock","Medway","North Yorkshire","North Somerset","Swindon","Portsmouth","Stoke-on-Trent","Central Bedfordshire","West Berkshire","Shropshire","Luton","Isle of Wight","Southend-on-Sea","Cumberland","West Northamptonshire","Bedford","Windsor and Maidenhead","Blackburn with Darwen","Herefordshire","Westmorland and Furness","Torbay","Blackpool","Bracknell Forest","North Northamptonshire","Isles of Scilly","Leicestershire","North East Lincolnshire","North Lincolnshire"],[3,2,13,6,3,2,1,0,8,16,3,1,11,2,2,1,6,1,4,2,3,0,2,5,2,7,2,1,1,1,3,7,9,5,1,1,1,1,1,1,2,3,1,1,6,1,3,1,1,4,0,2,3,1,1,1,2,2,1,1,13,2,1,2,1,2,1,1,0,1,3,8,3,1,0],[2,134,90,19,28,48,11,0,377,249,21,1,168,18,1,8,43,23,50,42,21,0,4,0,2,51,3,2,28,6,5,135,150,11,0,12,11,17,7,16,3,6,37,26,27,7,100,3,5,83,0,0,11,0,0,8,12,1,5,1,96,48,0,10,1,29,2,12,0,12,50,3,42,2,0],[0.7,67,6.9,3.2,9.300000000000001,24,11,null,47.1,15.6,7,1,15.3,9,0.5,8,7.2,23,12.5,21,7,null,2,0,1,7.3,1.5,2,28,6,1.7,19.3,16.7,2.2,0,12,11,17,7,16,1.5,2,37,26,4.5,7,33.3,3,5,20.8,null,0,3.7,0,0,8,6,0.5,5,1,7.4,24,0,5,1,14.5,2,12,null,12,16.7,0.4,14,2,null],[0,1,0.4,0.8,1,1,0,null,0.6,0.7,0.7,0,0.5,0.5,0,0,0.5,1,0,0.5,0.3,null,0.5,0,0.5,0.3,0.5,0,1,1,0.3,0.6,0.9,0.2,0,0,0,1,1,1,0.5,0.3,1,1,0.2,0,0.3,1,1,0.8,null,0,0.3,0,0,0,0.5,0.5,1,1,0.7,1,0,0.5,0,1,1,1,null,1,0,0,1,0,null],[1,3,3,2,2.3,2,2,null,2.7,2.7,2,2,2.6,2,2,2,2.5,3,3,3,2.5,null,1,null,2,2.3,null,2,3,3,2,2.6,2.4,2,null,2,3,3,3,2,2,3,2,3,2.5,2,2.5,2,3,2.3,null,null,3,null,null,2,2,2,3,3,2.1,2.5,null,3,2,2,2,2,null,3,2.5,1,3,null,null],[63182456,54324251,47477943,42858845,37714444,34982349,24008721,20000000,19097747,16885628,15745226,15562630,15216271,14449268,13782703,12280136,12053115,11259064,10813483,9807846,8963049,8507045,7935284,7574447,7123120,6816569,5529110,4362994,4345747,4318909,4269032,3893996,3749003,3741554,3378343,3370767,2948637,2877947,2739831,2686122,2539784,2539059,2347322,2231927,2065720,2039442,1759504,1716087,1580591,1381459,1331268,1252624,1238542,1168225,1149944,1146701,1145238,1143057,1098969,1034894,1002089,928089,737857,689455,634976,538050,515234,453273,396208,361581,215297,11000,null,null,null],[35419725,36009295,29018362,16165396,12742158,40481711,17965685,null,19800132,20185686,24739079,16968822,19718081,12537098,11783694,1645184,25924411,977301,23094356,20299711,24915193,4187144,9840039,15082603,4538302,13375751,11116505,9119124,2926114,2844014,5420018,5464466,9412476,4347677,4060747,3376793,2354155,6577971,3469034,3531678,5874580,5635523,3052129,1245154,3169878,4733197,3735036,1086046,1727695,3820857,1342255,1442980,1276988,1593160,1824716,999379,2004847,1388110,869870,1115058,4496932,2633042,1146917,950332,2544323,1158006,3728176,860961,870272,772844,2225048,140000,null,null,null],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>n_observations<\/th>\n      <th>n_mentions_pct<\/th>\n      <th>pct_mention_rate<\/th>\n      <th>desire_lines_rate<\/th>\n      <th>depth_score_mean<\/th>\n      <th>total_over_5yr<\/th>\n      <th>total_over_4yr<\/th>\n      <th>rank<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7,8,9]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"name","targets":1},{"name":"n_observations","targets":2},{"name":"n_mentions_pct","targets":3},{"name":"pct_mention_rate","targets":4},{"name":"desire_lines_rate","targets":5},{"name":"depth_score_mean","targets":6},{"name":"total_over_5yr","targets":7},{"name":"total_over_4yr","targets":8},{"name":"rank","targets":9}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+</section>
+<section id="limitations-next-steps" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Limitations &amp; Next Steps</h1>
 <ul>
-<li>This 2026 run covers <strong>England only</strong>; the international tools (NPT Scotland, CRUSE Ireland, biclaR Portugal, Norway PCT) are the next stage.</li>
-<li><code>doc_type</code> and free-text fields are model-extracted; treat as indicative and spot-check before citation.</li>
-<li>10 candidate URLs could not be downloaded (blocked/relocated); their records are retained with <code>download_status: failed</code> for transparency.</li>
-<li>Reproducibility: re-run <code>scripts/run_extract_ollama.py</code> against the downloaded corpus; no paid API credits are required.</li>
+<li><strong>Geographic scope</strong>: This 2026 run covers <strong>England only</strong>; international tools (NPT Scotland, CRUSE Ireland, biclaR Portugal, Norway PCT) are the focus of subsequent analysis stages.</li>
+<li><strong>Normalisation by authority scale</strong>: Funding allocations are heavily influenced by local authority population and geographic scale; further work will normalise funding per capita.</li>
+<li><strong>Validation</strong>: <code>doc_type</code> and free-text fields are model-extracted; key quotes and scoring should be spot-checked against source PDFs.</li>
+<li><strong>Reproducibility</strong>: Extraction can be re-run locally with <code>scripts/run_extract_ollama.py</code> without external paid API credits.</li>
 </ul>
 
 

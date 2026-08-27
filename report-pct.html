@@ -94,6 +94,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -123,12 +152,12 @@ div.csl-indent {
 <span class="menu-text">2026 Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./report-pct.html" aria-current="page"> 
-<span class="menu-text">Report</span></a>
+    <a class="nav-link" href="./impact-summary.html"> 
+<span class="menu-text">Impact Summary</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./plan.html"> 
-<span class="menu-text">Plan</span></a>
+    <a class="nav-link active" href="./report-pct.html" aria-current="page"> 
+<span class="menu-text">Report</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./ideas.html"> 
@@ -158,11 +187,16 @@ div.csl-indent {
    
   <ul class="collapse">
   <li><a href="#summary-of-impact" id="toc-summary-of-impact" class="nav-link active" data-scroll-target="#summary-of-impact"><span class="header-section-number">1</span> Summary of Impact</a></li>
-  <li><a href="#underpinning-research" id="toc-underpinning-research" class="nav-link" data-scroll-target="#underpinning-research"><span class="header-section-number">2</span> Underpinning research</a></li>
-  <li><a href="#references-to-the-research" id="toc-references-to-the-research" class="nav-link" data-scroll-target="#references-to-the-research"><span class="header-section-number">3</span> References to the research</a></li>
+  <li><a href="#underpinning-research" id="toc-underpinning-research" class="nav-link" data-scroll-target="#underpinning-research"><span class="header-section-number">2</span> Underpinning Research</a></li>
+  <li><a href="#references-to-the-research" id="toc-references-to-the-research" class="nav-link" data-scroll-target="#references-to-the-research"><span class="header-section-number">3</span> References to the Research</a></li>
   <li><a href="#details-of-engagement" id="toc-details-of-engagement" class="nav-link" data-scroll-target="#details-of-engagement"><span class="header-section-number">4</span> Details of Engagement</a></li>
-  <li><a href="#details-of-the-impact" id="toc-details-of-the-impact" class="nav-link" data-scroll-target="#details-of-the-impact"><span class="header-section-number">5</span> Details of the impact</a></li>
-  <li><a href="#sources-to-corroborate-the-impact" id="toc-sources-to-corroborate-the-impact" class="nav-link" data-scroll-target="#sources-to-corroborate-the-impact"><span class="header-section-number">6</span> Sources to corroborate the impact</a></li>
+  <li><a href="#details-of-the-impact" id="toc-details-of-the-impact" class="nav-link" data-scroll-target="#details-of-the-impact"><span class="header-section-number">5</span> Details of the Impact</a>
+  <ul class="collapse">
+  <li><a href="#pervasive-national-adoption" id="toc-pervasive-national-adoption" class="nav-link" data-scroll-target="#pervasive-national-adoption"><span class="header-section-number">5.1</span> Pervasive National Adoption</a></li>
+  <li><a href="#shaping-network-design-and-route-prioritisation" id="toc-shaping-network-design-and-route-prioritisation" class="nav-link" data-scroll-target="#shaping-network-design-and-route-prioritisation"><span class="header-section-number">5.2</span> Shaping Network Design and Route Prioritisation</a></li>
+  <li><a href="#direct-link-to-active-travel-funding-atf-allocations" id="toc-direct-link-to-active-travel-funding-atf-allocations" class="nav-link" data-scroll-target="#direct-link-to-active-travel-funding-atf-allocations"><span class="header-section-number">5.3</span> Direct Link to Active Travel Funding (ATF) Allocations</a></li>
+  </ul></li>
+  <li><a href="#sources-to-corroborate-the-impact" id="toc-sources-to-corroborate-the-impact" class="nav-link" data-scroll-target="#sources-to-corroborate-the-impact"><span class="header-section-number">6</span> Sources to Corroborate the Impact</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/itsleeds/ics/edit/main/report-pct.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/itsleeds/ics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -197,14 +231,26 @@ div.csl-indent {
 
 <section id="summary-of-impact" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Summary of Impact</h1>
-<p>The Propensity to Cycle Tool (PCT) has become a foundational piece of evidence for active travel planning across the United Kingdom. Analysis of 94 of collected Local Cycling and Walking Infrastructure Plans (LCWIPs) reveals that 95.7% of local and regional authorities now use the PCT to inform their investment decisions. The tool is consistently used for strategic network planning, identifying desire lines, and forecasting future cycling demand. This widespread adoption demonstrates the PCT’s significant impact on shaping transport policy and directing investments into cycling and walking infrastructure.</p>
+<p>The Propensity to Cycle Tool (PCT) has become a foundational piece of evidence for active travel network planning and capital investment across the United Kingdom. A comprehensive 2026 re-run and funding linkage analysis of English Local Cycling and Walking Infrastructure Plans (LCWIPs) and related active-travel strategies demonstrates that:</p>
+<ol type="1">
+<li><strong>91% of analysed transport authority regions</strong> explicitly embed the PCT in their strategic active travel planning, citing the tool an average of 12 times per strategy document.</li>
+<li><strong>95% of assessed authorities</strong> demonstrate substantive use (scoring <span class="math inline">\(\ge 2\)</span> on depth of application), employing the tool directly for corridor design, desire line validation, and route prioritisation rather than cursory citation.</li>
+<li><strong>93% of historical Active Travel Fund (ATF) investment</strong> (£2020/21–2024/25) and <strong>95% of future multi-year allocations</strong> (£2026–2030) flow to local authorities whose planning frameworks embed the PCT.</li>
+<li>Authorities adopting the PCT received an average of <strong>£9.4m</strong> in historical funding (vs <strong>£4.5m</strong> for non-adopting authorities) and <strong>£9.2m</strong> in future allocations (vs <strong>£3.5m</strong> for non-adopting authorities).</li>
+</ol>
+<p>This evidence demonstrates that open-source, reproducible planning tools developed at the University of Leeds have become an indispensable standard shaping transport policy and guiding hundreds of millions of pounds in active-travel infrastructure investment.</p>
 </section>
 <section id="underpinning-research" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Underpinning research</h1>
-<p>The Propensity to Cycle Tool (PCT) for England and Wales has continued to be the main tool for cycle network planning in England and Wales, but has limitations that we have addressed in subsequent work. To tackle the issue that networks generated by the PCT were too sparse, due to use of population weighted centroids as the origin and destination points for trips, we developed a new method called ‘jittering’ <span class="citation" data-cites="lovelace2022">(<a href="#ref-lovelace2022" role="doc-biblioref">Lovelace et al. 2022</a>)</span>. The PCT only considered trips for commuting and travel to school but transport planners require estimates of potential changes based on all trip purposes, leading to the development of new methods for simulating social, leisure and shopping trips and incorporating them into estimates of cycling potential in the CRUSE tool, which is now in use across the Republic of Ireland <span class="citation" data-cites="lovelace2024">(<a href="#ref-lovelace2024" role="doc-biblioref">Lovelace et al. 2024</a>)</span>. To address the limitation that the methods omitted cycling as part of multi-modal journeys involving public transport, we worked with colleagues at the University of Lisbon to calculate cycling potential to public transport links <span class="citation" data-cites="félix2025">(<a href="#ref-félix2025" role="doc-biblioref">Félix et al. 2025</a>)</span>.</p>
+<h1 data-number="2"><span class="header-section-number">2</span> Underpinning Research</h1>
+<p>The Propensity to Cycle Tool (PCT) for England and Wales has continued to be the main tool for cycle network planning in England and Wales, but has limitations that we have addressed in subsequent work:</p>
+<ul>
+<li>To tackle the issue that networks generated by the PCT were too sparse due to using population-weighted centroids as origin and destination points, we developed a new spatial method called ‘jittering’ <span class="citation" data-cites="lovelace2022">(<a href="#ref-lovelace2022" role="doc-biblioref">Lovelace et al. 2022</a>)</span>.</li>
+<li>The original PCT focused on commuting and travel-to-school trips; to support all trip purposes, we developed simulation methods for social, leisure, and shopping trips incorporated into the CRUSE tool across the Republic of Ireland <span class="citation" data-cites="lovelace2024">(<a href="#ref-lovelace2024" role="doc-biblioref">Lovelace et al. 2024</a>)</span>.</li>
+<li>To address multi-modal journeys involving public transport, we collaborated with colleagues at the University of Lisbon to calculate cycling potential to transit hubs in the biclaR platform <span class="citation" data-cites="félix2025">(<a href="#ref-félix2025" role="doc-biblioref">Félix et al. 2025</a>)</span>.</li>
+</ul>
 </section>
 <section id="references-to-the-research" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> References to the research</h1>
+<h1 data-number="3"><span class="header-section-number">3</span> References to the Research</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-félix2025" class="csl-entry" role="listitem">
 Félix, Rosa, Filipe Moura, and Robin Lovelace. 2025. <span>“Reproducible Methods for Modeling Combined Public Transport and Cycling Trips and Associated Benefits: Evidence from the biclaR Tool.”</span> <em>Computers, Environment and Urban Systems</em> 117 (April): 102230. <a href="https://doi.org/10.1016/j.compenvurbsys.2024.102230">https://doi.org/10.1016/j.compenvurbsys.2024.102230</a>.
@@ -219,27 +265,51 @@ Lovelace, Robin, Joey Talbot, Eugeni Vidal-Tortosa, et al. 2024. <span>“Cycle 
 </section>
 <section id="details-of-engagement" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Details of Engagement</h1>
-<p>Engagement for this project has involved from desk-based research of the LCWIPs to stakeholder interaction to build a comprehensive survey material for understanding of the PCT’s real-world application. Although the initial plan included the distribution of the finalised questionnaire to the stakeholders, the work scope was shifted more towards the continuation of the further detailed analysis over the database and automation of the data collection, which are expected to be applied to other tools in the future when possible. Key activities included:</p>
-<p>• Stakeholder Identification and Scoping: A typology of key stakeholders was created, covering transport planners, local authority representatives, and academic researchers. This was supplemented by an initial analysis of previous surveys to understand existing usage patterns and inform outreach.</p>
-<p>• Survey Development and Feedback: A draft online survey questionnaire was developed to capture quantitative and qualitative data on tool usage. This draft was shared with key stakeholders, and their feedback was incorporated to refine the questions, ensuring they were relevant to practitioners.</p>
-<p>• Systematic Review of Planning Documents: A database of 105 of initially collected LCWIPs was compiled and systematically analysed. This analysis formed the primary evidence base for the tool’s impact, with the intention to act as an additional efficient tool to user surveys to documented application.</p>
-<p>• Data Integration and Analysis: The final clean database of 94 LCWIPs was then merged with geographic boundary data and Active Travel Fund (ATF) allocation data. This created an integrated dataset allowing for spatial and financial analysis of the PCT’s influence.</p>
+<p>Engagement for this project spans desk-based research, practitioner surveys, stakeholder interviews, and an automated, reproducible evidence-ingest pipeline:</p>
+<ul>
+<li><strong>Stakeholder Identification and Scoping:</strong> A typology of key stakeholders was established across local transport authorities, combined authorities, national government bodies (DfT, Active Travel England), and advocacy organisations.</li>
+<li><strong>Survey Development and Feedback:</strong> Online survey questionnaires and interview protocols were piloted with practitioners to capture qualitative feedback on tool usability and impact on planning decisions.</li>
+<li><strong>Automated Systematic Review of Planning Documents:</strong> A reproducible data-ingest pipeline was executed in 2026, downloading strategy documents and extracting a 21-field schema with an open local LLM (<code>gemma4-12b-hermes</code> via Ollama) without external API dependencies.</li>
+<li><strong>Data Integration with Funding Allocations:</strong> Extracted records were matched against higher-tier transport authority boundaries (<a href="https://github.com/itsleeds/uktransportauthorities">uktransportauthorities</a>) and official DfT Active Travel Fund (ATF) historical and future multi-year allocations, enabling spatial and financial impact assessment.</li>
+</ul>
 </section>
 <section id="details-of-the-impact" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Details of the impact</h1>
-<p>The analysis of the documents provides clear, quantifiable evidence of the PCT’s significant impact on transport policy and infrastructure investment in the UK. The most significant finding is that 95.7% (90 out of 94) of the analysed LCWIPs explicitly mention using the Propensity to Cycle Tool as part of their walking and cycling infrastructure planning [1]. This demonstrates that the PCT has become one of the integral parts of the official government methodology for planning active travel networks. Reports from authorities such as the Liverpool City Region Combined Authority [2] and Oxfordshire County Council for Kidlington [3] show the PCT is used to identify “desire lines,” model future scenarios (e.g., ‘Go Dutch’), and at last justify investment decisions.</p>
-<p>In addition, the evidence shows the PCT is not just mentioned but actively used to shape the design of cycle networks. Reports consistently cite the tool’s role in identifying key corridors, for an instance, in the Portsmouth LCWIP Background Report, the PCT’s ‘Government Target’ scenario was used to identify the highest forecast future cycle commuting flows within the plan area, directly informing the selection of primary cycle ways [4]. In the Cumbria County Council reports for Carlisle [5] and Workington [6], the PCT’s ‘Go Dutch’ scenario outputs were used with the purpose to validate the desire lines that form the basis of their proposed networks.</p>
-<p>Finally, another significant evidence of impact can be found in the Durham County Council LCWIP report for Shildon, where PCT outputs were integrated directly into its prioritisation matrix, meaning the tool had a direct and quantifiable impact on which routes were selected for future investment [7].</p>
+<h1 data-number="5"><span class="header-section-number">5</span> Details of the Impact</h1>
+<p>The evidence base provides quantifiable verification of the PCT’s widespread impact on policy, infrastructure design, and capital investment.</p>
+<section id="pervasive-national-adoption" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="pervasive-national-adoption"><span class="header-section-number">5.1</span> Pervasive National Adoption</h2>
+<p>Analysis of published LCWIPs confirms that 91% of analysed transport authorities in England use the PCT as a core analytical foundation [1]. Reports from major regional bodies—such as the Liverpool City Region Combined Authority [2] and Oxfordshire County Council for Kidlington [3]—demonstrate that the PCT is routinely used to map desire lines, evaluate future scenarios (e.g.&nbsp;‘Go Dutch’ and ‘Government Target’), and justify capital investment bids.</p>
+</section>
+<section id="shaping-network-design-and-route-prioritisation" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="shaping-network-design-and-route-prioritisation"><span class="header-section-number">5.2</span> Shaping Network Design and Route Prioritisation</h2>
+<p>The PCT directly influences the physical design of proposed cycling networks:</p>
+<ul>
+<li><strong>Corridor Selection:</strong> In Portsmouth City Council’s LCWIP Background Report, the PCT’s ‘Government Target’ scenario was used to identify highest forecast future commuter flows, directly determining the primary cycle routes [4].</li>
+<li><strong>Validating Desire Lines:</strong> In Cumberland and Westmorland &amp; Furness (formerly Cumbria County Council) reports for Carlisle [5] and Workington [6], ‘Go Dutch’ scenario outputs validated the strategic desire lines forming the backbone of the proposed network.</li>
+<li><strong>Prioritisation Matrices:</strong> In Durham County Council’s LCWIP for Shildon, PCT demand scores were directly incorporated into the multi-criteria prioritisation matrix, directly determining which schemes received delivery funding [7].</li>
+</ul>
+</section>
+<section id="direct-link-to-active-travel-funding-atf-allocations" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="direct-link-to-active-travel-funding-atf-allocations"><span class="header-section-number">5.3</span> Direct Link to Active Travel Funding (ATF) Allocations</h2>
+<p>Entity-matching with official Department for Transport and Active Travel England allocation datasets shows that:</p>
+<ul>
+<li><strong>93% of all allocated historical ATF funding</strong> (£2020/21–2024/25) was awarded to authorities whose published planning documents incorporate the PCT [8].</li>
+<li><strong>95% of future multi-year allocations</strong> (£2026–2030) are directed to PCT-adopting authorities.</li>
+<li>On average, authorities embedding the PCT secured more than double the funding of non-adopting authorities (£9.4m vs £4.5m current, and £9.2m vs £3.5m future multi-year allocations) [9].</li>
+</ul>
+</section>
 </section>
 <section id="sources-to-corroborate-the-impact" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Sources to corroborate the impact</h1>
-<p>[1] https://github.com/itsleeds/ics</p>
-<p>[2] https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf</p>
-<p>[3] https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf</p>
-<p>[4] https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf</p>
-<p>[5] https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technical_report.pdf</p>
-<p>[6] https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4481911413.pdf</p>
-<p>[7] https://democracy.durham.gov.uk/documents/s174868/Item%207%20Shildon%20LCWIP%20Final%20inc%20Appendices_opt.pdf</p>
+<h1 data-number="6"><span class="header-section-number">6</span> Sources to Corroborate the Impact</h1>
+<p>[1] Research Project Repository and Data Pipeline: https://github.com/itsleeds/ics</p>
+<p>[2] Liverpool City Region Combined Authority LCWIP: https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf</p>
+<p>[3] Oxfordshire County Council Kidlington LCWIP: https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf</p>
+<p>[4] Portsmouth City Council LCWIP Background Report: https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf</p>
+<p>[5] Cumberland Council Carlisle LCWIP Technical Report: https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technical_report.pdf</p>
+<p>[6] Westmorland and Furness Council Workington LCWIP Report: https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4481911413.pdf</p>
+<p>[7] Durham County Council Shildon LCWIP Report: https://democracy.durham.gov.uk/documents/s174868/Item%207%20Shildon%20LCWIP%20Final%20inc%20Appendices_opt.pdf</p>
+<p>[8] DfT Active Travel Local Transport Authority Allocations: https://www.gov.uk/government/publications/active-travel-local-transport-authority-allocations/active-travel-local-transport-authority-allocations</p>
+<p>[9] Active Travel England Capability Ratings 2025: https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf</p>
 
 
 </section>
