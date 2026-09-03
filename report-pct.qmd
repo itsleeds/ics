@@ -55,7 +55,7 @@ The Propensity to Cycle Tool (PCT) has become a foundational piece of evidence f
 
 1. **91% of analysed transport authority regions** explicitly embed the PCT in their strategic active travel planning, citing the tool an average of 12 times per strategy document.
 2. **95% of assessed authorities** demonstrate substantive use (scoring $\ge 2$ on depth of application), employing the tool directly for corridor design, desire line validation, and route prioritisation rather than cursory citation.
-3. **93% of historical Active Travel Fund (ATF) investment** (£2020/21–2024/25) and **95% of future multi-year allocations** (£2026–2030) flow to local authorities whose planning frameworks embed the PCT.
+3. **93% of historical Active Travel Fund (ATF) investment** (2020/21–2024/25) and **95% of future multi-year allocations** (2026–2030) flow to local authorities whose planning frameworks embed the PCT.
 4. Authorities adopting the PCT received an average of **£9.4m** in historical funding (vs **£4.5m** for non-adopting authorities) and **£9.2m** in future allocations (vs **£3.5m** for non-adopting authorities).
 
 This evidence demonstrates that open-source, reproducible planning tools developed at the University of Leeds have become an indispensable standard shaping transport policy and guiding hundreds of millions of pounds in active-travel infrastructure investment.
@@ -128,14 +128,14 @@ map_data <- ltas %>%
     depth_category = factor(case_when(
       is.na(n_observations) | n_observations == 0 ~ "No documents analysed",
       n_mentions_pct == 0 ~ "No PCT mentions",
-      depth_score_mean >= 2.5 ~ "Level 3: Quantitative Prioritisation",
-      depth_score_mean >= 1.5 ~ "Level 2: Corridor & Desire Line Design",
-      depth_score_mean >= 1.0 ~ "Level 1: Contextual Mention",
+      depth_score_mean >= 2.5 ~ "Level 3: Network Design, Mapping and Prioritisation",
+      depth_score_mean >= 1.5 ~ "Level 2: Data Input and Network Analysis",
+      depth_score_mean >= 1.0 ~ "Level 1: Passing Mention",
       TRUE ~ "Mentioned (Unclassified)"
     ), levels = c(
-      "Level 3: Quantitative Prioritisation",
-      "Level 2: Corridor & Desire Line Design",
-      "Level 1: Contextual Mention",
+      "Level 3: Network Design, Mapping and Prioritisation",
+      "Level 2: Data Input and Network Analysis",
+      "Level 1: Passing Mention",
       "Mentioned (Unclassified)",
       "No PCT mentions",
       "No documents analysed"
@@ -151,9 +151,9 @@ map_data <- ltas %>%
   )
 
 palette_colors <- c(
-  "Level 3: Quantitative Prioritisation" = "#08519c",
-  "Level 2: Corridor & Desire Line Design" = "#41b6c4",
-  "Level 1: Contextual Mention" = "#a1dab4",
+  "Level 3: Network Design, Mapping and Prioritisation" = "#08519c",
+  "Level 2: Data Input and Network Analysis" = "#41b6c4",
+  "Level 1: Passing Mention" = "#a1dab4",
   "Mentioned (Unclassified)" = "#fecc5c",
   "No PCT mentions" = "#e31a1c",
   "No documents analysed" = "#bdbdbd"
@@ -200,8 +200,8 @@ leaflet(map_data, width = "100%", height = "650px") %>%
 
 Entity-matching with official Department for Transport and Active Travel England allocation datasets reveals a powerful connection between analytical planning tools and active travel capital allocation:
 
-- **93% of all allocated historical ATF funding** (£2020/21–2024/25) was awarded to authorities whose published planning documents incorporate the PCT [8].
-- **95% of future multi-year allocations** (£2026–2030) are directed to PCT-adopting authorities.
+- **93% of all allocated historical ATF funding** (2020/21–2024/25) was awarded to authorities whose published planning documents incorporate the PCT [8].
+- **95% of future multi-year allocations** (2026–2030) are directed to PCT-adopting authorities.
 - On average, authorities embedding the PCT secured more than double the funding of non-adopting authorities (£9.4m vs £4.5m current, and £9.2m vs £3.5m future multi-year allocations) [9].
 
 ```{r}
