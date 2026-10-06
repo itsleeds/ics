@@ -2,8 +2,8 @@ project:
   type: website
   render:
     - index.qmd
+    - case-study-report.qmd
     - 2026-analysis.qmd
-    - report-pct.qmd
     - paper.qmd
 
 website:
@@ -17,8 +17,10 @@ website:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Impact Report"
-        href: report-pct.qmd
+      - text: "Case Study Report"
+        href: case-study-report.qmd
+      - text: "Analysis"
+        href: 2026-analysis.qmd
       - text: "Paper"
         href: paper.qmd
     right:

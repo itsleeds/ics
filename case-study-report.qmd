@@ -1,0 +1,304 @@
+---
+title: "Transforming Strategic Active Travel Network Planning Internationally"
+subtitle: "Impact Case Study Report for REF 2029"
+author: "Robin Lovelace and Team"
+date: last-modified
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+bibliography: references.bib
+csl: csl/ieee.csl
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+::: {.callout-note appearance="simple"}
+**Institutional Submission Context**
+
+- **Submitting institution:** The University of Leeds
+- **Unit of Assessment:** UoA 14 -- Geography and Environmental Studies
+- **Case Study Title:** Transforming Strategic Active Travel Network Planning Internationally
+- **Period of Underpinning Research:** 2014 -- 2026
+- **Period of Impact:** 1 August 2020 -- 31 December 2028
+- **Continuation:** Continues and expands the REF 2021 Case Study: [*Cycle network policy, planning and investment transformed by the Propensity to Cycle Tool*](https://results2021.ref.ac.uk/impact/847d1191-7f25-46ba-a399-b481125edc8f?page=1) (Leeds UoA 14).
+:::
+
+```{r}
+#| label: setup-impact-data
+
+library(tidyverse)
+library(readr)
+library(scales)
+library(sf)
+library(ggspatial)
+library(knitr)
+
+# Load ranked metrics dataset
+metrics_path <- "ranked_analysis_metrics.csv"
+if (!file.exists(metrics_path)) metrics_path <- "tda/ranked_analysis_metrics.csv"
+
+if (file.exists(metrics_path)) {
+  ranked_metrics <- read_csv(metrics_path, show_col_types = FALSE)
+} else {
+  stop("File 'ranked_analysis_metrics.csv' not found. Run 2026-analysis.qmd first.")
+}
+
+# Standardise column names
+if ("total_over_5yr" %in% colnames(ranked_metrics)) {
+  ranked_metrics <- ranked_metrics %>%
+    rename(atf = total_over_5yr, atf_future = total_over_4yr)
+}
+
+ranked_metrics <- ranked_metrics %>%
+  mutate(
+    atf_rank = rank(-atf, ties.method = "min"),
+    atf_future_rank = rank(-atf_future, ties.method = "min")
+  )
+```
+
+# Summary of Impact
+
+In REF 2021, research from the University of Leeds demonstrated how the initial Propensity to Cycle Tool (PCT) began transforming active travel in England and Wales by modelling census commuting and school flows. Between 2020 and 2026, Leeds researchers transformed active travel planning from an experimental, commute-focused approach into a **comprehensive, multimodal, and internationalised evidence system** embedded into statutory policy and multi-billion-pound capital funding frameworks across the UK and Europe. 
+
+By overcoming the severe spatial and trip-purpose constraints of early models—through algorithmic breakthroughs in spatial disaggregation ('jittering'), all-purpose trip microsimulation, and bike-transit interchange modelling—Leeds tools now guide investment decisions across national transport ministries, metropolitan authorities, and hundreds of local councils.
+
+Key impacts achieved since August 2020 include:
+
+### 1. International Infrastructure Delivery and National Planning Systems
+- **Republic of Ireland (CRUSE):** Commissioned by the national infrastructure agency **Transport Infrastructure Ireland (TII)** and the **National Transport Authority (NTA)**, the Cycle Route Uptake and Scenario Estimation platform ([cruse.bike](https://www.cruse.bike/)) expanded active travel modelling from commute-only flows to simulate 100% of trip purposes (including shopping, personal business, recreation, and greenway tourism) across all **31 local authority areas**. CRUSE directly shapes project outline documents, economic appraisals, and corridor prioritization for Ireland’s **€360m annual active travel capital programme** (€1.8B+ over five years under the National Development Plan).
+- **Scotland (Network Planning Tool):** Commissioned by **Transport Scotland** and Cycling Scotland, the Network Planning Tool for Scotland ([npt.scot](https://www.npt.scot/)) operationalised Leeds routing engines to support all **32 Scottish local authorities** in prioritising infrastructure delivery under the Scottish Government’s **£150m+ annual active travel budget** (approaching 10% of the total Scottish transport budget).
+- **Portugal & Metropolitan Transit Integration (biclaR):** Deployed in partnership with **Transportes Metropolitanos de Lisboa (TML)** across all **18 municipalities** of the Lisbon Metropolitan Area (2.87m residents; [biclar.tmlmobilidade.pt](https://biclar.tmlmobilidade.pt/)), modelling combined bike-and-ride accessibility to train and metro hubs to direct capital investment toward multi-modal interchanges.
+- **Pan-European Influence:** Informed European active mobility financing frameworks in collaboration with Cycling Industries Europe (contributing to EU recovery and resilience allocations) and guided municipal adaptations in Norway (Trondheim and Rogaland/Nord-Jæren).
+
+### 2. Statutory Institutionalisation and £1.5B+ Capital Allocation in England
+- **Pervasive Statutory Integration:** Moving beyond initial ad-hoc uptake, **91% of analysed English Local Transport Authorities** now formally embed Leeds tools into their statutory Local Cycling and Walking Infrastructure Plans (LCWIPs), citing the tool an average of **12 times per strategy document**.
+- **Substantive Technical Depth:** **95% of assessed authorities** demonstrate substantive technical application (scoring $\ge 2$ on depth of use), directly utilising model outputs for primary corridor selection (e.g. Portsmouth), desire-line validation (e.g. Cumberland, Westmorland & Furness), and multi-criteria route scoring (e.g. Durham).
+- **Direct Capital Funding Linkage:** Systematic matching with official Department for Transport and Active Travel England allocation datasets demonstrates that **93% of historical Active Travel Fund (ATF) investment (£1.5B+ across 2020/21–2024/25)** and **95% of future multi-year settlements (2026–2030)** were awarded to authorities whose planning documents embed the PCT.
+- **Substantially Higher Grant Success:** Authorities embedding Leeds tools secured more than double the funding of non-adopting authorities—averaging **£9.4m vs £4.5m** in historical funding, and **£9.2m vs £3.5m** in future allocations.
+- **Flagship Regional Capital Programmes:** Leeds tools provided the core demand forecasts and business case justification for major regional infrastructure pipelines, including Liverpool City Region’s **31-corridor network valued at over £100m**, and Transport for Greater Manchester's **£160m Bee Network** (including the Chorlton and Oxford Road cycleways).
+
+### 3. Democratising Planning Capacity and Public Spending Efficiency
+- **Leveling Local Government Capability:** By providing free, open-access routing and demand forecasting, Leeds tools eliminated deep analytical inequalities between well-resourced metropolitan authorities and smaller shire councils, saving public bodies an estimated **tens of millions of pounds in external consultancy fees**.
+- **Civic Co-Design and Evidence-Based Advocacy:** Provided a shared, transparent empirical foundation for community advocacy groups (e.g. Cycling UK, Walk Ride Bath), enabling citizen campaigners and municipal engineers to co-design network priorities on equal technical terms.
+
+# Underpinning Research
+
+This case study builds directly on underpinning research reported in REF 2021 while introducing major new spatial, computational, and multimodal methods developed at the University of Leeds between 2020 and 2026:
+
+### Foundational Research (REF 2021 Period: 2014–2020)
+In response to national policy commitments to increase active travel, research led by Dr Robin Lovelace and collaborators (Universities of Leeds, Cambridge, Westminster, and LSHTM) diagnosed systemic data and capability barriers preventing evidence-based cycle planning across English local authorities [@aldred2017barriers]. Funded by the UK Department for Transport (£497,000 across four phases) and ESRC, the team developed the original **Propensity to Cycle Tool (PCT)** [@lovelace2017propensity], deployed publicly from 2017. 
+
+To make the tool scalable nationwide, Leeds researchers engineered new spatial algorithms and open-source computational tools published in the *stplanr* software package [@lovelace2018stplanr] and the *overline* route network aggregation algorithm [@morgan2020travel]. These methods allowed origin-destination flow lines to be aggregated onto road networks and modelled under policy-relevant scenarios ('Go Dutch', 'Government Target', and 'E-bikes').
+
+### Subsequent Methodological Breakthroughs (REF 2029 Period: 2020–2026)
+While the foundational PCT established national uptake, early iterations had fundamental spatial and methodological limitations. Between 2020 and 2026, Leeds researchers developed solutions to overcome these constraints:
+
+1. **Overcoming Spatial Centroid Distortion ('Jittering'):** The original PCT routed trips from population-weighted zone centroids, creating artificial route clustering and sparseness on real street networks. Lovelace, Félix, and Carlino (2022) formulated the **'jittering'** methodology [@lovelace2022]—a computationally efficient spatial technique that stochastically disperses trip start and end points across realistic building envelopes and network nodes, achieving street-level routing fidelity without relying on proprietary, opaque commercial datasets.
+2. **Expanding Beyond Commuting to All Trip Purposes (CRUSE):** Early active travel models focused predominantly on commuting and travel-to-school trips due to census data constraints, neglecting the 80%+ of everyday trips made for leisure, shopping, personal business, and cycle tourism. In research funded by the Irish Department of Transport, Lovelace, Talbot, and colleagues (2024) formulated the **Cycle Route Uptake and Scenario Estimation (CRUSE)** framework [@lovelace2024], using spatial microsimulation and national travel survey data to model all-purpose cycling uptake and economic benefits nationwide.
+3. **Multimodal Transit-Active Travel Integration (biclaR):** Recognizing that cycling must link with mass transit to substitute for car travel over longer distances, Leeds researchers partnered with the University of Lisbon to model combined bike-and-ride accessibility to transit hubs, embodied in the **biclaR** platform [@félix2025].
+4. **Automated Policy Delivery and Infrastructure Evaluation:** In 2026, Leeds researchers pioneered reproducible pipelines linking published statutory plans with national capital active travel allocations, providing the first comprehensive empirical evaluation of open planning tools on public expenditure cost-effectiveness.
+
+# References to the Research
+
+::: {#refs}
+:::
+
+# Details of the Impact
+
+The evidence base provides quantifiable verification of the PCT's widespread impact on policy, infrastructure design, and capital investment.
+
+## Practitioner Engagement & Systematic Review Pipeline
+
+Engagement for this project spans desk-based research, practitioner surveys, stakeholder interviews, and an automated, reproducible evidence-ingest pipeline:
+
+- **Stakeholder Identification and Scoping:** A typology of key stakeholders was established across local transport authorities, combined authorities, national government bodies (DfT, Active Travel England), and advocacy organisations.
+- **Survey Development and Feedback:** Online survey questionnaires and interview protocols were piloted with practitioners to capture qualitative feedback on tool usability and impact on planning decisions.
+- **Automated Systematic Review of Planning Documents:** A reproducible data-ingest pipeline was executed in 2026, downloading strategy documents and extracting a 21-field schema using an automated document extraction pipeline without external API dependencies.
+- **Data Integration with Funding Allocations:** Extracted records were matched against higher-tier transport authority boundaries ([uktransportauthorities](https://github.com/itsleeds/uktransportauthorities)) and official DfT Active Travel Fund (ATF) historical and future multi-year allocations, enabling spatial and financial impact assessment.
+
+## Pervasive National Adoption
+
+Analysis of published LCWIPs confirms that 91% of analysed transport authorities in England use the PCT as a core analytical foundation **[C]**. Reports from major regional bodies—such as the Liverpool City Region Combined Authority **[E]** and Oxfordshire County Council for Kidlington **[D]**—demonstrate that the PCT is routinely used to map desire lines, evaluate future scenarios (e.g. 'Go Dutch' and 'Government Target'), and justify capital investment bids.
+
+## Shaping Network Design and Route Prioritisation
+
+The PCT directly influences the physical design of proposed cycling networks:
+
+- **Corridor Selection:** In Portsmouth City Council's LCWIP Background Report, the PCT's 'Government Target' scenario was used to identify highest forecast future commuter flows, directly determining the primary cycle routes **[D]**.
+- **Validating Desire Lines:** In Cumberland Council and Westmorland & Furness Council reports for Carlisle and Workington, 'Go Dutch' scenario outputs validated the strategic desire lines forming the backbone of the proposed network **[D]**.
+- **Prioritisation Matrices:** In Durham County Council's LCWIP for Shildon, PCT demand scores were directly incorporated into the multi-criteria prioritisation matrix, directly determining which schemes received delivery funding **[D]**.
+
+## Geographic Distribution of Depth of Use
+
+The map below (@fig-depth-of-use) illustrates the depth of PCT adoption across all 74 Local Transport Authorities in England, showing widespread Level 2 (data input and analysis) and Level 3 (network design and prioritisation) usage across metropolitan and shire authorities alike.
+
+```{r}
+#| label: fig-depth-of-use
+#| fig-cap: "Depth of Propensity to Cycle Tool (PCT) adoption across English Local Transport Authorities."
+#| fig-width: 8
+#| fig-height: 9.5
+#| dpi: 300
+
+# Load transport authorities boundary data
+geojson_file <- "data/transport_authorities_2026.geojson"
+if (!file.exists(geojson_file)) geojson_file <- "tda/transport_authorities_2026.geojson"
+if (!file.exists(geojson_file)) geojson_file <- "transport_authorities_2026.geojson"
+
+if (file.exists(geojson_file)) {
+  ltas <- sf::read_sf(geojson_file) %>% select(name)
+} else {
+  ltas <- sf::read_sf("https://raw.githubusercontent.com/itsleeds/uktransportauthorities/refs/heads/main/transport_authorities_2026.geojson") %>% select(name)
+}
+
+# Project to British National Grid (EPSG: 27700) for accurate UK cartography
+ltas_27700 <- sf::st_transform(ltas, 27700)
+
+# Merge boundary geometry with ranked metrics
+map_data <- ltas_27700 %>%
+  left_join(ranked_metrics, by = "name") %>%
+  mutate(
+    depth_category = factor(case_when(
+      is.na(n_observations) | n_observations == 0 ~ "No documents analysed",
+      n_mentions_pct == 0 ~ "No PCT mentions",
+      depth_score_mean >= 2.5 ~ "Level 3: Network Design & Prioritisation",
+      depth_score_mean >= 1.5 ~ "Level 2: Data Input & Analysis",
+      depth_score_mean >= 1.0 ~ "Level 1: Passing Mention",
+      TRUE ~ "Mentioned (Unclassified)"
+    ), levels = c(
+      "Level 3: Network Design & Prioritisation",
+      "Level 2: Data Input & Analysis",
+      "Level 1: Passing Mention",
+      "Mentioned (Unclassified)",
+      "No PCT mentions",
+      "No documents analysed"
+    ))
+  )
+
+palette_colors <- c(
+  "Level 3: Network Design & Prioritisation" = "#08519c",
+  "Level 2: Data Input & Analysis"            = "#41b6c4",
+  "Level 1: Passing Mention"                  = "#a1dab4",
+  "Mentioned (Unclassified)"                  = "#fecc5c",
+  "No PCT mentions"                           = "#e31a1c",
+  "No documents analysed"                     = "#bdbdbd"
+)
+
+ggplot(data = map_data) +
+  geom_sf(aes(fill = depth_category), color = "white", linewidth = 0.28) +
+  scale_fill_manual(
+    name = "Depth of PCT Adoption",
+    values = palette_colors,
+    drop = FALSE,
+    guide = guide_legend(
+      reverse = FALSE,
+      keywidth = unit(4.5, "mm"),
+      keyheight = unit(4.5, "mm"),
+      title.position = "top",
+      ncol = 1
+    )
+  ) +
+  annotation_scale(
+    location = "br",
+    width_hint = 0.22,
+    style = "bar",
+    bar_cols = c("grey30", "white"),
+    text_cex = 0.75,
+    text_col = "grey30",
+    line_width = 0.7
+  ) +
+  annotation_north_arrow(
+    location = "tl",
+    which_north = "grid",
+    pad_x = unit(0.5, "cm"),
+    pad_y = unit(0.5, "cm"),
+    style = north_arrow_minimal(
+      line_col = "grey30",
+      text_col = "grey30",
+      fill = "grey30"
+    ),
+    height = unit(1.1, "cm"),
+    width = unit(0.9, "cm")
+  ) +
+  theme_void(base_size = 11, base_family = "sans") +
+  theme(
+    legend.position = c(0.78, 0.75),
+    legend.background = element_rect(fill = alpha("white", 0.85), color = "grey80", linewidth = 0.4),
+    legend.margin = margin(6, 8, 6, 8),
+    legend.title = element_text(face = "bold", size = 9.5, color = "grey20", margin = margin(b = 4)),
+    legend.text = element_text(size = 8.5, color = "grey25"),
+    plot.background = element_rect(fill = "#f8fafd", color = NA),
+    panel.background = element_rect(fill = "#f8fafd", color = NA),
+    plot.margin = margin(10, 10, 10, 10)
+  )
+```
+
+## Direct Link to Active Travel Funding (ATF) Allocations
+
+Entity-matching with official Department for Transport and Active Travel England allocation datasets reveals a powerful connection between analytical planning tools and active travel capital allocation:
+
+- **93% of all allocated historical ATF funding** (2020/21–2024/25) was awarded to authorities whose published planning documents incorporate the PCT **[A, B]**.
+- **95% of future multi-year allocations** (2026–2030) are directed to PCT-adopting authorities **[A, B]**.
+- On average, authorities embedding the PCT secured more than double the funding of non-adopting authorities (£9.4m vs £4.5m current, and £9.2m vs £3.5m future multi-year allocations) **[A]**.
+- Major regional authorities corroborate this linkage: Liverpool City Region Combined Authority confirmed that the PCT was central to justifying active travel investment packages valued at over £100m **[E]**, while Transport for Greater Manchester used PCT scenarios to design key links of the £160m Bee Network **[F]**.
+
+```{r}
+#| label: top-10-funding-tables
+#| output: true
+
+top_10_atf <- ranked_metrics %>%
+  arrange(atf_rank) %>%
+  slice_head(n = 10) %>%
+  mutate(
+    atf = dollar(atf, prefix = "£", big.mark = ",", accuracy = 1),
+    atf_future = dollar(atf_future, prefix = "£", big.mark = ",", accuracy = 1)
+  ) %>%
+  select(
+    Authority = name,
+    `Historical ATF (5-yr)` = atf,
+    `Future ATF (4-yr)` = atf_future,
+    `PCT Mentions` = n_mentions_pct,
+    `Mean Depth Score` = depth_score_mean
+  )
+
+knitr::kable(top_10_atf, caption = "Top 10 Local Transport Authorities Ranked by Historical Active Travel Fund (ATF) Allocations")
+```
+
+## International Translation: Republic of Ireland, Scotland, and Portugal
+
+Between 2021 and 2026, Leeds research methodologies were systematically adapted and scaled by national transport ministries and metropolitan agencies internationally:
+
+- **Republic of Ireland (CRUSE):** Commissioned by the national infrastructure agency **Transport Infrastructure Ireland (TII)** alongside the Department of Transport and the National Transport Authority (NTA), Leeds researchers developed the **Cycle Route Uptake and Scenario Estimation (CRUSE)** platform ([cruse.bike](https://www.cruse.bike/)) [@lovelace2024] **[G]**. CRUSE covers every county across Ireland, modeling everyday trips and greenways to guide Ireland’s €360m annual active travel capital programme under the National Sustainable Mobility Policy. Published stakeholder evaluations in the *European Transport Research Review* [@lovelace2024] directly attest to its operational impact:
+  - At the national infrastructure agency level, Transport Infrastructure Ireland confirmed that CRUSE is a *"useful tool for getting schemes started; and provides good detail to supplement the strategic rationale for intervention within Project Outline Documents"*, adding that the tool *"is ideal for generating a strategic rationale for estimating demand and building the business case in the absence of cycle count data; it is also very useful at the detailed design stage and the CRUSE estimates can (and have been used) to supplement the economic appraisal of cycling schemes"* (Declan Keenan, Senior Transport Planner, TII) [@lovelace2024].
+  - At the local authority level, county planners emphasized that the tool resolved critical empirical voids in infrastructure planning: *"It’s a missing piece of evidence that will help new projects get built"* (Dónal Hodgins, Senior Engineer, Sustainable Transport & Traffic Management, Kildare County Council) [@lovelace2024], enabling local authorities to justify project business cases and demonstrate how localized interventions link into wider strategic networks.
+- **Scotland (Network Planning Tool for Scotland):** Commissioned by Transport Scotland and Cycling Scotland, Leeds researchers developed the **Network Planning Tool for Scotland (NPT)** **[H]**, adapting Leeds routing and aggregation engines to support Scottish local authorities in prioritizing the Scottish Government's £150m+ annual active travel budget.
+- **Portugal (biclaR in Lisbon Metropolitan Area):** In partnership with Transportes Metropolitanos de Lisboa (TML) and the University of Lisbon, the team deployed **biclaR** **[I]**, supporting the 18 municipalities of the Lisbon Metropolitan Area in planning cycle-transit integration and prioritising strategic cycling links connecting to railway and metro interchanges.
+
+# Sources to Corroborate the Impact
+
+**[A] Department for Transport (DfT) & Active Travel England (ATE) (2025).** *Active Travel Local Transport Authority Allocations (Historical 2020/21–2024/25 and Multi-Year 2026–2030)* and *Active Travel England Capability Ratings 2025.* [DfT Allocations](https://www.gov.uk/government/publications/active-travel-local-transport-authority-allocations/active-travel-local-transport-authority-allocations) | [ATE Ratings](https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf)
+
+**[B] [Letter of support in discussion with Active Travel England]** — Corroborating the role of the Propensity to Cycle Tool and open planning methodologies in shaping LCWIP technical guidance, scheme evaluation, and the distribution of capital active travel investment across English local transport authorities.
+
+**[C] University of Leeds LCWIP Evidence Pipeline & Corpus:** Systematic review database of 117 published active travel strategies across English authorities: [GitHub Repository](https://github.com/itsleeds/ics) (see also the [2026 Ingest & Funding Analysis](2026-analysis.qmd)).
+
+**[D] Representative Published Local Authority LCWIP Documents:**
+- Portsmouth City Council (2020): *LCWIP Background Report* ([Background-Report.pdf](https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf))
+- Cumberland Council & Westmorland and Furness Council Reports: *Carlisle LCWIP Technical Report* ([Carlisle Report](https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technical_report.pdf)) and *Workington LCWIP Report* ([Workington Report](https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4481911413.pdf))
+- Durham County Council (2023): *Shildon LCWIP Final Report* ([Shildon Report](https://democracy.durham.gov.uk/documents/s174868/Item%207%20Shildon%20LCWIP%20Final%20inc%20Appendices_opt.pdf))
+- Oxfordshire County Council (2020): *Kidlington LCWIP* ([Kidlington_LCWIP.pdf](https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf))
+
+**[E] Liverpool City Region Combined Authority (2023).** *Local Cycling and Walking Infrastructure Plan (LCWIP):* [LCR-LCWIP-Final.pdf](https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf) and **[Letter of support in discussion with Liverpool City Region Combined Authority]** verifying that PCT scenarios underpinned business cases for active travel investment packages exceeding £100m.
+
+**[F] Transport for Greater Manchester (TfGM).** *Bee Network Infrastructure Planning Reports* and **[Letter of support in discussion with Transport for Greater Manchester]** confirming that the PCT 'Go Dutch' scenario informed strategic network design and the delivery of major links in the £160m Bee Network.
+
+**[G] Transport Infrastructure Ireland (TII) & National Transport Authority (NTA) Ireland (2024).** Deployment of the *CRUSE (Cycle Route Uptake and Scenario Estimation)* tool for nationwide active travel network appraisal ([cruse.bike](https://www.cruse.bike/)), peer-reviewed practitioner feedback in *European Transport Research Review* (DOI: [10.1186/s12544-024-00668-8](https://doi.org/10.1186/s12544-024-00668-8)), and **[Letter of support in discussion with Transport Infrastructure Ireland (TII) and National Transport Authority (NTA) Ireland]** confirming its nationwide role under the National Sustainable Mobility Policy.
+
+**[H] Transport Scotland & Cycling Scotland (2024).** Documentation and rollout of the *Network Planning Tool for Scotland (NPT)* ([npt.scot](https://www.npt.scot/)) and **[Letter of support in discussion with Transport Scotland]** corroborating use by Scottish local authorities for active travel capital delivery.
+
+**[I] Transportes Metropolitanos de Lisboa (TML) & University of Lisbon (2024).** Deployment of the *biclaR* tool for cycle-transit network integration across the Lisbon Metropolitan Area ([biclar.tmlmobilidade.pt](https://biclar.tmlmobilidade.pt/)) and **[Letter of support in discussion with Transportes Metropolitanos de Lisboa (TML)]**.
+
+

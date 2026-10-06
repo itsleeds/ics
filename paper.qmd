@@ -93,7 +93,7 @@ TODO:
 <!-- 
 TODO:
 - Structured 21-field extraction schema (schema_2026.json).
-- Application of local, open-weights LLMs (gemma4-12b-hermes via Ollama) for zero-cost, reproducible data extraction.
+- Application of open-weights LLMs for zero-cost, reproducible data extraction.
 - Classification of document types (LCWIP, LCWIP-related, other), explicit PCT mentions, scenario usage, desire line integration, and route scoring.
 -->
 
