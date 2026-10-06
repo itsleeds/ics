@@ -22,6 +22,7 @@ site_libs/
 *_files/
 *.html
 *.knit.md
+*.docx
 **/*.quarto_ipynb
 *.csv
 *.json
