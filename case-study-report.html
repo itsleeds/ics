@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Robin Lovelace and Team">
+<meta name="dcterms.date" content="2026-11-26">
+
+<title>Transforming Strategic Active Travel Network Planning Internationally</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7977bcff561eaf5689a351c5509d56a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Transforming Strategic Active Travel Network Planning Internationally</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./case-study-report.html" aria-current="page"> 
+<span class="menu-text">Case Study Report</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./2026-analysis.html"> 
+<span class="menu-text">Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./paper.html"> 
+<span class="menu-text">Paper</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/itsleeds/ics"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#summary-of-impact" id="toc-summary-of-impact" class="nav-link active" data-scroll-target="#summary-of-impact"><span class="header-section-number">1</span> Summary of Impact</a></li>
+  <li><a href="#underpinning-research" id="toc-underpinning-research" class="nav-link" data-scroll-target="#underpinning-research"><span class="header-section-number">2</span> Underpinning Research</a></li>
+  <li><a href="#references-to-the-research" id="toc-references-to-the-research" class="nav-link" data-scroll-target="#references-to-the-research"><span class="header-section-number">3</span> References to the Research</a></li>
+  <li><a href="#details-of-the-impact" id="toc-details-of-the-impact" class="nav-link" data-scroll-target="#details-of-the-impact"><span class="header-section-number">4</span> Details of the Impact</a>
+  <ul class="collapse">
+  <li><a href="#practitioner-engagement-systematic-review-pipeline" id="toc-practitioner-engagement-systematic-review-pipeline" class="nav-link" data-scroll-target="#practitioner-engagement-systematic-review-pipeline"><span class="header-section-number">4.1</span> Practitioner Engagement &amp; Systematic Review Pipeline</a></li>
+  <li><a href="#national-adoption-in-england" id="toc-national-adoption-in-england" class="nav-link" data-scroll-target="#national-adoption-in-england"><span class="header-section-number">4.2</span> National Adoption in England</a></li>
+  <li><a href="#shaping-network-design-and-route-prioritisation" id="toc-shaping-network-design-and-route-prioritisation" class="nav-link" data-scroll-target="#shaping-network-design-and-route-prioritisation"><span class="header-section-number">4.3</span> Shaping Network Design and Route Prioritisation</a></li>
+  <li><a href="#geographic-distribution-of-depth-of-use" id="toc-geographic-distribution-of-depth-of-use" class="nav-link" data-scroll-target="#geographic-distribution-of-depth-of-use"><span class="header-section-number">4.4</span> Geographic Distribution of Depth of Use</a></li>
+  <li><a href="#direct-link-to-active-travel-funding-atf-allocations" id="toc-direct-link-to-active-travel-funding-atf-allocations" class="nav-link" data-scroll-target="#direct-link-to-active-travel-funding-atf-allocations"><span class="header-section-number">4.5</span> Direct Link to Active Travel Funding (ATF) Allocations</a></li>
+  <li><a href="#international-translation-republic-of-ireland-scotland-and-portugal" id="toc-international-translation-republic-of-ireland-scotland-and-portugal" class="nav-link" data-scroll-target="#international-translation-republic-of-ireland-scotland-and-portugal"><span class="header-section-number">4.6</span> International Translation: Republic of Ireland, Scotland, and Portugal</a></li>
+  </ul></li>
+  <li><a href="#sources-to-corroborate-the-impact" id="toc-sources-to-corroborate-the-impact" class="nav-link" data-scroll-target="#sources-to-corroborate-the-impact"><span class="header-section-number">5</span> Sources to Corroborate the Impact</a></li>
+  </ul>
+<div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/itsleeds/ics/edit/main/case-study-report.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/itsleeds/ics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Transforming Strategic Active Travel Network Planning Internationally</h1>
+<p class="subtitle lead">Impact Case Study Report for REF 2029</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Robin Lovelace and Team </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 26, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Institutional Submission Context</strong></p>
+<ul>
+<li><strong>Submitting institution:</strong> The University of Leeds</li>
+<li><strong>Unit of Assessment:</strong> UoA 14 – Geography and Environmental Studies</li>
+<li><strong>Case Study Title:</strong> Transforming Strategic Active Travel Network Planning Internationally</li>
+<li><strong>Period of Underpinning Research:</strong> 2014 – 2026</li>
+<li><strong>Period of Impact:</strong> 1 August 2020 – 31 December 2028</li>
+<li><strong>Continuation:</strong> Continues and expands the REF 2021 Case Study: <a href="https://results2021.ref.ac.uk/impact/847d1191-7f25-46ba-a399-b481125edc8f?page=1"><em>Cycle network policy, planning and investment transformed by the Propensity to Cycle Tool</em></a> (Leeds UoA 14).</li>
+</ul>
+</div>
+</div>
+</div>
+<section id="summary-of-impact" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Summary of Impact</h1>
+<p>Building on work presented in REF 2021 Case Study, Cycle network policy, planning and investment transformed by the Propensity to Cycle Tool, researchers at the University of Leeds developed <strong>transport planning tools and methodologies that have increased the effectiveness of multi-billion-pound investment strategies</strong>. These tools are now embedded into statutory planning and funding frameworks across the UK and Europe. Work develivered between 2021 and 2026 overcame fundamental issues around low spatial resolution and lack of data on non-commute trip-purposes, constraints that prevented earlier models from accurately representing travel demand. <strong>Methodological breakthroughs</strong> in spatial disaggregation (‘jittering’), all-purpose trip microsimulation, and bike-transit interchange modelling mean that tools based on work developed by the University of Leeds now guide investment decisions across national transport ministries, metropolitan authorities, and more than 90% of local authorities across England.</p>
+<p>Key impacts achieved since August 2020 include:</p>
+<section id="international-infrastructure-delivery-and-national-planning-systems" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="international-infrastructure-delivery-and-national-planning-systems"><span class="header-section-number">1.0.1</span> 1. International Infrastructure Delivery and National Planning Systems</h3>
+<ul>
+<li><strong>Republic of Ireland (CRUSE):</strong> Commissioned by the national infrastructure agency <strong>Transport Infrastructure Ireland (TII)</strong>, the Cycle Route Uptake and Scenario Estimation platform (<a href="https://www.cruse.bike/">cruse.bike</a>) expanded active travel modelling from commute-only flows used in the original work to simulate 100% of trip purposes (including shopping, personal business, recreation, and greenway tourism) across all <strong>31 local authority areas</strong>. CRUSE directly shapes project outline documents, economic appraisals, and corridor prioritization for Ireland’s <strong>€360m annual active travel capital programme</strong> (€1.8B+ over five years under the National Development Plan).</li>
+<li><strong>Scotland (Network Planning Tool):</strong> Commissioned by <strong>Transport Scotland</strong> and delivered in collaboration with the <strong>Walk Wheel Cycle Trust</strong> charity, the Network Planning Tool for Scotland (<a href="https://www.npt.scot/">npt.scot</a>) operationalised methods developed at the University of Leeds to support all <strong>32 Scottish local authorities</strong> in prioritising infrastructure delivery under the Scottish Government’s <strong>£150m+ annual active travel budget</strong> (approaching 10% of the total Scottish transport budget).</li>
+<li><strong>Portugal &amp; Metropolitan Transit Integration (biclaR):</strong> Funded by the <strong>Transportes Metropolitanos de Lisboa (TML)</strong> across all <strong>18 municipalities</strong> of the Lisbon Metropolitan Area (2.87m residents; <a href="https://biclar.tmlmobilidade.pt/">biclar.tmlmobilidade.pt</a>), modelling combined bike-and-ride accessibility to train and metro hubs to direct capital investment toward multi-modal interchanges.</li>
+<li><strong>Wider European Influence:</strong> Informed European active mobility financing frameworks in collaboration with Cycling Industries Europe (contributing to EU recovery and resilience allocations) and guided municipal adaptations in Norway (Trondheim and Rogaland/Nord-Jæren).</li>
+</ul>
+</section>
+<section id="statutory-institutionalisation-and-1.5b-capital-allocation-in-england" class="level3" data-number="1.0.2">
+<h3 data-number="1.0.2" class="anchored" data-anchor-id="statutory-institutionalisation-and-1.5b-capital-allocation-in-england"><span class="header-section-number">1.0.2</span> 2. Statutory Institutionalisation and £1.5B+ Capital Allocation in England</h3>
+<ul>
+<li><strong>Statutory Integration:</strong> Moving beyond initial ad-hoc uptake, <strong>91% of analysed English Local Transport Authorities</strong> now formally embed Leeds tools into their statutory Local Cycling and Walking Infrastructure Plans (LCWIPs), citing the tool an average of <strong>12 times per strategy document</strong>.</li>
+<li><strong>Substantive Technical Depth:</strong> <strong>95% of assessed authorities</strong> demonstrate substantive technical application (scoring <span class="math inline">\(\ge 2\)</span> on depth of use), directly utilising model outputs for primary corridor selection (e.g.&nbsp;Portsmouth), desire-line validation (e.g.&nbsp;Cumberland, Westmorland &amp; Furness), and multi-criteria route scoring (e.g.&nbsp;Durham).</li>
+<li><strong>Direct Capital Funding Linkage:</strong> Systematic matching with official Department for Transport and Active Travel England allocation datasets demonstrates that <strong>93% of historical Active Travel Fund (ATF) investment (£1.5B+ across 2020/21–2024/25)</strong> and <strong>95% of future multi-year settlements (2026–2030)</strong> were awarded to authorities whose planning documents embed the PCT.</li>
+<li><strong>Substantially Higher Grant Success:</strong> Authorities embedding Leeds tools secured more than double the funding of non-adopting authorities, averaging <strong>£9.4m vs £4.5m</strong> in historical funding, and <strong>£9.2m vs £3.5m</strong> in future allocations.</li>
+<li><strong>Flagship Regional Capital Programmes:</strong> Leeds tools provided the core demand forecasts and business case justification for major regional infrastructure pipelines, including Liverpool City Region’s <strong>31-corridor network valued at over £100m</strong>, and Transport for Greater Manchester’s <strong>£160m Bee Network</strong> (including the Chorlton and Oxford Road cycleways).</li>
+</ul>
+</section>
+<section id="democratising-planning-capacity-and-public-spending-efficiency" class="level3" data-number="1.0.3">
+<h3 data-number="1.0.3" class="anchored" data-anchor-id="democratising-planning-capacity-and-public-spending-efficiency"><span class="header-section-number">1.0.3</span> 3. Democratising Planning Capacity and Public Spending Efficiency</h3>
+<ul>
+<li><strong>Leveling Local Government Capability:</strong> By providing free, open-access routing and demand forecasting, Leeds tools eliminated deep analytical inequalities between well-resourced metropolitan authorities and smaller shire councils, saving public bodies an estimated <strong>tens of millions of pounds in external consultancy fees</strong>.</li>
+<li><strong>Civic Co-Design and Evidence-Based Advocacy:</strong> Provided a shared, transparent empirical foundation for community advocacy groups (e.g.&nbsp;Cycling UK, Walk Ride Bath), enabling citizen campaigners and municipal engineers to co-design network priorities on equal technical terms.</li>
+</ul>
+</section>
+</section>
+<section id="underpinning-research" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Underpinning Research</h1>
+<p>This case study builds directly on underpinning research reported in REF 2021 while introducing major new spatial, computational, and multimodal methods developed at the University of Leeds between 2020 and 2026:</p>
+<section id="foundational-research-ref-2021-period-20142020" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="foundational-research-ref-2021-period-20142020"><span class="header-section-number">2.0.1</span> Foundational Research (REF 2021 Period: 2014–2020)</h3>
+<p>In response to national policy commitments to increase active travel, research led by Professor Robin Lovelace and collaborators (Universities of Leeds, Cambridge, Westminster, and LSHTM) diagnosed systemic data and capability barriers preventing evidence-based cycle planning across English local authorities <span class="citation" data-cites="aldred2017barriers"><a href="#ref-aldred2017barriers" role="doc-biblioref">[1]</a></span>. Funded by the UK Department for Transport (£497,000 across four phases) and ESRC, the team developed the original <strong>Propensity to Cycle Tool (PCT)</strong>, deployed publicly from 2017 <span class="citation" data-cites="lovelace2017propensity"><a href="#ref-lovelace2017propensity" role="doc-biblioref">[2]</a></span>. Conceptual research led by the University of Leeds established that a new generation of tools, defined as “open access transport models” in a term coined by the team, serve as a critical leverage point in transport planning <span class="citation" data-cites="lovelace2020open"><a href="#ref-lovelace2020open" role="doc-biblioref">[3]</a></span>. This work provided an important steer, prompting public bodies and researchers to invest in open models that democratise decision-making, support a shift from car-centric ‘predict and provide’ to participatory ‘decide and provide’ frameworks, and provide robust, actionable evidence to empower planners, advocates, and citizen scientists alike [refs here including from reports in New Zealand city our work can go here]. Underpinning these developments, Lovelace (2021) systematically evaluated the emerging ecosystem of open source tools for geographic analysis in transport planning <span class="citation" data-cites="lovelace2021open"><a href="#ref-lovelace2021open" role="doc-biblioref">[4]</a></span>, establishing how modular, reproducible geospatial tools (spanning R, Python, and web frameworks) overcome the lock-in of proprietary 20th-century motor-traffic software to deliver the spatial route analysis, network aggregation, and localized impact modeling required for modern active travel transitions. This work underpinned the high impact tools now in use, described in the Impact section.</p>
+</section>
+<section id="subsequent-methodological-breakthroughs-ref-2029-period-20202026" class="level3" data-number="2.0.2">
+<h3 data-number="2.0.2" class="anchored" data-anchor-id="subsequent-methodological-breakthroughs-ref-2029-period-20202026"><span class="header-section-number">2.0.2</span> Subsequent Methodological Breakthroughs (REF 2029 Period: 2020–2026)</h3>
+<p>While the foundational PCT established national uptake, early iterations had fundamental spatial and methodological limitations. Between 2020 and 2026, Leeds researchers developed solutions to overcome these constraints:</p>
+<ol type="1">
+<li><strong>Overcoming Spatial Centroid Distortion (‘Jittering’):</strong> The original PCT routed trips from population-weighted zone centroids, creating artificial route clustering and sparseness on real street networks. Lovelace, Félix, and Carlino (2022) formulated the <strong>‘jittering’</strong> methodology <span class="citation" data-cites="lovelace2022"><a href="#ref-lovelace2022" role="doc-biblioref">[5]</a></span>, a computationally efficient spatial technique that stochastically disperses trip start and end points across realistic building envelopes and network nodes, achieving street-level routing fidelity without relying on proprietary, opaque commercial datasets.</li>
+<li><strong>Expanding Beyond Commuting to All Trip Purposes (CRUSE):</strong> Early active travel models focused predominantly on commuting and travel-to-school trips due to census data constraints, neglecting the 80%+ of everyday trips made for leisure, shopping, personal business, and cycle tourism. In research funded by the Irish Department of Transport, Lovelace, Talbot, and colleagues (2024) formulated the <strong>Cycle Route Uptake and Scenario Estimation (CRUSE)</strong> framework <span class="citation" data-cites="lovelace2024"><a href="#ref-lovelace2024" role="doc-biblioref">[6]</a></span>, using spatial microsimulation and national travel survey data to model all-purpose cycling uptake and economic benefits nationwide.</li>
+<li><strong>Multimodal Transit-Active Travel Integration (biclaR):</strong> Recognizing that cycling must link with mass transit to substitute for car travel over longer distances, Leeds researchers partnered with the University of Lisbon to model combined bike-and-ride accessibility to transit hubs, embodied in the <strong>biclaR</strong> platform <span class="citation" data-cites="félix2025"><a href="#ref-félix2025" role="doc-biblioref">[7]</a></span>.</li>
+<li><strong>Automated Policy Delivery and Infrastructure Evaluation:</strong> In 2026, Leeds researchers pioneered reproducible pipelines linking published statutory plans with national capital active travel allocations, providing the first comprehensive empirical evaluation of open planning tools on public expenditure cost-effectiveness.</li>
+</ol>
+</section>
+</section>
+<section id="references-to-the-research" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> References to the Research</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-aldred2017barriers" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">R. Aldred, T. Watson, R. Lovelace, and J. Woodcock, <span>“Barriers to investing in cycling: Stakeholder views from england,”</span> <em>Transportation Research Part A: Policy and Practice</em>, vol. 128, pp. 149–159, 2017, doi: <a href="https://doi.org/10.1016/j.tra.2017.11.003">10.1016/j.tra.2017.11.003</a>.</div>
+</div>
+<div id="ref-lovelace2017propensity" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">R. Lovelace, A. Goodman, R. Aldred, N. Berkoff, A. Abbas, and J. Woodcock, <span>“The propensity to cycle tool: An open source online system for sustainable transport planning,”</span> <em>Journal of Transport and Land Use</em>, vol. 10, no. 1, pp. 505–528, 2017, doi: <a href="https://doi.org/10.5198/jtlu.2016.862">10.5198/jtlu.2016.862</a>.</div>
+</div>
+<div id="ref-lovelace2020open" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">R. Lovelace, J. Parkin, and T. Cohen, <span>“Open access transport models: A leverage point in sustainable transport planning,”</span> <em>Transport Policy</em>, vol. 97, pp. 47–54, 2020, doi: <a href="https://doi.org/10.1016/j.tranpol.2020.06.015">10.1016/j.tranpol.2020.06.015</a>.</div>
+</div>
+<div id="ref-lovelace2021open" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">R. Lovelace, <span>“Open source tools for geographic analysis in transport planning,”</span> <em>Journal of Geographical Systems</em>, vol. 23, no. 4, pp. 547–578, 2021, doi: <a href="https://doi.org/10.1007/s10109-020-00342-2">10.1007/s10109-020-00342-2</a>.</div>
+</div>
+<div id="ref-lovelace2022" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">R. Lovelace, R. Félix, and D. Carlino, <span>“Jittering: A computationally efficient method for generating realistic route networks from origin-destination data,”</span> <em>Findings</em>, p. 33873, Apr. 2022, doi: <a href="https://doi.org/10.32866/001c.33873">10.32866/001c.33873</a>.</div>
+</div>
+<div id="ref-lovelace2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">R. Lovelace <em>et al.</em>, <span>“Cycle route uptake and scenario estimation (CRUSE): An approach for developing strategic cycle network planning tools,”</span> <em>European Transport Research Review</em>, vol. 16, no. 1, p. 55, Sep. 2024, doi: <a href="https://doi.org/10.1186/s12544-024-00668-8">10.1186/s12544-024-00668-8</a>.</div>
+</div>
+<div id="ref-félix2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">R. Félix, F. Moura, and R. Lovelace, <span>“Reproducible methods for modeling combined public transport and cycling trips and associated benefits: Evidence from the biclaR tool,”</span> <em>Computers, Environment and Urban Systems</em>, vol. 117, p. 102230, Apr. 2025, doi: <a href="https://doi.org/10.1016/j.compenvurbsys.2024.102230">10.1016/j.compenvurbsys.2024.102230</a>.</div>
+</div>
+</div>
+</section>
+<section id="details-of-the-impact" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Details of the Impact</h1>
+<p>The evidence base provides quantifiable verification of the PCT’s widespread impact on policy, infrastructure design, and capital investment.</p>
+<section id="practitioner-engagement-systematic-review-pipeline" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="practitioner-engagement-systematic-review-pipeline"><span class="header-section-number">4.1</span> Practitioner Engagement &amp; Systematic Review Pipeline</h2>
+<p>Engagement for this project spans desk-based research, practitioner surveys, stakeholder interviews, and an automated, reproducible evidence-ingest pipeline:</p>
+<ul>
+<li><strong>Stakeholder Identification and Scoping:</strong> A typology of key stakeholders was established across local transport authorities, combined authorities, national government bodies (DfT, Active Travel England), and advocacy organisations.</li>
+<li><strong>Survey Development and Feedback:</strong> Online survey questionnaires and interview protocols were piloted with practitioners to capture qualitative feedback on tool usability and impact on planning decisions.</li>
+<li><strong>Automated Systematic Review of Planning Documents:</strong> A reproducible data-ingest pipeline was executed in 2026, downloading strategy documents and extracting a 21-field schema using an automated document extraction pipeline without external API dependencies.</li>
+<li><strong>Data Integration with Funding Allocations:</strong> Extracted records were matched against higher-tier transport authority boundaries (<a href="https://github.com/itsleeds/uktransportauthorities">uktransportauthorities</a>) and official DfT Active Travel Fund (ATF) historical and future multi-year allocations, enabling spatial and financial impact assessment.</li>
+</ul>
+</section>
+<section id="national-adoption-in-england" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="national-adoption-in-england"><span class="header-section-number">4.2</span> National Adoption in England</h2>
+<p>Analysis of published LCWIPs confirms that 91% of analysed transport authorities in England use the PCT as a core analytical foundation <strong>[C]</strong>. Reports from major regional bodies, such as the Liverpool City Region Combined Authority <strong>[E]</strong> and Oxfordshire County Council for Kidlington <strong>[D]</strong>, demonstrate that the PCT is routinely used to map desire lines, evaluate future scenarios (e.g.&nbsp;‘Go Dutch’ and ‘Government Target’), and justify capital investment bids.</p>
+</section>
+<section id="shaping-network-design-and-route-prioritisation" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="shaping-network-design-and-route-prioritisation"><span class="header-section-number">4.3</span> Shaping Network Design and Route Prioritisation</h2>
+<p>The PCT directly influences the physical design of proposed cycling networks:</p>
+<ul>
+<li><strong>Corridor Selection:</strong> In Portsmouth City Council’s LCWIP Background Report, the PCT’s ‘Government Target’ scenario was used to identify highest forecast future commuter flows, directly determining the primary cycle routes <strong>[D]</strong>.</li>
+<li><strong>Validating Desire Lines:</strong> In Cumberland Council and Westmorland &amp; Furness Council reports for Carlisle and Workington, ‘Go Dutch’ scenario outputs validated the strategic desire lines forming the backbone of the proposed network <strong>[D]</strong>.</li>
+<li><strong>Prioritisation Matrices:</strong> In Durham County Council’s LCWIP for Shildon, PCT demand scores were directly incorporated into the multi-criteria prioritisation matrix, directly determining which schemes received delivery funding <strong>[D]</strong>.</li>
+</ul>
+</section>
+<section id="geographic-distribution-of-depth-of-use" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="geographic-distribution-of-depth-of-use"><span class="header-section-number">4.4</span> Geographic Distribution of Depth of Use</h2>
+<p>The map below (<a href="#fig-depth-of-use" class="quarto-xref">Figure&nbsp;1</a>) illustrates the depth of PCT adoption across all 74 Local Transport Authorities in England, showing widespread Level 2 (data input and analysis) and Level 3 (network design and prioritisation) usage across metropolitan and shire authorities alike.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-depth-of-use" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-depth-of-use-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="case-study-report_files/figure-html/fig-depth-of-use-1.png" class="img-fluid figure-img" width="2400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-depth-of-use-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Depth of Propensity to Cycle Tool (PCT) adoption across English Local Transport Authorities.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="direct-link-to-active-travel-funding-atf-allocations" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="direct-link-to-active-travel-funding-atf-allocations"><span class="header-section-number">4.5</span> Direct Link to Active Travel Funding (ATF) Allocations</h2>
+<p>Entity-matching with official Department for Transport and Active Travel England allocation datasets reveals a powerful connection between analytical planning tools and active travel capital allocation:</p>
+<ul>
+<li><strong>93% of all allocated historical ATF funding</strong> (2020/21–2024/25) was awarded to authorities whose published planning documents incorporate the PCT <strong>[A, B]</strong>.</li>
+<li><strong>95% of future multi-year allocations</strong> (2026–2030) are directed to PCT-adopting authorities <strong>[A, B]</strong>.</li>
+<li>On average, authorities embedding the PCT secured more than double the funding of non-adopting authorities (£9.4m vs £4.5m current, and £9.2m vs £3.5m future multi-year allocations) <strong>[A]</strong>.</li>
+<li>Major regional authorities corroborate this linkage: Liverpool City Region Combined Authority confirmed that the PCT was central to justifying active travel investment packages valued at over £100m <strong>[E]</strong>, while Transport for Greater Manchester used PCT scenarios to design key links of the £160m Bee Network <strong>[F]</strong>.</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Top 10 Local Transport Authorities Ranked by Historical Active Travel Fund (ATF) Allocations</caption>
+<colgroup>
+<col style="width: 36%">
+<col style="width: 19%">
+<col style="width: 16%">
+<col style="width: 11%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Authority</th>
+<th style="text-align: left;">Historical ATF (5-yr)</th>
+<th style="text-align: left;">Future ATF (4-yr)</th>
+<th style="text-align: right;">PCT Mentions</th>
+<th style="text-align: right;">Mean Depth Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Greater Manchester Combined Authority</td>
+<td style="text-align: left;">£63,182,456</td>
+<td style="text-align: left;">£35,419,725</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">West Midlands Combined Authority</td>
+<td style="text-align: left;">£54,324,251</td>
+<td style="text-align: left;">£36,009,295</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">3.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">West Yorkshire Combined Authority</td>
+<td style="text-align: left;">£47,477,943</td>
+<td style="text-align: left;">£29,018,362</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">3.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">North East Combined Authority</td>
+<td style="text-align: left;">£42,858,845</td>
+<td style="text-align: left;">£16,165,396</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">2.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Liverpool City Region Combined Authority</td>
+<td style="text-align: left;">£37,714,444</td>
+<td style="text-align: left;">£12,742,158</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">2.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">East Midlands Combined Authority</td>
+<td style="text-align: left;">£34,982,349</td>
+<td style="text-align: left;">£40,481,711</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">2.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gloucestershire</td>
+<td style="text-align: left;">£24,008,721</td>
+<td style="text-align: left;">£17,965,685</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">2.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Greater London</td>
+<td style="text-align: left;">£20,000,000</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Surrey</td>
+<td style="text-align: left;">£19,097,747</td>
+<td style="text-align: left;">£19,800,132</td>
+<td style="text-align: right;">377</td>
+<td style="text-align: right;">2.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oxfordshire</td>
+<td style="text-align: left;">£16,885,628</td>
+<td style="text-align: left;">£20,185,686</td>
+<td style="text-align: right;">249</td>
+<td style="text-align: right;">2.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="international-translation-republic-of-ireland-scotland-and-portugal" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="international-translation-republic-of-ireland-scotland-and-portugal"><span class="header-section-number">4.6</span> International Translation: Republic of Ireland, Scotland, and Portugal</h2>
+<p>Between 2021 and 2026, Leeds research methodologies were systematically adapted and scaled by national transport ministries and metropolitan agencies internationally:</p>
+<ul>
+<li><strong>Republic of Ireland (CRUSE):</strong> Commissioned by the national infrastructure agency <strong>Transport Infrastructure Ireland (TII)</strong> alongside the Department of Transport and the National Transport Authority (NTA), Leeds researchers developed the <strong>Cycle Route Uptake and Scenario Estimation (CRUSE)</strong> platform (<a href="https://www.cruse.bike/">cruse.bike</a>) <span class="citation" data-cites="lovelace2024"><a href="#ref-lovelace2024" role="doc-biblioref">[6]</a></span> <strong>[G]</strong>. CRUSE covers every county across Ireland, modeling everyday trips and greenways to guide Ireland’s €360m annual active travel capital programme under the National Sustainable Mobility Policy. Published stakeholder evaluations in the <em>European Transport Research Review</em> <span class="citation" data-cites="lovelace2024"><a href="#ref-lovelace2024" role="doc-biblioref">[6]</a></span> directly attest to its operational impact:
+<ul>
+<li>At the national infrastructure agency level, Transport Infrastructure Ireland confirmed that CRUSE is a <em>“useful tool for getting schemes started; and provides good detail to supplement the strategic rationale for intervention within Project Outline Documents”</em>, adding that the tool <em>“is ideal for generating a strategic rationale for estimating demand and building the business case in the absence of cycle count data; it is also very useful at the detailed design stage and the CRUSE estimates can (and have been used) to supplement the economic appraisal of cycling schemes”</em> (Declan Keenan, Senior Transport Planner, TII) <span class="citation" data-cites="lovelace2024"><a href="#ref-lovelace2024" role="doc-biblioref">[6]</a></span>.</li>
+<li>At the local authority level, county planners emphasized that the tool resolved critical empirical voids in infrastructure planning: <em>“It’s a missing piece of evidence that will help new projects get built”</em> (Dónal Hodgins, Senior Engineer, Sustainable Transport &amp; Traffic Management, Kildare County Council) <span class="citation" data-cites="lovelace2024"><a href="#ref-lovelace2024" role="doc-biblioref">[6]</a></span>, enabling local authorities to justify project business cases and demonstrate how localized interventions link into wider strategic networks.</li>
+</ul></li>
+<li><strong>Scotland (Network Planning Tool for Scotland):</strong> Commissioned by Transport Scotland and Cycling Scotland, Leeds researchers developed the <strong>Network Planning Tool for Scotland (NPT)</strong> <strong>[H]</strong>, adapting Leeds routing and aggregation engines to support Scottish local authorities in prioritizing the Scottish Government’s £150m+ annual active travel budget.</li>
+<li><strong>Portugal (biclaR in Lisbon Metropolitan Area):</strong> In partnership with Transportes Metropolitanos de Lisboa (TML) and the University of Lisbon, the team deployed <strong>biclaR</strong> <strong>[I]</strong>, supporting the 18 municipalities of the Lisbon Metropolitan Area in planning cycle-transit integration and prioritising strategic cycling links connecting to railway and metro interchanges.</li>
+</ul>
+</section>
+</section>
+<section id="sources-to-corroborate-the-impact" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Sources to Corroborate the Impact</h1>
+<p><strong>[A] Department for Transport (DfT) &amp; Active Travel England (ATE) (2025).</strong> <em>Active Travel Local Transport Authority Allocations (Historical 2020/21–2024/25 and Multi-Year 2026–2030)</em> and <em>Active Travel England Capability Ratings 2025.</em> <a href="https://www.gov.uk/government/publications/active-travel-local-transport-authority-allocations/active-travel-local-transport-authority-allocations">DfT Allocations</a> | <a href="https://assets.publishing.service.gov.uk/media/6939a16933c7ace9c4a41f8b/local-authority-active-travel-capability-ratings-2025.pdf">ATE Ratings</a></p>
+<p><strong>[B] [Letter of support in discussion with Active Travel England].</strong> Corroborating the role of the Propensity to Cycle Tool and open planning methodologies in shaping LCWIP technical guidance, scheme evaluation, and the distribution of capital active travel investment across English local transport authorities.</p>
+<p><strong>[C] University of Leeds LCWIP Evidence Pipeline &amp; Corpus:</strong> Systematic review database of 117 published active travel strategies across English authorities: <a href="https://github.com/itsleeds/ics">GitHub Repository</a> (see also the <a href="./2026-analysis.html">2026 Ingest &amp; Funding Analysis</a>).</p>
+<p><strong>[D] Representative Published Local Authority LCWIP Documents:</strong> - Portsmouth City Council (2020): <em>LCWIP Background Report</em> (<a href="https://travel.portsmouth.gov.uk/wp-content/uploads/2020/08/Background-Report.pdf">Background-Report.pdf</a>) - Cumberland Council &amp; Westmorland and Furness Council Reports: <em>Carlisle LCWIP Technical Report</em> (<a href="https://www.cumberland.gov.uk/sites/default/files/2025-04/carlisle_lcwip_technical_report.pdf">Carlisle Report</a>) and <em>Workington LCWIP Report</em> (<a href="https://legacy.westmorlandandfurness.gov.uk/elibrary/Content/Internet/538/18110/38384/4481911413.pdf">Workington Report</a>) - Durham County Council (2023): <em>Shildon LCWIP Final Report</em> (<a href="https://democracy.durham.gov.uk/documents/s174868/Item%207%20Shildon%20LCWIP%20Final%20inc%20Appendices_opt.pdf">Shildon Report</a>) - Oxfordshire County Council (2020): <em>Kidlington LCWIP</em> (<a href="https://www.oxfordshire.gov.uk/sites/default/files/file/roads-and-transport-major-projects/Kidlington_LCWIP.pdf">Kidlington_LCWIP.pdf</a>)</p>
+<p><strong>[E] Liverpool City Region Combined Authority (2023).</strong> <em>Local Cycling and Walking Infrastructure Plan (LCWIP):</em> <a href="https://api.liverpoolcityregion-ca.gov.uk/wp-content/uploads/2023/09/LCR-LCWIP-Final.pdf">LCR-LCWIP-Final.pdf</a> and <strong>[Letter of support in discussion with Liverpool City Region Combined Authority]</strong> verifying that PCT scenarios underpinned business cases for active travel investment packages exceeding £100m.</p>
+<p><strong>[F] Transport for Greater Manchester (TfGM).</strong> <em>Bee Network Infrastructure Planning Reports</em> and <strong>[Letter of support in discussion with Transport for Greater Manchester]</strong> confirming that the PCT ‘Go Dutch’ scenario informed strategic network design and the delivery of major links in the £160m Bee Network.</p>
+<p><strong>[G] Transport Infrastructure Ireland (TII) &amp; National Transport Authority (NTA) Ireland (2024).</strong> Deployment of the <em>CRUSE (Cycle Route Uptake and Scenario Estimation)</em> tool for nationwide active travel network appraisal (<a href="https://www.cruse.bike/">cruse.bike</a>), peer-reviewed practitioner feedback in <em>European Transport Research Review</em> (DOI: <a href="https://doi.org/10.1186/s12544-024-00668-8">10.1186/s12544-024-00668-8</a>), and <strong>[Letter of support in discussion with Transport Infrastructure Ireland (TII) and National Transport Authority (NTA) Ireland]</strong> confirming its nationwide role under the National Sustainable Mobility Policy.</p>
+<p><strong>[H] Transport Scotland &amp; Cycling Scotland (2024).</strong> Documentation and rollout of the <em>Network Planning Tool for Scotland (NPT)</em> (<a href="https://www.npt.scot/">npt.scot</a>) and <strong>[Letter of support in discussion with Transport Scotland]</strong> corroborating use by Scottish local authorities for active travel capital delivery.</p>
+<p><strong>[I] Transportes Metropolitanos de Lisboa (TML) &amp; University of Lisbon (2024).</strong> Deployment of the <em>biclaR</em> tool for cycle-transit network integration across the Lisbon Metropolitan Area (<a href="https://biclar.tmlmobilidade.pt/">biclar.tmlmobilidade.pt</a>) and <strong>[Letter of support in discussion with Transportes Metropolitanos de Lisboa (TML)]</strong>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/itsleeds\.github\.io\/ics\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/itsleeds/ics/edit/main/case-study-report.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/itsleeds/ics/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
