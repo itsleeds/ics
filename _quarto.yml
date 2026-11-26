@@ -2,8 +2,8 @@ project:
   type: website
   render:
     - index.qmd
-    - case-study-report.qmd
     - 2026-analysis.qmd
+    - case-study-report.qmd
     - paper.qmd
 
 website:

@@ -51,6 +51,7 @@ jobs:
             any::scales
             any::leaflet
             any::htmltools
+            any::ggspatial
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
